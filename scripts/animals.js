@@ -88,7 +88,7 @@ import {
     //     wiki: "link",
     //     fandom: "link",
     //     notes: ""
-    // }
+    // },
 
 const animals = {
     // --- BASEGAME HABITAT ANIMALS ---
@@ -259,7 +259,7 @@ const animals = {
         foodGrade3CostJuv: 83.85,
 
         speciesAppeal: 1500,
-        enrichmentBonus: ["Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok"],
+        enrichmentBonus: ["Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/African_buffalo",
         fandom: "https://planetzoo.fandom.com/wiki/African_Buffalo",
         notes: "The subspecies represented in-game is the Cape Buffalo."
@@ -947,7 +947,7 @@ const animals = {
         foodGrade3CostJuv: 27.15,
 
         speciesAppeal: 1125,
-        enrichmentBonus: ["African Buffalo", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok"],
+        enrichmentBonus: ["African Buffalo", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Black_wildebeest",
         fandom: "https://planetzoo.fandom.com/wiki/Black_Wildebeest",
         notes: ""
@@ -1463,7 +1463,7 @@ const animals = {
         foodGrade3CostJuv: 55.02,
 
         speciesAppeal: 1125,
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok"],
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Common_ostrich",
         fandom: "https://planetzoo.fandom.com/wiki/Common_Ostrich",
         notes: "Receives enrichment bonus from 14 species in-game, the most of any animal in Planet Zoo."
@@ -1549,7 +1549,7 @@ const animals = {
         foodGrade3CostJuv: 12.15,
 
         speciesAppeal: 750,
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok"],
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Common_warthog",
         fandom: "https://planetzoo.fandom.com/wiki/Common_Warthog",
         notes: ""
@@ -3097,7 +3097,7 @@ const animals = {
         foodGrade3CostJuv: 42.00,
 
         speciesAppeal: 1125,
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Reticulated Giraffe", "Sable Antelope", "Springbok"],
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Plains_zebra",
         fandom: "https://planetzoo.fandom.com/wiki/Plains_Zebra",
         notes: ""
@@ -3441,7 +3441,7 @@ const animals = {
         foodGrade3CostJuv: 106.20,
 
         speciesAppeal: 5250,
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Sable Antelope", "Springbok"],
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Sable Antelope", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Reticulated_giraffe",
         fandom: "https://planetzoo.fandom.com/wiki/Reticulated_Giraffe",
         notes: ""
@@ -3613,7 +3613,7 @@ const animals = {
         foodGrade3CostJuv: 61.35,
 
         speciesAppeal: 1125,
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Springbok"],
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Springbok", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Sable_antelope",
         fandom: "https://planetzoo.fandom.com/wiki/Sable_Antelope",
         notes: ""
@@ -4043,7 +4043,7 @@ const animals = {
         foodGrade3CostJuv: 12.90,
 
         speciesAppeal: 1125,
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope"],
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Thomson's Gazelle"],
         wiki: "https://en.wikipedia.org/wiki/Springbok",
         fandom: "https://planetzoo.fandom.com/wiki/Springbok",
         notes: ""
@@ -4644,7 +4644,7 @@ const animals = {
         gestationMonths: 2,
         offspringPerMating: {min: 2, max: 3},
         interbirthMonths: 9,
-        maturityAge: 3,
+        maturityAge: 2.5,
         sterilityAge: null,
         lifeExpectancy: 11,
 
@@ -5082,7 +5082,7 @@ const animals = {
 
         DLC: DLC.basegame,
         type: types.exhibit,
-        continents: [continents.southAmerica],
+        continents: [continents.northAmerica, continents.southAmerica],
         biomes: [biomes.grassland, biomes.tropical],
         IUCN: IUCN.leastConcern,
         dominance: dominance.none,
@@ -5172,7 +5172,7 @@ const animals = {
 
         DLC: DLC.basegame,
         type: types.exhibit,
-        continents: [continents.southAmerica],
+        continents: [continents.northAmerica, continents.southAmerica],
         biomes: [biomes.tropical],
         IUCN: IUCN.criticallyEndangered,
         dominance: dominance.none,
@@ -5217,7 +5217,7 @@ const animals = {
 
         DLC: DLC.basegame,
         type: types.exhibit,
-        continents: [continents.southAmerica],
+        continents: [continents.northAmerica],
         biomes: [biomes.desert, biomes.tropical, biomes.temperate],
         IUCN: IUCN.vulnerable,
         dominance: dominance.none,
@@ -5352,7 +5352,7 @@ const animals = {
 
         DLC: DLC.basegame,
         type: types.exhibit,
-        continents: [continents.northAmerica, continents.southAmerica],
+        continents: [continents.northAmerica],
         biomes: [biomes.desert, biomes.grassland, biomes.temperate],
         IUCN: IUCN.leastConcern,
         dominance: dominance.none,
@@ -5427,7 +5427,266 @@ const animals = {
         wiki: "https://en.wikipedia.org/wiki/Yellow_anaconda",
         fandom: "https://planetzoo.fandom.com/wiki/Yellow_Anaconda",
         notes: ""
-    }
+    },
+    // --- DELUXE DLC ANIMALS ---
+    // --- #74 ---
+    komodoDragon:{
+        name: "Komodo Dragon",
+        latin: "Varanus komodoensis",
+        image: "./images/animals/komodoDragon.webp",
+        icon: "./images/animal-icons/komodoDragon-icon.png",
+   
+        class: "Reptilia",
+        order: "Squamata",
+        family: "Varanidae",
+        genus: "Varanus",
+
+        DLC: DLC.deluxe,
+        type: types.habitat,
+        continents: [continents.asia],
+        biomes: [biomes.grassland, biomes.tropical],
+        IUCN: IUCN.endangered,
+        relationWithHumans: relationWithHumans.confident,
+        dominance: dominance.none,
+        matingSystem: matingSystem.monogamous,
+        maturationRules: maturationRules.gregarious,
+
+        groupSizeMin: 1,
+        groupMixedMax: 2,
+        maxMalesMixed: 1,
+        maxMalesBachelor: 2,
+        maxFemalesMixed: 1,
+        maxFemalesBachelor: 2,
+
+        gestationMonths: 8,
+        offspringPerMating: {min: 2, max: 6},
+        interbirthMonths: 24,
+        maturityAge: 8,
+        sterilityAge: null,
+        lifeExpectancy: 26,
+
+        barrierGrade: 2,
+        barrierHeight: 1,
+        landMinimum: 600,
+        landPerAddAdult: 80,
+        landPerAddJuvenile: 40,
+        climbingMinimum: 0,
+        climbingPerAddAdult: 0,
+        climbingPerAddJuvenile: 0,
+        waterMinimum: 0,
+        waterPerAddAdult: 0,
+        waterPerAddJuvenile: 0,
+        waterDeep: 0,
+        waterDeepPerAddAdult: 0,
+        waterDeepPerAddJuvenile: 0,
+
+        temperatureRange: {min: 12, max: 42},
+        plantCoverage: {min: 10, max: 40},
+        shortGrass: {min: 0, max: 50},
+        longGrass: {min: 0, max: 30},
+        soilRange: {min: 0, max: 40},
+        rockRange: {min: 20, max: 40},
+        sandRange: {min: 20, max: 60},
+        snowRange: {min: 0, max: 0},
+
+        predator: true,
+        guestsEnter: false,
+        guestsInteract: false,
+        canJump: false,     
+        canClimb: false,
+        canWade: true,       
+        canSwim: true,
+        canDive: false,
+        burrower: false,
+    
+        foodGrade1: "Rodents",
+        foodGrade1Cost: 375.00,
+        foodGrade1CostJuv: 37.50,
+        foodGrade2: "Mealworms",
+        foodGrade2Cost: 424.80,
+        foodGrade2CostJuv: 42.48,
+        foodGrade3: "Amphibians",
+        foodGrade3Cost: 456.30,
+        foodGrade3CostJuv: 45.63,
+
+        speciesAppeal: 1500,
+        enrichmentBonus: [""],   
+        wiki: "https://en.wikipedia.org/wiki/Komodo_dragon",
+        fandom: "https://planetzoo.fandom.com/wiki/Komodo_Dragon",
+        notes: "Since 2021, has been listed as 'Endangered' on the IUCN Red List."
+    },
+    // --- #75 ---
+    pygmyHippopotamus:{
+        name: "Pygmy Hippopotamus",
+        latin: "Choeropsis liberiensis",
+        image: "./images/animals/pygmyHippopotamus.webp",
+        icon: "./images/animal-icons/pygmyHippopotamus-icon.png",
+   
+        class: "Mammalia",
+        order: "Artiodactyla",
+        family: "Hippopotamidae",
+        genus: "Choeropsis",
+
+        DLC: DLC.deluxe,
+        type: types.habitat,
+        continents: [continents.africa],
+        biomes: [biomes.aquatic, biomes.tropical],
+        IUCN: IUCN.endangered,
+        relationWithHumans: relationWithHumans.confident,
+        dominance: dominance.alphaMale,
+        matingSystem: matingSystem.monogamous,
+        maturationRules: maturationRules.gregarious,
+
+        groupSizeMin: 1,
+        groupMixedMax: 4,
+        maxMalesMixed: 1,
+        maxMalesBachelor: 4,
+        maxFemalesMixed: 3,
+        maxFemalesBachelor: 4,
+
+        gestationMonths: 7,
+        offspringPerMating: {min: 1, max: 1},
+        interbirthMonths: 12,
+        maturityAge: 4.5,
+        sterilityAge: null,
+        lifeExpectancy: 30,
+
+        barrierGrade: 3,
+        barrierHeight: 1,
+        landMinimum: 270,
+        landPerAddAdult: 30,
+        landPerAddJuvenile: 15,
+        climbingMinimum: 0,
+        climbingPerAddAdult: 0,
+        climbingPerAddJuvenile: 0,
+        waterMinimum: 270,
+        waterPerAddAdult: 30,
+        waterPerAddJuvenile: 15,
+        waterDeep: 0,
+        waterDeepPerAddAdult: 0,
+        waterDeepPerAddJuvenile: 0,
+
+        temperatureRange: {min: 12, max: 42},
+        plantCoverage: {min: 20, max: 100},
+        shortGrass: {min: 0, max: 50},
+        longGrass: {min: 0, max: 50},
+        soilRange: {min: 20, max: 60},
+        rockRange: {min: 20, max: 40},
+        sandRange: {min: 0, max: 40},
+        snowRange: {min: 0, max: 0},
+
+        predator: false,
+        guestsEnter: false,
+        guestsInteract: false,
+        canJump: false,     
+        canClimb: false,
+        canWade: true,       
+        canSwim: true,
+        canDive: false,
+        burrower: false,
+    
+        foodGrade1: "Hay",
+        foodGrade1Cost: 60.00,
+        foodGrade1CostJuv: 15.00,
+        foodGrade2: "Herbivore Pellets",
+        foodGrade2Cost: 69.00,
+        foodGrade2CostJuv: 17.25,
+        foodGrade3: "Aquatic Plants and Melons",
+        foodGrade3Cost: 74.40,
+        foodGrade3CostJuv: 18.60,
+
+        speciesAppeal: 4500,
+        enrichmentBonus: [""],   
+        wiki: "https://en.wikipedia.org/wiki/Pygmy_hippopotamus",
+        fandom: "https://planetzoo.fandom.com/wiki/Pygmy_Hippopotamus",
+        notes: ""
+    },
+    // --- #76 ---
+    thomsonsGazelle:{
+        name: "Thomson's Gazelle",
+        latin: "Eudorcas thomsonii",
+        image: "./images/animals/thomsonsGazelle.webp",
+        icon: "./images/animal-icons/thomsonsGazelle-icon.png",
+   
+        class: "Mammalia",
+        order: "Artiodactyla",
+        family: "Bovidae",
+        genus: "Eudorcas",
+
+        DLC: DLC.deluxe,
+        type: types.habitat,
+        continents: [continents.africa],
+        biomes: [biomes.grassland],
+        IUCN: IUCN.leastConcern,
+        relationWithHumans: relationWithHumans.shy,
+        dominance: dominance.alphaMale,
+        matingSystem: matingSystem.polygynous,
+        maturationRules: maturationRules.matrilineal,
+
+        groupSizeMin: 3,
+        groupMixedMax: 36,
+        maxMalesMixed: 1,
+        maxMalesBachelor: 36,
+        maxFemalesMixed: 35,
+        maxFemalesBachelor: 36,
+
+        gestationMonths: 6,
+        offspringPerMating: {min: 1, max: 1},
+        interbirthMonths: 12,
+        maturityAge: 2,
+        sterilityAge: null,
+        lifeExpectancy: 11,
+
+        barrierGrade: 2,
+        barrierHeight: 1.25,
+        landMinimum: 425,
+        landPerAddAdult: 55,
+        landPerAddJuvenile: 27.5,
+        climbingMinimum: 0,
+        climbingPerAddAdult: 0,
+        climbingPerAddJuvenile: 0,
+        waterMinimum: 0,
+        waterPerAddAdult: 0,
+        waterPerAddJuvenile: 0,
+        waterDeep: 0,
+        waterDeepPerAddAdult: 0,
+        waterDeepPerAddJuvenile: 0,
+
+        temperatureRange: {min: 8, max: 40},
+        plantCoverage: {min: 10, max: 40},
+        shortGrass: {min: 30, max: 100},
+        longGrass: {min: 10, max: 100},
+        soilRange: {min: 10, max: 40},
+        rockRange: {min: 0, max: 40},
+        sandRange: {min: 0, max: 30},
+        snowRange: {min: 0, max: 0},
+
+        predator: false,
+        guestsEnter: true,
+        guestsInteract: false,
+        canJump: true,     
+        canClimb: false,
+        canWade: true,       
+        canSwim: true,
+        canDive: false,
+        burrower: false,
+    
+        foodGrade1: "Hay",
+        foodGrade1Cost: 9.90,
+        foodGrade1CostJuv: 4.95,
+        foodGrade2: "Herbivore Pellets",
+        foodGrade2Cost: 10.80,
+        foodGrade2CostJuv: 5.40,
+        foodGrade3: "Fruit and Vegetables",
+        foodGrade3Cost: 12.00,
+        foodGrade3CostJuv: 6.00,
+
+        speciesAppeal: 1125,
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok"],   
+        wiki: "https://en.wikipedia.org/wiki/Thomson%27s_gazelle",
+        fandom: "https://planetzoo.fandom.com/wiki/Thomson's_Gazelle",
+        notes: ""
+    },
 }
 
 

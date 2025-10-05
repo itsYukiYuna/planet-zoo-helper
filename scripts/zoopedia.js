@@ -15,7 +15,8 @@ let selectedBooleans = {};
 let selectedSwimming = "All";
 let alphaAscending = true;
 let appealAscending = true;
-let foodAscending = true; 
+let foodAscending = true;
+let lifeAscending = true; 
 let currentSort = 'alpha';
 let selectedClass = "All";
 let selectedOrder = "All";
@@ -140,7 +141,8 @@ function setupSortButtons() {
   const sortButtons = [
     ['.button-alphabet', () => { alphaAscending = !alphaAscending; currentSort = 'alpha'; }],
     ['.button-appeal', () => { appealAscending = !appealAscending; currentSort = 'appeal'; }],
-    ['.button-food-cost', () => { foodAscending = !foodAscending; currentSort = 'food'; }]
+    ['.button-food-cost', () => { foodAscending = !foodAscending; currentSort = 'food'; }],
+    ['.button-life-expectancy', () => { lifeAscending = !lifeAscending; currentSort = 'life'; }]
   ];
   
   sortButtons.forEach(([selector, handler]) => {
@@ -344,6 +346,7 @@ function reRender() {
   const sortFunctions = {
     appeal: (a, b) => appealAscending ? (a.speciesAppeal ?? 0) - (b.speciesAppeal ?? 0) : (b.speciesAppeal ?? 0) - (a.speciesAppeal ?? 0),
     food: (a, b) => foodAscending ? (a.foodGrade1Cost ?? 0) - (b.foodGrade1Cost ?? 0) : (b.foodGrade1Cost ?? 0) - (a.foodGrade1Cost ?? 0),
+    life: (a, b) => lifeAscending ? (a.lifeExpectancy ?? 0) - (b.lifeExpectancy ?? 0) : (b.lifeExpectancy ?? 0) - (a.lifeExpectancy ?? 0),
     alpha: (a, b) => alphaAscending ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)
   };
   
@@ -377,6 +380,7 @@ function resetAllFilters(){
   alphaAscending = true;
   appealAscending = true;
   foodAscending = true;
+  lifeAscending = true;
   currentSort = 'alpha';
   selectedClass = selectedOrder = selectedFamily = selectedGenus = "All";
 
