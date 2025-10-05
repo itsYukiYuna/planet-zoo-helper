@@ -1,0 +1,481 @@
+:root {
+    --font-heading: 'Eagle', sans-serif;
+    --font-content: 'Noto Sans', sans-serif;
+    --color-main: #139b6d;
+    --color-menu: #072736;
+    --color-text: #5b3b28;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--font-heading), var(--font-content), sans-serif;
+
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    background-color: var(--color-main);
+}
+
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main {
+    background-color: rgba(196, 194, 187, 0.7);
+    color: var(--color-text);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(19, 155, 109, 0.7);
+
+    width: calc(70vw - 3.5rem);
+    max-height: calc(90vh - 0.5rem);
+    overflow-y: auto;
+
+    margin: 1rem;
+    padding: 1rem;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-family: var(--font-content);
+    font-weight: 600;
+}
+
+nav {
+    background-color: var(--color-menu);
+    background-image: url("../images/pattern-zebra.svg");
+
+    position: fixed;
+    left: 4rem;
+    bottom: 3rem;
+    margin-right: 2rem;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    border-radius: 1rem;
+    width: 20vw;
+    box-shadow: 0 0 1rem rgba(19, 155, 109, 1);
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav img {
+    width: 5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+header img {
+    max-width: 10vw; 
+    position: fixed;
+    top: 1rem;
+    left: 4rem;
+    display: flex;
+}
+
+header {
+    top: 12rem
+}
+
+#button-open-menu, #button-close-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--color-menu);
+    background-image: url("../images/pattern-zebra.svg");  
+    color: white;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    text-align: center; 
+}
+
+footer img {
+    width: 2rem;
+    margin-top: 0.2rem;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: none;
+}
+
+summary {
+    font-family: var(--font-heading);
+    display: inline !important;
+    cursor: pointer;
+}
+
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+.icon-description {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-description img {
+    border-radius: 1rem;
+}
+
+.icon-description:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(196, 194, 187, 0.9);
+    color: var(--color-menu);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+    z-index: 10;
+}
+
+/* MODAL STYLING */
+
+#modal-animal-card {
+    background-color: #A9AD9F;
+    box-shadow: 0 0 1rem rgba(19, 155, 109, 0.7);
+    padding: 1rem;
+    gap: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    display: grid;
+    grid-auto-columns: 35vw;
+    grid-auto-rows: 15vh;
+    grid-template-areas: 
+    "animal-card-image animal-card-general"
+    "animal-card-image animal-card-details"
+    "animal-card-image animal-card-details"
+    "animal-card-image animal-card-details"
+    "animal-card-name animal-card-details";
+}
+
+.modal-animal-image {
+    position: relative;
+    grid-area: animal-card-image;
+    overflow: hidden;
+    border-radius: 0.5rem;   
+    border: var(--color-menu) 0.3rem solid;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-animal-image img {
+    object-fit: contain;
+    object-position: center;
+ 
+    height: 100%;
+    width: auto;
+}
+
+.album-indicator {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: small;
+    padding: 0.2rem ;
+    border-radius: 0.5rem;
+    user-select: none;
+}
+
+.modal-animal-name {
+    grid-area: animal-card-name;
+    background-color: #283C46;
+    background-image: url("../images/pattern-zebra.svg");
+    color: white;
+    height: 100%;
+    border-radius: 0.5rem;
+    gap: 0.3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-animal-name h1 {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+
+.modal-animal-name h2 {
+    margin-bottom: 0.3rem;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.modal-animal-name div {
+    font-family: var(--font-content);
+    font-size: 0.7rem;
+    gap: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25%;
+}
+
+.modal-animal-general {
+    grid-area: animal-card-general;
+    background-color: var(--color-main);
+    background-image: url("../images/pattern-zebra.svg");
+    color: white;
+
+    border-radius: 0.5rem;
+    height: 100%;
+    padding: 0.3rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.modal-animal-general-item {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1rem;
+    height: 32%;
+}
+
+.modal-animal-general img {
+    display: inline-block;
+    margin-left: 0.3rem;
+}
+
+.modal-animal-details {
+    grid-area: animal-card-details;
+    background-color: #CFC7BC;
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    font-family: var(--font-content);
+
+    height: 100%;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.modal-animal-details > div {
+    margin: 0.3rem;
+}
+
+.modal-animal-details img {
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.modal-animal-details-item {
+    background-color: #EAE7E2;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+.modal-animal-details-item span {
+    margin: 0.15rem;
+}
+
+
+#modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10001;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+@media screen and (orientation: portrait), (max-width: 880px) {
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        width: 100%;
+        max-height: 100%;
+        margin: 3rem 1rem 1rem 1rem;
+    }
+
+    nav {
+        position: fixed;
+
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 15rem;
+
+        border-radius: 0;
+        z-index: 9999;
+
+        padding: 1rem;
+        line-height: 3rem;
+    }
+
+    nav.show {
+        left: 0;
+        transition: left 0.3s ease-in-out;
+    }
+
+    nav.show ~ #overlay {
+        display: block;
+    }
+
+    #button-open-menu, #button-close-menu {
+        display: block;
+    }
+
+    header {
+        background-image: url("../images/pattern-zebra.svg");
+        background-color: var(--color-menu);
+
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        z-index: 900;
+    }
+
+    header img {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0.5rem;
+        max-width: 50px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    #modal-animal-card {
+        display: block;
+        flex-direction: column;
+        height: 95vh;
+        width: 90vw;      
+        top: 0;
+        left: 0;
+        transform: none;
+        z-index: 1000;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .modal-animal-details {
+        overflow: visible;
+    }
+
+    .modal-animal-image {
+        height: 50vh;
+    }
+
+    .modal-animal-name {
+        height: auto;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+
+    .modal-animal-general {
+        height: auto;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .modal-animal-details {
+        height: auto;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+}
+

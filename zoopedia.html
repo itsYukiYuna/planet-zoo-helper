@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/zoopedia.css"/>
+
+    <!-- Eagle Font to almost match the Planet Zoo font -->
+    <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
+
+    <!-- Noto Sans inspired by official Planet Zoo website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" 
+    rel="stylesheet">
+
+    <title>Zoopedia</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+</head>
+
+<header>
+    <button id="button-open-menu" onclick="openMenu()"><img src="./images/icons/icon-menu.svg" alt="Open Menu"></button>
+
+    <a href="./index.html"><img src="./images/PZ-helper.png" alt="Planet Zoo Helper"></a>   
+</header>
+
+<nav id="navbar">
+    <ul>
+        <li><button id="button-close-menu" onclick="closeMenu()"><img src="./images/icons/icon-close.svg" alt="Close Menu"></button></li>
+        <li><a href="./index.html"><img src="./images/icons/icon-planet-zoo.svg" alt="Home"></a></li>
+        <li><a href="./zoopedia.html">Zoopedia</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+        <li><a href="./planner.html">Planner</a></li>
+        <li><a href="./changelog.html">Changelog</a></li>
+        <li><a href="./about.html">✦About✦</a></li>     
+        <li>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();</script> 
+        </li>
+    </ul>
+</nav>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+<body>
+
+    <main>
+
+        <h1> <img height="25rem" src="./images/icons/icon-zoopedia.svg" alt=""> Zoopedia</h1>
+
+        <!-- ZOOPEDIA FILTERS -->
+         <div id="filters-container">
+            <details>
+                <summary>
+                    
+                    <h3>
+                        <img width="20rem" src="./images/icons/icon-filters.svg" alt="Filters Icon">
+                        Filters ▼
+                    </h3>
+                </summary>
+
+                <div id="filters-type">
+                    <span class="type-filter filter-selected" data-type="Habitat">Habitat</span>
+                    |
+                    <span class="type-filter filter-selected" data-type="Exhibit">Exhibit</span>
+                </div>
+
+                <div id="filters-dlc">
+                    Select DLC:
+                    
+                    <label><input type="checkbox" name="DLC" value="All" checked>ALL</label> 
+                    
+                    <img id="dlc-dropdown-toggle" class="dropdown-toggle" height="25rem" src="./images/icons/icon-dropdown.svg" alt="Dropdown Menu" role="button" aria-haspopup="true" aria-expanded="false"> <br>
+                    
+                    <ul id="dlc-dropdown-menu" class="dropdown-menu" hidden>
+                        <label><input type="checkbox" name="DLC" value="Base Game">Base Game</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Deluxe Upgrade Pack">Deluxe Upgrade Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Arctic Pack">Arctic Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="South America Pack">South America Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Australia Pack">Australia Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Aquatic Pack">Aquatic Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Southeast Asia Animal Pack">Southeast Asia Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Africa Pack">Africa Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="North America Animal Pack">North America Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Europe Pack">Europe Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Wetlands Animal Pack">Wetlands Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Conservation Pack">Conservation Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Twilight Pack">Twilight Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Grasslands Animal Pack">Grasslands Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Tropical Pack">Tropical Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Arid Animal Pack">Arid Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Oceania Pack">Oceania Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Eurasia Animal Pack">Eurasia Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Barnyard Animal Pack">Barnyard Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Zookeepers Animal Pack">Zookeepers Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Americas Animal Pack">Americas Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Asia Animal Pack">Asia Animal Pack</label> <br>
+                    </ul>
+                </div>
+
+                <div id="button-sorting">
+                    <div class="icon-description filter-selected" data-tooltip="Alphabetical Order">
+                        <button class="button-alphabet"><img height="30rem" src=".//images/icons/icon-alphabet.svg" alt="Alphabetical Order"></button>
+                    </div>
+                    
+                    <div class="icon-description filter-selected" data-tooltip="Species Appeal">
+                        <button class="button-appeal"><img height="30rem" src=".//images/icons/icon-appeal.png" alt="Species Appeal"></button>
+                    </div>
+                    
+                    <div class="icon-description filter-selected" data-tooltip="Food Cost">
+                        <button class="button-food-cost"><img height="30rem" src=".//images/icons/icon-food.png" alt="Food Cost"></button>
+                    </div>
+
+                    <div class="icon-description filter-selected" data-tooltip="Reset Filters">
+                        <button class="button-reset-filters"><img height="30rem" src=".//images/icons/icon-reset.svg" alt="Reset Filters"></button>
+                    </div>
+
+                </div>
+                <br>
+
+                <div id="filters-continents">
+
+                    Continents: <br>
+
+                    <div class="icon-description filter-selected" data-tooltip="Africa"><img height="30rem" src="./images/icons/icon-continent-africa.webp" alt="Africa"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Europe"><img height="30rem" src="./images/icons/icon-continent-europe.webp" alt="Europe"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Asia"><img height="30rem" src="./images/icons/icon-continent-asia.webp" alt="Asia"></div>            
+                    <div class="icon-description filter-selected" data-tooltip="North America"><img height="30rem" src="./images/icons/icon-continent-north-america.webp" alt="North America"></div>
+                    <div class="icon-description filter-selected" data-tooltip="South America"><img height="30rem" src="./images/icons/icon-continent-south-america.webp" alt="South America"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Oceania"><img height="30rem" src="./images/icons/icon-continent-oceania.webp" alt="Oceania"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Antarctica"><img height="30rem" src="./images/icons/icon-continent-antarctica.webp" alt="Antarctica"></div>
+                </div>
+
+                <div id="filters-biomes">
+                    
+                    Biomes: <br>
+
+                    <div class="icon-description filter-selected" data-tooltip="Aquatic"><img height="30rem" src="./images/icons/icon-biome-aquatic.svg" alt="Aquatic"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Desert"><img height="30rem" src="./images/icons/icon-biome-desert.svg" alt="Desert"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Grassland"><img height="30rem" src="./images/icons/icon-biome-grassland.svg" alt="Grassland"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Tropical"><img height="30rem" src="./images/icons/icon-biome-tropical.svg" alt="Tropical"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Temperate"><img height="30rem" src="./images/icons/icon-biome-temperate.svg" alt="Temperate"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Taiga"><img height="30rem" src="./images/icons/icon-biome-taiga.svg" alt="Taiga"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Tundra"><img height="30rem" src="./images/icons/icon-biome-tundra.svg" alt="Tundra"></div>
+                    
+                </div>
+
+                
+                <div id="filters-status">
+
+                    IUCN Status: <br>
+                    
+                    <div class="icon-description filter-selected" data-tooltip="Extinct in the Wild"><img height="30rem" src="./images/icons/icon-iucn-extinct-wild.webp" alt="Extinct in the Wild"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Critically Endangered"><img height="30rem" src="./images/icons/icon-iucn-critically-endangered.webp" alt="Critically Endangered"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Endangered"><img height="30rem" src="./images/icons/icon-iucn-endangered.webp" alt="Endangered"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Vulnerable"><img height="30rem" src="./images/icons/icon-iucn-vulnerable.webp" alt="Vulnerable"></div>      
+                    <div class="icon-description filter-selected" data-tooltip="Near Threatened"><img height="30rem" src="./images/icons/icon-iucn-near-threatened.webp" alt="Near Threatened"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Least Concern"><img height="30rem" src="./images/icons/icon-iucn-least-concern.webp" alt="Least Concern"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Domesticated"><img height="30rem" src="./images/icons/icon-iucn-domesticated.webp" alt="Domesticated"></div>
+                    <div class="icon-description filter-selected" data-tooltip="Data Deficient"><img height="30rem" src="./images/icons/icon-iucn-data-deficient.webp" alt="Data Deficient"></div>
+                    
+                </div>
+
+                <br>
+
+                <div id="filters-data-input">
+
+                    <div id="data-minimum">   
+                                   
+                        <div class="icon-description filter-selected" data-tooltip="Barrier Grade">
+                            <label for="barrierGrade"><img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier Grade"></label>
+                            <input type="number" name="barrierGrade" min="0" max="5">   
+                        </div>
+
+                        <div class="icon-description filter-selected" data-tooltip="Barrier Height">
+                            <label for="barrierHeight"><img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier Height"></label>
+                            <input type="number" name="barrierHeight" min="0" max="10" step="0.25"> m
+                        </div>
+                        
+                        <br>
+
+                        <div class="icon-description filter-selected" data-tooltip="Land">
+                            <label for="landMinimum"><img height="30rem" src="./images/icons/icon-area-land.jpg" alt="Land"></label>
+                            <input type="number" name="landMinimum" min="0" step="25"> m²
+                        </div>  
+
+                        <div class="icon-description filter-selected" data-tooltip="Climbing">
+                            <label for="climbingMinimum"><img height="30rem" src="./images/icons/icon-area-climbing.jpg" alt="Climbing"></label>
+                            <input type="number" name="climbingMinimum" min="0" step="5"> m²
+                        </div>    
+                        
+                        <div class="icon-description filter-selected" data-tooltip="Water">
+                            <label for="waterMinimum"><img height="30rem" src="./images/icons/icon-area-water.jpg" alt="Water"></label>
+                            <input type="number" name="waterMinimum" min="0" step="20"> m²
+                        </div>
+
+                        <div class="icon-description filter-selected" data-tooltip="Deep Water">
+                            <label for="waterDeep"><img height="30rem" src="./images/icons/icon-area-deep-water.jpg" alt="Deep Water"></label>
+                            <input type="number" name="waterDeep" min="0" step="5"> m²
+                        </div>
+
+                    </div>
+
+                    <div id="data-range">
+                        <div class="icon-description filter-selected" data-tooltip="Temperature">
+                            <label for="temperatureRange"><img height="30rem" src="./images/icons/icon-temperature.jpg" alt="Temperature"></label>
+                            <input type="number" name="temperatureRange" min="-75" max="150" step="5"> °C
+                        </div>
+
+                        <div class="icon-description filter-selected" data-tooltip="Plant Coverage">
+                            <label for="plantCoverage"><img height="30rem" src="./images/icons/icon-plants.jpg" alt="Plant Coverage"></label>
+                            <input type="number" name="plantCoverage" min="0" max="100" step="5"> %
+                        </div>
+
+                        <br>
+                                    
+                        <div class="icon-description filter-selected" data-tooltip="Grass (short)">
+                            <label for="shortGrass"><img height="30rem" src="./images/icons/icon-terrain-grass-short.jpg" alt="Grass (short)"></label>
+                            <input type="number" name="shortGrass" min="0" max="100" step="5"> %
+                        </div>    
+
+                        <div class="icon-description filter-selected" data-tooltip="Grass (long)">
+                            <label for="longGrass"><img height="30rem" src="./images/icons/icon-terrain-grass-long.jpg" alt="Grass (long)"></label>
+                            <input type="number" name="longGrass" min="0" max="100" step="5"> %
+                        </div>
+                                    
+                        <div class="icon-description filter-selected" data-tooltip="Soil">
+                            <label for="soilRange"><img height="30rem" src="./images/icons/icon-terrain-soil.jpg" alt="Soil"></label>
+                            <input type="number" name="soilRange" min="0" max="100" step="5"> %
+                        </div>
+
+                        <div class="icon-description filter-selected" data-tooltip="Rock">
+                            <label for="rockRange"><img height="30rem" src="./images/icons/icon-terrain-rock.jpg" alt="Rock"></label>
+                            <input type="number" name="rockRange" min="0" max="100" step="5"> %
+                        </div>
+                                    
+                        <div class="icon-description filter-selected" data-tooltip="Sand">
+                            <label for="sandRange"><img height="30rem" src="./images/icons/icon-terrain-sand.jpg" alt="Sand"></label>
+                            <input type="number" name="sandRange" min="0" max="100" step="5"> %
+                        </div>    
+
+                        <div class="icon-description filter-selected" data-tooltip="Snow">
+                            <label for="snowRange"><img height="30rem" src="./images/icons/icon-terrain-snow.jpg" alt="Snow"></label>
+                            <input type="number" name="snowRange" min="0" max="100" step="5"> %
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="filter-data-boolean">
+                            
+                    <div class="filter-boolean" data-filter="guestsEnter"> 
+                        Guests Enter: <br>
+                        <img height="30rem" class="icon-description filter-selected" data-value="true" src="./images/icons/icon-yes.svg" alt="True"> 
+                        <img height="30rem" class="icon-description filter-selected" data-value="false" src="./images/icons/icon-no.svg" alt="False">
+                    </div>
+
+                    <div class="filter-boolean" data-filter="guestsInteract"> 
+                        Guests Interact: <br>
+                        <img height="30rem" class="icon-description filter-selected" data-value="true" src="./images/icons/icon-yes.svg" alt="True"> 
+                        <img height="30rem" class="icon-description filter-selected" data-value="false" src="./images/icons/icon-no.svg" alt="False">
+                    </div>
+
+                    <div class="filter-boolean" data-filter="predator">
+                        Predator: <br>
+                        <img height="30rem" class="icon-description filter-selected" data-value="true" src="./images/icons/icon-yes.svg" alt="True"> 
+                        <img height="30rem" class="icon-description filter-selected" data-value="false" src="./images/icons/icon-no.svg" alt="False">
+                    </div> 
+
+                    <div class="filter-boolean" data-filter="canClimb"> 
+                        Can Climb: <br>
+                        <img height="30rem" class="icon-description filter-selected" data-value="true" src="./images/icons/icon-yes.svg" alt="True"> 
+                        <img height="30rem" class="icon-description filter-selected" data-value="false" src="./images/icons/icon-no.svg" alt="False">
+                    </div>
+
+                    <div class="filter-boolean" data-filter="canJump"> 
+                        Can Jump: <br>
+                        <img height="30rem" class="icon-description filter-selected" data-value="true" src="./images/icons/icon-yes.svg" alt="True"> 
+                        <img height="30rem" class="icon-description filter-selected" data-value="false" src="./images/icons/icon-no.svg" alt="False">
+                    </div>
+
+                    <div class="filter-boolean" data-filter="burrower"> 
+                        Burrower: <br>
+                        <img height="30rem" class="icon-description filter-selected" data-value="true" src="./images/icons/icon-yes.svg" alt="True"> 
+                        <img height="30rem" class="icon-description filter-selected" data-value="false" src="./images/icons/icon-no.svg" alt="False">
+                    </div>
+
+                    <div class="filter-boolean">
+                        Swimming: <br>
+                        <select name="Swimming" id="">
+                            <option value="All">All</option>
+                            <option value="Can't Swim">Can't Swim</option>
+                            <option value="Wades Only">Wades Only</option>
+                            <option value="Can Swim">Can Swim</option>
+                            <option value="Can Dive">Can Dive</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div id="filter-taxonomy">
+                    <div>
+                        Class: <br>
+                        <select name="Class" id="">
+                            <option value="All">All</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        Order: <br>
+                        <select name="Order" id="">
+                            <option value="All">All</option>
+                        </select>  
+                    </div>
+
+                    <div>
+                        Family: <br>
+                        <select name="Family" id="">
+                            <option value="All">All</option>
+                        </select> 
+                    </div>
+
+                    <div>
+                        Genus: <br>
+                        <select name="Genus" id="">
+                            <option value="All">All</option>
+                        </select>
+                    </div>
+                </div>
+
+            </details>
+
+         </div>
+
+
+
+        <!-- ZOOPEDIA -->
+
+        <div id="zoopedia-list">
+                                        
+        </div>
+
+    </main>
+
+</body>
+
+
+<footer>
+
+    <a href="https://www.planetzoogame.com/" target="_blank"> 
+        <img src="./images/icons/icon-planet-zoo.svg" alt="Planet Zoo Icon">
+    </a>
+    
+    This is a fansite for the game Planet Zoo.
+</footer>
+
+<script type="module" src="./scripts/interface.js"></script>
+<script type="module" src="./scripts/zoopedia.js"></script>
+
+</html>

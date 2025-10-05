@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg45308"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Tundra.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview45310"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.4204826"
+     inkscape:cx="-669.46884"
+     inkscape:cy="542.23409"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs45305" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="display:inline;fill:#95d9f6;fill-opacity:1;stroke:none;stroke-width:0.195915"
+       d="M 0,0 V 132.29167 H 132.19375 V 0 Z"
+       id="path39542"
+       sodipodi:nodetypes="ccccc"
+       inkscape:label="Background" />
+    <path
+       style="display:inline;fill:#997e32;fill-opacity:1;stroke:none;stroke-width:0.195915"
+       d="m 0,81.33488 h 132.19375 v 50.95679 H 0 Z"
+       id="path39545"
+       inkscape:label="Ground" />
+    <path
+       style="display:inline;fill:#1e7099;fill-opacity:1;stroke:none;stroke-width:0.195915"
+       d="m -0.09792,97.247063 c 0,0 8.26617,-0.93558 12.21067,0.0693 2.04819,0.52176 3.59526,2.29158 5.58591,3.002207 5.13435,1.8329 10.97979,1.13106 16.05184,3.13014 6.83466,2.69379 12.5117,7.70733 18.69502,11.67572 4.8733,3.12763 10.76351,5.13973 14.50335,9.56231 1.78923,2.11587 3.36078,7.60497 3.36078,7.60497 L 0,132.29167 Z"
+       id="path40715"
+       sodipodi:nodetypes="caaaaaccc"
+       inkscape:label="Water" />
+    <path
+       id="path41747"
+       style="display:inline;fill:#b1b2b2;fill-opacity:1;stroke:none;stroke-width:0.195915"
+       inkscape:label="Mountain"
+       d="M 38.00303,1.42091 0,47.674 V 81.33488 H 132.19375 V 71.4865 c 0,0 -5.51492,-0.98507 -8.07851,-2.05787 -3.14773,-1.31724 -6.88988,-2.43847 -8.76395,-5.29167 -1.86365,-2.83731 0.0334,-7.00244 -1.3709,-10.09336 -1.28292,-2.82386 -4.16315,-4.60089 -6.12009,-7.00656 -1.75777,-2.16084 -4.01638,-4.07356 -5.04294,-6.66358 -1.33111,-3.3584 -1.15708,-10.77664 -1.15708,-10.77664 L 76.18277,51.64275 92.63967,71.3663 c 0,0 -7.20877,0.34729 -10.64397,-0.5604 C 76.26674,69.29214 70.29293,67.0363 66.09688,62.84965 62.2181,58.97957 62.29918,52.29905 58.70382,48.16397 55.10811,44.02849 48.53495,43.14719 45.19068,38.80556 41.94738,34.59501 40.77376,29.03036 39.75605,23.8125 38.40687,16.8952 38.96312,2.68373 38.96312,2.68373 Z" />
+    <path
+       style="display:inline;fill:#fefffe;fill-opacity:1;stroke:none;stroke-width:0.195915"
+       d="m 38.96298,2.68383 37.21979,48.95892 16.45704,19.72372 c 0,0 -7.20886,0.34698 -10.64407,-0.56071 C 76.26677,69.29199 70.29295,67.03614 66.09688,62.84948 62.2181,58.9794 62.29918,52.29905 58.70382,48.16397 55.1081,44.02848 48.53495,43.1472 45.19068,38.80556 41.94737,34.595 40.77376,29.03037 39.75605,23.8125 38.40687,16.89518 38.96298,2.68383 38.96298,2.68383 Z"
+       id="path43887"
+       sodipodi:nodetypes="cccaaaaac"
+       inkscape:label="Snow" />
+    <path
+       style="display:inline;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:0.195915"
+       d="m 132.19375,71.4865 c 0,0 -5.51492,-0.98507 -8.07851,-2.05787 -3.14773,-1.31724 -6.88988,-2.43848 -8.76396,-5.29167 -1.86365,-2.83732 0.0334,-7.00244 -1.37089,-10.09336 -1.28293,-2.82387 -4.16315,-4.60089 -6.12009,-7.00656 -1.75777,-2.16084 -4.01638,-4.07356 -5.04294,-6.66358 -1.33112,-3.35841 -1.15706,-10.77681 -1.15706,-10.77681 l 2.38108,-2.06038 28.15237,33.85687 z"
+       id="path43893"
+       sodipodi:nodetypes="caaaaacccc"
+       inkscape:label="Snow" />
+  </g>
+</svg>

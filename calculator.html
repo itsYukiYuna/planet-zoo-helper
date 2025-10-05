@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="./styles/calculator.css"/>
+
+    <!-- Eagle Font to almost match the Planet Zoo font -->
+    <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
+
+    <!-- Noto Sans inspired by official Planet Zoo website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" 
+    rel="stylesheet">
+
+    <title>Habitat Calculator</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+</head>
+
+<header>
+    <button id="button-open-menu" onclick="openMenu()"><img src="./images/icons/icon-menu.svg" alt="Open Menu"></button>
+
+    <a href="./index.html"><img src="./images/PZ-helper.png" alt="Planet Zoo Helper"></a>   
+</header>
+
+<nav id="navbar">
+    <ul>
+        <li><button id="button-close-menu" onclick="closeMenu()"><img src="./images/icons/icon-close.svg" alt="Close Menu"></button></li>
+        <li><a href="./index.html"><img src="./images/icons/icon-planet-zoo.svg" alt="Home"></a></li>
+        <li><a href="./zoopedia.html">Zoopedia</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+        <li><a href="./planner.html">Planner</a></li>
+        <li><a href="./changelog.html">Changelog</a></li>
+        <li><a href="./about.html">✦About✦</a></li>
+        <li>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();</script> 
+        </li>
+    </ul>
+</nav>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+<body>
+
+    <main>
+
+        <h1> <img height="25rem" src="./images/icons/icon-tools.svg" alt=""> Habitat Calculator</h1>
+
+
+        <!-- ANIMAL SELECTION -->
+
+        <section id="animal-selection">
+
+            
+                <div id="filters-dlc">
+                    Select DLC:
+                    
+                    <label><input type="checkbox" name="DLC" value="All" checked>ALL</label> 
+                    
+                    <img id="dlc-dropdown-toggle" class="dropdown-toggle" height="25rem" src="./images/icons/icon-dropdown.svg" alt="Dropdown Menu" role="button" aria-haspopup="true" aria-expanded="false"> <br>
+                    
+                    <ul id="dlc-dropdown-menu" class="dropdown-menu" hidden>
+                        <label><input type="checkbox" name="DLC" value="Base Game">Base Game</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Deluxe Upgrade Pack">Deluxe Upgrade Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Arctic Pack">Arctic Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="South America Pack">South America Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Australia Pack">Australia Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Aquatic Pack">Aquatic Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Southeast Asia Animal Pack">Southeast Asia Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Africa Pack">Africa Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="North America Animal Pack">North America Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Europe Pack">Europe Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Wetlands Animal Pack">Wetlands Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Conservation Pack">Conservation Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Twilight Pack">Twilight Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Grasslands Animal Pack">Grasslands Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Tropical Pack">Tropical Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Arid Animal Pack">Arid Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Oceania Pack">Oceania Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Eurasia Animal Pack">Eurasia Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Barnyard Animal Pack">Barnyard Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Zookeepers Animal Pack">Zookeepers Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Americas Animal Pack">Americas Animal Pack</label> <br>
+                        <label><input type="checkbox" name="DLC" value="Asia Animal Pack">Asia Animal Pack</label> <br>
+                    </ul>
+                </div>
+
+                <br>
+
+            <div>
+                <h3>
+                <label for="animal-select"> <img height="20rem" src="./images/icons/icon-paw.svg" alt=""> 
+                Animal Select <img height="20rem" src="./images/icons/icon-paw.svg" alt=""> </label>
+                <br>
+                <select name="animal-select" id="animal-select">
+                </select>
+                
+                <button class="button-add-animal">Add</button>
+                </h3>
+
+            </div>
+
+            <div id="selected-animal">
+
+            </div>
+
+        </section>
+
+        <!-- HABITAT REQUIREMENTS -->
+
+        <section id="habitat-requirements">
+
+            <h2><img height="25rem" src="./images/icons/icon-habitat.svg" alt=""> Habitat Requirements:</h2>
+
+            <div id="special-notes">
+                Please select an animal to see its habitat requirements.
+            </div>
+            
+            <br>
+
+            <div id="range-temperature" class="icon-description" data-tooltip="Temperature">
+                <img height="30rem" src="./images/icons/icon-temperature.jpg" alt="Temperature"> 
+                <span></span> °C
+            </div>
+
+            <div id="range-plant-coverage" class="icon-description" data-tooltip="Plant Coverage">
+                <img height="30rem" src="./images/icons/icon-plants.jpg" alt="Plant Coverage"> 
+                <span></span>
+            </div>
+
+            <br>
+
+            <div id="req-continents">
+                <h3>Continents: <span></span> </h3> 
+                
+            </div>
+
+            <br>
+
+            <div id="req-biomes">
+                <h3>Biomes: <span></span> </h3> 
+                
+            </div>
+
+            <br>
+
+            <div id="req-barrier" class="icon-description" data-tooltip="Barrier">
+                <h3>Barrier:</h3>
+                <img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier"> 
+                <span></span>
+            </div>
+
+            <br>
+
+            <h3>Minimum Area:</h3>
+
+            <div id="req-area-land" class="icon-description" data-tooltip="Land">
+                <img height="30rem" src="./images/icons/icon-area-land.jpg" alt="Land"> 
+                <span></span> m²
+            </div>
+
+            <div id="req-area-climbing" class="icon-description" data-tooltip="Climbing">
+                <img height="30rem" src="./images/icons/icon-area-climbing.jpg" alt="Climbing"> 
+                <span></span> m²
+            </div>
+
+            <div id="req-area-water" class="icon-description" data-tooltip="Water">
+                <img height="30rem" src="./images/icons/icon-area-water.jpg" alt="Water"> 
+                <span></span> m²
+            </div>
+
+            <div id="req-area-water-deep" class="icon-description" data-tooltip="Deep Water">
+                <img height="30rem" src="./images/icons/icon-area-deep-water.jpg" alt="Deep Water"> 
+                <span></span> m²
+            </div>
+
+            <br>
+
+            <h3>TERRAIN:</h3>
+
+            <div id="range-grass-short" class="icon-description" data-tooltip="Grass (Short)">
+                <img height="30rem" src="./images/icons/icon-terrain-grass-short.jpg" alt="Grass (Short)"> 
+                <span></span>
+            </div>
+            
+            <div id="range-grass-long" class="icon-description" data-tooltip="Grass (Long)">
+                <img height="30rem" src="./images/icons/icon-terrain-grass-long.jpg" alt="Grass (Long)"> 
+                <span></span>
+            </div>
+
+            <br>
+
+            <div id="range-soil" class="icon-description" data-tooltip="Soil">               
+                <img height="30rem" src="./images/icons/icon-terrain-soil.jpg" alt="Soil"> 
+                <span></span>
+            </div>
+
+            <div id="range-rock" class="icon-description" data-tooltip="Rock">  
+                <img height="30rem" src="./images/icons/icon-terrain-rock.jpg" alt="Rock"> 
+                <span></span>
+            </div>
+
+            <br>
+         
+            <div id="range-sand" class="icon-description" data-tooltip="Sand">
+                <img height="30rem" src="./images/icons/icon-terrain-sand.jpg" alt="Sand"> 
+                <span></span>
+            </div>
+            
+            <div id="range-snow" class="icon-description" data-tooltip="Snow">         
+                <img height="30rem" src="./images/icons/icon-terrain-snow.jpg" alt="Snow"> 
+                <span></span>
+            </div>
+
+            <br>
+
+            <div id="food-costs">
+                <img height="30rem" src="./images/icons/icon-food.png" alt="Food Costs"> 
+                <b>Food costs per feed: $<span></span></b>
+            </div>
+
+            <br>
+
+        </section>
+    </main>
+
+</body>
+
+
+<footer>
+
+    <a href="https://www.planetzoogame.com/" target="_blank"> 
+        <img src="./images/icons/icon-planet-zoo.svg" alt="Planet Zoo Icon">
+    </a>
+    
+    This is a fansite for the game Planet Zoo.
+</footer>
+
+<script type="module" src="./scripts/interface.js"></script>
+<script type="module" src="./scripts/calculator.js"></script>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css"/>
+
+    <!-- Eagle Font to almost match the Planet Zoo font -->
+    <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
+
+    <!-- Noto Sans inspired by official Planet Zoo website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" 
+    rel="stylesheet">
+
+    <title>Planet Zoo Helper</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+</head>
+
+<header>
+    <button id="button-open-menu" onclick="openMenu()"><img src="./images/icons/icon-menu.svg" alt="Open Menu"></button>
+    
+    <a href="./index.html"><img src="./images/PZ-helper.png" alt="Planet Zoo Helper"></a>   
+</header>
+
+<nav id="navbar">
+    <ul>
+        <li><button id="button-close-menu" onclick="closeMenu()"><img src="./images/icons/icon-close.svg" alt="Close Menu"></button></li>
+        <li><a href="https://www.planetzoogame.com/" target="_blank"><img src="./images/icons/icon-planet-zoo.svg" alt=""></a></li>
+        <li><a href="./zoopedia.html">Zoopedia</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+        <li><a href="./planner.html">Planner</a></li>
+        <li><a href="./changelog.html">Changelog</a></li>
+        <li><a href="./about.html">✦About✦</a></li>
+        <li>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();</script> 
+        </li>
+    </ul>
+</nav>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+<body>
+
+    <main>
+        <h1>
+            <img height="25rem" src="./images/icons/icon-paw.svg" alt=""> 
+            Planet Zoo Helper
+        </h1>
+
+       <article>
+            This a fan made project to help players of Planet Zoo with planning and information for their games. <br>
+            It is in no way affiliated with Frontier Developments or the Planet Zoo team. <br><br>
+            If you notice any bugs or mistakes on the website, please let me know! <br>
+            Note: animals are still being added. <br><br>
+       </article>
+
+       The following features are currently available: <br><br>
+
+       <article>
+            <h3><img height="15rem" src="./images/icons/icon-zoopedia.svg" alt=""> 
+            <a href="./zoopedia.html" target="_blank">Zoopedia</a>
+            <img height="15rem" src="./images/icons/icon-zoopedia.svg" alt=""></h3>
+
+            A filterable list of all animals in game with various data related to them. <br>
+
+            <details><summary>▶ ↓ ◀</summary>
+                You can filter by: <br>
+                Habitat/Exhibit, DLC, continents, biomes, conservation status (IUCN) <br>
+                Barrier and minimum habitat area requirements <br> 
+                Temperature, plant coverage, terrain type ranges <br>
+                Whether guests can enter the habitat or interact with the animal <br>
+                Whether the animal is a predator, can jump, climb, swim or use burrows <br>
+                Filter by taxonomy (Class, Order, Family, Genus) <br>
+                You can also sort alphabetically, by base species appeal or by food cost (for one adult per feed) 
+            </details> <br>
+
+            You can use a combination of filters to get ideas for which animals you can house together or who to build your next habitat for. <br>
+            Animals can be mixed in a habitat even if they do not get an interspecies bonus for it, although try to not mix with predators. <br><br>
+
+            I have also added a feature to open up an animal's card with more detailed information about them by clicking on an image of them (works on all pages).
+            Technically there is also an album feature in there, planned for when I'll add images of every animal's color morphs. You can see the example with the Aardvark (the project's lab rat for every feature).
+       </article>
+
+       <br>
+
+        <article>
+            <h3><img height="15rem" src="./images/icons/icon-tools.svg" alt=""> 
+            <a href="./calculator.html" target="_blank">Habitat Calculator</a>
+            <img height="15rem" src="./images/icons/icon-tools.svg" alt=""></h3>
+
+            A tool to help you check habitat requirements based on the animals you add. <br>
+
+            <details><summary>▶ ↓ ◀</summary>
+                What will be calculated: <br>
+                Temperature and plant coverage ranges <br>
+                Continents and biomes compatible to every added animal <br>
+                Barrier grade, height and whether it needs to be climb proof <br>
+                Minimum area requirements for land, climbing, water and deep water depending on the amount of animals added <br>
+                Terrain ranges required for the animal combination <br>
+                Food costs per feed depending on the amount of animals added and selected food grade <br>
+                You will also get various notes regarding what you add: <br>
+                Whether an animal is a predator (shouldn't be mixed with others) <br>
+                Whether guests can enter a habitat or interact with certain animals <br>
+                How many offspring can the females you added have in their lifetime <br>
+                A note if there's no match for continents/biomes, but animals don't need plant coverage <br>
+                Notes regarding who can breed (only alpha male/female/couple) <br>
+                How many adults and what combination of males/females you can have <br>
+                ETC.
+
+            </details> <br>
+
+            You can use this to see if the animals you added can be mixed together without issues. <br>
+            If there's issues in any areas, there will be notes like "No Match" in red. <br>
+            Use this in combination with the Zoopedia to get more ideas. <br>
+            Note that the animal icons can be clicked to see more information about the animal (like who they get interspecies bonus from). <br>
+       </article>
+
+       <br>
+
+        <article>
+            <h3><img height="15rem" src="./images/icons/icon-zookeeper.svg" alt=""> 
+            <a href="./planner.html" target="_blank">Zoo Planner</a>
+            <img height="15rem" src="./images/icons/icon-zookeeper.svg" alt=""></h3>
+
+            This is basically built with all the calculator functions, but lets you name, save, edit and delete your combos. <br>
+            The data gets saved in your device's local storage, you can only see what you saved on that specific device. <br>
+
+       </article><br><br>
+
+       <article>       
+            If you like this site and would like to support it, you can buy me a coffee! Thanks in advance! <br><br>
+
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();       
+            </script> 
+       </article><br><br>
+
+    </main>
+
+</body>
+
+
+<footer>
+
+    <a href="https://www.planetzoogame.com/" target="_blank"> 
+        <img src="./images/icons/icon-planet-zoo.svg" alt="Planet Zoo Icon">
+    </a>
+    
+    This is a fansite for the game Planet Zoo.
+</footer>
+
+<script type="module" src="./scripts/interface.js"></script>
+
+</html>

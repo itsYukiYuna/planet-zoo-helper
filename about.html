@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css"/>
+
+    <!-- Eagle Font to almost match the Planet Zoo font -->
+    <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
+
+    <!-- Noto Sans inspired by official Planet Zoo website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" 
+    rel="stylesheet">
+
+    <title>About - Planet Zoo Helper</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+</head>
+
+<header>
+    <button id="button-open-menu" onclick="openMenu()"><img src="./images/icons/icon-menu.svg" alt="Open Menu"></button>
+
+    <a href="./index.html"><img src="./images/PZ-helper.png" alt="Planet Zoo Helper"></a>   
+</header>
+
+<nav id="navbar">
+    <ul>
+        <li><button id="button-close-menu" onclick="closeMenu()"><img src="./images/icons/icon-close.svg" alt="Close Menu"></button></li>
+        <li><a href="./index.html"><img src="./images/icons/icon-planet-zoo.svg" alt="Home"></a></li>
+        <li><a href="./zoopedia.html">Zoopedia</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+        <li><a href="./planner.html">Planner</a></li>
+        <li><a href="./changelog.html">Changelog</a></li>
+        <li><a href="./about.html">✦About✦</a></li>
+        <li>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();</script> 
+        </li>
+    </ul>
+</nav>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+<body>
+
+    <main>
+        <h1>
+            <img height="25rem" src="./images/icons/icon-paw.svg" alt=""> 
+            About this Website
+            <img height="25rem" src="./images/icons/icon-paw.svg" alt=""> 
+        </h1>
+
+       <article>
+            Hello! I'm Alina (or "Yuki Yuna"), I'm a big fan of cozy games and especially Planet Zoo. <br>
+            I also like visiting zoos (and other animal related places) in almost every place I travel to if possible! <br>
+            I started this site as a project for a front end course I was taking and thought it would be fun to make something game related. <br> <br>
+
+            I took some inspiration from other fansites and spreadsheets made by the community, thank you to everyone! <br> <br>
+            <a href="https://www.planetzoopedia.com/" target="_blank">Planet Zoopedia</a> <br>
+            <a href="https://planetzooplanner.azurewebsites.net/about" target="_blank">Planet Zoo Planner by Erik Verboom</a> <br>
+            <a href="https://planetzoo.fandom.com/wiki/Planet_Zoo_Wiki" target="_blank">Planet Zoo Fandom Wiki Community</a> <br>
+            <a href="https://docs.google.com/spreadsheets/d/1J5YrIya-yduiAqBC-dEHyBYZ8Ev3KsTM6fyP7DsKUJQ/edit?gid=1480260872#gid=1480260872" target="_blank">Villanelle's Data Chest</a> <br>
+            <a href="https://docs.google.com/spreadsheets/d/1Pl4p1JgjbVZHtne9ez5sHs4nv9yHh_kEZ89IgQaXLFQ/edit?gid=1353416590#gid=1353416590" target="_blank">Senginous' Husbandry Guide and Planning Tool</a> <br><br>
+
+            <img height="25rem" src="./images/icons/icon-paw.svg" alt=""> 
+            <b>Biggest thank you to Frontier Developments for making this game of course!</b>
+            <img height="25rem" src="./images/icons/icon-paw.svg" alt=""> <br> 
+            <i> This is a fan made tool to aid players with the game. <br>
+            It is in no way associated with Frontier Developments. </i> <br><br>
+
+            I will continue to update this site with all the animals and make corrections where needed. <br>
+            If you have any suggestions or find any errors/mistakes please let me know! <br><br>
+            
+
+            <a href="https://www.reddit.com/user/itsyukiyuna/" target="_blank"><img height="50rem" src="./images/icons/icon-reddit.svg" alt="Reddit"></a> 
+            <a href="mailto:itsyukiyuna@gmail.com"><img height="50rem" src="./images/icons/icon-email.svg" alt="Email"></a> 
+            <a href="https://github.com/itsYukiYuna" target="_blank"><img height="50rem" src="./images/icons/icon-github.svg" alt="GitHub"></a>  
+
+            <br><br>
+
+            If you like this site and would like to support it, you can buy me a coffee! Thanks in advance! <br><br>
+
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();       
+            </script> 
+
+            <br><br>
+       </article>
+    </main>
+
+</body>
+
+
+<footer>
+
+    <a href="https://www.planetzoogame.com/" target="_blank"> 
+        <img src="./images/icons/icon-planet-zoo.svg" alt="Planet Zoo Icon">
+    </a>
+    
+    This is a fansite for the game Planet Zoo.
+</footer>
+
+<script type="module" src="./scripts/interface.js"></script>
+
+</html>

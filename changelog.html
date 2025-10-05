@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/global.css"/>
+
+    <!-- Eagle Font to almost match the Planet Zoo font -->
+    <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
+
+    <!-- Noto Sans inspired by official Planet Zoo website -->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" 
+    rel="stylesheet">
+
+    <title>Changelog</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+</head>
+
+<header>
+    <button id="button-open-menu" onclick="openMenu()"><img src="./images/icons/icon-menu.svg" alt="Open Menu"></button>
+
+    <a href="./index.html"><img src="./images/PZ-helper.png" alt="Planet Zoo Helper"></a>   
+</header>
+
+<nav id="navbar">
+    <ul>
+        <li><button id="button-close-menu" onclick="closeMenu()"><img src="./images/icons/icon-close.svg" alt="Close Menu"></button></li>
+        <li><a href="./index.html"><img src="./images/icons/icon-planet-zoo.svg" alt="Home"></a></li>
+        <li><a href="./zoopedia.html">Zoopedia</a></li>
+        <li><a href="./calculator.html">Calculator</a></li>
+        <li><a href="./planner.html">Planner</a></li>
+        <li><a href="./changelog.html">Changelog</a></li>
+        <li><a href="./about.html">✦About✦</a></li>       
+        <li>
+            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();</script> 
+        </li>
+    </ul>
+</nav>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+<body>
+
+    <main>
+
+        <h1><img height="25rem" src="./images/icons/icon-checklist.svg" alt=""> Changelog</h1>
+
+        <article>
+            <details>
+                <summary><h2>➤ </h2></summary>
+
+                <p>
+                    •
+                </p>
+
+            </details>
+        </article>
+     
+        <article>
+            <details>
+                <summary><h2>➤ 2025-08-01 Project Started!</h2></summary>
+
+                <p>
+                    • Created HTML files for "Index", "Zoopedia", "Calculator", "Planner", "Changelog" and "About". <br>
+                    • Created "styles" folder and in it - the CSS file "global.css" for global styles. <br>
+                    • Working on the home page first ("Planet Zoo Helper") as a base for the rest of the site. <br>
+                    • Created the structure for changelog entries. <br>
+                    • Linked the normalize stylesheet for cross-browser consistency. <br>
+                    • Linked the global.css file. <br>
+                    • Linked the Eagle font from cdnfonts.com to almost match the PZ font.<br>
+                    • Linked the Noto Sans font from Google fonts inspired by the official Planet Zoo website. <br>
+                    • Added the favicon with the PZ logo in the folder "images".<br>
+                    • Added CSS variables for fonts and colors in global.css (font heading/content and color main/menu/text).<br>
+                    • Added font details to HTML in CSS and set the details regarding the background and the background image <br>
+                    • Added styles for body, main, header, navbar and footer. <br>
+                    • Created a navbar menu for the HTML pages. <br>
+                    • Changed styles for @media portrait to be responsive on mobile and tablets. <br>
+                    • Created interface.js file to create the menu buttons for the responsive portrait version <br>
+                    • Copied HTML structure from home.html to the rest of the HTML files. <br>
+                    • Created filters.js and defined several constants. <br>
+                    • Created animals.js and a template for animal data containing filterable values, social and lifecycle data and habitat requirements. <br>
+                    • Added the first 50 habitat animals that came with the base game. <br>
+                    • Created divs and ids for Zoopedia filters in HTML (type, DLC, status, continents, biomes, data inputs and booleans). <br>
+                    • Styled all the different filter sections in CSS. <br>
+                    • Created the reRender function to render all the animals on zoopedia.html. <br>
+                    • Added an event listener to call the reRender function when the DOM is loaded. <br>
+                    • Created the functions to filter the animals based on the filter divs created previously in HTML. <br>
+                    • Styled the Habitat Calculator page with the animal selection and habitat requirements sections. <br>
+                    • Populated the animal selection dropdown with all the animals from animals.js <br>
+                    • The "Add" button adds the animal selected from the dropdown menu. <br>
+                    • For now this will add the animal name, an icon (default Aardvark for now), then male, female and juvenile icons. <br>
+                    • Added a remove button for the added animals. <br>
+                    • Added a red text alert for when the selected animal is already added or the user clicks the default "-Select an animal-" option. <br>
+                    • Adding any animal will now generate habitat requirements. <br>
+                    • Continents and Biomes will generate icons that match all the added animals, if there are none it will say "No Match" in red. <br>
+                    • The barrier div will generate the highest barrier grade and height requirement and if any animal can climb, it will say "Climb Proof". <br>
+                    • Temperature, plant coverage and terrain types will generate the min/max % requirements that match all the added animals, for none, it will say "No Match". <br>
+                    • Minimum area for land, climbing, water and deep water will be generated based off animal inputs. <br>
+                    • Special notes and warnings will appear depending on what is added. <br>
+                    • Added icons for every base game animal species. <br>
+                    • Created DLC filtering dropdown menu. <br>
+                    • Added Species Appeal values and sorting button in filters. <br>
+                    • Added Food Grades and Costs calculations and sorting button in filters. <br>
+                    • Added Alphabetical Sorting A-Z and Z-A. <br>
+                    • Added class, order, family and genus data to animals.js <br>
+                    • Added filtering by taxonomy (class, order, family, genus) with hierarchical updating of options. <br>
+                    • Added Wiki and Fandom links to animals.js <br>
+                    • Added a Reset Filters button to reset all filters to default. <br>
+                    • Created and styled the animals popup modal template. <br>
+                    • Created the function to open the modal by clicking on an animal image or icon and populating it with the correct animal data. <br>
+                    • Added the DLC selection dropdown and created a button to "Plan a Habitat" in Planner.html. <br>
+                    • Took the template from calculator.html, made some changes and added it to planner.html <br>
+                    • Added buttons to Save, Cancel, Edit and Delete a habitat plan. <br>
+                    • Added the function to create "Habitat Plans" by clicking the "Plan a Habitat" button in calculator.js <br>
+                    • Added the Species Appeal and Attitude/Relation with Humans values for when an animal is added to a habitat plan. <br>
+                    • Added the 23 exhibit animals that came with the base game. <br>
+                    • Wrote the 'About' page. <br>
+                    • Wrote an introduction and explanation of the site features on the home page. <br>
+                </p>
+
+            </details>
+        </article>
+
+        <br><br>
+    </main>
+
+</body>
+
+<footer>
+
+    <a href="https://www.planetzoogame.com/" target="_blank"> 
+        <img src="./images/icons/icon-planet-zoo.svg" alt="Planet Zoo Icon">
+    </a>
+    
+    This is a fansite for the game Planet Zoo.
+</footer>
+
+<script type="module" src="./scripts/interface.js"></script>
+
+</html>

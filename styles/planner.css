@@ -1,0 +1,225 @@
+.planner-container {
+    background-image: url("../images/pattern-zebra.svg");
+    background-color: var(--color-menu);
+    color: white;  
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.button-plan-habitat {
+    background-image: url("../images/pattern-zebra.svg");
+    background-color: var(--color-main);
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--color-menu);
+    box-shadow: 0 0 1rem rgba(19, 155, 109, 0.7);
+}
+
+#habitat-planner-button {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#habitat-requirements div {
+    display: inline-block;
+    margin: 0.3rem
+}
+
+#habitat-requirements div img {
+    vertical-align: middle;
+}
+
+#req-continents img, #req-biomes img {
+    vertical-align: middle;
+}
+
+#req-continents h3, #req-biomes h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#req-continents span, #req-biomes span {
+    margin-right: 2rem;
+}
+
+#animal-selection {
+    padding-top: 1rem;
+}
+
+#animal-selection select {
+    text-align: center;
+    font-size: smaller;
+    font-weight: 700;
+    font-family: var(--font-content);
+    color: var(--color-menu);
+    vertical-align: middle;
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--color-text);
+    background-image: url("../images/pattern-zebra.svg");
+    background-color: rgba(196, 194, 187, 1);
+}
+
+.button-add-animal {
+    background-image: url("../images/pattern-zebra.svg");
+    background-color: var(--color-main);
+    color: white;
+    font-size: smaller;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.button-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#selected-animal {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.selected-animal {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.7rem;
+}
+
+.selected-animal input, .selected-animal img {
+    vertical-align: middle;
+}
+
+input {
+    text-align: center;
+    font-weight: 700;
+    width: 3rem;
+    font-family: var(--font-content);
+    color: var(--color-menu);
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--color-menu);
+    background-color: rgba(196, 194, 187, 1);
+}
+
+
+
+#filters-dlc {
+    max-height: none;
+    width: 17rem;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    background-color: var(--color-menu);
+    color: white;
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#filters-dlc img {
+    vertical-align: middle;
+    padding-left: 1rem;
+}
+
+#filters-dlc .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    display: block;
+    padding: 0.5rem;
+    background-color: var(--color-menu);
+    border: 1px solid white;
+    border-radius: 0.6rem;
+    max-height: 18rem;
+    width: 16rem;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,.4);
+    z-index: 1000;
+}
+
+#filters-dlc .dropdown-menu[hidden] {
+    display: none;
+}
+
+#filters-dlc label input[type="checkbox"] {
+    margin: 0.3rem;           
+    inline-size: auto;
+}
+
+.planner-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.planner-buttons {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.delete-habitat {
+    background: #A9AD9F;
+    box-shadow: 0 0 1rem rgba(19, 155, 109, 0.7);
+    border-radius: 0.8rem;
+    max-width: 20rem;
+    padding: 1rem;
+    text-align: center;
+    color: var(--color-menu);
+}
+
+.delete-habitat-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;    
+    margin-top: 0.5rem;
+}
+
+.del-confirm {
+    background: red;
+    color: white;
+    font-weight: 700;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.del-cancel {
+    background: var(--color-text);
+    color: white;
+    font-weight: 700;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: auto;
+    background:rgba(196, 194, 187, 0.7);
+    border: 0.15rem solid var(--color-text);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    padding: 0.2rem;
+    max-width: 20rem;
+}
+
+@media screen and (max-width: 750px) {
+   
+    .selected-animal img {
+        height: 1.5rem;
+    }
+}
