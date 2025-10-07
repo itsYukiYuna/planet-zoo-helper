@@ -30,44 +30,6 @@
     border-radius: 0.2rem;
 }
 
-#filters-dlc {
-    max-height: none;
-    width: 16rem;
-    display: inline-block;
-    vertical-align: middle;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 0.3rem;
-    background-color: var(--color-menu);
-    overflow: visible;
-    position: relative;
-    cursor: pointer;
-}
-
-#filters-dlc img {
-    vertical-align: middle;
-}
-
-#filters-dlc .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 0.3rem);
-    left: 0;
-    display: block;
-    padding: 0.5rem 0.75rem;
-    background-color: var(--color-menu);
-    border: 1px solid white;
-    border-radius: 0.6rem;
-    max-height: 18rem;
-    max-width: 20rem;
-    overflow-y: auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,.4);
-    z-index: 1000;
-}
-
-#filters-dlc .dropdown-menu[hidden] {
-    display: none;
-}
-
 .icon-description.filter-selected {
   opacity: 1;
   transition: opacity 0.2s;
@@ -185,6 +147,7 @@ select {
     overflow: hidden;
     border-radius: 50%;
     border-style: solid;
+    cursor: pointer;
 }
 
 .zoopedia-image img {

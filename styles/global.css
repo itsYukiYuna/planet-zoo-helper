@@ -170,6 +170,54 @@ h1, h2, h3 {
     z-index: 10;
 }
 
+/* DLC FILTERS DROPDOWN MENU */
+
+#filters-dlc {
+    max-height: none;
+    width: 17rem;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    background-color: var(--color-menu);
+    color: white;
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#filters-dlc img {
+    vertical-align: middle;
+    padding-left: 1rem;
+}
+
+#filters-dlc .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.3rem);
+    left: 0;
+    display: block;
+    padding: 0.5rem;
+    background-color: var(--color-menu);
+    border: 1px solid white;
+    border-radius: 0.6rem;
+    max-height: 18rem;
+    width: 16rem;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,.4);
+    z-index: 1000;
+}
+
+#filters-dlc .dropdown-menu[hidden] {
+    display: none;
+}
+
+#filters-dlc label input[type="checkbox"] {
+    margin: 0.3rem;           
+    inline-size: auto;
+}
+
 /* MODAL STYLING */
 
 #modal-animal-card {
@@ -177,7 +225,7 @@ h1, h2, h3 {
     box-shadow: 0 0 1rem rgba(19, 155, 109, 0.7);
     padding: 1rem;
     gap: 1rem;
-    margin: 1rem;
+    margin: 0.3rem;
     border-radius: 0.5rem;
 
     position: fixed;
@@ -253,7 +301,7 @@ h1, h2, h3 {
 }
 
 .modal-animal-name h1 {
-    margin-top: 0;
+    margin-top: 0.2rem;
     margin-bottom: 0.1rem;
 }
 
@@ -270,7 +318,6 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 25%;
 }
 
 .modal-animal-general {
@@ -290,7 +337,6 @@ h1, h2, h3 {
 .modal-animal-general-item {
     display: flex;
     justify-content: space-around;
-    margin-left: 1rem;
     height: 32%;
 }
 
@@ -362,7 +408,7 @@ h1, h2, h3 {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background: white;
+    background: #072736;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -376,7 +422,7 @@ h1, h2, h3 {
     background: rgba(255, 255, 255, 1);
 }
 
-@media screen and (orientation: portrait), (max-width: 880px) {
+@media screen and (orientation: portrait), (max-width: 1060px) {
     body {
         justify-content: center;
         align-items: center;
@@ -433,7 +479,7 @@ h1, h2, h3 {
         top: 0;
         left: 0;
         margin: 0.5rem;
-        max-width: 50px;
+        max-width: 45px;
     }
 
     footer {
@@ -445,8 +491,8 @@ h1, h2, h3 {
         flex-direction: column;
         height: 95vh;
         width: 90vw;      
-        top: 0;
-        left: 0;
+        top: auto;
+        left: auto;
         transform: none;
         z-index: 1000;
         overflow-y: auto;

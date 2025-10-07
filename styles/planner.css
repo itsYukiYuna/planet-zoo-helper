@@ -76,6 +76,7 @@
     font-size: smaller;
     border-radius: 1rem;
     padding: 0.5rem;
+    margin-top: 0.3rem;
     cursor: pointer;
 }
 
@@ -108,54 +109,6 @@ input {
     border-radius: 0.3rem;
     border: 0.2rem solid var(--color-menu);
     background-color: rgba(196, 194, 187, 1);
-}
-
-
-
-#filters-dlc {
-    max-height: none;
-    width: 17rem;
-    display: inline-block;
-    vertical-align: middle;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 0.3rem;
-    background-color: var(--color-menu);
-    color: white;
-    overflow: visible;
-    position: relative;
-    cursor: pointer;
-    margin-bottom: 1rem;
-}
-
-#filters-dlc img {
-    vertical-align: middle;
-    padding-left: 1rem;
-}
-
-#filters-dlc .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 0.3rem);
-    left: 0;
-    display: block;
-    padding: 0.5rem;
-    background-color: var(--color-menu);
-    border: 1px solid white;
-    border-radius: 0.6rem;
-    max-height: 18rem;
-    width: 16rem;
-    overflow-y: auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,.4);
-    z-index: 1000;
-}
-
-#filters-dlc .dropdown-menu[hidden] {
-    display: none;
-}
-
-#filters-dlc label input[type="checkbox"] {
-    margin: 0.3rem;           
-    inline-size: auto;
 }
 
 .planner-buttons button {
@@ -221,5 +174,9 @@ input[type="text"] {
    
     .selected-animal img {
         height: 1.5rem;
+    }
+
+    #animal-selection select {
+        max-width: 15rem;
     }
 }

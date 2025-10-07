@@ -439,10 +439,9 @@ if (document.readyState === "loading") {
               <div id="req-biomes"><h3>Biomes: <span></span></h3></div>
             <br>
             <div id="req-barrier" class="icon-description" data-tooltip="Barrier">
-              <h3>Barrier:
+              <h3>Barrier:</h3>
                 <img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier">
                 <span></span>
-              </h3>
             </div>
             <br>
             <h3>Minimum Area:</h3>
@@ -606,10 +605,9 @@ if (document.readyState === "loading") {
             <div id="req-biomes"><h3>Biomes: <span>${biomesHTML}</span></h3></div>
             <br>
             <div id="req-barrier" class="icon-description" data-tooltip="Barrier">
-              <h3>Barrier:
+              <h3>Barrier:</h3>
                 <img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier">
                 <span>${h.outputs.barrier || ''}</span>
-              </h3>
             </div>
             <br>
             <h3>Minimum Area:</h3>

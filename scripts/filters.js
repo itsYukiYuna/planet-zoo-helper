@@ -6,27 +6,27 @@ const types = {
 const DLC = {
     basegame: {
         name: "Base Game",
-        icon: "./images/icons/icon-dlc-basegame.jpg"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/703080/header.jpg?t=1750845999"
     },
     deluxe: {
         name: "Deluxe Upgrade Pack",
-        icon: "./images/icons/icon-dlc-deluxe.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1098120/header.jpg?t=1706279923"
     },
     arctic: {
         name: "Arctic Pack",
-        icon: "./images/icons/icon-dlc-arctic.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1196770/header.jpg?t=1706279284"
     },
     southAmerica: {
         name: "South America Pack",
-        icon: "./images/icons/icon-dlc-south-america.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1238440/header.jpg?t=1706278873"
     },
     australia: {
         name: "Australia Pack",
-        icon: "./images/icons/icon-dlc-australia.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1349400/header.jpg?t=1706278689"
     },
     aquatic: {
         name: "Aquatic Pack",
-        icon: "./images/icons/icon-dlc-aquatic.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1471590/header.jpg?t=1706278417"
     },
     southeastAsia: {
         name: "Southeast Asia Animal Pack",
