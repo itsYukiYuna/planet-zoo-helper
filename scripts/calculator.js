@@ -156,7 +156,7 @@ function updateJuvenileVisualFeedback(container = document){
     if(d.males>0 && d.females>0){
       if(dom===dominance.alphaMale && maleInput) Object.assign(maleInput.style,{backgroundColor:'#cce4ff',border:'0.2rem solid #3399ff'});
       else if(dom===dominance.alphaFemale && femaleInput) Object.assign(femaleInput.style,{backgroundColor:'#ffd6eb',border:'0.2rem solid #ff66b3'});
-      else if(dom===dominance.alphaCouple) [maleInput,femaleInput].forEach(inp=>inp&&Object.assign(inp.style,{backgroundColor:'#e5d4ff',border:'0.2rem solid #8e50ff'}));
+      else if(dom===dominance.alphaPair) [maleInput,femaleInput].forEach(inp=>inp&&Object.assign(inp.style,{backgroundColor:'#e5d4ff',border:'0.2rem solid #8e50ff'}));
     }
   });
 }
@@ -207,7 +207,7 @@ function generateSpecialNotes(container = document){
     if(d.males>0 && d.females>0){
       if(a.dominance===dominance.alphaMale) notes.push(`<span style="color:#3399ff;">Only the ${a.name} alpha male can mate!</span>`);
       else if(a.dominance===dominance.alphaFemale) notes.push(`<span style="color:#ff66b3;">Only the ${a.name} alpha female can mate!</span>`);
-      else if(a.dominance===dominance.alphaCouple) notes.push(`<span style="color:#8e50ff;">Only the ${a.name} alpha couple can mate!</span>`);
+      else if(a.dominance===dominance.alphaPair) notes.push(`<span style="color:#8e50ff;">Only the ${a.name} alpha pair can mate!</span>`);
     }
     
     // Offspring calculation
@@ -219,12 +219,11 @@ function generateSpecialNotes(container = document){
         const minOffspringPerFemale = Math.round(cyclesPerLifetime * a.offspringPerMating.min);
         const maxOffspringPerFemale = Math.round(cyclesPerLifetime * a.offspringPerMating.max);
         
-        if (a.dominance === dominance.alphaCouple || a.dominance === dominance.alphaFemale) {
+        if (a.dominance === dominance.alphaPair || a.dominance === dominance.alphaFemale) {
           if (d.males > 0 && d.females > 0) {
-            const breedingType = a.dominance === dominance.alphaCouple ? 'alpha couple' : 'alpha female';
             const text = minOffspringPerFemale === maxOffspringPerFemale ? 
-              `The ${a.name} ${breedingType} can have about ${minOffspringPerFemale} offspring in their lifetime!` :
-              `The ${a.name} ${breedingType} can have between ${minOffspringPerFemale} and ${maxOffspringPerFemale} offspring in their lifetime!`;
+              `The ${a.name} alpha female can have about ${minOffspringPerFemale} offspring in her lifetime!` :
+              `The ${a.name} alpha female can have between ${minOffspringPerFemale} and ${maxOffspringPerFemale} offspring in her lifetime!`;
             notes.push(`<span style="color:lightblue;">${text}</span>`);
           }
         } else if (d.males > 0 && d.females > 0) {

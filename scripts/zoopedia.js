@@ -316,6 +316,12 @@ const filterByBooleans = animal =>
 
 const filterBySwimming = animal => {
   if (selectedSwimming === "All") return true;
+  
+  // Only filter animals that have swimming properties defined
+  if (animal.canWade === undefined && 
+      animal.canSwim === undefined && 
+      animal.canDive === undefined) return false;
+
   const swimMap = {
     "Can't Swim": () => !animal.canWade && !animal.canSwim && !animal.canDive,
     "Wades Only": () => animal.canWade && !animal.canSwim && !animal.canDive,

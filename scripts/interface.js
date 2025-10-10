@@ -126,8 +126,8 @@ function createAnimalModal(animal) {
     };
     
     const genderTexts = {
-        males: animal.maxMalesMixed === 1 ? "1 Male Only" : `up to ${animal.maxMalesMixed || 0} Males`,
-        females: animal.maxFemalesMixed === 1 ? "1 Female Only" : `up to ${animal.maxFemalesMixed || 0} Females`
+        males: animal.maxMalesMixed === 1 ? "1 male only" : `up to ${animal.maxMalesMixed || 0} males`,
+        females: animal.maxFemalesMixed === 1 ? "1 female only" : `up to ${animal.maxFemalesMixed || 0} females`
     };
     
     // Check if sections should be displayed
@@ -171,19 +171,19 @@ function createAnimalModal(animal) {
 
                 <div class="modal-animal-general-item">
                     <span>Continents:
-                        ${(animal.continents || []).map(continent => 
+                        <span style="display:inline-block">${(animal.continents || []).map(continent => 
                             `<p class="icon-description filter-selected" data-tooltip="${continent.name}">
                                 <img height="25rem" src="${continent.icon}" alt="${continent.name}">
                             </p>`
-                        ).join('')}
+                        ).join('')}</span>
                     </span>
 
                     <span>Biomes:
-                        ${(animal.biomes || []).map(biome => 
+                        <span style="display:inline-block">${(animal.biomes || []).map(biome => 
                             `<p class="icon-description filter-selected" data-tooltip="${biome.name}">
                                 <img height="25rem" src="${biome.icon}" alt="${biome.name}">
                             </p>`
-                        ).join('')}
+                        ).join('')}</span>
                     </span>
                 </div>
 
@@ -208,11 +208,11 @@ function createAnimalModal(animal) {
                 <div class="modal-animal-details-item">
                     <span class="icon-description filter-selected" data-tooltip="Enclosure">
                         <img height="25rem" src="./images/icons/icon-barrier.jpg" alt="Barrier"> 
-                    ${
+                        <p>${
                         animal.type === types.exhibit 
                           ? (animal.guestsEnter ? `Walkthrough ${animal.type}` : `Box ${animal.type}`)
                           : animal.type
-                    }</span>
+                    }</p></span>
                     ${animal.barrierGrade != null ? `<span>Barrier Grade:<span>${animal.barrierGrade}</span></span>` : ''}
                     ${animal.barrierHeight != null ? `<span>Barrier Height:<span>${animal.barrierHeight}m</span></span>` : ''}
                     ${animal.canClimb ? '<span>Climb Proof</span>' : ''}
@@ -239,12 +239,12 @@ function createAnimalModal(animal) {
                         const key = type === 'waterDeep' ? 'waterDeep' : `${type}Minimum`;
                         const icon = type === 'waterDeep' ? 'deep-water' : type;
                         const label = type === 'waterDeep' ? 'Deep Water' : type.charAt(0).toUpperCase() + type.slice(1);
-                        return `<span class="icon-description filter-selected" data-tooltip="Minimum ${label} Area">
+                        return animal[key] ? `<span class="icon-description filter-selected" data-tooltip="Minimum ${label} Area">
                             <img height="25rem" src="./images/icons/icon-area-${icon}.jpg" alt="Minimum ${label} Area">
-                            <span>${animal[key] || 0} m²</span>
+                            <span>${animal[key]} m²</span>
                             <p>+${animal[`${type}PerAddAdult`] || 0} m² p/Adult</p>
                             <p>+${animal[`${type}PerAddJuvenile`] || 0} m² p/Juv</p>
-                        </span>`;
+                        </span>` : '';
                     }).join('')}
                 </div>
                 ` : ''}
@@ -303,7 +303,7 @@ function createAnimalModal(animal) {
                 <div class="modal-animal-details-item">
                     <span>Mixed Group: <p>${groupDisplays.mixed}</p></span>
                     ${sections.group ? `
-                    <span>Mixed Genders: <p>${genderTexts.males}</p><p>${genderTexts.females}</p></span>
+                    <span><p>${genderTexts.males}</p><p>${genderTexts.females}</p></span>
                     <span>Males Only: <p>${groupDisplays.males}</p></span>
                     <span>Females Only: <p>${groupDisplays.females}</p></span>
                     ` : ''}
@@ -329,8 +329,8 @@ function createAnimalModal(animal) {
                         <span>
                             Grade ${grade} <img height="20rem" src="./images/icons/icon-food.png" alt="Food">
                             <p>${animal[`foodGrade${grade}`] || 'N/A'}</p>
-                            <p>$${animal[`foodGrade${grade}Cost`] || 0} p/Adult</p>
-                            <p>$${animal[`foodGrade${grade}CostJuv`] || 0} p/Juv</p>
+                            <p>$${(animal[`foodGrade${grade}Cost`] || 0).toFixed(2)} p/Adult</p>
+                            <p>$${(animal[`foodGrade${grade}CostJuv`] || 0).toFixed(2)} p/Juv</p>
                         </span>
                     `).join('')}
                 </div>

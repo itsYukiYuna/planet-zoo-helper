@@ -30,19 +30,19 @@ const DLC = {
     },
     southeastAsia: {
         name: "Southeast Asia Animal Pack",
-        icon: "./images/icons/icon-dlc-southeast-asia.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1567110/header.jpg?t=1706278101"
     },
     africa: {
         name: "Africa Pack",
-        icon: "./images/icons/icon-dlc-africa.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1647620/header.jpg?t=1706277534"
     },
     northAmerica: {
         name: "North America Animal Pack",
-        icon: "./images/icons/icon-dlc-north-america.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1747960/header.jpg?t=1706277371"
     },
     europe: {
         name: "Europe Pack",
-        icon: "./images/icons/icon-dlc-europe.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1726150/header.jpg?t=1706277437"
     },
     wetlands: {
         name: "Wetlands Animal Pack",
@@ -206,8 +206,8 @@ const relationWithHumans = {
 };
 
 const dominance = {
-    alphaCouple: {
-        type: "Alpha Couple",
+    alphaPair: {
+        type: "Alpha Pair",
         description: "Other&nbsp;adults can't mate"
     },
     alphaMale: {
@@ -228,7 +228,7 @@ const dominance = {
     },
     none: {
         type: "None",
-        description: "None"
+        description: "No mating dominance"
     },
 };
 

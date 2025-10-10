@@ -179,6 +179,7 @@ select {
     }
     .zoopedia-name {
         width: 8rem;
+        font-size: small;
     }
 
 }
