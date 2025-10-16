@@ -326,9 +326,9 @@ function createAnimalModal(animal) {
                 <h3>Food Costs</h3>
                 <div class="modal-animal-details-item">
                     ${[1, 2, 3].map(grade => `
-                        <span>
-                            Grade ${grade} <img height="20rem" src="./images/icons/icon-food.png" alt="Food">
-                            <p>${animal[`foodGrade${grade}`] || 'N/A'}</p>
+                        <span class="icon-description filter-selected" data-tooltip="${animal[`foodGrade${grade}`] || 'N/A'}">
+                            Grade ${grade} <img height="20rem" src="./images/icons/icon-food.png" alt="${animal[`foodGrade${grade}`] || 'N/A'}">
+                            <p class="display-none">${animal[`foodGrade${grade}`] || 'N/A'}</p>
                             <p>$${(animal[`foodGrade${grade}Cost`] || 0).toFixed(2)} p/Adult</p>
                             <p>$${(animal[`foodGrade${grade}CostJuv`] || 0).toFixed(2)} p/Juv</p>
                         </span>

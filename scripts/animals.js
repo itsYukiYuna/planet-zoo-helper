@@ -261,7 +261,7 @@ const animals = {
         foodGrade3CostJuv: 83.85, 
 
         speciesAppeal: 1500, 
-        enrichmentBonus: ["Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros", "Nile Lechwe", "Scimitar-Horned Oryx", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/African_buffalo", 
         fandom: "https://planetzoo.fandom.com/wiki/African_Buffalo", 
         notes: "The subspecies represented in-game is the Cape Buffalo."
@@ -691,7 +691,7 @@ const animals = {
         foodGrade3CostJuv: 64.50, 
 
         speciesAppeal: 3000, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Przewalski's Horse"], 
         wiki: "https://en.wikipedia.org/wiki/Bactrian_camel", 
         fandom: "https://planetzoo.fandom.com/wiki/Bactrian_Camel", 
         notes: "The Bactrian Camel can spit at guests in game. <br> It is also the first domesticated animal in game."
@@ -777,7 +777,7 @@ const animals = {
         foodGrade3CostJuv: 56.55, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["Colombian White-Faced Capuchin Monkey", "Giant Anteater"], 
+        enrichmentBonus: ["Colombian White-Faced Capuchin Monkey", "Giant Anteater", "Capybara"], 
         wiki: "https://en.wikipedia.org/wiki/Baird%27s_tapir", 
         fandom: "https://planetzoo.fandom.com/wiki/Baird's_Tapir", 
         notes: ""
@@ -949,7 +949,7 @@ const animals = {
         foodGrade3CostJuv: 27.15, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["African Buffalo", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Black_wildebeest", 
         fandom: "https://planetzoo.fandom.com/wiki/Black_Wildebeest", 
         notes: ""
@@ -1207,7 +1207,7 @@ const animals = {
         foodGrade3CostJuv: 900.00, 
 
         speciesAppeal: 6375, 
-        enrichmentBonus: ["Malayan Tapir"], 
+        enrichmentBonus: ["Malayan Tapir", "Asian Small-Clawed Otter", "Siamang"], 
         wiki: "https://en.wikipedia.org/wiki/Bornean_orangutan", 
         fandom: "https://planetzoo.fandom.com/wiki/Bornean_Orangutan", 
         notes: ""
@@ -1465,7 +1465,7 @@ const animals = {
         foodGrade3CostJuv: 55.02, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros", "Nile Lechwe", "Scimitar-Horned Oryx", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Common_ostrich", 
         fandom: "https://planetzoo.fandom.com/wiki/Common_Ostrich", 
         notes: "Receives enrichment bonus from 14 species in-game, the most of any animal in Planet Zoo."
@@ -1551,7 +1551,7 @@ const animals = {
         foodGrade3CostJuv: 12.15, 
 
         speciesAppeal: 750, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Common_warthog", 
         fandom: "https://planetzoo.fandom.com/wiki/Common_Warthog", 
         notes: ""
@@ -1723,7 +1723,7 @@ const animals = {
         foodGrade3CostJuv: 9.24, 
 
         speciesAppeal: 1875, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Capybara"], 
         wiki: "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_tortoise", 
         fandom: "https://planetzoo.fandom.com/wiki/Galapagos_Giant_Tortoise", 
         notes: "There are currently 12 extant subspecies, 3 are vulnerable like the one in-game (becki, duncanensis and vandenburghi)."
@@ -2583,7 +2583,7 @@ const animals = {
         foodGrade3CostJuv: 28.13, 
 
         speciesAppeal: 4500, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Asian Small-Clawed Otter", "Wild Water Buffalo"], 
         wiki: "https://en.wikipedia.org/wiki/Indian_rhinoceros", 
         fandom: "https://planetzoo.fandom.com/wiki/Indian_Rhinoceros", 
         notes: ""
@@ -2669,7 +2669,7 @@ const animals = {
         foodGrade3CostJuv: 256.20, 
 
         speciesAppeal: 1875, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Red-Crowned Crane"], 
         wiki: "https://en.wikipedia.org/wiki/Japanese_macaque", 
         fandom: "https://planetzoo.fandom.com/wiki/Japanese_Macaque", 
         notes: "Japanese Macaques in-game can bathe in any pool that is shallow enough for them to walk in and is of suitable temperature."
@@ -3099,7 +3099,7 @@ const animals = {
         foodGrade3CostJuv: 42.00, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros", "Scimitar-Horned Oryx", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Plains_zebra", 
         fandom: "https://planetzoo.fandom.com/wiki/Plains_Zebra", 
         notes: ""
@@ -3443,7 +3443,7 @@ const animals = {
         foodGrade3CostJuv: 106.20, 
 
         speciesAppeal: 5250, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros", "Nile Lechwe", "Scimitar-Horned Oryx", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Reticulated_giraffe", 
         fandom: "https://planetzoo.fandom.com/wiki/Reticulated_Giraffe", 
         notes: ""
@@ -3615,7 +3615,7 @@ const animals = {
         foodGrade3CostJuv: 61.35, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Sable_antelope", 
         fandom: "https://planetzoo.fandom.com/wiki/Sable_Antelope", 
         notes: ""
@@ -4045,7 +4045,7 @@ const animals = {
         foodGrade3CostJuv: 12.90, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Thomson's Gazelle", "Southern White Rhinoceros", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Springbok", 
         fandom: "https://planetzoo.fandom.com/wiki/Springbok", 
         notes: ""
@@ -5665,13 +5665,13 @@ const animals = {
         foodGrade3CostJuv: 6.00, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Southern White Rhinoceros"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Southern White Rhinoceros", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Thomson%27s_gazelle", 
         fandom: "https://planetzoo.fandom.com/wiki/Thomson's_Gazelle", 
         notes: ""
     }, 
 
-    // --- ARCTIC DLC ANIMALS ---  
+    // --- ARCTIC DLC ANIMALS --- 
 
     // --- # 77 ---
     arcticWolf:{
@@ -6018,7 +6018,7 @@ const animals = {
         notes: ""
     }, 
 
-    // --- SOUTH AMERICA DLC ANIMALS ---  
+    // --- SOUTH AMERICA DLC ANIMALS --- 
 
     // --- # 81 ---
     colombianWhiteFacedCapuchinMonkey:{
@@ -6101,7 +6101,7 @@ const animals = {
         foodGrade3CostJuv: 72.60, 
 
         speciesAppeal: 1500, 
-        enrichmentBonus: ["Baird's Tapir", "Giant Anteater"], 
+        enrichmentBonus: ["Baird's Tapir", "Giant Anteater", "Capybara"], 
         wiki: "https://en.wikipedia.org/wiki/Colombian_white-faced_capuchin", 
         fandom: "https://planetzoo.fandom.com/wiki/Colombian_White-Faced_Capuchin_Monkey", 
         notes: ""
@@ -6187,7 +6187,7 @@ const animals = {
         foodGrade3CostJuv: 146.25, 
 
         speciesAppeal: 3000, 
-        enrichmentBonus: ["Baird's Tapir", "Colombian White-Faced Capuchin Monkey"], 
+        enrichmentBonus: ["Baird's Tapir", "Colombian White-Faced Capuchin Monkey", "Capybara", "Maned Wolf"], 
         wiki: "https://en.wikipedia.org/wiki/Giant_anteater", 
         fandom: "https://planetzoo.fandom.com/wiki/Giant_Anteater", 
         notes: "Unlike in-game, real giant anteaters are not safe for guests to walk around."
@@ -6359,7 +6359,7 @@ const animals = {
         foodGrade3CostJuv: 62.50, 
 
         speciesAppeal: 750, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Capybara"], 
         wiki: "https://en.wikipedia.org/wiki/Llama", 
         fandom: "https://planetzoo.fandom.com/wiki/Llama", 
         notes: "Llamas can spit at guests in game."
@@ -6408,8 +6408,8 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/Red-Eyed_Tree_Frog", 
         notes: "Phyllomedusidae is a subfamily of the Hylidae family."
     }, 
-    
-    // --- AUSTRALIA DLC ANIMALS ---  
+
+    // --- AUSTRALIA DLC ANIMALS --- 
 
     // --- # 86 ---
     dingo:{
@@ -6664,7 +6664,7 @@ const animals = {
         foodGrade3CostJuv: 30.68, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["Koala"], 
+        enrichmentBonus: ["Koala", "Emu", "Red-Necked Wallaby"], 
         wiki: "https://en.wikipedia.org/wiki/Red_kangaroo", 
         fandom: "https://planetzoo.fandom.com/wiki/Red_Kangaroo", 
         notes: "It was previously under the Macropus genus."
@@ -6799,8 +6799,8 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/Eastern_Blue_Tongued_Lizard", 
         notes: ""
     }, 
-     
-    // --- AQUATIC DLC ANIMALS ---  
+
+    // --- AQUATIC DLC ANIMALS --- 
 
     // --- # 91 ---
     cuviersDwarfCaiman:{
@@ -7190,9 +7190,9 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/Diamondback_Terrapin", 
         notes: "Male maturity age is 2-3 years. <br> The Diamondback Terrapin is the first exhibit animal in-game to have an aquatic terrarium and swimming behaviours."
     }, 
-         
-    // --- SOUTHEAST ASIA DLC ANIMALS ---  
- 
+
+    // --- SOUTHEAST ASIA DLC ANIMALS --- 
+
     // --- # 96 ---
     binturong:{
         name: "Binturong", 
@@ -7274,7 +7274,7 @@ const animals = {
         foodGrade3CostJuv: 25.36, 
 
         speciesAppeal: 3375, 
-        enrichmentBonus: ["Malayan Tapir", "Sun Bear"], 
+        enrichmentBonus: ["Malayan Tapir", "Sun Bear", "Asian Small-Clawed Otter"], 
         wiki: "https://en.wikipedia.org/wiki/Binturong", 
         fandom: "https://planetzoo.fandom.com/wiki/Binturong", 
         notes: ""
@@ -7532,7 +7532,7 @@ const animals = {
         foodGrade3CostJuv: 18.10, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: ["Bornean Orangutan", "Indian Elephant", "Binturong", "Proboscis Monkey"], 
+        enrichmentBonus: ["Bornean Orangutan", "Indian Elephant", "Binturong", "Proboscis Monkey", "Asian Small-Clawed Otter", "Wild Water Buffalo"], 
         wiki: "https://en.wikipedia.org/wiki/Malayan_tapir", 
         fandom: "https://planetzoo.fandom.com/wiki/Malayan_Tapir", 
         notes: "In the 1.16 Update, the Malayan Tapir got a model rework, as before it reused the Baird's Tapir model."
@@ -7704,7 +7704,7 @@ const animals = {
         foodGrade3CostJuv: 76.28, 
 
         speciesAppeal: 5250, 
-        enrichmentBonus: ["Indian Elephant", "Malayan Tapir"], 
+        enrichmentBonus: ["Indian Elephant", "Malayan Tapir", "Asian Small-Clawed Otter"], 
         wiki: "https://en.wikipedia.org/wiki/Proboscis_monkey", 
         fandom: "https://planetzoo.fandom.com/wiki/Proboscis_Monkey", 
         notes: ""
@@ -7839,9 +7839,9 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/Giant_Malaysian_Leaf_Insect", 
         notes: "It was placed in the genus Pulchriphyllium in 2021, so its correct name now would be Pulchriphyllium giganteum."
     }, 
-         
-    // --- AFRICA DLC ANIMALS ---  
-   
+
+    // --- AFRICA DLC ANIMALS --- 
+
     // --- # 104 ---
     africanPenguin:{
         name: "African Penguin", 
@@ -8181,7 +8181,7 @@ const animals = {
         foodGrade3CostJuv: 72.90, 
 
         speciesAppeal: 4500, 
-        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Nyala", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle"], 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Nyala", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Blue Wildebeest"], 
         wiki: "https://en.wikipedia.org/wiki/Southern_white_rhinoceros", 
         fandom: "https://planetzoo.fandom.com/wiki/Southern_White_Rhinoceros", 
         notes: ""
@@ -8230,9 +8230,9 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/Sacred_Scarab_Beetle", 
         notes: ""
     }, 
-         
+
     // --- NORTH AMERICA DLC ANIMALS --- 
-       
+     
     // --- # 109 ---
     americanAlligator:{
         name: "American Alligator", 
@@ -8486,7 +8486,7 @@ const animals = {
         foodGrade3CostJuv: 6.45, 
 
         speciesAppeal: 1500, 
-        enrichmentBonus: ["American Bison"], 
+        enrichmentBonus: ["American Bison", "Striped Skunk"], 
         wiki: "https://en.wikipedia.org/wiki/Black-tailed_prairie_dog", 
         fandom: "https://planetzoo.fandom.com/wiki/Black-Tailed_Prairie_Dog", 
         notes: ""
@@ -8830,7 +8830,7 @@ const animals = {
         foodGrade3CostJuv: 46.01, 
 
         speciesAppeal: 1875, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Raccoon", "Striped Skunk"], 
         wiki: "https://en.wikipedia.org/wiki/North_American_beaver", 
         fandom: "https://planetzoo.fandom.com/wiki/North_American_Beaver", 
         notes: "The beaver requires a non-wooden barrier."
@@ -8879,9 +8879,9 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/American_Bullfrog", 
         notes: ""
     }, 
-         
+
     // --- 2021 ANNIVERSARY ANIMAL --- 
-           
+
     // --- # 117 ---
     blackAndWhiteRuffedLemur:{
         name: "Black-And-White Ruffed Lemur", 
@@ -8968,9 +8968,9 @@ const animals = {
         fandom: "https://planetzoo.fandom.com/wiki/Black-and-White_Ruffed_Lemur", 
         notes: "The Black-And-White Ruffed Lemur was added to the game for free in the 2021 anniversary update."
     }, 
-         
+
     // --- EUROPE DLC ANIMALS --- 
-           
+
     // --- # 118 ---
     alpineIbex:{
         name: "Alpine Ibex", 
@@ -9310,7 +9310,7 @@ const animals = {
         foodGrade3CostJuv: 38.70, 
 
         speciesAppeal: 1125, 
-        enrichmentBonus: [""], 
+        enrichmentBonus: ["Red Deer"], 
         wiki: "https://en.wikipedia.org/wiki/European_fallow_deer", 
         fandom: "https://planetzoo.fandom.com/wiki/European_Fallow_Deer", 
         notes: "Male life expectancy is 15 years."
@@ -9358,7 +9358,2346 @@ const animals = {
         wiki: "https://en.wikipedia.org/wiki/Fire_salamander", 
         fandom: "https://planetzoo.fandom.com/wiki/Fire_Salamander", 
         notes: ""
-    } 
+    }, 
+
+    // --- WETLANDS DLC ANIMALS --- 
+
+    // --- # 123 ---
+    asianSmallClawedOtter:{
+        name: "Asian Small-Clawed Otter", 
+        latin: "Aonyx cinereus", 
+        image: "./images/animals/asianSmallClawedOtter.webp", 
+        icon: "./images/animal-icons/asianSmallClawedOtter-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Mustelidae", 
+        genus: "Aonyx", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.asia], 
+        biomes: [biomes.aquatic, biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.vulnerable, 
+        relationWithHumans: relationWithHumans.neutral, 
+        dominance: dominance.alphaPair, 
+        matingSystem: matingSystem.monogamous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 2, 
+        groupMixedMax: 16, 
+        maxMalesMixed: 15, 
+        maxMalesBachelor: 16, 
+        maxFemalesMixed: 15, 
+        maxFemalesBachelor: 6, 
+
+        gestationMonths: 2, 
+        offspringPerMating: {min: 1, max: 3}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 14, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1, 
+        landMinimum: 210, 
+        landPerAddAdult: 30, 
+        landPerAddJuvenile: 15, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 84, 
+        waterPerAddAdult: 12, 
+        waterPerAddJuvenile: 6, 
+        waterDeep: 56, 
+        waterDeepPerAddAdult: 8, 
+        waterDeepPerAddJuvenile: 4, 
+
+        temperatureRange: {min: 17, max: 42}, 
+        plantCoverage: {min: 20, max: 90}, 
+        shortGrass: {min: 20, max: 100}, 
+        longGrass: {min: 0, max: 40}, 
+        soilRange: {min: 20, max: 70}, 
+        rockRange: {min: 0, max: 25}, 
+        sandRange: {min: 0, max: 20}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: true, 
+        burrower: false, 
+    
+        foodGrade1: "Fish Cuts", 
+        foodGrade1Cost: 455.70, 
+        foodGrade1CostJuv: 113.93, 
+        foodGrade2: "Whole Fish", 
+        foodGrade2Cost: 501.90, 
+        foodGrade2CostJuv: 125.48, 
+        foodGrade3: "Vitamin Supplements", 
+        foodGrade3Cost: 588.00, 
+        foodGrade3CostJuv: 147.00, 
+
+        speciesAppeal: 2625, 
+        enrichmentBonus: ["Bornean Orangutan", "Indian Rhinoceros", "Binturong", "Malayan Tapir", "Proboscis Monkey"], 
+        wiki: "https://en.wikipedia.org/wiki/Asian_small-clawed_otter", 
+        fandom: "https://planetzoo.fandom.com/wiki/Asian_Small-Clawed_Otter", 
+        notes: ""
+    }, 
+    // --- # 124 ---
+    capybara:{
+        name: "Capybara", 
+        latin: "Hydrochoerus hydrochaeris", 
+        image: "./images/animals/capybara.webp", 
+        icon: "./images/animal-icons/capybara-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Rodentia", 
+        family: "Caviidae", 
+        genus: "Hydrochoerus", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.southAmerica], 
+        biomes: [biomes.aquatic, biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.leaderMale, 
+        matingSystem: matingSystem.promiscuous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 4, 
+        groupMixedMax: 20, 
+        maxMalesMixed: 9, 
+        maxMalesBachelor: 20, 
+        maxFemalesMixed: 19, 
+        maxFemalesBachelor: 20, 
+
+        gestationMonths: 5, 
+        offspringPerMating: {min: 2, max: 6}, 
+        interbirthMonths: 12, 
+        maturityAge: 1.5, 
+        sterilityAge: null, 
+        lifeExpectancy: 10, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 285, 
+        landPerAddAdult: 48, 
+        landPerAddJuvenile: 24, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 70, 
+        waterPerAddAdult: 12, 
+        waterPerAddJuvenile: 6, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 13, max: 42}, 
+        plantCoverage: {min: 15, max: 100}, 
+        shortGrass: {min: 20, max: 100}, 
+        longGrass: {min: 0, max: 100}, 
+        soilRange: {min: 10, max: 60}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 30}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: true, 
+        canJump: false, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: true, 
+        burrower: false, 
+    
+        foodGrade1: "Root Vegetables and Salad", 
+        foodGrade1Cost: 150.30, 
+        foodGrade1CostJuv: 37.58, 
+        foodGrade2: "Aquatic Plants", 
+        foodGrade2Cost: 168.75, 
+        foodGrade2CostJuv: 42.19, 
+        foodGrade3: "Vitamin Supplements", 
+        foodGrade3Cost: 184.05, 
+        foodGrade3CostJuv: 46.01, 
+
+        speciesAppeal: 1875, 
+        enrichmentBonus: ["Baird's Tapir", "Galapagos Giant Tortoise", "Colombian White-Faced Capuchin Monkey", "Giant Anteater", "Llama", "Maned Wolf"], 
+        wiki: "https://en.wikipedia.org/wiki/Capybara", 
+        fandom: "https://planetzoo.fandom.com/wiki/Capybara", 
+        notes: "The Capybara can bathe in shallow pools of water of the right temperature."
+    }, 
+    // --- # 125 ---
+    nileLechwe:{
+        name: "Nile Lechwe", 
+        latin: "Kobus megaceros", 
+        image: "./images/animals/nileLechwe.webp", 
+        icon: "./images/animal-icons/nileLechwe-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Bovidae", 
+        genus: "Kobus", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.africa], 
+        biomes: [biomes.aquatic, biomes.grassland], 
+        IUCN: IUCN.endangered, 
+        relationWithHumans: relationWithHumans.shy, 
+        dominance: dominance.alphaMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.matrilineal, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 50, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 10, 
+        maxFemalesMixed: 49, 
+        maxFemalesBachelor: 50, 
+
+        gestationMonths: 8, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 13, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 390, 
+        landPerAddAdult: 50, 
+        landPerAddJuvenile: 25, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 45, 
+        waterPerAddAdult: 10, 
+        waterPerAddJuvenile: 5, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 13, max: 38},  
+        plantCoverage: {min: 0, max: 30}, 
+        shortGrass: {min: 10, max: 100}, 
+        longGrass: {min: 0, max: 100}, 
+        soilRange: {min: 30, max: 100}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 80}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 20.10, 
+        foodGrade1CostJuv: 2.01, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 22.20, 
+        foodGrade2CostJuv: 2.22, 
+        foodGrade3: "Vitamin and Mineral Supplements", 
+        foodGrade3Cost: 25.80, 
+        foodGrade3CostJuv: 2.58, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: ["African Buffalo", "Common Ostrich", "Reticulated Giraffe"], 
+        wiki: "https://en.wikipedia.org/wiki/Nile_lechwe", 
+        fandom: "https://planetzoo.fandom.com/wiki/Nile_Lechwe", 
+        notes: ""
+    }, 
+    // --- # 126 ---
+    platypus:{
+        name: "Platypus", 
+        latin: "Ornithorhynchus anatinus", 
+        image: "./images/animals/platypus.webp", 
+        icon: "./images/animal-icons/platypus-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Monotremata", 
+        family: "Ornithorhynchidae", 
+        genus: "Ornithorhynchus", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.oceania], 
+        biomes: [biomes.aquatic, biomes.grassland, biomes.tropical, biomes.temperate], 
+        IUCN: IUCN.nearThreatened, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.promiscuous, 
+        maturationRules: maturationRules.solitary, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 3, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 2, 
+        maxFemalesBachelor: 2, 
+
+        gestationMonths: 1, 
+        offspringPerMating: {min: 1, max: 3}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: 13, 
+        lifeExpectancy: 15, 
+
+        barrierGrade: 1, 
+        barrierHeight: 1, 
+        landMinimum: 180, 
+        landPerAddAdult: 30, 
+        landPerAddJuvenile: 15, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 90, 
+        waterPerAddAdult: 15, 
+        waterPerAddJuvenile: 7.5, 
+        waterDeep: 45, 
+        waterDeepPerAddAdult: 8, 
+        waterDeepPerAddJuvenile: 4, 
+
+        temperatureRange: {min: -4, max: 42}, 
+        plantCoverage: {min: 0, max: 50}, 
+        shortGrass: {min: 0, max: 40}, 
+        longGrass: {min: 0, max: 40}, 
+        soilRange: {min: 0, max: 100}, 
+        rockRange: {min: 20, max: 100}, 
+        sandRange: {min: 10, max: 60}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: false, 
+        canJump: false, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: true, 
+        burrower: true, 
+    
+        foodGrade1: "Freshwater Crustaceans", 
+        foodGrade1Cost: 592.40, 
+        foodGrade1CostJuv: 148.10, 
+        foodGrade2: "Mealworms", 
+        foodGrade2Cost: 652.45, 
+        foodGrade2CostJuv: 163.11, 
+        foodGrade3: "Whole Fish", 
+        foodGrade3Cost: 718.60, 
+        foodGrade3CostJuv: 179.65, 
+
+        speciesAppeal: 3750, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Platypus", 
+        fandom: "https://planetzoo.fandom.com/wiki/Platypus", 
+        notes: ""
+    }, 
+    // --- # 127 ---
+    redCrownedCrane:{
+        name: "Red-Crowned Crane", 
+        latin: "Grus japonensis", 
+        image: "./images/animals/redCrownedCrane.webp", 
+        icon: "./images/animal-icons/redCrownedCrane-icon.png", 
+   
+        class: "Aves", 
+        order: "Gruiformes", 
+        family: "Gruidae", 
+        genus: "Grus", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.asia], 
+        biomes: [biomes.aquatic, biomes.temperate, biomes.taiga, biomes.tundra], 
+        IUCN: IUCN.vulnerable, 
+        relationWithHumans: relationWithHumans.neutral, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.monogamous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 2, 
+        groupMixedMax: 80, 
+        maxMalesMixed: 79, 
+        maxMalesBachelor: 80, 
+        maxFemalesMixed: 79, 
+        maxFemalesBachelor: 80, 
+
+        gestationMonths: 1, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 12, 
+        maturityAge: 4, 
+        sterilityAge: null, 
+        lifeExpectancy: 40, 
+
+        barrierGrade: 1, 
+        barrierHeight: 1, 
+        landMinimum: 300, 
+        landPerAddAdult: 15, 
+        landPerAddJuvenile: 7.5, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 75, 
+        waterPerAddAdult: 9, 
+        waterPerAddJuvenile: 4.5, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -13, max: 31}, 
+        plantCoverage: {min: 0, max: 40}, 
+        shortGrass: {min: 20, max: 100}, 
+        longGrass: {min: 0, max: 70}, 
+        soilRange: {min: 10, max: 100}, 
+        rockRange: {min: 0, max: 30}, 
+        sandRange: {min: 0, max: 20}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Rice and Larvae", 
+        foodGrade1Cost: 31.50, 
+        foodGrade1CostJuv: 7.88, 
+        foodGrade2: "Amphibians", 
+        foodGrade2Cost: 34.50, 
+        foodGrade2CostJuv: 8.63, 
+        foodGrade3: "Whole Fish", 
+        foodGrade3Cost: 36.30, 
+        foodGrade3CostJuv: 9.08, 
+
+        speciesAppeal: 2250, 
+        enrichmentBonus: ["Japanese Macaque"], 
+        wiki: "https://en.wikipedia.org/wiki/Red-crowned_crane", 
+        fandom: "https://planetzoo.fandom.com/wiki/Red-Crowned_Crane", 
+        notes: ""
+    }, 
+    // --- # 128 ---
+    spectacledCaiman:{
+        name: "Spectacled Caiman", 
+        latin: "Caiman crocodilus", 
+        image: "./images/animals/spectacledCaiman.webp", 
+        icon: "./images/animal-icons/spectacledCaiman-icon.png", 
+   
+        class: "Reptilia", 
+        order: "Crocodilia", 
+        family: "Alligatoridae", 
+        genus: "Caiman", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.southAmerica], 
+        biomes: [biomes.aquatic, biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.leaderMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 6, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 6, 
+        maxFemalesMixed: 5, 
+        maxFemalesBachelor: 6, 
+
+        gestationMonths: 1, 
+        offspringPerMating: {min: 3, max: 8}, 
+        interbirthMonths: 24, 
+        maturityAge: 6, 
+        sterilityAge: null, 
+        lifeExpectancy: 50, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1, 
+        landMinimum: 240, 
+        landPerAddAdult: 18, 
+        landPerAddJuvenile: 9, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 220, 
+        waterPerAddAdult: 14, 
+        waterPerAddJuvenile: 7, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 13, max: 42},  
+        plantCoverage: {min: 10, max: 100}, 
+        shortGrass: {min: 0, max: 70}, 
+        longGrass: {min: 0, max: 50}, 
+        soilRange: {min: 0, max: 40}, 
+        rockRange: {min: 20, max: 50}, 
+        sandRange: {min: 0, max: 60}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: true, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: false, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: true, 
+        burrower: false, 
+    
+        foodGrade1: "Whole Fish", 
+        foodGrade1Cost: 600.00, 
+        foodGrade1CostJuv: 150.00, 
+        foodGrade2: "Amphibians", 
+        foodGrade2Cost: 660.00, 
+        foodGrade2CostJuv: 165.00, 
+        foodGrade3: "Calcium Supplement", 
+        foodGrade3Cost: 720.00, 
+        foodGrade3CostJuv: 180.00, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Spectacled_caiman", 
+        fandom: "https://planetzoo.fandom.com/wiki/Spectacled_Caiman", 
+        notes: ""
+    }, 
+    // --- # 129 ---
+    wildWaterBuffalo:{
+        name: "Wild Water Buffalo", 
+        latin: "Bubalus arnee", 
+        image: "./images/animals/wildWaterBuffalo.webp", 
+        icon: "./images/animal-icons/wildWaterBuffalo-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Bovidae", 
+        genus: "Bubalus", 
+
+        DLC: DLC.wetlands, 
+        type: types.habitat, 
+        continents: [continents.asia], 
+        biomes: [biomes.aquatic, biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.endangered, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.alphaMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.matrilineal, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 30, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 10, 
+        maxFemalesMixed: 29, 
+        maxFemalesBachelor: 30, 
+
+        gestationMonths: 10, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 24, 
+        maturityAge: 3, 
+        sterilityAge: 20, 
+        lifeExpectancy: 25, 
+
+        barrierGrade: 3, 
+        barrierHeight: 1.25, 
+        landMinimum: 570, 
+        landPerAddAdult: 80, 
+        landPerAddJuvenile: 40, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 20, 
+        waterPerAddAdult: 10, 
+        waterPerAddJuvenile: 5, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 17, max: 42}, 
+        plantCoverage: {min: 0, max: 50}, 
+        shortGrass: {min: 20, max: 100}, 
+        longGrass: {min: 10, max: 100}, 
+        soilRange: {min: 10, max: 50}, 
+        rockRange: {min: 0, max: 40}, 
+        sandRange: {min: 0, max: 10}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 260.10, 
+        foodGrade1CostJuv: 65.03, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 286.20, 
+        foodGrade2CostJuv: 71.55, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 335.40, 
+        foodGrade3CostJuv: 83.85, 
+
+        speciesAppeal: 1500, 
+        enrichmentBonus: ["Indian Rhinoceros", "Malayan Tapir"], 
+        wiki: "https://en.wikipedia.org/wiki/Wild_water_buffalo", 
+        fandom: "https://planetzoo.fandom.com/wiki/Wild_Water_Buffalo", 
+        notes: ""
+    }, 
+    // --- # 130 ---
+    danubeCrestedNewt:{
+        name: "Danube Crested Newt", 
+        latin: "Triturus dobrogicus", 
+        image: "./images/animals/danubeCrestedNewt.webp", 
+        icon: "./images/animal-icons/danubeCrestedNewt-icon.png", 
+   
+        class: "Amphibia", 
+        order: "Urodela", 
+        family: "Salamandridae", 
+        genus: "Triturus", 
+
+        DLC: DLC.wetlands, 
+        type: types.exhibit, 
+        continents: [continents.europe], 
+        biomes: [biomes.aquatic, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 6, 
+
+        gestationMonths: 3, 
+        offspringPerMating: {min: 1, max: 3}, 
+        interbirthMonths: 9, 
+        maturityAge: 2.5, 
+        sterilityAge: null, 
+        lifeExpectancy: 7.5, 
+
+        temperatureRange: {min: 12, max: 25}, 
+        humidityRange: {min: 55, max: 75}, 
+
+        guestsEnter: false, 
+    
+        foodGrade1: "Invertebrates", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 1875, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Danube_crested_newt", 
+        fandom: "https://planetzoo.fandom.com/wiki/Danube_Crested_Newt", 
+        notes: ""
+    }, 
+
+    // --- CONSERVATION DLC ANIMALS --- 
+
+    // --- # 131 ---
+    amurLeopard:{
+        name: "Amur Leopard", 
+        latin: "Panthera pardus orientalis", 
+        image: "./images/animals/amurLeopard.webp", 
+        icon: "./images/animal-icons/amurLeopard-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Felidae", 
+        genus: "Panthera", 
+
+        DLC: DLC.conservation, 
+        type: types.habitat, 
+        continents: [continents.asia], 
+        biomes: [biomes.temperate, biomes.taiga], 
+        IUCN: IUCN.criticallyEndangered, 
+        relationWithHumans: relationWithHumans.neutral, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.promiscuous, 
+        maturationRules: maturationRules.solitary, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 1, 
+
+        gestationMonths: 3, 
+        offspringPerMating: {min: 1, max: 3}, 
+        interbirthMonths: 33, 
+        maturityAge: 3, 
+        sterilityAge: 15, 
+        lifeExpectancy: 15, 
+
+        barrierGrade: 3, 
+        barrierHeight: 3, 
+        landMinimum: 705, 
+        landPerAddAdult: 111, 
+        landPerAddJuvenile: 55.5, 
+        climbingMinimum: 45, 
+        climbingPerAddAdult: 14, 
+        climbingPerAddJuvenile: 7, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -15, max: 31}, 
+        plantCoverage: {min: 0, max: 65}, 
+        shortGrass: {min: 20, max: 50}, 
+        longGrass: {min: 0, max: 10}, 
+        soilRange: {min: 10, max: 60}, 
+        rockRange: {min: 0, max: 80}, 
+        sandRange: {min: 0, max: 10}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: true, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: true, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Processed Meat", 
+        foodGrade1Cost: 750.00, 
+        foodGrade1CostJuv: 187.50, 
+        foodGrade2: "Whole Carcass", 
+        foodGrade2Cost: 840.00, 
+        foodGrade2CostJuv: 210.00, 
+        foodGrade3: "Calcium Supplement", 
+        foodGrade3Cost: 885.00, 
+        foodGrade3CostJuv: 221.25, 
+
+        speciesAppeal: 5250, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Amur_leopard", 
+        fandom: "https://planetzoo.fandom.com/wiki/Amur_Leopard", 
+        notes: ""
+    }, 
+    // --- # 132 ---
+    przewalskisHorse:{
+        name: "Przewalski's Horse", 
+        latin: "Equus ferus przewalskii", 
+        image: "./images/animals/przewalskisHorse.webp", 
+        icon: "./images/animal-icons/przewalskisHorse-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Perissodactyla", 
+        family: "Equidae", 
+        genus: "Equus", 
+
+        DLC: DLC.conservation, 
+        type: types.habitat, 
+        continents: [continents.asia], 
+        biomes: [biomes.desert, biomes.grassland], 
+        IUCN: IUCN.endangered, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.alphaMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.matrilineal, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 8, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 8, 
+        maxFemalesMixed: 7, 
+        maxFemalesBachelor: 8, 
+
+        gestationMonths: 12, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 25, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 575, 
+        landPerAddAdult: 172, 
+        landPerAddJuvenile: 86, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -9, max: 43},  
+        plantCoverage: {min: 0, max: 30}, 
+        shortGrass: {min: 0, max: 100}, 
+        longGrass: {min: 20, max: 100}, 
+        soilRange: {min: 0, max: 100}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 40}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 78.15, 
+        foodGrade1CostJuv: 19.54, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 86.05, 
+        foodGrade2CostJuv: 21.51, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 100.80, 
+        foodGrade3CostJuv: 25.20, 
+
+        speciesAppeal: 2250, 
+        enrichmentBonus: ["Bactrian Camel"], 
+        wiki: "https://en.wikipedia.org/wiki/Przewalski%27s_horse", 
+        fandom: "https://planetzoo.fandom.com/wiki/Przewalski's_Horse", 
+        notes: ""
+    }, 
+    // --- # 133 ---
+    scimitarHornedOryx:{
+        name: "Scimitar-Horned Oryx", 
+        latin: "Oryx dammah", 
+        image: "./images/animals/scimitarHornedOryx.webp", 
+        icon: "./images/animal-icons/scimitarHornedOryx-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Bovidae", 
+        genus: "Oryx", 
+
+        DLC: DLC.conservation, 
+        type: types.habitat, 
+        continents: [continents.africa], 
+        biomes: [biomes.desert, biomes.grassland], 
+        IUCN: IUCN.endangered, 
+        relationWithHumans: relationWithHumans.shy, 
+        dominance: dominance.alphaMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.matrilineal, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 40, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 40, 
+        maxFemalesMixed: 39, 
+        maxFemalesBachelor: 40, 
+
+        gestationMonths: 8, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 10, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 18, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 270, 
+        landPerAddAdult: 40, 
+        landPerAddJuvenile: 20, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 3, max: 48}, 
+        plantCoverage: {min: 0, max: 25}, 
+        shortGrass: {min: 0, max: 100}, 
+        longGrass: {min: 20, max: 100}, 
+        soilRange: {min: 0, max: 40}, 
+        rockRange: {min: 0, max: 40}, 
+        sandRange: {min: 0, max: 100}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 100.20, 
+        foodGrade1CostJuv: 25.05, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 110.10, 
+        foodGrade2CostJuv: 27.53, 
+        foodGrade3: "Fruit and Salt Licks", 
+        foodGrade3Cost: 126.00, 
+        foodGrade3CostJuv: 31.50, 
+
+        speciesAppeal: 1875, 
+        enrichmentBonus: ["African Buffalo", "Common Ostrich", "Plains Zebra", "Reticulated Giraffe"], 
+        wiki: "https://en.wikipedia.org/wiki/Scimitar_oryx", 
+        fandom: "https://planetzoo.fandom.com/wiki/Scimitar-Horned_Oryx", 
+        notes: "The Scimitar-Horned Oryx was the first 'Extinct in the Wild' animal to be added in-game. Its IUCN status was updated in 2023."
+    }, 
+    // --- # 134 ---
+    siamang:{
+        name: "Siamang", 
+        latin: "Symphalangus syndactylus", 
+        image: "./images/animals/siamang.webp", 
+        icon: "./images/animal-icons/siamang-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Primates", 
+        family: "Hylobatidae", 
+        genus: "Symphalangus", 
+
+        DLC: DLC.conservation, 
+        type: types.habitat, 
+        continents: [continents.asia], 
+        biomes: [biomes.tropical], 
+        IUCN: IUCN.endangered, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.alphaPair, 
+        matingSystem: matingSystem.monogamous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 2, 
+        groupMixedMax: 6, 
+        maxMalesMixed: 5, 
+        maxMalesBachelor: 6, 
+        maxFemalesMixed: 5, 
+        maxFemalesBachelor: 6, 
+
+        gestationMonths: 8, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 36, 
+        maturityAge: 8, 
+        sterilityAge: 40, 
+        lifeExpectancy: 40, 
+
+        barrierGrade: 3, 
+        barrierHeight: 5, 
+        landMinimum: 305, 
+        landPerAddAdult: 80, 
+        landPerAddJuvenile: 40, 
+        climbingMinimum: 80, 
+        climbingPerAddAdult: 35, 
+        climbingPerAddJuvenile: 17.5, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 17, max: 42}, 
+        plantCoverage: {min: 35, max: 100}, 
+        shortGrass: {min: 20, max: 100}, 
+        longGrass: {min: 0, max: 10}, 
+        soilRange: {min: 0, max: 100}, 
+        rockRange: {min: 0, max: 30}, 
+        sandRange: {min: 0, max: 10}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: true, 
+        canWade: false, 
+        canSwim: false, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Monkey Chow", 
+        foodGrade1Cost: 500.00, 
+        foodGrade1CostJuv: 250.00, 
+        foodGrade2: "Fruit, Leaves and Vegetables", 
+        foodGrade2Cost: 575.00, 
+        foodGrade2CostJuv: 287.50, 
+        foodGrade3: "Eggs", 
+        foodGrade3Cost: 600.00, 
+        foodGrade3CostJuv: 300.00, 
+
+        speciesAppeal: 4500, 
+        enrichmentBonus: ["Bornean Orangutan"], 
+        wiki: "https://en.wikipedia.org/wiki/Siamang", 
+        fandom: "https://planetzoo.fandom.com/wiki/Siamang", 
+        notes: ""
+    }, 
+    // --- # 135 ---
+    axolotl:{
+        name: "Axolotl", 
+        latin: "Ambystoma mexicanum", 
+        image: "./images/animals/axolotl.webp", 
+        icon: "./images/animal-icons/axolotl-icon.png", 
+   
+        class: "Amphibia", 
+        order: "Urodela", 
+        family: "Ambystomatidae", 
+        genus: "Ambystoma", 
+
+        DLC: DLC.conservation, 
+        type: types.exhibit, 
+        continents: [continents.northAmerica], 
+        biomes: [biomes.aquatic, biomes.desert], 
+        IUCN: IUCN.criticallyEndangered, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.promiscuous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 5, 
+
+        gestationMonths: 0, 
+        offspringPerMating: {min: 2, max: 3}, 
+        interbirthMonths: 12, 
+        maturityAge: 1, 
+        sterilityAge: null, 
+        lifeExpectancy: 8, 
+
+        temperatureRange: {min: 15, max: 20}, 
+        humidityRange: {min: 80, max: 90}, 
+ 
+        guestsEnter: false, 
+    
+        foodGrade1: "Worms, insects, small fish", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 2250, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Axolotl", 
+        fandom: "https://planetzoo.fandom.com/wiki/Axolotl", 
+        notes: ""
+    }, 
+
+    // --- TWILIGHT DLC ANIMALS --- 
+
+    // --- # 136 ---
+    commonWombat:{
+        name: "Common Wombat", 
+        latin: "Vombatus ursinus", 
+        image: "./images/animals/commonWombat.webp", 
+        icon: "./images/animal-icons/commonWombat-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Diprotodontia", 
+        family: "Vombatidae", 
+        genus: "Vombatus", 
+
+        DLC: DLC.twilight, 
+        type: types.habitat, 
+        continents: [continents.oceania], 
+        biomes: [biomes.grassland, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.solitary, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 1, 
+
+        gestationMonths: 4, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 24, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 21, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1, 
+        landMinimum: 225, 
+        landPerAddAdult: 45, 
+        landPerAddJuvenile: 22.5, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -4, max: 38}, 
+        plantCoverage: {min: 0, max: 30}, 
+        shortGrass: {min: 0, max: 70}, 
+        longGrass: {min: 20, max: 70}, 
+        soilRange: {min: 0, max: 100}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 30}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: false, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: true, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 144.00, 
+        foodGrade1CostJuv: 14.40, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 164.20, 
+        foodGrade2CostJuv: 16.42, 
+        foodGrade3: "Root Vegetables", 
+        foodGrade3Cost: 181.00, 
+        foodGrade3CostJuv: 18.10, 
+
+        speciesAppeal: 3750, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Common_wombat", 
+        fandom: "https://planetzoo.fandom.com/wiki/Common_Wombat", 
+        notes: ""
+    }, 
+    // --- # 137 ---
+    raccoon:{
+        name: "Raccoon", 
+        latin: "Procyon lotor", 
+        image: "./images/animals/raccoon.webp", 
+        icon: "./images/animal-icons/raccoon-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Procyonidae", 
+        genus: "Procyon", 
+
+        DLC: DLC.twilight, 
+        type: types.habitat, 
+        continents: [continents.northAmerica, continents.southAmerica], 
+        biomes: [biomes.aquatic, biomes.grassland, biomes.tropical, biomes.temperate, biomes.taiga], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.promiscuous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 2, 
+        groupMixedMax: 5, 
+        maxMalesMixed: 2, 
+        maxMalesBachelor: 4, 
+        maxFemalesMixed: 3, 
+        maxFemalesBachelor: 10, 
+
+        gestationMonths: 2, 
+        offspringPerMating: {min: 2, max: 4}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 14, 
+
+        barrierGrade: 2, 
+        barrierHeight: 3, 
+        landMinimum: 210, 
+        landPerAddAdult: 45, 
+        landPerAddJuvenile: 22.5, 
+        climbingMinimum: 20, 
+        climbingPerAddAdult: 5, 
+        climbingPerAddJuvenile: 2.5, 
+        waterMinimum: 10, 
+        waterPerAddAdult: 5, 
+        waterPerAddJuvenile: 2.5, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -9, max: 42}, 
+        plantCoverage: {min: 10, max: 100}, 
+        shortGrass: {min: 30, max: 100}, 
+        longGrass: {min: 0, max: 60}, 
+        soilRange: {min: 10, max: 60}, 
+        rockRange: {min: 0, max: 30}, 
+        sandRange: {min: 0, max: 30}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: true, 
+        canJump: true, 
+        canClimb: true, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Dry Kibble", 
+        foodGrade1Cost: 72.45, 
+        foodGrade1CostJuv: 18.11, 
+        foodGrade2: "Mealworms", 
+        foodGrade2Cost: 86.95, 
+        foodGrade2CostJuv: 21.74, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 101.45, 
+        foodGrade3CostJuv: 25.36, 
+
+        speciesAppeal: 1875, 
+        enrichmentBonus: ["North American Beaver", "Striped Skunk"], 
+        wiki: "https://en.wikipedia.org/wiki/Raccoon", 
+        fandom: "https://planetzoo.fandom.com/wiki/Raccoon", 
+        notes: ""
+    }, 
+    // --- # 138 ---
+    redFox:{
+        name: "Red Fox", 
+        latin: "Vulpes vulpes", 
+        image: "./images/animals/redFox.webp", 
+        icon: "./images/animal-icons/redFox-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Canidae", 
+        genus: "Vulpes", 
+
+        DLC: DLC.twilight, 
+        type: types.habitat, 
+        continents: [continents.africa, continents.europe, continents.asia, continents.northAmerica], 
+        biomes: [biomes.desert, biomes.grassland, biomes.temperate, biomes.taiga, biomes.tundra], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.shy, 
+        dominance: dominance.alphaPair, 
+        matingSystem: matingSystem.monogamous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 14, 
+        maxMalesMixed: 13, 
+        maxMalesBachelor: 14, 
+        maxFemalesMixed: 13, 
+        maxFemalesBachelor: 14, 
+
+        gestationMonths: 2, 
+        offspringPerMating: {min: 3, max: 6}, 
+        interbirthMonths: 12, 
+        maturityAge: 0.85, 
+        sterilityAge: 10, 
+        lifeExpectancy: 12, 
+
+        barrierGrade: 2, 
+        barrierHeight: 3, 
+        landMinimum: 250, 
+        landPerAddAdult: 40, 
+        landPerAddJuvenile: 20, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -13, max: 43}, 
+        plantCoverage: {min: 0, max: 100}, 
+        shortGrass: {min: 20, max: 70}, 
+        longGrass: {min: 0, max: 20}, 
+        soilRange: {min: 10, max: 100}, 
+        rockRange: {min: 0, max: 40}, 
+        sandRange: {min: 0, max: 20}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: true, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: true, 
+    
+        foodGrade1: "Processed Meat", 
+        foodGrade1Cost: 162.50, 
+        foodGrade1CostJuv: 40.63, 
+        foodGrade2: "Whole Carcass", 
+        foodGrade2Cost: 178.70, 
+        foodGrade2CostJuv: 44.68, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 195.00, 
+        foodGrade3CostJuv: 48.75, 
+
+        speciesAppeal: 3000, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Red_fox", 
+        fandom: "https://planetzoo.fandom.com/wiki/Red_Fox", 
+        notes: ""
+    }, 
+    // --- # 139 ---
+    stripedSkunk:{
+        name: "Striped Skunk", 
+        latin: "Mephitis mephitis", 
+        image: "./images/animals/stripedSkunk.webp", 
+        icon: "./images/animal-icons/stripedSkunk-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Mephitidae", 
+        genus: "Mephitis", 
+
+        DLC: DLC.twilight, 
+        type: types.habitat, 
+        continents: [continents.northAmerica], 
+        biomes: [biomes.grassland, biomes.temperate, biomes.taiga], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.shy, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.solitary, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 2, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 1, 
+
+        gestationMonths: 2, 
+        offspringPerMating: {min: 1, max: 5}, 
+        interbirthMonths: 12, 
+        maturityAge: 1, 
+        sterilityAge: null, 
+        lifeExpectancy: 8, 
+
+        barrierGrade: 1, 
+        barrierHeight: 1.25, 
+        landMinimum: 180, 
+        landPerAddAdult: 42, 
+        landPerAddJuvenile: 21, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -7, max: 38}, 
+        plantCoverage: {min: 0, max: 100}, 
+        shortGrass: {min: 40, max: 100}, 
+        longGrass: {min: 0, max: 30}, 
+        soilRange: {min: 0, max: 80}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 20}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: false, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: true, 
+    
+        foodGrade1: "Dry Kibble", 
+        foodGrade1Cost: 47.82, 
+        foodGrade1CostJuv: 11.96, 
+        foodGrade2: "Insects", 
+        foodGrade2Cost: 57.40, 
+        foodGrade2CostJuv: 14.35, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 66.95, 
+        foodGrade3CostJuv: 16.74, 
+
+        speciesAppeal: 1500, 
+        enrichmentBonus: ["Black-Tailed Prairie Dog", "North American Beaver", "Raccoon"], 
+        wiki: "https://en.wikipedia.org/wiki/Striped_skunk", 
+        fandom: "https://planetzoo.fandom.com/wiki/Striped_Skunk", 
+        notes: ""
+    }, 
+    // --- # 140 ---
+    egyptianFruitBat:{
+        name: "Egyptian Fruit Bat", 
+        latin: "Rousettus aegyptiacus", 
+        image: "./images/animals/egyptianFruitBat.webp", 
+        icon: "./images/animal-icons/egyptianFruitBat-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Chiroptera", 
+        family: "Pteropodidae", 
+        genus: "Rousettus", 
+
+        DLC: DLC.twilight, 
+        type: types.exhibit, 
+        continents: [continents.africa, continents.asia], 
+        biomes: [biomes.desert, biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.leastConcern, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.promiscuous, 
+
+        groupSizeMin: 5, 
+        groupMixedMax: 35, 
+
+        gestationMonths: 4, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 8, 
+        maturityAge: 1.25, 
+        sterilityAge: null, 
+        lifeExpectancy: 17, 
+
+        temperatureRange: {min: 21, max: 32}, 
+
+        guestsEnter: true, 
+    
+        foodGrade1: "Fruit", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 2625, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Egyptian_fruit_bat", 
+        fandom: "https://planetzoo.fandom.com/wiki/Egyptian_Fruit_Bat", 
+        notes: "The Egyptian Fruit Bat was the first Walkthrough Exhibit animal."
+    }, 
+
+    // --- 2022 ANNIVERSARY ANIMAL --- 
+
+    // --- # 141 ---
+    redDeer:{
+        name: "Red Deer", 
+        latin: "Cervus elaphus", 
+        image: "./images/animals/redDeer.webp", 
+        icon: "./images/animal-icons/redDeer-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Cervidae", 
+        genus: "Cervus", 
+
+        DLC: DLC.basegame, 
+        type: types.habitat, 
+        continents: [continents.africa, continents.europe, continents.asia], 
+        biomes: [biomes.grassland, biomes.temperate, biomes.taiga], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.neutral, 
+        dominance: dominance.alphaMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.matrilineal, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 9, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 10, 
+        maxFemalesMixed: 8, 
+        maxFemalesBachelor: 15, 
+
+        gestationMonths: 8, 
+        offspringPerMating: {min: 1, max: 2}, 
+        interbirthMonths: 12, 
+        maturityAge: 4, 
+        sterilityAge: null, 
+        lifeExpectancy: 27, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.5, 
+        landMinimum: 360, 
+        landPerAddAdult: 45, 
+        landPerAddJuvenile: 22.5, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -10, max: 38}, 
+        plantCoverage: {min: 0, max: 100}, 
+        shortGrass: {min: 30, max: 100}, 
+        longGrass: {min: 0, max: 50}, 
+        soilRange: {min: 0, max: 60}, 
+        rockRange: {min: 0, max: 20}, 
+        sandRange: {min: 0, max: 20}, 
+        snowRange: {min: 0, max: 100}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 60.00, 
+        foodGrade1CostJuv: 15.00, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 66.00, 
+        foodGrade2CostJuv: 16.50, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 77.40, 
+        foodGrade3CostJuv: 19.35, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: ["European Fallow Deer"], 
+        wiki: "https://en.wikipedia.org/wiki/Red_deer", 
+        fandom: "https://planetzoo.fandom.com/wiki/Red_Deer", 
+        notes: "The Red Deer was added to the game for free in the 2022 anniversary update."
+    }, 
+
+    // --- GRASSLANDS DLC ANIMALS --- 
+
+    // --- # 142 ---
+    blueWildebeest:{
+        name: "Blue Wildebeest", 
+        latin: "Connochaetes taurinus", 
+        image: "./images/animals/blueWildebeest.webp", 
+        icon: "./images/animal-icons/blueWildebeest-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Bovidae", 
+        genus: "Connochaetes", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.africa], 
+        biomes: [biomes.grassland], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.neutral, 
+        dominance: dominance.alphaMale, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.matrilineal, 
+
+        groupSizeMin: 4, 
+        groupMixedMax: 20, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 9, 
+        maxFemalesMixed: 19, 
+        maxFemalesBachelor: 20, 
+
+        gestationMonths: 8, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 12, 
+        maturityAge: 4, 
+        sterilityAge: null, 
+        lifeExpectancy: 18, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 410, 
+        landPerAddAdult: 40, 
+        landPerAddJuvenile: 20, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 8, max: 40}, 
+        plantCoverage: {min: 0, max: 30}, 
+        shortGrass: {min: 10, max: 100}, 
+        longGrass: {min: 20, max: 100}, 
+        soilRange: {min: 10, max: 40}, 
+        rockRange: {min: 0, max: 40}, 
+        sandRange: {min: 0, max: 30}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 42.00, 
+        foodGrade1CostJuv: 10.50, 
+        foodGrade2: "Herbivore pellets", 
+        foodGrade2Cost: 46.20, 
+        foodGrade2CostJuv: 11.55, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 54.30, 
+        foodGrade3CostJuv: 13.58, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: ["African Buffalo", "Black Wildebeest", "Common Ostrich", "Common Warthog", "Plains Zebra", "Reticulated Giraffe", "Sable Antelope", "Springbok", "Thomson's Gazelle", "Southern White Rhinoceros"], 
+        wiki: "https://en.wikipedia.org/wiki/Blue_wildebeest", 
+        fandom: "https://planetzoo.fandom.com/wiki/Blue_Wildebeest", 
+        notes: ""
+    }, 
+    // --- # 143 ---
+    caracal:{
+        name: "Caracal", 
+        latin: "Caracal caracal", 
+        image: "./images/animals/caracal.webp", 
+        icon: "./images/animal-icons/caracal-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Felidae", 
+        genus: "Caracal", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.africa, continents.asia], 
+        biomes: [biomes.desert, biomes.grassland, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.shy, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.solitary, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 1, 
+
+        gestationMonths: 2, 
+        offspringPerMating: {min: 1, max: 4}, 
+        interbirthMonths: 24, 
+        maturityAge: 1.5, 
+        sterilityAge: 15, 
+        lifeExpectancy: 18, 
+
+        barrierGrade: 3, 
+        barrierHeight: 3, 
+        landMinimum: 534, 
+        landPerAddAdult: 111, 
+        landPerAddJuvenile: 55.5, 
+        climbingMinimum: 81, 
+        climbingPerAddAdult: 54, 
+        climbingPerAddJuvenile: 27, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 0, max: 43}, 
+        plantCoverage: {min: 0, max: 40}, 
+        shortGrass: {min: 0, max: 40}, 
+        longGrass: {min: 0, max: 20}, 
+        soilRange: {min: 0, max: 80}, 
+        rockRange: {min: 0, max: 80}, 
+        sandRange: {min: 30, max: 100}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: true, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: true, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Processed Meat", 
+        foodGrade1Cost: 281.25, 
+        foodGrade1CostJuv: 70.31, 
+        foodGrade2: "Whole Carcass", 
+        foodGrade2Cost: 315.00, 
+        foodGrade2CostJuv: 78.75, 
+        foodGrade3: "Vitamin and Mineral Supplements", 
+        foodGrade3Cost: 331.90, 
+        foodGrade3CostJuv: 82.98, 
+
+        speciesAppeal: 3000, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Caracal", 
+        fandom: "https://planetzoo.fandom.com/wiki/Caracal", 
+        notes: ""
+    }, 
+    // --- # 144 ---
+    emu:{
+        name: "Emu", 
+        latin: "Dromaius novaehollandiae", 
+        image: "./images/animals/emu.webp", 
+        icon: "./images/animal-icons/emu-icon.png", 
+   
+        class: "Aves", 
+        order: "Casuariiformes", 
+        family: "Casuariidae", 
+        genus: "Dromaius", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.oceania], 
+        biomes: [biomes.desert, biomes.grassland, biomes.tropical, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polyandrous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 6, 
+        maxMalesMixed: 5, 
+        maxMalesBachelor: 6, 
+        maxFemalesMixed: 5, 
+        maxFemalesBachelor: 6, 
+
+        gestationMonths: 3, 
+        offspringPerMating: {min: 1, max: 5}, 
+        interbirthMonths: 12, 
+        maturityAge: 1.5, 
+        sterilityAge: null, 
+        lifeExpectancy: 15, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 450, 
+        landPerAddAdult: 75, 
+        landPerAddJuvenile: 37.5, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 3, max: 43}, 
+        plantCoverage: {min: 0, max: 40}, 
+        shortGrass: {min: 20, max: 100}, 
+        longGrass: {min: 0, max: 80}, 
+        soilRange: {min: 0, max: 50}, 
+        rockRange: {min: 0, max: 40}, 
+        sandRange: {min: 10, max: 80}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Fruit and Vegetables", 
+        foodGrade1Cost: 500.10, 
+        foodGrade1CostJuv: 50.01, 
+        foodGrade2: "Seeds", 
+        foodGrade2Cost: 520.20, 
+        foodGrade2CostJuv: 52.02, 
+        foodGrade3: "Locusts and Crickets", 
+        foodGrade3Cost: 550.20, 
+        foodGrade3CostJuv: 55.02, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: ["Red Kangaroo", "Red-Necked Wallaby"], 
+        wiki: "https://en.wikipedia.org/wiki/Emu", 
+        fandom: "https://planetzoo.fandom.com/wiki/Emu", 
+        notes: ""
+    }, 
+    // --- # 145 ---
+    manedWolf:{
+        name: "Maned Wolf", 
+        latin: "Chrysocyon brachyurus", 
+        image: "./images/animals/manedWolf.webp", 
+        icon: "./images/animal-icons/manedWolf-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Canidae", 
+        genus: "Chrysocyon", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.southAmerica], 
+        biomes: [biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.nearThreatened, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.monogamous, 
+        maturationRules: maturationRules.solitary, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 3, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 2, 
+
+        gestationMonths: 2, 
+        offspringPerMating: {min: 1, max: 5}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 14, 
+
+        barrierGrade: 2, 
+        barrierHeight: 3, 
+        landMinimum: 930, 
+        landPerAddAdult: 310, 
+        landPerAddJuvenile: 155, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: 10, max: 42}, 
+        plantCoverage: {min: 0, max: 30}, 
+        shortGrass: {min: 0, max: 100}, 
+        longGrass: {min: 20, max: 100}, 
+        soilRange: {min: 0, max: 20}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 10}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Dry Kibble", 
+        foodGrade1Cost: 325.20, 
+        foodGrade1CostJuv: 81.30, 
+        foodGrade2: "Small Vertebrates", 
+        foodGrade2Cost: 364.20, 
+        foodGrade2CostJuv: 91.05, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 383.70, 
+        foodGrade3CostJuv: 95.93, 
+
+        speciesAppeal: 1875, 
+        enrichmentBonus: ["Giant Anteater", "Capybara"], 
+        wiki: "https://en.wikipedia.org/wiki/Maned_wolf", 
+        fandom: "https://planetzoo.fandom.com/wiki/Maned_Wolf", 
+        notes: ""
+    }, 
+    // --- # 146 ---
+    nineBandedArmadillo:{
+        name: "Nine-Banded Armadillo", 
+        latin: "Dasypus novemcinctus", 
+        image: "./images/animals/nineBandedArmadillo.webp", 
+        icon: "./images/animal-icons/nineBandedArmadillo-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Cingulata", 
+        family: "Dasypodidae", 
+        genus: "Dasypus", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.northAmerica, continents.southAmerica], 
+        biomes: [biomes.desert, biomes.grassland, biomes.tropical, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.shy, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 1, 
+
+        gestationMonths: 7, 
+        offspringPerMating: {min: 4, max: 4}, 
+        interbirthMonths: 12, 
+        maturityAge: 2, 
+        sterilityAge: null, 
+        lifeExpectancy: 15, 
+
+        barrierGrade: 1, 
+        barrierHeight: 1, 
+        landMinimum: 182, 
+        landPerAddAdult: 16, 
+        landPerAddJuvenile: 8, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -5, max: 43}, 
+        plantCoverage: {min: 0, max: 80}, 
+        shortGrass: {min: 10, max: 40}, 
+        longGrass: {min: 0, max: 20}, 
+        soilRange: {min: 0, max: 60}, 
+        rockRange: {min: 0, max: 30}, 
+        sandRange: {min: 10, max: 60}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: false, 
+        canJump: false, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: true, 
+    
+        foodGrade1: "Rice and Larvae", 
+        foodGrade1Cost: 31.50, 
+        foodGrade1CostJuv: 7.88, 
+        foodGrade2: "Mealworms", 
+        foodGrade2Cost: 34.50, 
+        foodGrade2CostJuv: 8.63, 
+        foodGrade3: "Vitamin and Mineral Supplements", 
+        foodGrade3Cost: 36.30, 
+        foodGrade3CostJuv: 9.08, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Nine-banded_armadillo", 
+        fandom: "https://planetzoo.fandom.com/wiki/Nine-Banded_Armadillo", 
+        notes: ""
+    }, 
+    // --- # 147 ---
+    redNeckedWallaby:{
+        name: "Red-Necked Wallaby", 
+        latin: "Notamacropus rufogriseus", 
+        image: "./images/animals/redNeckedWallaby.webp", 
+        icon: "./images/animal-icons/redNeckedWallaby-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Diprotodontia", 
+        family: "Macropodidae", 
+        genus: "Notamacropus", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.oceania], 
+        biomes: [biomes.grassland, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        relationWithHumans: relationWithHumans.confident, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.promiscuous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 30, 
+        maxMalesMixed: 29, 
+        maxMalesBachelor: 30, 
+        maxFemalesMixed: 29, 
+        maxFemalesBachelor: 30, 
+
+        gestationMonths: 8, 
+        offspringPerMating: {min: 1, max: 1}, 
+        interbirthMonths: 12, 
+        maturityAge: 1.5, 
+        sterilityAge: null, 
+        lifeExpectancy: 17, 
+
+        barrierGrade: 2, 
+        barrierHeight: 3, 
+        landMinimum: 250, 
+        landPerAddAdult: 45, 
+        landPerAddJuvenile: 22.5, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -4, max: 43}, 
+        plantCoverage: {min: 0, max: 60}, 
+        shortGrass: {min: 0, max: 100}, 
+        longGrass: {min: 20, max: 100}, 
+        soilRange: {min: 0, max: 100}, 
+        rockRange: {min: 0, max: 10}, 
+        sandRange: {min: 0, max: 10}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: false, 
+        guestsEnter: true, 
+        guestsInteract: true, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: false, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 47.55, 
+        foodGrade1CostJuv: 11.89, 
+        foodGrade2: "Herbivore Pellets", 
+        foodGrade2Cost: 52.35, 
+        foodGrade2CostJuv: 13.09, 
+        foodGrade3: "Fruit and Vegetables", 
+        foodGrade3Cost: 61.35, 
+        foodGrade3CostJuv: 15.34, 
+
+        speciesAppeal: 750, 
+        enrichmentBonus: ["Red Kangaroo", "Emu"], 
+        wiki: "https://en.wikipedia.org/wiki/Red-necked_wallaby", 
+        fandom: "https://planetzoo.fandom.com/wiki/Red-Necked_Wallaby", 
+        notes: ""
+    }, 
+    // --- # 148 ---
+    stripedHyena:{
+        name: "Striped Hyena", 
+        latin: "Hyaena hyaena", 
+        image: "./images/animals/stripedHyena.webp", 
+        icon: "./images/animal-icons/stripedHyena-icon.png", 
+   
+        class: "Mammalia", 
+        order: "Carnivora", 
+        family: "Hyaenidae", 
+        genus: "Hyaena", 
+
+        DLC: DLC.grasslands, 
+        type: types.habitat, 
+        continents: [continents.africa, continents.asia], 
+        biomes: [biomes.desert, biomes.grassland, biomes.tropical, biomes.temperate], 
+        IUCN: IUCN.nearThreatened, 
+        relationWithHumans: relationWithHumans.neutral, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.monogamous, 
+        maturationRules: maturationRules.gregarious, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 7, 
+        maxMalesMixed: 6, 
+        maxMalesBachelor: 7, 
+        maxFemalesMixed: 1, 
+        maxFemalesBachelor: 7, 
+
+        gestationMonths: 3, 
+        offspringPerMating: {min: 2, max: 4}, 
+        interbirthMonths: 15, 
+        maturityAge: 2, 
+        sterilityAge: 12, 
+        lifeExpectancy: 16, 
+
+        barrierGrade: 2, 
+        barrierHeight: 1.25, 
+        landMinimum: 1162, 
+        landPerAddAdult: 92, 
+        landPerAddJuvenile: 46, 
+        climbingMinimum: 0, 
+        climbingPerAddAdult: 0, 
+        climbingPerAddJuvenile: 0, 
+        waterMinimum: 0, 
+        waterPerAddAdult: 0, 
+        waterPerAddJuvenile: 0, 
+        waterDeep: 0, 
+        waterDeepPerAddAdult: 0, 
+        waterDeepPerAddJuvenile: 0, 
+
+        temperatureRange: {min: -4, max: 43}, 
+        plantCoverage: {min: 0, max: 40}, 
+        shortGrass: {min: 10, max: 80}, 
+        longGrass: {min: 0, max: 50}, 
+        soilRange: {min: 20, max: 100}, 
+        rockRange: {min: 0, max: 40}, 
+        sandRange: {min: 0, max: 100}, 
+        snowRange: {min: 0, max: 0}, 
+
+        predator: true, 
+        guestsEnter: false, 
+        guestsInteract: false, 
+        canJump: true, 
+        canClimb: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+        burrower: false, 
+    
+        foodGrade1: "Processed Meat", 
+        foodGrade1Cost: 437.60, 
+        foodGrade1CostJuv: 109.40, 
+        foodGrade2: "Whole Carcass", 
+        foodGrade2Cost: 490.10, 
+        foodGrade2CostJuv: 122.53, 
+        foodGrade3: "Whole Carcass and Bones", 
+        foodGrade3Cost: 516.35, 
+        foodGrade3CostJuv: 129.09, 
+
+        speciesAppeal: 2250, 
+        enrichmentBonus: [""], 
+        wiki: "https://en.wikipedia.org/wiki/Striped_hyena", 
+        fandom: "https://planetzoo.fandom.com/wiki/Striped_Hyena", 
+        notes: ""
+    }, 
+    // --- # 149 ---
+    cloudlessSulphur:{
+        name: "Cloudless Sulphur", 
+        latin: "Phoebis sennae", 
+        image: "./images/animals/cloudlessSulphur.webp", 
+        icon: "./images/animal-icons/cloudlessSulphur-icon.png", 
+   
+        class: "Insecta", 
+        order: "Lepidoptera", 
+        family: "Pieridae", 
+        genus: "Phoebis", 
+
+        DLC: DLC.grasslands, 
+        type: types.exhibit, 
+        continents: [continents.northAmerica, continents.southAmerica], 
+        biomes: [biomes.grassland, biomes.temperate, biomes.taiga], 
+        IUCN: IUCN.leastConcern, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 90, 
+
+        gestationMonths: 0, 
+        offspringPerMating: {min: 3, max: 6}, 
+        interbirthMonths: null, 
+        maturityAge: 0.12, 
+        sterilityAge: null, 
+        lifeExpectancy: 0.75, 
+
+        temperatureRange: {min: 21, max: 28}, 
+
+        guestsEnter: true, 
+    
+        foodGrade1: "Nectar", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: ["European Peacock", "Menelaus Blue Morpho", "Monarch", "Old World Swallowtail"], 
+        wiki: "https://en.wikipedia.org/wiki/Phoebis_sennae", 
+        fandom: "https://planetzoo.fandom.com/wiki/Cloudless_Sulphur", 
+        notes: ""
+    }, 
+    // --- # 150 ---
+    europeanPeacock:{
+        name: "European Peacock", 
+        latin: "Aglais io", 
+        image: "./images/animals/europeanPeacock.webp", 
+        icon: "./images/animal-icons/europeanPeacock-icon.png", 
+   
+        class: "Insecta", 
+        order: "Lepidoptera", 
+        family: "Nymphalidae", 
+        genus: "Aglais", 
+
+        DLC: DLC.grasslands, 
+        type: types.exhibit, 
+        continents: [continents.europe, continents.asia], 
+        biomes: [biomes.grassland, biomes.temperate], 
+        IUCN: IUCN.leastConcern, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.monogamous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 90, 
+
+        gestationMonths: 0, 
+        offspringPerMating: {min: 3, max: 6}, 
+        interbirthMonths: null, 
+        maturityAge: 0.12, 
+        sterilityAge: null, 
+        lifeExpectancy: 1, 
+
+        temperatureRange: {min: 18, max: 25}, 
+
+        guestsEnter: true, 
+    
+        foodGrade1: "Nectar, Overripe Fruit, Tree Sap", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 1125, 
+        enrichmentBonus: ["Cloudless Sulphur", "Menelaus Blue Morpho", "Monarch", "Old World Swallowtail"], 
+        wiki: "https://en.wikipedia.org/wiki/Aglais_io", 
+        fandom: "https://planetzoo.fandom.com/wiki/European_Peacock", 
+        notes: ""
+    }, 
+    // --- # 151 ---
+    menelausBlueMorpho:{
+        name: "Menelaus Blue Morpho", 
+        latin: "Morpho menelaus", 
+        image: "./images/animals/menelausBlueMorpho.webp", 
+        icon: "./images/animal-icons/menelausBlueMorpho-icon.png", 
+   
+        class: "Insecta", 
+        order: "Lepidoptera", 
+        family: "Nymphalidae", 
+        genus: "Morpho", 
+
+        DLC: DLC.grasslands, 
+        type: types.exhibit, 
+        continents: [continents.southAmerica], 
+        biomes: [biomes.grassland, biomes.tropical], 
+        IUCN: IUCN.dataDeficient, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 90, 
+
+        gestationMonths: 0, 
+        offspringPerMating: {min: 3, max: 6}, 
+        interbirthMonths: null, 
+        maturityAge: 0.25, 
+        sterilityAge: null, 
+        lifeExpectancy: 0.33, 
+
+        temperatureRange: {min: 21, max: 35}, 
+
+        guestsEnter: true, 
+    
+        foodGrade1: "Rotting Fruit and Meat, Nectar", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 1875, 
+        enrichmentBonus: ["Cloudless Sulphur", "European Peacock", "Monarch", "Old World Swallowtail"], 
+        wiki: "https://en.wikipedia.org/wiki/Morpho_menelaus", 
+        fandom: "https://planetzoo.fandom.com/wiki/Menelaus_Blue_Morpho", 
+        notes: ""
+    }, 
+    // --- # 152 ---
+    monarch:{
+        name: "Monarch", 
+        latin: "Danaus plexippus", 
+        image: "./images/animals/monarch.webp", 
+        icon: "./images/animal-icons/monarch-icon.png", 
+   
+        class: "Insecta", 
+        order: "Lepidoptera", 
+        family: "Nymphalidae", 
+        genus: "Danaus", 
+
+        DLC: DLC.grasslands, 
+        type: types.exhibit, 
+        continents: [continents.asia, continents.northAmerica, continents.southAmerica, continents.oceania], 
+        biomes: [biomes.grassland, biomes.tropical, biomes.temperate], 
+        IUCN: IUCN.endangered, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 90, 
+
+        gestationMonths: 0, 
+        offspringPerMating: {min: 3, max: 6}, 
+        interbirthMonths: null, 
+        maturityAge: 0.08, 
+        sterilityAge: null, 
+        lifeExpectancy: 0.75, 
+
+        temperatureRange: {min: 21, max: 30}, 
+
+        guestsEnter: true, 
+    
+        foodGrade1: "Nectar", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 1500, 
+        enrichmentBonus: ["Cloudless Sulphur", "European Peacock", "Menelaus Blue Morpho", "Old World Swallowtail"], 
+        wiki: "https://en.wikipedia.org/wiki/Monarch_butterfly", 
+        fandom: "https://planetzoo.fandom.com/wiki/Monarch", 
+        notes: "Occasional migrants are found in Europe and Africa."
+    }, 
+    // --- # 153 ---
+    oldWorldSwallowtail:{
+        name: "Old World Swallowtail", 
+        latin: "Papilio machaon", 
+        image: "./images/animals/oldWorldSwallowtail.webp", 
+        icon: "./images/animal-icons/oldWorldSwallowtail-icon.png", 
+   
+        class: "Insecta", 
+        order: "Lepidoptera", 
+        family: "Papilionidae", 
+        genus: "Papilio", 
+
+        DLC: DLC.grasslands, 
+        type: types.exhibit, 
+        continents: [continents.europe, continents.asia, continents.northAmerica], 
+        biomes: [biomes.grassland, biomes.temperate, biomes.taiga, biomes.tundra], 
+        IUCN: IUCN.leastConcern, 
+        dominance: dominance.none, 
+        matingSystem: matingSystem.polygynous, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 90, 
+
+        gestationMonths: 0, 
+        offspringPerMating: {min: 3, max: 6}, 
+        interbirthMonths: null, 
+        maturityAge: 0.12, 
+        sterilityAge: null, 
+        lifeExpectancy: 0.75, 
+
+        temperatureRange: {min: 18, max: 24}, 
+
+        guestsEnter: true, 
+    
+        foodGrade1: "Nectar", 
+        foodGrade1Cost: 0, 
+
+        speciesAppeal: 1500, 
+        enrichmentBonus: ["Cloudless Sulphur", "European Peacock", "Menelaus Blue Morpho", "Monarch"], 
+        wiki: "https://en.wikipedia.org/wiki/Papilio_machaon", 
+        fandom: "https://planetzoo.fandom.com/wiki/Old_World_Swallowtail", 
+        notes: ""
+    }
 }
 
 

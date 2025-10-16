@@ -46,19 +46,19 @@ const DLC = {
     },
     wetlands: {
         name: "Wetlands Animal Pack",
-        icon: "./images/icons/icon-dlc-wetlands.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1934140/header.jpg?t=1706277256"
     },
     conservation: {
         name: "Conservation Pack",
-        icon: "./images/icons/icon-dlc-conservation.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2013290/header.jpg?t=1706277200"
     },
     twilight: {
         name: "Twilight Pack",
-        icon: "./images/icons/icon-dlc-twilight.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2150050/header.jpg?t=1706277132"
     },
     grasslands: {
         name: "Grasslands Animal Pack",
-        icon: "./images/icons/icon-dlc-grasslands.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2199210/header.jpg?t=1706277050"
     },
     tropical: {
         name: "Tropical Pack",

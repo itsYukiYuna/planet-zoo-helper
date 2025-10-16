@@ -247,7 +247,7 @@ function generateSpecialNotes(container = document){
   
   if(data.length && data.every(d=>d.animal.guestsEnter)){
     notes.push('<span style="color:green;">Guests can enter this habitat.</span>');
-    data.forEach(d=>d.animal.guestsInteract && notes.push(`<span style="color:green;">Animal encounters available for ${d.animal.name}!</span>`));
+    data.forEach(d=>d.animal.guestsInteract && notes.push(`<span style="color:green;">Animal encounters available for the ${d.animal.name}!</span>`));
   }
   
   updateJuvenileVisualFeedback(container);
