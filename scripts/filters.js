@@ -62,35 +62,35 @@ const DLC = {
     },
     tropical: {
         name: "Tropical Pack",
-        icon: "./images/icons/icon-dlc-tropical.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2346830/header.jpg?t=1706276990"
     },
     arid: {
         name: "Arid Animal Pack",
-        icon: "./images/icons/icon-dlc-arid.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2436600/header.jpg?t=1706276322"
     },
     oceania: {
         name: "Oceania Pack",
-        icon: "./images/icons/icon-dlc-oceania.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2502240/header.jpg?t=1706276135"
     },
     eurasia: {
         name: "Eurasia Animal Pack",
-        icon: "./images/icons/icon-dlc-eurasia.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2675740/header.jpg?t=1706276161"
     },
     barnyard: {
         name: "Barnyard Animal Pack",
-        icon: "./images/icons/icon-dlc-barnyard.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2837730/header.jpg?t=1714471314"
     },
     zookeepers: {
         name: "Zookeepers Animal Pack",
-        icon: "./images/icons/icon-dlc-zookeepers.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3146420/header.jpg?t=1728986434"
     },
     americas: {
         name: "Americas Animal Pack",
-        icon: "./images/icons/icon-dlc-americas.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3473820/4b1ad7a50ad48e0e70be6e2557a6bb09a2b1753e/header.jpg?t=1744711154"
     },
     asia: {
         name: "Asia Animal Pack",
-        icon: "./images/icons/icon-dlc-asia.webp"
+        icon: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3586990/18ce6c97184a9d3641a40860a0f40aee50696c88/header.jpg?t=1750845628"
     }
 };
 
