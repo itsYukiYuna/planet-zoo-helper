@@ -240,7 +240,7 @@ h1, h2, h3 {
 
     display: grid;
     grid-auto-columns: 35vw;
-    grid-auto-rows: 15vh;
+    grid-auto-rows: 14vh;
     grid-template-areas: 
     "animal-card-image animal-card-general"
     "animal-card-image animal-card-details"

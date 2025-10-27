@@ -82,7 +82,6 @@ async function loadAnimalsData() {
     }
 }
 
-// Helper functions for modal
 const getBooleanIcon = (value) => value ? './images/icons/icon-yes.svg' : './images/icons/icon-no.svg';
 
 const formatRange = (range, suffix = '') => 
@@ -114,7 +113,6 @@ function createAnimalModal(animal) {
     modal.id = 'modal-container';
     modal.dataset.animal = animal.name;
     
-    // Calculate display values
     const groupDisplays = {
         mixed: `${animal.groupSizeMin || 0}-${animal.groupMixedMax || 0}`,
         males: (animal.groupSizeMin === animal.maxMalesBachelor) 
@@ -130,7 +128,6 @@ function createAnimalModal(animal) {
         females: animal.maxFemalesMixed === 1 ? "1 female only" : `up to ${animal.maxFemalesMixed || 0} females`
     };
     
-    // Check if sections should be displayed
     const sections = {
         booleans: hasAllProperties(animal, ['predator', 'guestsEnter', 'guestsInteract', 'canWade', 'canSwim', 'canDive', 'canJump', 'canClimb', 'burrower']),
         terrain: hasAllProperties(animal, ['shortGrass', 'longGrass', 'soilRange', 'rockRange', 'sandRange', 'snowRange']),
@@ -391,24 +388,19 @@ function setupAnimalModalListeners() {
         await loadAnimalsData();
         if (!animalsData) return;
 
-        // Try different methods to find animal name
         const getAnimalName = () => {
-            // From zoopedia card
             const zoopediaCard = img.closest('.zoopedia-animal');
             if (zoopediaCard) return zoopediaCard.querySelector('h3')?.textContent.trim();
             
-            // From selected animal
             const selectedCard = img.closest('.selected-animal');
             if (selectedCard) return selectedCard.querySelector('h3')?.textContent.trim();
             
-            // From icon tooltip
             const iconContainer = img.closest('.icon-description');
             if (iconContainer?.hasAttribute('data-tooltip')) {
                 const tooltip = iconContainer.getAttribute('data-tooltip');
                 if (Object.values(animalsData).some(a => a.name === tooltip)) return tooltip;
             }
-            
-            // From img alt
+
             if (img.alt && Object.values(animalsData).some(a => a.name === img.alt)) return img.alt;
             
             return null;
@@ -433,19 +425,12 @@ if (document.readyState === 'loading') {
     setupAnimalModalListeners();
 }
 
-// Album (image carousel) support
+// Album (image carousel) function
 const albumCache = Object.create(null);
 
 const toCandidateFolders = (name) => {
-    const trimmed = name.trim();
-    const noSpace = trimmed.replace(/\s+/g,'')
-    const flatLower = noSpace.toLowerCase();
-    const lowerCamel = noSpace.charAt(0).toLowerCase() + noSpace.slice(1);
-    const pascal = noSpace.charAt(0).toUpperCase() + noSpace.slice(1);
-    const kebab = trimmed.toLowerCase().replace(/\s+/g,'-');
-    const snake = trimmed.toLowerCase().replace(/\s+/g,'_');
-    const spacedLower = trimmed.toLowerCase();
-    return [...new Set([lowerCamel, flatLower, kebab, snake, pascal, noSpace, spacedLower, trimmed])];
+    const lowerCamel = name.trim().toLowerCase().replace(/'/g, '').replace(/[-'\s]+(\w)/g, (_, c) => c.toUpperCase());
+    return [lowerCamel];
 };
 
 const testImage = (url) => new Promise(res => {
@@ -458,7 +443,7 @@ const testImage = (url) => new Promise(res => {
 async function loadAlbum(animal) {
     if (albumCache[animal.name] !== undefined) return albumCache[animal.name];
     
-    const exts = ['png','jpg'];
+    const exts = ['png'];
     const folders = toCandidateFolders(animal.name);
     
     for (const folder of folders) {
@@ -466,7 +451,7 @@ async function loadAlbum(animal) {
             const first = `./images/albums/${folder}/1.${ext}`;
             if (await testImage(first)) {
                 const images = [first];
-                for (let i = 2; i <= 50; i++) {
+                for (let i = 2; i <= 20; i++) {
                     let found = false;
                     for (const e of exts) {
                         const cand = `./images/albums/${folder}/${i}.${e}`;
@@ -479,7 +464,6 @@ async function loadAlbum(animal) {
                     if (!found) break;
                 }
                 albumCache[animal.name] = {images, folder, idx: -1};
-                console.debug('[Album] Found', animal.name, folder, images);
                 return albumCache[animal.name];
             }
         }

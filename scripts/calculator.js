@@ -368,11 +368,11 @@ if (document.readyState === "loading") {
   initialize();
 }
 
-// === HABITAT PLANNER (Non-breaking extension) =================================
+// === HABITAT PLANNER
 (function(){
   const LS_KEY = 'pzHabitats';
-  let editingHabitatId = null;          // id of habitat currently being edited (unsaved or in edit mode)
-  let originalSnapshot = null;          // snapshot for cancel during edit
+  let editingHabitatId = null; 
+  let originalSnapshot = null; 
   let idCounter = Date.now();
 
   function loadSavedArray(){
@@ -393,7 +393,7 @@ if (document.readyState === "loading") {
   }
 
   function habitatNameInputTemplate(){
-    return `<input type="text" class="habitat-name-input" placeholder="Habitat Name">`;
+    return `<input type="text" name="habitat-name" class="habitat-name-input" placeholder="Habitat Name">`;
   }
 
   function editorTemplate(){
