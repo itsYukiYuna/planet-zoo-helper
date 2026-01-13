@@ -15804,9 +15804,9 @@ const animals = {
         gestationMonths: 6, 
         offspringPerMating: {min: 1, max: 1}, 
         interbirthMonths: 6, 
-        maturityAge: 1, 
-        sterilityAge: 1, 
-        lifeExpectancy: 1, 
+        maturityAge: 1.5, 
+        sterilityAge: null, 
+        lifeExpectancy: 14, 
 
         barrierGrade: 2, 
         barrierHeight: 1.25, 
