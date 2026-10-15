@@ -1,5 +1,5 @@
 .planner-container {
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: var(--color-menu);
     color: white;  
     text-align: center;
@@ -12,7 +12,7 @@
 }
 
 .button-plan-habitat {
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: var(--color-main);
     color: white;
     font-size: larger;
@@ -65,12 +65,12 @@
     vertical-align: middle;
     border-radius: 0.3rem;
     border: 0.2rem solid var(--color-text);
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: rgba(196, 194, 187, 1);
 }
 
 .button-add-animal {
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: var(--color-main);
     color: white;
     font-size: smaller;

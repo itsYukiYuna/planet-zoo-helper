@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/pz2/styles/global.css"/>
+    <link rel="stylesheet" href="/pz2/styles/zoopedia.css"/>
+
+    <!-- Eagle Font to almost match the Planet Zoo font -->
+    <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
+
+    <!-- Noto Sans inspired by official Planet Zoo website -->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" 
+    rel="stylesheet">
+
+    <title>Zoopedia</title>
+
+    <link rel="icon" type="image/x-icon" href="/pz2/images/favicon.svg">
+
+</head>
+
+<body>
+    <header id="menu">
+        <div class="logo-container">
+            <a href="/"><img src="/images/PZ-helper.png" alt="Planet Zoo Helper"></a>
+        </div>
+
+        <button id="button-open-menu" onclick="openMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </button>  
+
+        <nav>
+            <button id="button-close-menu" onclick="closeMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </button>
+
+            <div class="navbar">
+                <li><span><a href="/pz2/zoopedia">Zoopedia</a></span></li>
+                <li><a href="/pz2/planner">Planner</a></li>
+                <li><a href="/">🛠WIP🛠</a></li>
+            </div>
+        </nav>  
+    </header>
+
+    <div class="zoopedia-page">
+
+        <div id="zoopedia-filters">
+
+        </div>
+
+        <div id="zoopedia-list">
+
+        </div>
+
+    </div>
+    
+</body>
+
+    <script type="module" src="/pz2/scripts/interface.js"></script>
+
+</html>

@@ -1,7 +1,7 @@
 import {
     types, DLC, continents, biomes, IUCN, relationWithHumans, dominance, matingSystem, maturationRules
-} from "./filters.js";
-import {animals} from "./animals.js";
+} from "/pz1/scripts/filters.js";
+import {animals} from "/pz1/scripts/animals.js";
 
 // --- Filter State ---
 let selectedTypes = ["Habitat", "Exhibit"];

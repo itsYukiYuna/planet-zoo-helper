@@ -1,0 +1,133 @@
+html {
+    font-family: 'Eagle', 'Noto Sans', sans-serif;
+    background-color: var(--color-background);
+    background-image: url(/images/pattern-animal.svg);
+}
+
+:root {
+    --font-heading: 'Eagle', sans-serif;
+    --font-content: 'Noto Sans', sans-serif;
+    --color-background: rgb(255, 242, 221);
+    --color-background-dark: rgb(230, 218, 199);
+    --color-menu: rgb(138, 151, 81);
+    --color-menu-dark: rgb(89, 105, 68);
+    --color-text: rgb(114, 91, 75);  
+    --color-text-dark: rgb(51, 48, 41);
+}
+
+.home-page {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+
+    color: var(--color-text);
+    font-size: large;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    overflow-x: hidden;
+}
+
+.home-page a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.list-games h2 a:hover {
+    color: var(--color-background);
+    background-color: var(--color-menu);
+    padding: 0.15rem 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.home-page p {
+    font-family: var(--font-content);
+    font-weight: 600;
+}
+
+.home-title {
+    padding: 0.5rem 2rem;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    clip-path: polygon(
+    /* Above (Top Edge) */
+    0% 4%,     15% 1%,    30% 3%,    45% 0%,    60% 4%,    75% 1%,    90% 3%,    100% 0%,
+    /* Right Edge */
+    98% 25%,   99% 50%,   97% 75%,   100% 100%,
+    /* Below (Bottom Edge) */
+    85% 97%,   70% 99%,   55% 96%,   40% 100%,  25% 98%,   10% 99%,   0% 96%,
+    /* Left Edge */
+    2% 75%,    1% 50%,    3% 25%
+);
+}
+
+.list-games {
+    display: flex;
+    line-height: 1vmax;
+}
+
+.list-games .game-image {
+    display: block;
+    overflow: hidden;
+    border: 3px solid var(--color-text);
+    border-radius: 1rem;
+    margin: 0.25rem 2rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.list-games img {
+    display: block;
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.list-games .game-image:hover {
+    border: ridge var(--color-text);
+}
+
+.list-games .game-image:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.75);
+}
+
+.changelog {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: medium;
+    border: groove var(--color-text);
+    border-radius: 1rem;
+    background-color: rgb(from var(--color-background-dark) r g b / 0.5);
+}
+
+.changelog img {
+    max-width: 75vw;
+    border: ridge var(--color-text);
+    border-radius: 1rem;
+}
+
+details > summary {
+    list-style: none;
+}
+
+@media screen and (orientation: portrait), (max-width: 1000px) {
+    .home-page {
+        max-width: 95vw;
+        padding: 0.5rem;
+        font-size: medium;
+    }
+
+    .list-games {
+        display: block;
+        line-height: 0.75rem;
+    }
+
+    .list-games img {
+        max-width: 75vw;
+        height: auto;
+    }
+}

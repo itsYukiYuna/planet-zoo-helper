@@ -1,0 +1,31 @@
+.zoopedia-page {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5rem;
+    margin: auto 5vw;
+}
+
+#zoopedia-filters {
+    padding: 3rem;
+
+    background-color: var(--color-text);
+    color: var(--color-background);
+    clip-path: polygon(
+    /* Above (Top Edge) */
+    0% 4%,     15% 1%,    30% 3%,    45% 0%,    60% 4%,    75% 1%,    90% 3%,    100% 0%,
+    /* Right Edge */
+    98% 25%,   99% 50%,   97% 75%,   100% 100%,
+    /* Below (Bottom Edge) */
+    85% 97%,   70% 99%,   55% 96%,   40% 100%,  25% 98%,   10% 99%,   0% 96%,
+    /* Left Edge */
+    2% 75%,    1% 50%,    3% 25%
+);
+}
+
+#zoopedia-list {
+    color: var(--color-text);
+    padding: 1rem;
+    margin: 2rem 0;
+}

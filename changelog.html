@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles/global.css"/>
+    <link rel="stylesheet" href="/global.css"/>
 
     <!-- Eagle Font to almost match the Planet Zoo font -->
     <link href="https://fonts.cdnfonts.com/css/eagle-2" rel="stylesheet"/>
@@ -23,75 +24,94 @@
 
     <title>Changelog</title>
 
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
 
 </head>
 
-<header>
-    <button id="button-open-menu" onclick="openMenu()"><img src="./images/icons/icon-menu.svg" alt="Open Menu"></button>
-
-    <a href="/"><img src="./images/PZ-helper.png" alt="Planet Zoo Helper"></a>   
-</header>
-
-<nav id="navbar">
-    <ul>
-        <li><button id="button-close-menu" onclick="closeMenu()"><img src="./images/icons/icon-close.svg" alt="Close Menu"></button></li>
-        <li><a href="/"><img src="./images/icons/icon-planet-zoo.svg" alt="Home"></a></li>
-        <li><a href="./zoopedia.html">Zoopedia</a></li>
-        <li><a href="./calculator.html">Calculator</a></li>
-        <li><a href="./planner.html">Planner</a></li>
-        <li><a href="./changelog.html">Changelog</a></li>
-        <li><a href="./about.html">✦About✦</a></li>       
-        <li>
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support the site on Ko-fi', '#139b6d', 'E1E21M8J3G');kofiwidget2.draw();</script> 
-        </li>
-    </ul>
-</nav>
-
-<div id="overlay" onclick="closeMenu()"></div>
-
 <body>
 
-    <main>
+    <div class="home-page">
+        <a href="/"><h1 class="home-title">Planet Zoo Helper</h1></a>
 
-        <h1><img height="25rem" src="./images/icons/icon-checklist.svg" alt=""> Changelog</h1>
+        <p>
+        <i> This is a <u><b>fan-made</b></u> project designed to help players plan habitats in the Planet Zoo game series. <br>
+          This site is entirely unofficial and is in no way associated with, endorsed by, or affiliated with Frontier Developments or the Planet Zoo team. <br>
+          All game content, imagery, characters, and trademarks belong to their respective owners. <br><br>
+          For official updates, please refer to the official <a href="https://www.planetzoogame.com/" target="_blank">Planet Zoo</a> channels.</i>
+        </p><br>
 
-        <article>
-            <span>
+        <h1>🗎 Changelog 🗎</h1><br>
+
+        <!-- <article class="changelog">
+            
+                <h2>➤ 2026-00-00 Update</h2>
+
+                <p>
+                    •  <br>
+                </p>
+
+        </article>
+        <br> -->
+        <article class="changelog">
+            
+                <h2>➤ 2026-10-13 PLANET ZOO 2 is out!</h2>
+
+                <p>
+                    • Created a new home page for the website. <br>
+                    • Created a new css file for page design based around the PZ2 style. <br>
+                    • Edited the changelog to match the home page. <br>
+                    • Removed the 'About' page, was too similar to the home page. <br>
+                    • Created Zoopedia page and css file for PZ2. <br>
+                </p>
+
+        </article>
+        <br>
+        <article class="changelog">
+            
+                <h2>➤ 2026-05-28 Planet Zoo 2 announcement</h2>
+
+                <p>
+                    • Started writing down animal data in a JS file for the revealed animals after the announcement of Planet Zoo 2. <br>
+                    • Created separate folders for PZ1 and PZ2. <br>
+                    • Moved all the PZ1 files over to their own folder and made changes accordingly for all the linked files. <br>
+                </p><br>
+
+                <img src="/images/header-pz2.jpg" alt="">
+        </article>
+        <br>
+        <article class="changelog">
+            
                 <h2>➤ 2025-10-27 Update</h2>
 
                 <p>
                     • Added animals from the Barnyard, Zookeepers, Americas and Asia packs (+2024 anniversary animal and a bonus free animal). <br>
                 </p>
-
-            </span>
+ 
         </article>
         <br>
-        <article>
-            <span>
+        <article class="changelog">
+            
                 <h2>➤ 2025-10-19 Update</h2>
 
                 <p>
                     • Added animals from the Tropical, Arid, Oceania and Eurasia packs (+2023 anniversary animal). <br>
                 </p>
 
-            </span>
         </article>
         <br>
-        <article>
-            <span>
+        <article class="changelog">
+            
                 <h2>➤ 2025-10-16 Update</h2>
 
                 <p>
                     • Added animals from the Wetlands, Conservation, Twilight and Grasslands packs (+2022 anniversary animal). <br>
                     • Animal food names will only display on smaller screens when you hover/click on them. <br>
                 </p>
-
-            </span>
+ 
         </article>
         <br>
-        <article>
-            <span>
+        <article class="changelog">
+            
                 <h2>➤ 2025-10-10 Update</h2>
 
                 <p>
@@ -104,11 +124,10 @@
                     • Made some minor CSS corrections. <br>
                 </p>
 
-            </span>
         </article>
         <br>
-        <article>
-            <span>
+        <article class="changelog">
+            
                 <h2>➤ 2025-10-08 Update</h2>
 
                 <p>
@@ -117,11 +136,10 @@
                     • Made some text corrections/changes in HTML. <br>
                 </p>
 
-            </span>
         </article>
         <br>
-        <article>
-            <span>
+        <article class="changelog">
+            
                 <h2>➤ 2025-10-05 Website is live now!</h2>
 
                 <p>
@@ -131,10 +149,9 @@
                     • Added button to sort animals by life expectancy in Zoopedia. <br> 
                 </p>
 
-            </span>
         </article>
         <br>
-        <article>
+        <article class="changelog">
             <details>
                 <summary><h2>➤ 2025-08-01 Project Started!</h2></summary>
 
@@ -196,23 +213,15 @@
                     • Wrote an introduction and explanation of the site features on the home page. <br>
                 </p>
 
-            </details>
+            </details><br>
+
+            <img src="/images/header-pz1.jpg" alt="">
+
         </article>
 
         <br><br>
-    </main>
+    </div>
 
 </body>
-
-<footer>
-
-    <a href="https://www.planetzoogame.com/" target="_blank"> 
-        <img src="./images/icons/icon-planet-zoo.svg" alt="Planet Zoo Icon">
-    </a>
-    
-    This is a fansite for the game Planet Zoo.
-</footer>
-
-<script type="module" src="./scripts/interface.js"></script>
 
 </html>

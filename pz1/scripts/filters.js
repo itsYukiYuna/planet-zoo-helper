@@ -97,105 +97,105 @@ const DLC = {
 const continents = {    
     africa: {
         name: "Africa",
-        icon: "./images/icons/icon-continent-africa.webp"
+        icon: "/pz1/images/icons/icon-continent-africa.webp"
     },
     europe: {
         name: "Europe",
-        icon: "./images/icons/icon-continent-europe.webp"
+        icon: "/pz1/images/icons/icon-continent-europe.webp"
     },
     asia: {
         name: "Asia",
-        icon: "./images/icons/icon-continent-asia.webp"
+        icon: "/pz1/images/icons/icon-continent-asia.webp"
     },
     northAmerica: {
         name: "North America",
-        icon: "./images/icons/icon-continent-north-america.webp"
+        icon: "/pz1/images/icons/icon-continent-north-america.webp"
     },
     southAmerica: {
         name: "South America",
-        icon: "./images/icons/icon-continent-south-america.webp"
+        icon: "/pz1/images/icons/icon-continent-south-america.webp"
     },
     oceania: {
         name: "Oceania",
-        icon: "./images/icons/icon-continent-oceania.webp"
+        icon: "/pz1/images/icons/icon-continent-oceania.webp"
     },
     antarctica: {
         name: "Antarctica", 
-        icon: "./images/icons/icon-continent-antarctica.webp"
+        icon: "/pz1/images/icons/icon-continent-antarctica.webp"
     }
 };
 
 const biomes = {
     aquatic: {
         name: "Aquatic",
-        icon: "./images/icons/icon-biome-aquatic.svg"
+        icon: "/pz1/images/icons/icon-biome-aquatic.svg"
     },
     desert: {
         name: "Desert",
-        icon: "./images/icons/icon-biome-desert.svg"
+        icon: "/pz1/images/icons/icon-biome-desert.svg"
     },
     grassland: {
         name: "Grassland",
-        icon: "./images/icons/icon-biome-grassland.svg"
+        icon: "/pz1/images/icons/icon-biome-grassland.svg"
     },
     tropical: {
         name: "Tropical",
-        icon: "./images/icons/icon-biome-tropical.svg"
+        icon: "/pz1/images/icons/icon-biome-tropical.svg"
     },
     temperate: {
         name: "Temperate",
-        icon: "./images/icons/icon-biome-temperate.svg"
+        icon: "/pz1/images/icons/icon-biome-temperate.svg"
     },
     taiga: {
         name: "Taiga",
-        icon: "./images/icons/icon-biome-taiga.svg"
+        icon: "/pz1/images/icons/icon-biome-taiga.svg"
     },
     tundra: {
         name: "Tundra",
-        icon: "./images/icons/icon-biome-tundra.svg"
+        icon: "/pz1/images/icons/icon-biome-tundra.svg"
     }
 };
 
 const IUCN = {
     extinctInTheWild: {
         status: "Extinct in the Wild",
-        icon: "./images/icons/icon-iucn-extinct-wild.webp",
-        iconLong: "./images/icons/icon-iucn-long-extinct-wild.png"
+        icon: "/pz1/images/icons/icon-iucn-extinct-wild.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-extinct-wild.png"
     },
     criticallyEndangered: {
         status: "Critically Endangered",
-        icon: "./images/icons/icon-iucn-critically-endangered.webp",
-        iconLong: "./images/icons/icon-iucn-long-critically-endangered.png"
+        icon: "/pz1/images/icons/icon-iucn-critically-endangered.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-critically-endangered.png"
     },
     endangered: {
         status: "Endangered",
-        icon: "./images/icons/icon-iucn-endangered.webp",
-        iconLong: "./images/icons/icon-iucn-long-endangered.png"
+        icon: "/pz1/images/icons/icon-iucn-endangered.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-endangered.png"
     },
     vulnerable: {
         status: "Vulnerable",
-        icon: "./images/icons/icon-iucn-vulnerable.webp",
-        iconLong: "./images/icons/icon-iucn-long-vulnerable.png"
+        icon: "/pz1/images/icons/icon-iucn-vulnerable.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-vulnerable.png"
     },
     nearThreatened: {
         status: "Near Threatened",
-        icon: "./images/icons/icon-iucn-near-threatened.webp",
-        iconLong: "./images/icons/icon-iucn-long-near-threatened.png"
+        icon: "/pz1/images/icons/icon-iucn-near-threatened.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-near-threatened.png"
     },
     leastConcern: {
         status: "Least Concern",
-        icon: "./images/icons/icon-iucn-least-concern.webp",
-        iconLong: "./images/icons/icon-iucn-long-least-concern.png"
+        icon: "/pz1/images/icons/icon-iucn-least-concern.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-least-concern.png"
     },
     domesticated: {
         status: "Domesticated",
-        icon: "./images/icons/icon-iucn-domesticated.webp",
-        iconLong: "./images/icons/icon-iucn-long-domesticated.png"
+        icon: "/pz1/images/icons/icon-iucn-domesticated.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-domesticated.png"
     },
     dataDeficient: {
         status: "Data Deficient",
-        icon: "./images/icons/icon-iucn-data-deficient.webp",
-        iconLong: "./images/icons/icon-iucn-long-data-deficient.png"
+        icon: "/pz1/images/icons/icon-iucn-data-deficient.webp",
+        iconLong: "/pz1/images/icons/icon-iucn-long-data-deficient.png"
     }
 };
 

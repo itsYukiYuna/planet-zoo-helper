@@ -1,7 +1,7 @@
 import {
     types, DLC, continents, biomes, IUCN, relationWithHumans, dominance, matingSystem, maturationRules
-} from "./filters.js";
-import {animals} from "./animals.js";
+} from "/pz1/scripts/filters.js";
+import {animals} from "/pz1/scripts/animals.js";
 
 const navbar = document.querySelector('nav');
 
@@ -73,7 +73,7 @@ let animalsData = null;
 async function loadAnimalsData() {
     if (animalsData) return animalsData;
     try {
-        const module = await import('./animals.js');
+        const module = await import('/pz1/scripts/animals.js');
         animalsData = module.animals;
         return animalsData;
     } catch (error) {
@@ -82,7 +82,7 @@ async function loadAnimalsData() {
     }
 }
 
-const getBooleanIcon = (value) => value ? './images/icons/icon-yes.svg' : './images/icons/icon-no.svg';
+const getBooleanIcon = (value) => value ? '/pz1/images/icons/icon-yes.svg' : '/pz1/images/icons/icon-no.svg';
 
 const formatRange = (range, suffix = '') => 
     (!range || range.min === undefined || range.max === undefined) ? 'N/A' : `${range.min}${suffix} - ${range.max}${suffix}`;
@@ -139,7 +139,7 @@ function createAnimalModal(animal) {
     modal.innerHTML = `
         <div id="modal-overlay"></div>
             <span id="modal-close" class="modal-close">
-                <img height="30rem" src="./images/icons/icon-close.svg" alt="Close Modal">
+                <img height="30rem" src="/pz1/images/icons/icon-close.svg" alt="Close Modal">
             </span>
         <div id="modal-animal-card">
             <div class="modal-animal-image" style="grid-area: animal-card-image;">
@@ -162,8 +162,8 @@ function createAnimalModal(animal) {
                     <span class="icon-description filter-selected" data-tooltip="${animal.IUCN.status} Conservation Status">
                         <img width="75%" src="${animal.IUCN.iconLong}" alt="${animal.IUCN.status}">  
                     </span>
-                    <span><a href="${animal.wiki}" target="_blank"><img height="30rem" src="./images/icons/icon-wiki.svg" alt="Wikipedia"></a></span>
-                    <span><a href="${animal.fandom}" target="_blank"><img height="30rem" src="./images/icons/icon-fandom.png" alt="PZ Fandom"></a></span>
+                    <span><a href="${animal.wiki}" target="_blank"><img height="30rem" src="/pz1/images/icons/icon-wiki.svg" alt="Wikipedia"></a></span>
+                    <span><a href="${animal.fandom}" target="_blank"><img height="30rem" src="/pz1/images/icons/icon-fandom.png" alt="PZ Fandom"></a></span>
                 </div>
 
                 <div class="modal-animal-general-item">
@@ -192,7 +192,7 @@ function createAnimalModal(animal) {
                     </span>
                     <span style="margin-top: 0.3rem;">
                         <p class="icon-description filter-selected" data-tooltip="Species Appeal">
-                        <img height="35rem" src="./images/icons/icon-appeal.png" alt="Species Appeal"> 
+                        <img height="35rem" src="/pz1/images/icons/icon-appeal.png" alt="Species Appeal"> 
                         </p>
                         ${animal.speciesAppeal || 'N/A'}
                     </span>
@@ -204,7 +204,7 @@ function createAnimalModal(animal) {
 
                 <div class="modal-animal-details-item">
                     <span class="icon-description filter-selected" data-tooltip="Enclosure">
-                        <img height="25rem" src="./images/icons/icon-barrier.jpg" alt="Barrier"> 
+                        <img height="25rem" src="/pz1/images/icons/icon-barrier.jpg" alt="Barrier"> 
                         <p>${
                         animal.type === types.exhibit 
                           ? (animal.guestsEnter ? `Walkthrough ${animal.type}` : `Box ${animal.type}`)
@@ -217,15 +217,15 @@ function createAnimalModal(animal) {
 
                 <div class="modal-animal-details-item">
                     <span class="icon-description filter-selected" data-tooltip="Temperature">
-                        <img height="25rem" src="./images/icons/icon-temperature.jpg" alt="Temperature">
+                        <img height="25rem" src="/pz1/images/icons/icon-temperature.jpg" alt="Temperature">
                         <span>${formatRange(animal.temperatureRange, '°C')}</span>
                     </span>
                     ${animal.humidityRange?.min !== undefined ? `<span class="icon-description filter-selected" data-tooltip="Humidity">
-                        <img height="25rem" src="./images/icons/icon-humidity.jpg" alt="Humidity">
+                        <img height="25rem" src="/pz1/images/icons/icon-humidity.jpg" alt="Humidity">
                         <span>${formatRange(animal.humidityRange, '%')}</span>
                     </span>` : ''}
                     ${animal.plantCoverage?.min !== undefined ? `<span class="icon-description filter-selected" data-tooltip="Plant Coverage">
-                        <img height="25rem" src="./images/icons/icon-plants.jpg" alt="Plant Coverage">
+                        <img height="25rem" src="/pz1/images/icons/icon-plants.jpg" alt="Plant Coverage">
                         <span>${formatRange(animal.plantCoverage, '%')}</span>
                     </span>` : ''}
                 </div>
@@ -237,7 +237,7 @@ function createAnimalModal(animal) {
                         const icon = type === 'waterDeep' ? 'deep-water' : type;
                         const label = type === 'waterDeep' ? 'Deep Water' : type.charAt(0).toUpperCase() + type.slice(1);
                         return animal[key] ? `<span class="icon-description filter-selected" data-tooltip="Minimum ${label} Area">
-                            <img height="25rem" src="./images/icons/icon-area-${icon}.jpg" alt="Minimum ${label} Area">
+                            <img height="25rem" src="/pz1/images/icons/icon-area-${icon}.jpg" alt="Minimum ${label} Area">
                             <span>${animal[key]} m²</span>
                             <p>+${animal[`${type}PerAddAdult`] || 0} m² p/Adult</p>
                             <p>+${animal[`${type}PerAddJuvenile`] || 0} m² p/Juv</p>
@@ -273,7 +273,7 @@ function createAnimalModal(animal) {
                         ['snowRange', 'Snow', 'snow']
                     ].reduce((acc, [key, label, icon], i) => {
                         const item = `<p class="icon-description filter-selected" data-tooltip="${label}">
-                            <img height="25rem" src="./images/icons/icon-terrain-${icon}.jpg" alt="${label}">
+                            <img height="25rem" src="/pz1/images/icons/icon-terrain-${icon}.jpg" alt="${label}">
                             ${formatRange(animal[key], '%')}
                         </p>`;
                         const spanIndex = Math.floor(i / 2);
@@ -324,7 +324,7 @@ function createAnimalModal(animal) {
                 <div class="modal-animal-details-item">
                     ${[1, 2, 3].map(grade => `
                         <span class="icon-description filter-selected" data-tooltip="${animal[`foodGrade${grade}`] || 'N/A'}">
-                            Grade ${grade} <img height="20rem" src="./images/icons/icon-food.png" alt="${animal[`foodGrade${grade}`] || 'N/A'}">
+                            Grade ${grade} <img height="20rem" src="/pz1/images/icons/icon-food.png" alt="${animal[`foodGrade${grade}`] || 'N/A'}">
                             <p class="display-none">${animal[`foodGrade${grade}`] || 'N/A'}</p>
                             <p>$${(animal[`foodGrade${grade}Cost`] || 0).toFixed(2)} p/Adult</p>
                             <p>$${(animal[`foodGrade${grade}CostJuv`] || 0).toFixed(2)} p/Juv</p>
@@ -448,13 +448,13 @@ async function loadAlbum(animal) {
     
     for (const folder of folders) {
         for (const ext of exts) {
-            const first = `./images/albums/${folder}/1.${ext}`;
+            const first = `/images/albums/${folder}/1.${ext}`;
             if (await testImage(first)) {
                 const images = [first];
                 for (let i = 2; i <= 20; i++) {
                     let found = false;
                     for (const e of exts) {
-                        const cand = `./images/albums/${folder}/${i}.${e}`;
+                        const cand = `/images/albums/${folder}/${i}.${e}`;
                         if (await testImage(cand)) {
                             images.push(cand);
                             found = true;

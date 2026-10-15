@@ -1,0 +1,166 @@
+html {
+    font-family: 'Eagle', 'Noto Sans', sans-serif;
+    background-color: var(--color-background);
+    background-image: url(/images/pattern-animal.svg);
+}
+
+:root {
+    --font-heading: 'Eagle', sans-serif;
+    --font-content: 'Noto Sans', sans-serif;
+    --color-background: rgb(255, 242, 221);
+    --color-background-dark: rgb(230, 218, 199);
+    --color-menu: rgb(138, 151, 81);
+    --color-menu-dark: rgb(89, 105, 68);
+    --color-text: rgb(114, 91, 75);  
+    --color-text-dark: rgb(51, 48, 41);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#menu {
+    display: flex;
+    background-color: var(--color-menu);
+    background-image: linear-gradient(to top, var(--color-menu-dark), var(--color-menu), transparent), url('/images/pattern-animal.svg');
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    position: fixed;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+#menu a {
+    color: var(--color-background);
+    text-decoration: none;
+    padding: 0.15rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+#menu nav a:hover {
+    background-color: var(--color-menu-dark);
+}
+
+#menu span {
+    background-color: var(--color-menu-dark);
+    padding: 0.15rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.logo-container {
+    margin-right: auto;
+    margin-left: 3vw;
+}
+
+.logo-container img {
+    height: 3rem;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    font-size: large;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav li {
+    list-style: none;
+    padding: 0 2rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-background);
+}
+
+#menu svg:hover {
+    fill: var(--color-background);
+    stroke: var(--color-background);
+}
+
+#button-open-menu, #button-close-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#button-open-menu svg, #button-close-menu svg {
+    fill: var(--color-background);
+    stroke: var(--color-background);
+}
+
+/* Mobile Version */
+@media screen and (max-width: 1060px) {
+
+    #button-open-menu {
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+    #button-open-menu svg,
+    #button-close-menu svg {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    nav {
+        position: fixed;
+        top: 4rem;
+        left: auto;
+        right: -100%;
+        transform: none;
+
+        width: fit-content;
+        height: calc(100dvh - 4rem);
+        box-sizing: border-box;
+        overflow-y: auto;
+
+        padding: 1.5rem 1rem;
+        background-color: var(--color-menu);
+        background-image: linear-gradient(to bottom, var(--color-menu), var(--color-menu), transparent), url('/images/pattern-animal.svg');
+        box-shadow: 0px 0px 15px var(--color-menu-dark);
+        text-align: center;
+        font-size: x-large;
+        line-height: 2.5rem;
+
+        z-index: 999;
+        visibility: hidden;
+        transition: right 0.3s ease, visibility 0.3s ease;
+    }
+
+    nav li {
+        padding: 0 3rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav.show {
+        right: 0;
+        visibility: visible;
+    }
+
+    #button-close-menu {
+        display: none;
+        margin: 0 0 1rem auto;
+    }
+
+    nav.show #button-close-menu {
+        display: block;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+}

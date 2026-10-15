@@ -1,7 +1,7 @@
-import { animals } from "./animals.js";
+import { animals } from "/pz1/scripts/animals.js";
 import {
     types, DLC, continents, biomes, IUCN, relationWithHumans, dominance, matingSystem, maturationRules
-} from "./filters.js";
+} from "/pz1/scripts/filters.js";
 
 // ===== Utilities =====
 const q = s=>document.querySelector(s), qa = s=>Array.from(document.querySelectorAll(s));
@@ -311,31 +311,31 @@ function addSelectedAnimal(container = document){
       <img height="40rem" src="${a.icon}" alt="${a.name}">
     </div>
     <div class="icon-description" data-tooltip="Males">
-      <label><img height="30rem" src="./images/icons/icon-male.svg" alt="Males"></label>
+      <label><img height="30rem" src="/pz1/images/icons/icon-male.svg" alt="Males"></label>
       <input type="number" min="0" max="500" id="male-count-${sid}">
     </div>
     <div class="icon-description" data-tooltip="Females">
-      <label><img height="30rem" src="./images/icons/icon-female.svg" alt="Females"></label>
+      <label><img height="30rem" src="/pz1/images/icons/icon-female.svg" alt="Females"></label>
       <input type="number" min="0" max="500" id="female-count-${sid}">
     </div>
     <div class="icon-description" data-tooltip="Juveniles">
-      <label><img height="30rem" src="./images/icons/icon-juvenile.png" alt="Juveniles"></label>
+      <label><img height="30rem" src="/pz1/images/icons/icon-juvenile.png" alt="Juveniles"></label>
       <input type="number" min="0" max="500" id="juvenile-count-${sid}">
     </div>
     <div class="icon-description" data-tooltip="Food Grade">
-      <label><img height="30rem" src="./images/icons/icon-food.png" alt="Food"></label>
+      <label><img height="30rem" src="/pz1/images/icons/icon-food.png" alt="Food"></label>
       <select id="food-grade-${sid}"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
     </div>
     ${isPlanner ? `<div class="icon-description" data-tooltip="Species Appeal">
-      <img height="30rem" src="./images/icons/icon-appeal.png" alt="Species Appeal">
+      <img height="30rem" src="/pz1/images/icons/icon-appeal.png" alt="Species Appeal">
       <span>${a.speciesAppeal || 0}</span>
     </div>` : ''}
     ${isPlanner ? `<div class="icon-description" data-tooltip="Relation with Humans">
-      <img height="30rem" src="./images/icons/icon-attitude.svg" alt="Relation with Humans">
+      <img height="30rem" src="/pz1/images/icons/icon-attitude.svg" alt="Relation with Humans">
       <span>${a.relationWithHumans || 0}</span>
     </div>` : ''}
     <div class="icon-description" data-tooltip="Delete">
-      <button class="button-delete"><img height="40rem" src="./images/icons/icon-delete.svg" alt="Delete"></button>
+      <button class="button-delete"><img height="40rem" src="/pz1/images/icons/icon-delete.svg" alt="Delete"></button>
     </div>`;
   
   div.querySelector('.button-delete').addEventListener('click',()=>{ div.remove(); refreshAllDisplays(container); });
@@ -403,7 +403,7 @@ if (document.readyState === "loading") {
         
           <summary>
             <h2>
-              <img height="25rem" src="./images/icons/icon-habitat.svg" alt="">
+              <img height="25rem" src="/pz1/images/icons/icon-habitat.svg" alt="">
               ${habitatNameInputTemplate()}
             </h2>
           </summary>
@@ -426,11 +426,11 @@ if (document.readyState === "loading") {
             <div id="special-notes">Please select an animal to see its habitat requirements...</div>
             <br>
             <div id="range-temperature" class="icon-description" data-tooltip="Temperature">
-              <img height="30rem" src="./images/icons/icon-temperature.jpg" alt="Temperature">
+              <img height="30rem" src="/pz1/images/icons/icon-temperature.jpg" alt="Temperature">
               <span></span> °C
             </div>
             <div id="range-plant-coverage" class="icon-description" data-tooltip="Plant Coverage">
-              <img height="30rem" src="./images/icons/icon-plants.jpg" alt="Plant Coverage">
+              <img height="30rem" src="/pz1/images/icons/icon-plants.jpg" alt="Plant Coverage">
               <span></span>
             </div>
             <br>
@@ -439,56 +439,56 @@ if (document.readyState === "loading") {
             <br>
             <div id="req-barrier" class="icon-description" data-tooltip="Barrier">
               <h3>Barrier:</h3>
-                <img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier">
+                <img height="30rem" src="/pz1/images/icons/icon-barrier.jpg" alt="Barrier">
                 <span></span>
             </div>
             <br>
             <h3>Minimum Area:</h3>
             <div id="req-area-land" class="icon-description" data-tooltip="Land">
-              <img height="30rem" src="./images/icons/icon-area-land.jpg" alt="Land">
+              <img height="30rem" src="/pz1/images/icons/icon-area-land.jpg" alt="Land">
               <span></span> m²
             </div>
             <div id="req-area-climbing" class="icon-description" data-tooltip="Climbing">
-              <img height="30rem" src="./images/icons/icon-area-climbing.jpg" alt="Climbing">
+              <img height="30rem" src="/pz1/images/icons/icon-area-climbing.jpg" alt="Climbing">
               <span></span> m²
             </div>
               <div id="req-area-water" class="icon-description" data-tooltip="Water">
-                <img height="30rem" src="./images/icons/icon-area-water.jpg" alt="Water">
+                <img height="30rem" src="/pz1/images/icons/icon-area-water.jpg" alt="Water">
                 <span></span> m²
               </div>
             <div id="req-area-water-deep" class="icon-description" data-tooltip="Deep Water">
-              <img height="30rem" src="./images/icons/icon-area-deep-water.jpg" alt="Deep Water">
+              <img height="30rem" src="/pz1/images/icons/icon-area-deep-water.jpg" alt="Deep Water">
               <span></span> m²
             </div>
             <br>
             <h3>TERRAIN:</h3>
             <div id="range-grass-short" class="icon-description" data-tooltip="Grass (Short)">
-              <img height="30rem" src="./images/icons/icon-terrain-grass-short.jpg" alt="Grass (Short)">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-grass-short.jpg" alt="Grass (Short)">
               <span></span>
             </div>
             <div id="range-grass-long" class="icon-description" data-tooltip="Grass (Long)">
-              <img height="30rem" src="./images/icons/icon-terrain-grass-long.jpg" alt="Grass (Long)">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-grass-long.jpg" alt="Grass (Long)">
               <span></span>
             </div>
             <div id="range-soil" class="icon-description" data-tooltip="Soil">
-              <img height="30rem" src="./images/icons/icon-terrain-soil.jpg" alt="Soil">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-soil.jpg" alt="Soil">
               <span></span>
             </div>
             <div id="range-rock" class="icon-description" data-tooltip="Rock">
-              <img height="30rem" src="./images/icons/icon-terrain-rock.jpg" alt="Rock">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-rock.jpg" alt="Rock">
               <span></span>
             </div>
             <div id="range-sand" class="icon-description" data-tooltip="Sand">
-              <img height="30rem" src="./images/icons/icon-terrain-sand.jpg" alt="Sand">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-sand.jpg" alt="Sand">
               <span></span>
             </div>
             <div id="range-snow" class="icon-description" data-tooltip="Snow">
-              <img height="30rem" src="./images/icons/icon-terrain-snow.jpg" alt="Snow">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-snow.jpg" alt="Snow">
               <span></span>
             </div>
             <br>
             <div id="food-costs">
-              <img height="30rem" src="./images/icons/icon-food.png" alt="Food Costs">
+              <img height="30rem" src="/pz1/images/icons/icon-food.png" alt="Food Costs">
               <b>Food costs per feed: $<span></span></b>
             </div>
             <br>
@@ -496,16 +496,16 @@ if (document.readyState === "loading") {
 
           <div class="planner-buttons">
             <span class="icon-description" data-tooltip="Save Habitat">
-              <button class="button-planner-save"><img height="50rem" src="./images/icons/icon-planner-save.svg" alt="Save"></button>
+              <button class="button-planner-save"><img height="50rem" src="/pz1/images/icons/icon-planner-save.svg" alt="Save"></button>
             </span>
             <span class="icon-description" data-tooltip="Cancel">
-              <button class="button-planner-cancel"><img height="50rem" src="./images/icons/icon-planner-cancel.svg" alt="Cancel"></button>
+              <button class="button-planner-cancel"><img height="50rem" src="/pz1/images/icons/icon-planner-cancel.svg" alt="Cancel"></button>
             </span>
             <span class="icon-description" data-tooltip="Edit Habitat" style="display:none;">
-              <button class="button-planner-edit"><img height="50rem" src="./images/icons/icon-planner-edit.svg" alt="Edit"></button>
+              <button class="button-planner-edit"><img height="50rem" src="/pz1/images/icons/icon-planner-edit.svg" alt="Edit"></button>
             </span>
             <span class="icon-description" data-tooltip="Delete Habitat" style="display:none;">
-              <button class="button-planner-delete"><img height="50rem" src="./images/icons/icon-planner-delete.svg" alt="Delete"></button>
+              <button class="button-planner-delete"><img height="50rem" src="/pz1/images/icons/icon-planner-delete.svg" alt="Delete"></button>
             </span>
           </div>
         </details>
@@ -529,19 +529,19 @@ if (document.readyState === "loading") {
             <img height="40rem" src="${animal?.icon || ''}" alt="${a.name}">
           </div>
           <div class="icon-description" data-tooltip="Males">
-            <label><img height="30rem" src="./images/icons/icon-male.svg" alt="Males"></label>
+            <label><img height="30rem" src="/pz1/images/icons/icon-male.svg" alt="Males"></label>
             <input type="number" disabled value="${a.males}" id="male-count-${sid}-${pid}">
           </div>
           <div class="icon-description" data-tooltip="Females">
-            <label><img height="30rem" src="./images/icons/icon-female.svg" alt="Females"></label>
+            <label><img height="30rem" src="/pz1/images/icons/icon-female.svg" alt="Females"></label>
             <input type="number" disabled value="${a.females}" id="female-count-${sid}-${pid}">
           </div>
           <div class="icon-description" data-tooltip="Juveniles">
-            <label><img height="30rem" src="./images/icons/icon-juvenile.png" alt="Juveniles"></label>
+            <label><img height="30rem" src="/pz1/images/icons/icon-juvenile.png" alt="Juveniles"></label>
             <input type="number" disabled value="${a.juveniles}" id="juvenile-count-${sid}-${pid}">
           </div>
           <div class="icon-description" data-tooltip="Food Grade">
-            <label><img height="30rem" src="./images/icons/icon-food.png" alt="Food"></label>
+            <label><img height="30rem" src="/pz1/images/icons/icon-food.png" alt="Food"></label>
             <select disabled id="food-grade-${sid}-${pid}">
               <option value="1" ${a.foodGrade==='1'?'selected':''}>1</option>
               <option value="2" ${a.foodGrade==='2'?'selected':''}>2</option>
@@ -549,11 +549,11 @@ if (document.readyState === "loading") {
             </select>
           </div>         
           <div class="icon-description" data-tooltip="Species Appeal">
-            <img height="30rem" src="./images/icons/icon-appeal.png" alt="Species Appeal">
+            <img height="30rem" src="/pz1/images/icons/icon-appeal.png" alt="Species Appeal">
             <span>${animal?.speciesAppeal || 0}</span>
           </div>
             <div class="icon-description" data-tooltip="Relation with Humans">
-            <img height="30rem" src="./images/icons/icon-attitude.svg" alt="Relation with Humans">
+            <img height="30rem" src="/pz1/images/icons/icon-attitude.svg" alt="Relation with Humans">
             <span>${animal?.relationWithHumans || 0}</span>
           </div>
         </div>
@@ -569,7 +569,7 @@ if (document.readyState === "loading") {
         <details>
           <summary>
             <h2>
-              <img height="25rem" src="./images/icons/icon-habitat.svg" alt="">
+              <img height="25rem" src="/pz1/images/icons/icon-habitat.svg" alt="">
               ${escapeHtml(h.name)}
             </h2>
           </summary>
@@ -592,11 +592,11 @@ if (document.readyState === "loading") {
             <div id="special-notes">${h.outputs.notesHTML || ''}</div>
             <br>
             <div id="range-temperature" class="icon-description" data-tooltip="Temperature">
-              <img height="30rem" src="./images/icons/icon-temperature.jpg" alt="Temperature">
+              <img height="30rem" src="/pz1/images/icons/icon-temperature.jpg" alt="Temperature">
               <span>${h.outputs.temperatureRange || ''}</span> °C
             </div>
             <div id="range-plant-coverage" class="icon-description" data-tooltip="Plant Coverage">
-              <img height="30rem" src="./images/icons/icon-plants.jpg" alt="Plant Coverage">
+              <img height="30rem" src="/pz1/images/icons/icon-plants.jpg" alt="Plant Coverage">
               <span>${h.outputs.plantCoverage || ''}</span>
             </div>
             <br>
@@ -605,56 +605,56 @@ if (document.readyState === "loading") {
             <br>
             <div id="req-barrier" class="icon-description" data-tooltip="Barrier">
               <h3>Barrier:</h3>
-                <img height="30rem" src="./images/icons/icon-barrier.jpg" alt="Barrier">
+                <img height="30rem" src="/pz1/images/icons/icon-barrier.jpg" alt="Barrier">
                 <span>${h.outputs.barrier || ''}</span>
             </div>
             <br>
             <h3>Minimum Area:</h3>
             <div id="req-area-land" class="icon-description" data-tooltip="Land">
-              <img height="30rem" src="./images/icons/icon-area-land.jpg" alt="Land">
+              <img height="30rem" src="/pz1/images/icons/icon-area-land.jpg" alt="Land">
               <span>${h.outputs.landArea || ''}</span> m²
             </div>
             <div id="req-area-climbing" class="icon-description" data-tooltip="Climbing">
-              <img height="30rem" src="./images/icons/icon-area-climbing.jpg" alt="Climbing">
+              <img height="30rem" src="/pz1/images/icons/icon-area-climbing.jpg" alt="Climbing">
               <span>${h.outputs.climbingArea || ''}</span> m²
             </div>
             <div id="req-area-water" class="icon-description" data-tooltip="Water">
-              <img height="30rem" src="./images/icons/icon-area-water.jpg" alt="Water">
+              <img height="30rem" src="/pz1/images/icons/icon-area-water.jpg" alt="Water">
               <span>${h.outputs.waterArea || ''}</span> m²
             </div>
             <div id="req-area-water-deep" class="icon-description" data-tooltip="Deep Water">
-              <img height="30rem" src="./images/icons/icon-area-deep-water.jpg" alt="Deep Water">
+              <img height="30rem" src="/pz1/images/icons/icon-area-deep-water.jpg" alt="Deep Water">
               <span>${h.outputs.deepWaterArea || ''}</span> m²
             </div>
             <br>
             <h3>TERRAIN:</h3>
             <div id="range-grass-short" class="icon-description" data-tooltip="Grass (Short)">
-              <img height="30rem" src="./images/icons/icon-terrain-grass-short.jpg" alt="Grass (Short)">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-grass-short.jpg" alt="Grass (Short)">
               <span>${terrain.shortGrass || ''}</span>
             </div>
             <div id="range-grass-long" class="icon-description" data-tooltip="Grass (Long)">
-              <img height="30rem" src="./images/icons/icon-terrain-grass-long.jpg" alt="Grass (Long)">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-grass-long.jpg" alt="Grass (Long)">
               <span>${terrain.longGrass || ''}</span>
             </div>
             <div id="range-soil" class="icon-description" data-tooltip="Soil">
-              <img height="30rem" src="./images/icons/icon-terrain-soil.jpg" alt="Soil">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-soil.jpg" alt="Soil">
               <span>${terrain.soilRange || ''}</span>
             </div>
             <div id="range-rock" class="icon-description" data-tooltip="Rock">
-              <img height="30rem" src="./images/icons/icon-terrain-rock.jpg" alt="Rock">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-rock.jpg" alt="Rock">
               <span>${terrain.rockRange || ''}</span>
             </div>
             <div id="range-sand" class="icon-description" data-tooltip="Sand">
-              <img height="30rem" src="./images/icons/icon-terrain-sand.jpg" alt="Sand">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-sand.jpg" alt="Sand">
               <span>${terrain.sandRange || ''}</span>
             </div>
             <div id="range-snow" class="icon-description" data-tooltip="Snow">
-              <img height="30rem" src="./images/icons/icon-terrain-snow.jpg" alt="Snow">
+              <img height="30rem" src="/pz1/images/icons/icon-terrain-snow.jpg" alt="Snow">
               <span>${terrain.snowRange || ''}</span>
             </div>
             <br>
             <div id="food-costs">
-              <img height="30rem" src="./images/icons/icon-food.png" alt="Food Costs">
+              <img height="30rem" src="/pz1/images/icons/icon-food.png" alt="Food Costs">
               <b>Food costs per feed: $<span>${h.outputs.foodCosts || '0.00'}</span></b>
             </div>
             <br>
@@ -662,16 +662,16 @@ if (document.readyState === "loading") {
 
           <div class="planner-buttons">
             <span class="icon-description" data-tooltip="Save Habitat" style="display:none;">
-              <button class="button-planner-save" disabled><img height="50rem" src="./images/icons/icon-planner-save.svg" alt="Save"></button>
+              <button class="button-planner-save" disabled><img height="50rem" src="/pz1/images/icons/icon-planner-save.svg" alt="Save"></button>
             </span>
             <span class="icon-description" data-tooltip="Cancel" style="display:none;">
-              <button class="button-planner-cancel" disabled><img height="50rem" src="./images/icons/icon-planner-cancel.svg" alt="Cancel"></button>
+              <button class="button-planner-cancel" disabled><img height="50rem" src="/pz1/images/icons/icon-planner-cancel.svg" alt="Cancel"></button>
             </span>
             <span class="icon-description" data-tooltip="Edit Habitat">
-              <button class="button-planner-edit"><img height="50rem" src="./images/icons/icon-planner-edit.svg" alt="Edit"></button>
+              <button class="button-planner-edit"><img height="50rem" src="/pz1/images/icons/icon-planner-edit.svg" alt="Edit"></button>
             </span>
             <span class="icon-description" data-tooltip="Delete Habitat">
-              <button class="button-planner-delete"><img height="50rem" src="./images/icons/icon-planner-delete.svg" alt="Delete"></button>
+              <button class="button-planner-delete"><img height="50rem" src="/pz1/images/icons/icon-planner-delete.svg" alt="Delete"></button>
             </span>
           </div>
         </details>

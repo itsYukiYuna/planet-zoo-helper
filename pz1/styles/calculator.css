@@ -15,7 +15,7 @@ main::after {
 }
 
 #habitat-requirements {
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: var(--color-menu);
     color: white;
     border-radius: 1rem;
@@ -55,7 +55,7 @@ main::after {
     vertical-align: middle;
     border-radius: 0.3rem;
     border: 0.2rem solid var(--color-menu);
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: rgba(196, 194, 187, 1);
 }
 
@@ -64,7 +64,7 @@ select option {
 }
 
 .button-add-animal {
-    background-image: url("../images/pattern-zebra.svg");
+    background-image: url("/pz1/images/pattern-zebra.svg");
     background-color: var(--color-menu);
     color: white;
     font-size: smaller;

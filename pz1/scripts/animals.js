@@ -1,13 +1,13 @@
 import {
     types, DLC, continents, biomes, IUCN, relationWithHumans, dominance, matingSystem, maturationRules
-} from "./filters.js";
+} from "/pz1/scripts/filters.js";
 
     // --- # 0 ---
     // name:{
     //     name: "name", 
     //     latin: "latin", 
-    //     image: "./images/animals/animal.webp", 
-    //     icon: "./images/animal-icons/animal-icon.png", 
+    //     image: "/pz1/images/animals/animal.webp", 
+    //     icon: "/pz1/images/animal-icons/animal-icon.png", 
    
     //     class: "name", 
     //     order: "name", 
@@ -98,8 +98,8 @@ const animals = {
     aardvark: {
         name: "Aardvark", 
         latin: "Orycteropus afer", 
-        image: "./images/animals/aardvark.webp", 
-        icon: "./images/animal-icons/aardvark-icon.png", 
+        image: "/pz1/images/animals/aardvark.webp", 
+        icon: "/pz1/images/animal-icons/aardvark-icon.png", 
 
         class: "Mammalia", 
         order: "Tubulidentata", 
@@ -184,8 +184,8 @@ const animals = {
     africanBuffalo: {
         name: "African Buffalo", 
         latin: "Syncerus caffer caffer", 
-        image: "./images/animals/africanBuffalo.webp", 
-        icon: "./images/animal-icons/africanBuffalo-icon.png", 
+        image: "/pz1/images/animals/africanBuffalo.webp", 
+        icon: "/pz1/images/animal-icons/africanBuffalo-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -270,8 +270,8 @@ const animals = {
     africanSavannahElephant: {
         name: "African Savannah Elephant", 
         latin: "Loxodonta africana", 
-        image: "./images/animals/africanSavannahElephant.webp", 
-        icon: "./images/animal-icons/africanSavannahElephant-icon.png", 
+        image: "/pz1/images/animals/africanSavannahElephant.webp", 
+        icon: "/pz1/images/animal-icons/africanSavannahElephant-icon.png", 
 
         class: "Mammalia", 
         order: "Proboscidea", 
@@ -356,8 +356,8 @@ const animals = {
     africanWildDog:{
         name: "African Wild Dog", 
         latin: "Lycaon pictus", 
-        image: "./images/animals/africanWildDog.webp", 
-        icon: "./images/animal-icons/africanWildDog-icon.png", 
+        image: "/pz1/images/animals/africanWildDog.webp", 
+        icon: "/pz1/images/animal-icons/africanWildDog-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -442,8 +442,8 @@ const animals = {
     aldabraGiantTortoise: {
         name: "Aldabra Giant Tortoise", 
         latin: "Aldabrachelys gigantea", 
-        image: "./images/animals/aldabraGiantTortoise.webp", 
-        icon: "./images/animal-icons/aldabraGiantTortoise-icon.png", 
+        image: "/pz1/images/animals/aldabraGiantTortoise.webp", 
+        icon: "/pz1/images/animal-icons/aldabraGiantTortoise-icon.png", 
 
         class: "Reptilia", 
         order: "Testudines", 
@@ -528,8 +528,8 @@ const animals = {
     americanBison: {
         name: "American Bison", 
         latin: "Bison bison bison", 
-        image: "./images/animals/americanBison.webp", 
-        icon: "./images/animal-icons/americanBison-icon.png", 
+        image: "/pz1/images/animals/americanBison.webp", 
+        icon: "/pz1/images/animal-icons/americanBison-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -614,8 +614,8 @@ const animals = {
     bactrianCamel: {
         name: "Bactrian Camel", 
         latin: "Camelus bactrianus", 
-        image: "./images/animals/bactrianCamel.webp", 
-        icon: "./images/animal-icons/bactrianCamel-icon.png", 
+        image: "/pz1/images/animals/bactrianCamel.webp", 
+        icon: "/pz1/images/animal-icons/bactrianCamel-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -700,8 +700,8 @@ const animals = {
     bairdsTapir: {
         name: "Baird's Tapir", 
         latin: "Tapirus bairdii", 
-        image: "./images/animals/bairdsTapir.webp", 
-        icon: "./images/animal-icons/bairdsTapir-icon.png", 
+        image: "/pz1/images/animals/bairdsTapir.webp", 
+        icon: "/pz1/images/animal-icons/bairdsTapir-icon.png", 
 
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -786,8 +786,8 @@ const animals = {
     bengalTiger: {
         name: "Bengal Tiger", 
         latin: "Panthera tigris tigris", 
-        image: "./images/animals/bengalTiger.webp", 
-        icon: "./images/animal-icons/bengalTiger-icon.png", 
+        image: "/pz1/images/animals/bengalTiger.webp", 
+        icon: "/pz1/images/animal-icons/bengalTiger-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -872,8 +872,8 @@ const animals = {
     blackWildebeest: {
         name: "Black Wildebeest", 
         latin: "Connochaetes gnou", 
-        image: "./images/animals/blackWildebeest.webp", 
-        icon: "./images/animal-icons/blackWildebeest-icon.png", 
+        image: "/pz1/images/animals/blackWildebeest.webp", 
+        icon: "/pz1/images/animal-icons/blackWildebeest-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -958,8 +958,8 @@ const animals = {
     bongo: {
         name: "Bongo", 
         latin: "Tragelaphus eurycerus", 
-        image: "./images/animals/bongo.webp", 
-        icon: "./images/animal-icons/bongo-icon.png", 
+        image: "/pz1/images/animals/bongo.webp", 
+        icon: "/pz1/images/animal-icons/bongo-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -1044,8 +1044,8 @@ const animals = {
     bonobo: {
         name: "Bonobo", 
         latin: "Pan paniscus", 
-        image: "./images/animals/bonobo.webp", 
-        icon: "./images/animal-icons/bonobo-icon.png", 
+        image: "/pz1/images/animals/bonobo.webp", 
+        icon: "/pz1/images/animal-icons/bonobo-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -1130,8 +1130,8 @@ const animals = {
     borneanOrangutan: {
         name: "Bornean Orangutan", 
         latin: "Pongo pygmaeus", 
-        image: "./images/animals/borneanOrangutan.webp", 
-        icon: "./images/animal-icons/borneanOrangutan-icon.png", 
+        image: "/pz1/images/animals/borneanOrangutan.webp", 
+        icon: "/pz1/images/animal-icons/borneanOrangutan-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -1216,8 +1216,8 @@ const animals = {
     cheetah: {
         name: "Cheetah", 
         latin: "Acinonyx jubatus", 
-        image: "./images/animals/cheetah.webp", 
-        icon: "./images/animal-icons/cheetah-icon.png", 
+        image: "/pz1/images/animals/cheetah.webp", 
+        icon: "/pz1/images/animal-icons/cheetah-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -1302,8 +1302,8 @@ const animals = {
     chinesePangolin: {
         name: "Chinese Pangolin", 
         latin: "Manis pentadactyla", 
-        image: "./images/animals/chinesePangolin.webp", 
-        icon: "./images/animal-icons/chinesePangolin-icon.png", 
+        image: "/pz1/images/animals/chinesePangolin.webp", 
+        icon: "/pz1/images/animal-icons/chinesePangolin-icon.png", 
 
         class: "Mammalia", 
         order: "Pholidota", 
@@ -1388,8 +1388,8 @@ const animals = {
     commonOstrich: {
         name: "Common Ostrich", 
         latin: "Struthio camelus", 
-        image: "./images/animals/commonOstrich.webp", 
-        icon: "./images/animal-icons/commonOstrich-icon.png", 
+        image: "/pz1/images/animals/commonOstrich.webp", 
+        icon: "/pz1/images/animal-icons/commonOstrich-icon.png", 
 
         class: "Aves", 
         order: "Struthioniformes", 
@@ -1474,8 +1474,8 @@ const animals = {
     commonWarthog:{
         name: "Common Warthog", 
         latin: "Phacochoerus africanus", 
-        image: "./images/animals/commonWarthog.webp", 
-        icon: "./images/animal-icons/commonWarthog-icon.png", 
+        image: "/pz1/images/animals/commonWarthog.webp", 
+        icon: "/pz1/images/animal-icons/commonWarthog-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -1560,8 +1560,8 @@ const animals = {
     formosanBlackBear: {
         name: "Formosan Black Bear", 
         latin: "Ursus thibetanus formosanus", 
-        image: "./images/animals/formosanBlackBear.webp", 
-        icon: "./images/animal-icons/formosanBlackBear-icon.png", 
+        image: "/pz1/images/animals/formosanBlackBear.webp", 
+        icon: "/pz1/images/animal-icons/formosanBlackBear-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -1646,8 +1646,8 @@ const animals = {
     galapagosGiantTortoise: {
         name: "Galapagos Giant Tortoise", 
         latin: "Chelonoidis nigra", 
-        image: "./images/animals/galapagosGiantTortoise.webp", 
-        icon: "./images/animal-icons/galapagosGiantTortoise-icon.png", 
+        image: "/pz1/images/animals/galapagosGiantTortoise.webp", 
+        icon: "/pz1/images/animal-icons/galapagosGiantTortoise-icon.png", 
 
         class: "Reptilia", 
         order: "Testudines", 
@@ -1732,8 +1732,8 @@ const animals = {
     gemsbok: {
         name: "Gemsbok", 
         latin: "Oryx gazella", 
-        image: "./images/animals/gemsbok.webp", 
-        icon: "./images/animal-icons/gemsbok-icon.png", 
+        image: "/pz1/images/animals/gemsbok.webp", 
+        icon: "/pz1/images/animal-icons/gemsbok-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -1818,8 +1818,8 @@ const animals = {
     gharial: {
         name: "Gharial", 
         latin: "Gavialis gangeticus", 
-        image: "./images/animals/gharial.webp", 
-        icon: "./images/animal-icons/gharial-icon.png", 
+        image: "/pz1/images/animals/gharial.webp", 
+        icon: "/pz1/images/animal-icons/gharial-icon.png", 
 
         class: "Reptilia", 
         order: "Crocodilia", 
@@ -1904,8 +1904,8 @@ const animals = {
     giantPanda: {
         name: "Giant Panda", 
         latin: "Ailuropoda melanoleuca", 
-        image: "./images/animals/giantPanda.webp", 
-        icon: "./images/animal-icons/giantPanda-icon.png", 
+        image: "/pz1/images/animals/giantPanda.webp", 
+        icon: "/pz1/images/animal-icons/giantPanda-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -1990,8 +1990,8 @@ const animals = {
     greaterFlamingo: {
         name: "Greater Flamingo", 
         latin: "Phoenicopterus roseus", 
-        image: "./images/animals/greaterFlamingo.webp", 
-        icon: "./images/animal-icons/greaterFlamingo-icon.png", 
+        image: "/pz1/images/animals/greaterFlamingo.webp", 
+        icon: "/pz1/images/animal-icons/greaterFlamingo-icon.png", 
 
         class: "Aves", 
         order: "Phoenicopteriformes", 
@@ -2076,8 +2076,8 @@ const animals = {
     grizzlyBear: {
         name: "Grizzly Bear", 
         latin: "Ursus arctos horribilis", 
-        image: "./images/animals/grizzlyBear.webp", 
-        icon: "./images/animal-icons/grizzlyBear-icon.png", 
+        image: "/pz1/images/animals/grizzlyBear.webp", 
+        icon: "/pz1/images/animal-icons/grizzlyBear-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -2162,8 +2162,8 @@ const animals = {
     himalayanBrownBear: {
         name: "Himalayan Brown Bear", 
         latin: "Ursus arctos isabellinus", 
-        image: "./images/animals/himalayanBrownBear.webp", 
-        icon: "./images/animal-icons/himalayanBrownBear-icon.png", 
+        image: "/pz1/images/animals/himalayanBrownBear.webp", 
+        icon: "/pz1/images/animal-icons/himalayanBrownBear-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -2248,8 +2248,8 @@ const animals = {
     hippopotamus: {
         name: "Hippopotamus", 
         latin: "Hippopotamus amphibius", 
-        image: "./images/animals/hippopotamus.webp", 
-        icon: "./images/animal-icons/hippopotamus-icon.png", 
+        image: "/pz1/images/animals/hippopotamus.webp", 
+        icon: "/pz1/images/animal-icons/hippopotamus-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -2334,8 +2334,8 @@ const animals = {
     indianElephant: {
         name: "Indian Elephant", 
         latin: "Elephas maximus indicus", 
-        image: "./images/animals/indianElephant.webp", 
-        icon: "./images/animal-icons/indianElephant-icon.png", 
+        image: "/pz1/images/animals/indianElephant.webp", 
+        icon: "/pz1/images/animal-icons/indianElephant-icon.png", 
 
         class: "Mammalia", 
         order: "Proboscidea", 
@@ -2420,8 +2420,8 @@ const animals = {
     indianPeafowl: {
         name: "Indian Peafowl", 
         latin: "Pavo cristatus", 
-        image: "./images/animals/indianPeafowl.webp", 
-        icon: "./images/animal-icons/indianPeafowl-icon.png", 
+        image: "/pz1/images/animals/indianPeafowl.webp", 
+        icon: "/pz1/images/animal-icons/indianPeafowl-icon.png", 
 
         class: "Aves", 
         order: "Galliformes", 
@@ -2506,8 +2506,8 @@ const animals = {
     indianRhinoceros: {
         name: "Indian Rhinoceros", 
         latin: "Rhinoceros unicornis", 
-        image: "./images/animals/indianRhinoceros.webp", 
-        icon: "./images/animal-icons/indianRhinoceros-icon.png", 
+        image: "/pz1/images/animals/indianRhinoceros.webp", 
+        icon: "/pz1/images/animal-icons/indianRhinoceros-icon.png", 
 
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -2592,8 +2592,8 @@ const animals = {
     japaneseMacaque: {
         name: "Japanese Macaque", 
         latin: "Macaca fuscata", 
-        image: "./images/animals/japaneseMacaque.webp", 
-        icon: "./images/animal-icons/japaneseMacaque-icon.png", 
+        image: "/pz1/images/animals/japaneseMacaque.webp", 
+        icon: "/pz1/images/animal-icons/japaneseMacaque-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -2678,8 +2678,8 @@ const animals = {
     mandrill: {
         name: "Mandrill", 
         latin: "Mandrillus sphinx", 
-        image: "./images/animals/mandrill.webp", 
-        icon: "./images/animal-icons/mandrill-icon.png", 
+        image: "/pz1/images/animals/mandrill.webp", 
+        icon: "/pz1/images/animal-icons/mandrill-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -2764,8 +2764,8 @@ const animals = {
     nileMonitor: {
         name: "Nile Monitor", 
         latin: "Varanus niloticus", 
-        image: "./images/animals/nileMonitor.webp", 
-        icon: "./images/animal-icons/nileMonitor-icon.png", 
+        image: "/pz1/images/animals/nileMonitor.webp", 
+        icon: "/pz1/images/animal-icons/nileMonitor-icon.png", 
 
         class: "Reptilia", 
         order: "Squamata", 
@@ -2850,8 +2850,8 @@ const animals = {
     nyala: {
         name: "Nyala", 
         latin: "Tragelaphus angasii", 
-        image: "./images/animals/nyala.webp", 
-        icon: "./images/animal-icons/nyala-icon.png", 
+        image: "/pz1/images/animals/nyala.webp", 
+        icon: "/pz1/images/animal-icons/nyala-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -2936,8 +2936,8 @@ const animals = {
     okapi: {
         name: "Okapi", 
         latin: "Okapia johnstoni", 
-        image: "./images/animals/okapi.webp", 
-        icon: "./images/animal-icons/okapi-icon.png", 
+        image: "/pz1/images/animals/okapi.webp", 
+        icon: "/pz1/images/animal-icons/okapi-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -3022,8 +3022,8 @@ const animals = {
     plainsZebra: {
         name: "Plains Zebra", 
         latin: "Equus quagga", 
-        image: "./images/animals/plainsZebra.webp", 
-        icon: "./images/animal-icons/plainsZebra-icon.png", 
+        image: "/pz1/images/animals/plainsZebra.webp", 
+        icon: "/pz1/images/animal-icons/plainsZebra-icon.png", 
 
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -3108,8 +3108,8 @@ const animals = {
     pronghornAntelope: {
         name: "Pronghorn Antelope", 
         latin: "Antilocapra americana", 
-        image: "./images/animals/pronghornAntelope.webp", 
-        icon: "./images/animal-icons/pronghornAntelope-icon.png", 
+        image: "/pz1/images/animals/pronghornAntelope.webp", 
+        icon: "/pz1/images/animal-icons/pronghornAntelope-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -3194,8 +3194,8 @@ const animals = {
     redPanda: {
         name: "Red Panda", 
         latin: "Ailurus fulgens", 
-        image: "./images/animals/redPanda.webp", 
-        icon: "./images/animal-icons/redPanda-icon.png", 
+        image: "/pz1/images/animals/redPanda.webp", 
+        icon: "/pz1/images/animal-icons/redPanda-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -3280,8 +3280,8 @@ const animals = {
     redRuffedLemur: {
         name: "Red Ruffed Lemur", 
         latin: "Varecia rubra", 
-        image: "./images/animals/redRuffedLemur.webp", 
-        icon: "./images/animal-icons/redRuffedLemur-icon.png", 
+        image: "/pz1/images/animals/redRuffedLemur.webp", 
+        icon: "/pz1/images/animal-icons/redRuffedLemur-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -3366,8 +3366,8 @@ const animals = {
     reticulatedGiraffe: {
         name: "Reticulated Giraffe", 
         latin: "Giraffa camelopardalis reticulata", 
-        image: "./images/animals/reticulatedGiraffe.webp", 
-        icon: "./images/animal-icons/reticulatedGiraffe-icon.png", 
+        image: "/pz1/images/animals/reticulatedGiraffe.webp", 
+        icon: "/pz1/images/animal-icons/reticulatedGiraffe-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -3452,8 +3452,8 @@ const animals = {
     ringTailedLemur: {
         name: "Ring Tailed Lemur", 
         latin: "Lemur catta", 
-        image: "./images/animals/ringTailedLemur.webp", 
-        icon: "./images/animal-icons/ringTailedLemur-icon.png", 
+        image: "/pz1/images/animals/ringTailedLemur.webp", 
+        icon: "/pz1/images/animal-icons/ringTailedLemur-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -3538,8 +3538,8 @@ const animals = {
     sableAntelope: {
         name: "Sable Antelope", 
         latin: "Hippotragus niger", 
-        image: "./images/animals/sableAntelope.webp", 
-        icon: "./images/animal-icons/sableAntelope-icon.png", 
+        image: "/pz1/images/animals/sableAntelope.webp", 
+        icon: "/pz1/images/animal-icons/sableAntelope-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -3624,8 +3624,8 @@ const animals = {
     saltwaterCrocodile: {
         name: "Saltwater Crocodile", 
         latin: "Crocodylus porosus", 
-        image: "./images/animals/saltwaterCrocodile.webp", 
-        icon: "./images/animal-icons/saltwaterCrocodile-icon.png", 
+        image: "/pz1/images/animals/saltwaterCrocodile.webp", 
+        icon: "/pz1/images/animal-icons/saltwaterCrocodile-icon.png", 
 
         class: "Reptilia", 
         order: "Crocodilia", 
@@ -3710,8 +3710,8 @@ const animals = {
     siberianTiger: {
         name: "Siberian Tiger", 
         latin: "Panthera tigris altaica", 
-        image: "./images/animals/siberianTiger.webp", 
-        icon: "./images/animal-icons/siberianTiger-icon.png", 
+        image: "/pz1/images/animals/siberianTiger.webp", 
+        icon: "/pz1/images/animal-icons/siberianTiger-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -3796,8 +3796,8 @@ const animals = {
     snowLeopard: {
         name: "Snow Leopard", 
         latin: "Panthera uncia", 
-        image: "./images/animals/snowLeopard.webp", 
-        icon: "./images/animal-icons/snowLeopard-icon.png", 
+        image: "/pz1/images/animals/snowLeopard.webp", 
+        icon: "/pz1/images/animal-icons/snowLeopard-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -3882,8 +3882,8 @@ const animals = {
     spottedHyena: {
         name: "Spotted Hyena", 
         latin: "Crocuta crocuta", 
-        image: "./images/animals/spottedHyena.webp", 
-        icon: "./images/animal-icons/spottedHyena-icon.png", 
+        image: "/pz1/images/animals/spottedHyena.webp", 
+        icon: "/pz1/images/animal-icons/spottedHyena-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -3968,8 +3968,8 @@ const animals = {
     springbok: {
         name: "Springbok", 
         latin: "Antidorcas marsupialis", 
-        image: "./images/animals/springbok.webp", 
-        icon: "./images/animal-icons/springbok-icon.png", 
+        image: "/pz1/images/animals/springbok.webp", 
+        icon: "/pz1/images/animal-icons/springbok-icon.png", 
 
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -4054,8 +4054,8 @@ const animals = {
     timberWolf: {
         name: "Timber Wolf", 
         latin: "Canis lupus", 
-        image: "./images/animals/timberWolf.webp", 
-        icon: "./images/animal-icons/timberWolf-icon.png", 
+        image: "/pz1/images/animals/timberWolf.webp", 
+        icon: "/pz1/images/animal-icons/timberWolf-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -4140,8 +4140,8 @@ const animals = {
     westAfricanLion: {
         name: "West African Lion", 
         latin: "Panthera leo leo", 
-        image: "./images/animals/westAfricanLion.webp", 
-        icon: "./images/animal-icons/westAfricanLion-icon.png", 
+        image: "/pz1/images/animals/westAfricanLion.webp", 
+        icon: "/pz1/images/animal-icons/westAfricanLion-icon.png", 
 
         class: "Mammalia", 
         order: "Carnivora", 
@@ -4226,8 +4226,8 @@ const animals = {
     westernChimpanzee: {
         name: "Western Chimpanzee", 
         latin: "Pan troglodytes verus", 
-        image: "./images/animals/westernChimpanzee.webp", 
-        icon: "./images/animal-icons/westernChimpanzee-icon.png", 
+        image: "/pz1/images/animals/westernChimpanzee.webp", 
+        icon: "/pz1/images/animal-icons/westernChimpanzee-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -4312,8 +4312,8 @@ const animals = {
     westernLowlandGorilla: {
         name: "Western Lowland Gorilla", 
         latin: "Gorilla gorilla gorilla", 
-        image: "./images/animals/westernLowlandGorilla.webp", 
-        icon: "./images/animal-icons/westernLowlandGorilla-icon.png", 
+        image: "/pz1/images/animals/westernLowlandGorilla.webp", 
+        icon: "/pz1/images/animal-icons/westernLowlandGorilla-icon.png", 
 
         class: "Mammalia", 
         order: "Primates", 
@@ -4401,8 +4401,8 @@ const animals = {
     amazonianGiantCentipede: {
         name: "Amazonian Giant Centipede", 
         latin: "Scolopendra gigantea", 
-        image: "./images/animals/amazonianGiantCentipede.webp", 
-        icon: "./images/animal-icons/amazonianGiantCentipede-icon.png", 
+        image: "/pz1/images/animals/amazonianGiantCentipede.webp", 
+        icon: "/pz1/images/animal-icons/amazonianGiantCentipede-icon.png", 
    
         class: "Chilopoda", 
         order: "Scolopendromorpha", 
@@ -4445,8 +4445,8 @@ const animals = {
     boaConstrictor: {
         name: "Boa Constrictor", 
         latin: "Boa constrictor", 
-        image: "./images/animals/boaConstrictor.webp", 
-        icon: "./images/animal-icons/boaConstrictor-icon.png", 
+        image: "/pz1/images/animals/boaConstrictor.webp", 
+        icon: "/pz1/images/animal-icons/boaConstrictor-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -4489,8 +4489,8 @@ const animals = {
     brazilianSalmonPinkTarantula: {
         name: "Brazilian Salmon Pink Tarantula", 
         latin: "Lasiodora parahybana", 
-        image: "./images/animals/brazilianSalmonPinkTarantula.webp", 
-        icon: "./images/animal-icons/brazilianSalmonPinkTarantula-icon.png", 
+        image: "/pz1/images/animals/brazilianSalmonPinkTarantula.webp", 
+        icon: "/pz1/images/animal-icons/brazilianSalmonPinkTarantula-icon.png", 
    
         class: "Arachnida", 
         order: "Araneae", 
@@ -4533,8 +4533,8 @@ const animals = {
     brazilianWanderingSpider: {
         name: "Brazilian Wandering Spider", 
         latin: "Phoneutria nigriventer", 
-        image: "./images/animals/brazilianWanderingSpider.webp", 
-        icon: "./images/animal-icons/brazilianWanderingSpider-icon.png", 
+        image: "/pz1/images/animals/brazilianWanderingSpider.webp", 
+        icon: "/pz1/images/animal-icons/brazilianWanderingSpider-icon.png", 
    
         class: "Arachnida", 
         order: "Araneae", 
@@ -4577,8 +4577,8 @@ const animals = {
     commonDeathAdder: {
         name: "Common Death Adder", 
         latin: "Acanthophis antarcticus", 
-        image: "./images/animals/commonDeathAdder.webp", 
-        icon: "./images/animal-icons/commonDeathAdder-icon.png", 
+        image: "/pz1/images/animals/commonDeathAdder.webp", 
+        icon: "/pz1/images/animal-icons/commonDeathAdder-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -4621,8 +4621,8 @@ const animals = {
     easternBrownSnake: {
         name: "Eastern Brown Snake", 
         latin: "Pseudonaja textilis", 
-        image: "./images/animals/easternBrownSnake.webp", 
-        icon: "./images/animal-icons/easternBrownSnake-icon.png", 
+        image: "/pz1/images/animals/easternBrownSnake.webp", 
+        icon: "/pz1/images/animal-icons/easternBrownSnake-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -4665,8 +4665,8 @@ const animals = {
     giantBurrowingCockroach: {
         name: "Giant Burrowing Cockroach", 
         latin: "Macropanesthia rhinoceros", 
-        image: "./images/animals/giantBurrowingCockroach.webp", 
-        icon: "./images/animal-icons/giantBurrowingCockroach-icon.png", 
+        image: "/pz1/images/animals/giantBurrowingCockroach.webp", 
+        icon: "/pz1/images/animal-icons/giantBurrowingCockroach-icon.png", 
    
         class: "Insecta", 
         order: "Blattodea", 
@@ -4709,8 +4709,8 @@ const animals = {
     giantDesertHairyScorpion: {
         name: "Giant Desert Hairy Scorpion", 
         latin: "Hadrurus arizonensis", 
-        image: "./images/animals/giantDesertHairyScorpion.webp", 
-        icon: "./images/animal-icons/giantDesertHairyScorpion-icon.png", 
+        image: "/pz1/images/animals/giantDesertHairyScorpion.webp", 
+        icon: "/pz1/images/animal-icons/giantDesertHairyScorpion-icon.png", 
    
         class: "Arachnida", 
         order: "Scorpiones", 
@@ -4753,8 +4753,8 @@ const animals = {
     giantForestScorpion: {
         name: "Giant Forest Scorpion", 
         latin: "Heterometrus swammerdami titanicus", 
-        image: "./images/animals/giantForestScorpion.webp", 
-        icon: "./images/animal-icons/giantForestScorpion-icon.png", 
+        image: "/pz1/images/animals/giantForestScorpion.webp", 
+        icon: "/pz1/images/animal-icons/giantForestScorpion-icon.png", 
    
         class: "Arachnida", 
         order: "Scorpiones", 
@@ -4797,8 +4797,8 @@ const animals = {
     giantTigerLandSnail: {
         name: "Giant Tiger Land Snail", 
         latin: "Achatina achatina", 
-        image: "./images/animals/giantTigerLandSnail.webp", 
-        icon: "./images/animal-icons/giantTigerLandSnail-icon.png", 
+        image: "/pz1/images/animals/giantTigerLandSnail.webp", 
+        icon: "/pz1/images/animal-icons/giantTigerLandSnail-icon.png", 
    
         class: "Gastropoda", 
         order: "Stylommatophora", 
@@ -4841,8 +4841,8 @@ const animals = {
     gilaMonster: {
         name: "Gila Monster", 
         latin: "Heloderma suspectum", 
-        image: "./images/animals/gilaMonster.webp", 
-        icon: "./images/animal-icons/gilaMonster-icon.png", 
+        image: "/pz1/images/animals/gilaMonster.webp", 
+        icon: "/pz1/images/animal-icons/gilaMonster-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -4885,8 +4885,8 @@ const animals = {
     goldenPoisonFrog: {
         name: "Golden Poison Frog", 
         latin: "Phyllobates terribilis", 
-        image: "./images/animals/goldenPoisonFrog.webp", 
-        icon: "./images/animal-icons/goldenPoisonFrog-icon.png", 
+        image: "/pz1/images/animals/goldenPoisonFrog.webp", 
+        icon: "/pz1/images/animal-icons/goldenPoisonFrog-icon.png", 
    
         class: "Amphibia", 
         order: "Anura", 
@@ -4929,8 +4929,8 @@ const animals = {
     goliathBeetle: {
         name: "Goliath Beetle", 
         latin: "Goliathus goliatus", 
-        image: "./images/animals/goliathBeetle.webp", 
-        icon: "./images/animal-icons/goliathBeetle-icon.png", 
+        image: "/pz1/images/animals/goliathBeetle.webp", 
+        icon: "/pz1/images/animal-icons/goliathBeetle-icon.png", 
    
         class: "Insecta", 
         order: "Coleoptera", 
@@ -4973,8 +4973,8 @@ const animals = {
     goliathBirdeater: {
         name: "Goliath Birdeater", 
         latin: "Theraphosa blondi", 
-        image: "./images/animals/goliathBirdeater.webp", 
-        icon: "./images/animal-icons/goliathBeetle-icon.png", 
+        image: "/pz1/images/animals/goliathBirdeater.webp", 
+        icon: "/pz1/images/animal-icons/goliathBeetle-icon.png", 
    
         class: "Arachnida", 
         order: "Araneae", 
@@ -5017,8 +5017,8 @@ const animals = {
     goliathFrog: {
         name: "Goliath Frog", 
         latin: "Conraua goliath", 
-        image: "./images/animals/goliathFrog.webp", 
-        icon: "./images/animal-icons/goliathFrog-icon.png", 
+        image: "/pz1/images/animals/goliathFrog.webp", 
+        icon: "/pz1/images/animal-icons/goliathFrog-icon.png", 
    
         class: "Amphibia", 
         order: "Anura", 
@@ -5061,8 +5061,8 @@ const animals = {
     greenIguana: {
         name: "Green Iguana", 
         latin: "Iguana iguana", 
-        image: "./images/animals/greenIguana.webp", 
-        icon: "./images/animal-icons/greenIguana-icon.png", 
+        image: "/pz1/images/animals/greenIguana.webp", 
+        icon: "/pz1/images/animal-icons/greenIguana-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -5105,8 +5105,8 @@ const animals = {
     lehmannsPoisonFrog: {
         name: "Lehmann's Poison Frog", 
         latin: "Oophaga lehmanni", 
-        image: "./images/animals/lehmannsPoisonFrog.webp", 
-        icon: "./images/animal-icons/lehmannsPoisonFrog-icon.png", 
+        image: "/pz1/images/animals/lehmannsPoisonFrog.webp", 
+        icon: "/pz1/images/animal-icons/lehmannsPoisonFrog-icon.png", 
    
         class: "Amphibia", 
         order: "Anura", 
@@ -5149,8 +5149,8 @@ const animals = {
     lesserAntilleanIguana: {
         name: "Lesser Antillean Iguana", 
         latin: "Iguana delicatissima", 
-        image: "./images/animals/lesserAntilleanIguana.webp", 
-        icon: "./images/animal-icons/lesserAntilleanIguana-icon.png", 
+        image: "/pz1/images/animals/lesserAntilleanIguana.webp", 
+        icon: "/pz1/images/animal-icons/lesserAntilleanIguana-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -5193,8 +5193,8 @@ const animals = {
     mexicanRedKneeTarantula: {
         name: "Mexican Red Knee Tarantula", 
         latin: "Brachypelma hamorii", 
-        image: "./images/animals/mexicanRedKneeTarantula.webp", 
-        icon: "./images/animal-icons/mexicanRedKneeTarantula-icon.png", 
+        image: "/pz1/images/animals/mexicanRedKneeTarantula.webp", 
+        icon: "/pz1/images/animal-icons/mexicanRedKneeTarantula-icon.png", 
    
         class: "Arachnida", 
         order: "Araneae", 
@@ -5237,8 +5237,8 @@ const animals = {
     puffAdder: {
         name: "Puff Adder", 
         latin: "Bitis arietans", 
-        image: "./images/animals/puffAdder.webp", 
-        icon: "./images/animal-icons/puffAdder-icon.png", 
+        image: "/pz1/images/animals/puffAdder.webp", 
+        icon: "/pz1/images/animal-icons/puffAdder-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -5281,8 +5281,8 @@ const animals = {
     titanBeetle: {
         name: "Titan Beetle", 
         latin: "Titanus giganteus", 
-        image: "./images/animals/titanBeetle.webp", 
-        icon: "./images/animal-icons/titanBeetle-icon.png", 
+        image: "/pz1/images/animals/titanBeetle.webp", 
+        icon: "/pz1/images/animal-icons/titanBeetle-icon.png", 
    
         class: "Insecta", 
         order: "Coleoptera", 
@@ -5325,8 +5325,8 @@ const animals = {
     westernDiamondbackRattlesnake: {
         name: "Western Diamondback Rattlesnake", 
         latin: "Crotalus atrox", 
-        image: "./images/animals/westernDiamondbackRattlesnake.webp", 
-        icon: "./images/animal-icons/westernDiamondbackRattlesnake-icon.png", 
+        image: "/pz1/images/animals/westernDiamondbackRattlesnake.webp", 
+        icon: "/pz1/images/animal-icons/westernDiamondbackRattlesnake-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -5369,8 +5369,8 @@ const animals = {
     yellowAnaconda: {
         name: "Yellow Anaconda", 
         latin: "Eunectes notaeus", 
-        image: "./images/animals/yellowAnaconda.webp", 
-        icon: "./images/animal-icons/yellowAnaconda-icon.png", 
+        image: "/pz1/images/animals/yellowAnaconda.webp", 
+        icon: "/pz1/images/animal-icons/yellowAnaconda-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -5416,8 +5416,8 @@ const animals = {
     komodoDragon:{
         name: "Komodo Dragon", 
         latin: "Varanus komodoensis", 
-        image: "./images/animals/komodoDragon.webp", 
-        icon: "./images/animal-icons/komodoDragon-icon.png", 
+        image: "/pz1/images/animals/komodoDragon.webp", 
+        icon: "/pz1/images/animal-icons/komodoDragon-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -5502,8 +5502,8 @@ const animals = {
     pygmyHippopotamus:{
         name: "Pygmy Hippopotamus", 
         latin: "Choeropsis liberiensis", 
-        image: "./images/animals/pygmyHippopotamus.webp", 
-        icon: "./images/animal-icons/pygmyHippopotamus-icon.png", 
+        image: "/pz1/images/animals/pygmyHippopotamus.webp", 
+        icon: "/pz1/images/animal-icons/pygmyHippopotamus-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -5588,8 +5588,8 @@ const animals = {
     thomsonsGazelle:{
         name: "Thomson's Gazelle", 
         latin: "Eudorcas thomsonii", 
-        image: "./images/animals/thomsonsGazelle.webp", 
-        icon: "./images/animal-icons/thomsonsGazelle-icon.png", 
+        image: "/pz1/images/animals/thomsonsGazelle.webp", 
+        icon: "/pz1/images/animal-icons/thomsonsGazelle-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -5677,8 +5677,8 @@ const animals = {
     arcticWolf:{
         name: "Arctic Wolf", 
         latin: "Canis lupus arctos", 
-        image: "./images/animals/arcticWolf.webp", 
-        icon: "./images/animal-icons/arcticWolf-icon.png", 
+        image: "/pz1/images/animals/arcticWolf.webp", 
+        icon: "/pz1/images/animal-icons/arcticWolf-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -5763,8 +5763,8 @@ const animals = {
     dallSheep:{
         name: "Dall Sheep", 
         latin: "Ovis dalli", 
-        image: "./images/animals/dallSheep.webp", 
-        icon: "./images/animal-icons/dallSheep-icon.png", 
+        image: "/pz1/images/animals/dallSheep.webp", 
+        icon: "/pz1/images/animal-icons/dallSheep-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -5849,8 +5849,8 @@ const animals = {
     polarBear:{
         name: "Polar Bear", 
         latin: "Ursus maritimus", 
-        image: "./images/animals/polarBear.webp", 
-        icon: "./images/animal-icons/polarBear-icon.png", 
+        image: "/pz1/images/animals/polarBear.webp", 
+        icon: "/pz1/images/animal-icons/polarBear-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -5935,8 +5935,8 @@ const animals = {
     reindeer:{
         name: "Reindeer", 
         latin: "Rangifer tarandus", 
-        image: "./images/animals/reindeer.webp", 
-        icon: "./images/animal-icons/reindeer-icon.png", 
+        image: "/pz1/images/animals/reindeer.webp", 
+        icon: "/pz1/images/animal-icons/reindeer-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -6024,8 +6024,8 @@ const animals = {
     colombianWhiteFacedCapuchinMonkey:{
         name: "Colombian White-Faced Capuchin Monkey", 
         latin: "Cebus capucinus", 
-        image: "./images/animals/colombianWhiteFacedCapuchinMonkey.webp", 
-        icon: "./images/animal-icons/colombianWhiteFacedCapuchinMonkey-icon.png", 
+        image: "/pz1/images/animals/colombianWhiteFacedCapuchinMonkey.webp", 
+        icon: "/pz1/images/animal-icons/colombianWhiteFacedCapuchinMonkey-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -6110,8 +6110,8 @@ const animals = {
     giantAnteater:{
         name: "Giant Anteater", 
         latin: "Myrmecophaga tridactyla", 
-        image: "./images/animals/giantAnteater.webp", 
-        icon: "./images/animal-icons/giantAnteater-icon.png", 
+        image: "/pz1/images/animals/giantAnteater.webp", 
+        icon: "/pz1/images/animal-icons/giantAnteater-icon.png", 
    
         class: "Mammalia", 
         order: "Pilosa", 
@@ -6196,8 +6196,8 @@ const animals = {
     jaguar:{
         name: "Jaguar", 
         latin: "Panthera onca", 
-        image: "./images/animals/jaguar.webp", 
-        icon: "./images/animal-icons/jaguar-icon.png", 
+        image: "/pz1/images/animals/jaguar.webp", 
+        icon: "/pz1/images/animal-icons/jaguar-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -6282,8 +6282,8 @@ const animals = {
     llama:{
         name: "Llama", 
         latin: "Lama glama", 
-        image: "./images/animals/llama.webp", 
-        icon: "./images/animal-icons/llama-icon.png", 
+        image: "/pz1/images/animals/llama.webp", 
+        icon: "/pz1/images/animal-icons/llama-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -6368,8 +6368,8 @@ const animals = {
     redEyedTreeFrog:{
         name: "Red-Eyed Tree Frog", 
         latin: "Agalychnis callidryas", 
-        image: "./images/animals/redEyedTreeFrog.webp", 
-        icon: "./images/animal-icons/redEyedTreeFrog-icon.png", 
+        image: "/pz1/images/animals/redEyedTreeFrog.webp", 
+        icon: "/pz1/images/animal-icons/redEyedTreeFrog-icon.png", 
    
         class: "Amphibia", 
         order: "Anura", 
@@ -6415,8 +6415,8 @@ const animals = {
     dingo:{
         name: "Dingo", 
         latin: "Canis lupus dingo", 
-        image: "./images/animals/dingo.webp", 
-        icon: "./images/animal-icons/dingo-icon.png", 
+        image: "/pz1/images/animals/dingo.webp", 
+        icon: "/pz1/images/animal-icons/dingo-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -6501,8 +6501,8 @@ const animals = {
     koala:{
         name: "Koala", 
         latin: "Phascolarctos cinereus", 
-        image: "./images/animals/koala.webp", 
-        icon: "./images/animal-icons/koala-icon.png", 
+        image: "/pz1/images/animals/koala.webp", 
+        icon: "/pz1/images/animal-icons/koala-icon.png", 
    
         class: "Mammalia", 
         order: "Diprotodontia", 
@@ -6587,8 +6587,8 @@ const animals = {
     redKangaroo:{
         name: "Red Kangaroo", 
         latin: "Osphranter rufus", 
-        image: "./images/animals/redKangaroo.webp", 
-        icon: "./images/animal-icons/redKangaroo-icon.png", 
+        image: "/pz1/images/animals/redKangaroo.webp", 
+        icon: "/pz1/images/animal-icons/redKangaroo-icon.png", 
    
         class: "Mammalia", 
         order: "Diprotodontia", 
@@ -6673,8 +6673,8 @@ const animals = {
     southernCassowary:{
         name: "Southern Cassowary", 
         latin: "Casuarius casuarius", 
-        image: "./images/animals/southernCassowary.webp", 
-        icon: "./images/animal-icons/southernCassowary-icon.png", 
+        image: "/pz1/images/animals/southernCassowary.webp", 
+        icon: "/pz1/images/animal-icons/southernCassowary-icon.png", 
    
         class: "Aves", 
         order: "Casuariiformes", 
@@ -6759,8 +6759,8 @@ const animals = {
     easternBlueTonguedLizard:{
         name: "Eastern Blue Tongued Lizard", 
         latin: "Tiliqua scincoides scincoides", 
-        image: "./images/animals/easternBlueTonguedLizard.webp", 
-        icon: "./images/animal-icons/easternBlueTonguedLizard-icon.png", 
+        image: "/pz1/images/animals/easternBlueTonguedLizard.webp", 
+        icon: "/pz1/images/animal-icons/easternBlueTonguedLizard-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -6806,8 +6806,8 @@ const animals = {
     cuviersDwarfCaiman:{
         name: "Cuvier's Dwarf Caiman", 
         latin: "Paleosuchus palpebrosus", 
-        image: "./images/animals/cuviersDwarfCaiman.webp", 
-        icon: "./images/animal-icons/cuviersDwarfCaiman-icon.png", 
+        image: "/pz1/images/animals/cuviersDwarfCaiman.webp", 
+        icon: "/pz1/images/animal-icons/cuviersDwarfCaiman-icon.png", 
    
         class: "Reptilia", 
         order: "Crocodilia", 
@@ -6892,8 +6892,8 @@ const animals = {
     giantOtter:{
         name: "Giant Otter", 
         latin: "Pteronura brasiliensis", 
-        image: "./images/animals/giantOtter.webp", 
-        icon: "./images/animal-icons/giantOtter-icon.png", 
+        image: "/pz1/images/animals/giantOtter.webp", 
+        icon: "/pz1/images/animal-icons/giantOtter-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -6978,8 +6978,8 @@ const animals = {
     greySeal:{
         name: "Grey Seal", 
         latin: "Halichoerus grypus atlantica", 
-        image: "./images/animals/greySeal.webp", 
-        icon: "./images/animal-icons/greySeal-icon.png", 
+        image: "/pz1/images/animals/greySeal.webp", 
+        icon: "/pz1/images/animal-icons/greySeal-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -7064,8 +7064,8 @@ const animals = {
     kingPenguin:{
         name: "King Penguin", 
         latin: "Aptenodytes patagonicus patagonicus", 
-        image: "./images/animals/kingPenguin.webp", 
-        icon: "./images/animal-icons/kingPenguin-icon.png", 
+        image: "/pz1/images/animals/kingPenguin.webp", 
+        icon: "/pz1/images/animal-icons/kingPenguin-icon.png", 
    
         class: "Aves", 
         order: "Sphenisciformes", 
@@ -7150,8 +7150,8 @@ const animals = {
     diamondbackTerrapin:{
         name: "Diamondback Terrapin", 
         latin: "Malaclemys terrapin terrapin", 
-        image: "./images/animals/diamondbackTerrapin.webp", 
-        icon: "./images/animal-icons/diamondbackTerrapin-icon.png", 
+        image: "/pz1/images/animals/diamondbackTerrapin.webp", 
+        icon: "/pz1/images/animal-icons/diamondbackTerrapin-icon.png", 
    
         class: "Reptilia", 
         order: "Testudines", 
@@ -7197,8 +7197,8 @@ const animals = {
     binturong:{
         name: "Binturong", 
         latin: "Arctictis binturong", 
-        image: "./images/animals/binturong.webp", 
-        icon: "./images/animal-icons/binturong-icon.png", 
+        image: "/pz1/images/animals/binturong.webp", 
+        icon: "/pz1/images/animal-icons/binturong-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -7283,8 +7283,8 @@ const animals = {
     cloudedLeopard:{
         name: "Clouded Leopard", 
         latin: "Neofelis nebulosa", 
-        image: "./images/animals/cloudedLeopard.webp", 
-        icon: "./images/animal-icons/cloudedLeopard-icon.png", 
+        image: "/pz1/images/animals/cloudedLeopard.webp", 
+        icon: "/pz1/images/animal-icons/cloudedLeopard-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -7369,8 +7369,8 @@ const animals = {
     dhole:{
         name: "Dhole", 
         latin: "Cuon alpinus alpinus", 
-        image: "./images/animals/dhole.webp", 
-        icon: "./images/animal-icons/dhole-icon.png", 
+        image: "/pz1/images/animals/dhole.webp", 
+        icon: "/pz1/images/animal-icons/dhole-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -7455,8 +7455,8 @@ const animals = {
     malayanTapir:{
         name: "Malayan Tapir", 
         latin: "Tapirus indicus", 
-        image: "./images/animals/malayanTapir.webp", 
-        icon: "./images/animal-icons/malayanTapir-icon.png", 
+        image: "/pz1/images/animals/malayanTapir.webp", 
+        icon: "/pz1/images/animal-icons/malayanTapir-icon.png", 
    
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -7541,8 +7541,8 @@ const animals = {
     northSulawesiBabirusa:{
         name: "North Sulawesi Babirusa", 
         latin: "Babyrousa celebensis", 
-        image: "./images/animals/northSulawesiBabirusa.webp", 
-        icon: "./images/animal-icons/northSulawesiBabirusa-icon.png", 
+        image: "/pz1/images/animals/northSulawesiBabirusa.webp", 
+        icon: "/pz1/images/animal-icons/northSulawesiBabirusa-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -7627,8 +7627,8 @@ const animals = {
     proboscisMonkey:{
         name: "Proboscis Monkey", 
         latin: "Nasalis larvatus larvatus", 
-        image: "./images/animals/proboscisMonkey.webp", 
-        icon: "./images/animal-icons/proboscisMonkey-icon.png", 
+        image: "/pz1/images/animals/proboscisMonkey.webp", 
+        icon: "/pz1/images/animal-icons/proboscisMonkey-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -7713,8 +7713,8 @@ const animals = {
     sunBear:{
         name: "Sun Bear", 
         latin: "Helarctos malayanus", 
-        image: "./images/animals/sunBear.webp", 
-        icon: "./images/animal-icons/sunBear-icon.png", 
+        image: "/pz1/images/animals/sunBear.webp", 
+        icon: "/pz1/images/animal-icons/sunBear-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -7799,8 +7799,8 @@ const animals = {
     giantMalaysianLeafInsect:{
         name: "Giant Malaysian Leaf Insect", 
         latin: "Phyllium giganteum", 
-        image: "./images/animals/giantMalaysianLeafInsect.webp", 
-        icon: "./images/animal-icons/giantMalaysianLeafInsect-icon.png", 
+        image: "/pz1/images/animals/giantMalaysianLeafInsect.webp", 
+        icon: "/pz1/images/animal-icons/giantMalaysianLeafInsect-icon.png", 
    
         class: "Insecta", 
         order: "Phasmatodea", 
@@ -7846,8 +7846,8 @@ const animals = {
     africanPenguin:{
         name: "African Penguin", 
         latin: "Spheniscus demersus", 
-        image: "./images/animals/africanPenguin.webp", 
-        icon: "./images/animal-icons/africanPenguin-icon.png", 
+        image: "/pz1/images/animals/africanPenguin.webp", 
+        icon: "/pz1/images/animal-icons/africanPenguin-icon.png", 
    
         class: "Aves", 
         order: "Sphenisciformes", 
@@ -7932,8 +7932,8 @@ const animals = {
     fennecFox:{
         name: "Fennec Fox", 
         latin: "Vulpes zerda", 
-        image: "./images/animals/fennecFox.webp", 
-        icon: "./images/animal-icons/fennecFox-icon.png", 
+        image: "/pz1/images/animals/fennecFox.webp", 
+        icon: "/pz1/images/animal-icons/fennecFox-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -8018,8 +8018,8 @@ const animals = {
     meerkat:{
         name: "Meerkat", 
         latin: "Suricata suricatta", 
-        image: "./images/animals/meerkat.webp", 
-        icon: "./images/animal-icons/meerkat-icon.png", 
+        image: "/pz1/images/animals/meerkat.webp", 
+        icon: "/pz1/images/animal-icons/meerkat-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -8104,8 +8104,8 @@ const animals = {
     southernWhiteRhinoceros:{
         name: "Southern White Rhinoceros", 
         latin: "Ceratotherium simum simum", 
-        image: "./images/animals/southernWhiteRhinoceros.webp", 
-        icon: "./images/animal-icons/southernWhiteRhinoceros-icon.png", 
+        image: "/pz1/images/animals/southernWhiteRhinoceros.webp", 
+        icon: "/pz1/images/animal-icons/southernWhiteRhinoceros-icon.png", 
    
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -8190,8 +8190,8 @@ const animals = {
     sacredScarabBeetle:{
         name: "Sacred Scarab Beetle", 
         latin: "Scarabaeus sacer", 
-        image: "./images/animals/sacredScarabBeetle.webp", 
-        icon: "./images/animal-icons/sacredScarabBeetle-icon.png", 
+        image: "/pz1/images/animals/sacredScarabBeetle.webp", 
+        icon: "/pz1/images/animal-icons/sacredScarabBeetle-icon.png", 
    
         class: "Insecta", 
         order: "Coleoptera", 
@@ -8237,8 +8237,8 @@ const animals = {
     americanAlligator:{
         name: "American Alligator", 
         latin: "Alligator mississippiensis", 
-        image: "./images/animals/americanAlligator.webp", 
-        icon: "./images/animal-icons/americanAlligator-icon.png", 
+        image: "/pz1/images/animals/americanAlligator.webp", 
+        icon: "/pz1/images/animal-icons/americanAlligator-icon.png", 
    
         class: "Reptilia", 
         order: "Crocodilia", 
@@ -8323,8 +8323,8 @@ const animals = {
     arcticFox:{
         name: "Arctic Fox", 
         latin: "Vulpes lagopus", 
-        image: "./images/animals/arcticFox.webp", 
-        icon: "./images/animal-icons/arcticFox-icon.png", 
+        image: "/pz1/images/animals/arcticFox.webp", 
+        icon: "/pz1/images/animal-icons/arcticFox-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -8409,8 +8409,8 @@ const animals = {
     blackTailedPrairieDog:{
         name: "Black-Tailed Prairie Dog", 
         latin: "Cynomys ludovicianus", 
-        image: "./images/animals/blackTailedPrairieDog.webp", 
-        icon: "./images/animal-icons/blackTailedPrairieDog-icon.png", 
+        image: "/pz1/images/animals/blackTailedPrairieDog.webp", 
+        icon: "/pz1/images/animal-icons/blackTailedPrairieDog-icon.png", 
    
         class: "Mammalia", 
         order: "Rodentia", 
@@ -8495,8 +8495,8 @@ const animals = {
     californiaSeaLion:{
         name: "California Sea Lion", 
         latin: "Zalophus californianus", 
-        image: "./images/animals/californiaSeaLion.webp", 
-        icon: "./images/animal-icons/californiaSeaLion-icon.png", 
+        image: "/pz1/images/animals/californiaSeaLion.webp", 
+        icon: "/pz1/images/animal-icons/californiaSeaLion-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -8581,8 +8581,8 @@ const animals = {
     cougar:{
         name: "Cougar", 
         latin: "Puma concolor", 
-        image: "./images/animals/cougar.webp", 
-        icon: "./images/animal-icons/cougar-icon.png", 
+        image: "/pz1/images/animals/cougar.webp", 
+        icon: "/pz1/images/animal-icons/cougar-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -8667,8 +8667,8 @@ const animals = {
     moose:{
         name: "Moose", 
         latin: "Alces alces", 
-        image: "./images/animals/moose.webp", 
-        icon: "./images/animal-icons/moose-icon.png", 
+        image: "/pz1/images/animals/moose.webp", 
+        icon: "/pz1/images/animal-icons/moose-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -8753,8 +8753,8 @@ const animals = {
     northAmericanBeaver:{
         name: "North American Beaver", 
         latin: "Castor canadensis", 
-        image: "./images/animals/northAmericanBeaver.webp", 
-        icon: "./images/animal-icons/northAmericanBeaver-icon.png", 
+        image: "/pz1/images/animals/northAmericanBeaver.webp", 
+        icon: "/pz1/images/animal-icons/northAmericanBeaver-icon.png", 
    
         class: "Mammalia", 
         order: "Rodentia", 
@@ -8839,8 +8839,8 @@ const animals = {
     americanBullfrog:{
         name: "American Bullfrog", 
         latin: "Lithobates catesbeianus", 
-        image: "./images/animals/americanBullfrog.webp", 
-        icon: "./images/animal-icons/americanBullfrog-icon.png", 
+        image: "/pz1/images/animals/americanBullfrog.webp", 
+        icon: "/pz1/images/animal-icons/americanBullfrog-icon.png", 
    
         class: "Amphibia", 
         order: "Anura", 
@@ -8886,8 +8886,8 @@ const animals = {
     blackAndWhiteRuffedLemur:{
         name: "Black-And-White Ruffed Lemur", 
         latin: "Varecia variegata", 
-        image: "./images/animals/blackAndWhiteRuffedLemur.webp", 
-        icon: "./images/animal-icons/blackAndWhiteRuffedLemur-icon.png", 
+        image: "/pz1/images/animals/blackAndWhiteRuffedLemur.webp", 
+        icon: "/pz1/images/animal-icons/blackAndWhiteRuffedLemur-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -8975,8 +8975,8 @@ const animals = {
     alpineIbex:{
         name: "Alpine Ibex", 
         latin: "Capra ibex", 
-        image: "./images/animals/alpineIbex.webp", 
-        icon: "./images/animal-icons/alpineIbex-icon.png", 
+        image: "/pz1/images/animals/alpineIbex.webp", 
+        icon: "/pz1/images/animal-icons/alpineIbex-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -9061,8 +9061,8 @@ const animals = {
     eurasianLynx:{
         name: "Eurasian Lynx", 
         latin: "Lynx lynx", 
-        image: "./images/animals/eurasianLynx.webp", 
-        icon: "./images/animal-icons/eurasianLynx-icon.png", 
+        image: "/pz1/images/animals/eurasianLynx.webp", 
+        icon: "/pz1/images/animal-icons/eurasianLynx-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -9147,8 +9147,8 @@ const animals = {
     europeanBadger:{
         name: "European Badger", 
         latin: "Meles meles", 
-        image: "./images/animals/europeanBadger.webp", 
-        icon: "./images/animal-icons/europeanBadger-icon.png", 
+        image: "/pz1/images/animals/europeanBadger.webp", 
+        icon: "/pz1/images/animal-icons/europeanBadger-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -9233,8 +9233,8 @@ const animals = {
     europeanFallowDeer:{
         name: "European Fallow Deer", 
         latin: "Dama dama", 
-        image: "./images/animals/europeanFallowDeer.webp", 
-        icon: "./images/animal-icons/europeanFallowDeer-icon.png", 
+        image: "/pz1/images/animals/europeanFallowDeer.webp", 
+        icon: "/pz1/images/animal-icons/europeanFallowDeer-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -9319,8 +9319,8 @@ const animals = {
     fireSalamander:{
         name: "Fire Salamander", 
         latin: "Salamandra salamandra", 
-        image: "./images/animals/fireSalamander.webp", 
-        icon: "./images/animal-icons/fireSalamander-icon.png", 
+        image: "/pz1/images/animals/fireSalamander.webp", 
+        icon: "/pz1/images/animal-icons/fireSalamander-icon.png", 
    
         class: "Amphibia", 
         order: "Urodela", 
@@ -9366,8 +9366,8 @@ const animals = {
     asianSmallClawedOtter:{
         name: "Asian Small-Clawed Otter", 
         latin: "Aonyx cinereus", 
-        image: "./images/animals/asianSmallClawedOtter.webp", 
-        icon: "./images/animal-icons/asianSmallClawedOtter-icon.png", 
+        image: "/pz1/images/animals/asianSmallClawedOtter.webp", 
+        icon: "/pz1/images/animal-icons/asianSmallClawedOtter-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -9452,8 +9452,8 @@ const animals = {
     capybara:{
         name: "Capybara", 
         latin: "Hydrochoerus hydrochaeris", 
-        image: "./images/animals/capybara.webp", 
-        icon: "./images/animal-icons/capybara-icon.png", 
+        image: "/pz1/images/animals/capybara.webp", 
+        icon: "/pz1/images/animal-icons/capybara-icon.png", 
    
         class: "Mammalia", 
         order: "Rodentia", 
@@ -9538,8 +9538,8 @@ const animals = {
     nileLechwe:{
         name: "Nile Lechwe", 
         latin: "Kobus megaceros", 
-        image: "./images/animals/nileLechwe.webp", 
-        icon: "./images/animal-icons/nileLechwe-icon.png", 
+        image: "/pz1/images/animals/nileLechwe.webp", 
+        icon: "/pz1/images/animal-icons/nileLechwe-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -9624,8 +9624,8 @@ const animals = {
     platypus:{
         name: "Platypus", 
         latin: "Ornithorhynchus anatinus", 
-        image: "./images/animals/platypus.webp", 
-        icon: "./images/animal-icons/platypus-icon.png", 
+        image: "/pz1/images/animals/platypus.webp", 
+        icon: "/pz1/images/animal-icons/platypus-icon.png", 
    
         class: "Mammalia", 
         order: "Monotremata", 
@@ -9710,8 +9710,8 @@ const animals = {
     redCrownedCrane:{
         name: "Red-Crowned Crane", 
         latin: "Grus japonensis", 
-        image: "./images/animals/redCrownedCrane.webp", 
-        icon: "./images/animal-icons/redCrownedCrane-icon.png", 
+        image: "/pz1/images/animals/redCrownedCrane.webp", 
+        icon: "/pz1/images/animal-icons/redCrownedCrane-icon.png", 
    
         class: "Aves", 
         order: "Gruiformes", 
@@ -9796,8 +9796,8 @@ const animals = {
     spectacledCaiman:{
         name: "Spectacled Caiman", 
         latin: "Caiman crocodilus", 
-        image: "./images/animals/spectacledCaiman.webp", 
-        icon: "./images/animal-icons/spectacledCaiman-icon.png", 
+        image: "/pz1/images/animals/spectacledCaiman.webp", 
+        icon: "/pz1/images/animal-icons/spectacledCaiman-icon.png", 
    
         class: "Reptilia", 
         order: "Crocodilia", 
@@ -9882,8 +9882,8 @@ const animals = {
     wildWaterBuffalo:{
         name: "Wild Water Buffalo", 
         latin: "Bubalus arnee", 
-        image: "./images/animals/wildWaterBuffalo.webp", 
-        icon: "./images/animal-icons/wildWaterBuffalo-icon.png", 
+        image: "/pz1/images/animals/wildWaterBuffalo.webp", 
+        icon: "/pz1/images/animal-icons/wildWaterBuffalo-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -9968,8 +9968,8 @@ const animals = {
     danubeCrestedNewt:{
         name: "Danube Crested Newt", 
         latin: "Triturus dobrogicus", 
-        image: "./images/animals/danubeCrestedNewt.webp", 
-        icon: "./images/animal-icons/danubeCrestedNewt-icon.png", 
+        image: "/pz1/images/animals/danubeCrestedNewt.webp", 
+        icon: "/pz1/images/animal-icons/danubeCrestedNewt-icon.png", 
    
         class: "Amphibia", 
         order: "Urodela", 
@@ -10015,8 +10015,8 @@ const animals = {
     amurLeopard:{
         name: "Amur Leopard", 
         latin: "Panthera pardus orientalis", 
-        image: "./images/animals/amurLeopard.webp", 
-        icon: "./images/animal-icons/amurLeopard-icon.png", 
+        image: "/pz1/images/animals/amurLeopard.webp", 
+        icon: "/pz1/images/animal-icons/amurLeopard-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -10101,8 +10101,8 @@ const animals = {
     przewalskisHorse:{
         name: "Przewalski's Horse", 
         latin: "Equus ferus przewalskii", 
-        image: "./images/animals/przewalskisHorse.webp", 
-        icon: "./images/animal-icons/przewalskisHorse-icon.png", 
+        image: "/pz1/images/animals/przewalskisHorse.webp", 
+        icon: "/pz1/images/animal-icons/przewalskisHorse-icon.png", 
    
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -10187,8 +10187,8 @@ const animals = {
     scimitarHornedOryx:{
         name: "Scimitar-Horned Oryx", 
         latin: "Oryx dammah", 
-        image: "./images/animals/scimitarHornedOryx.webp", 
-        icon: "./images/animal-icons/scimitarHornedOryx-icon.png", 
+        image: "/pz1/images/animals/scimitarHornedOryx.webp", 
+        icon: "/pz1/images/animal-icons/scimitarHornedOryx-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -10273,8 +10273,8 @@ const animals = {
     siamang:{
         name: "Siamang", 
         latin: "Symphalangus syndactylus", 
-        image: "./images/animals/siamang.webp", 
-        icon: "./images/animal-icons/siamang-icon.png", 
+        image: "/pz1/images/animals/siamang.webp", 
+        icon: "/pz1/images/animal-icons/siamang-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -10359,8 +10359,8 @@ const animals = {
     axolotl:{
         name: "Axolotl", 
         latin: "Ambystoma mexicanum", 
-        image: "./images/animals/axolotl.webp", 
-        icon: "./images/animal-icons/axolotl-icon.png", 
+        image: "/pz1/images/animals/axolotl.webp", 
+        icon: "/pz1/images/animal-icons/axolotl-icon.png", 
    
         class: "Amphibia", 
         order: "Urodela", 
@@ -10406,8 +10406,8 @@ const animals = {
     commonWombat:{
         name: "Common Wombat", 
         latin: "Vombatus ursinus", 
-        image: "./images/animals/commonWombat.webp", 
-        icon: "./images/animal-icons/commonWombat-icon.png", 
+        image: "/pz1/images/animals/commonWombat.webp", 
+        icon: "/pz1/images/animal-icons/commonWombat-icon.png", 
    
         class: "Mammalia", 
         order: "Diprotodontia", 
@@ -10492,8 +10492,8 @@ const animals = {
     raccoon:{
         name: "Raccoon", 
         latin: "Procyon lotor", 
-        image: "./images/animals/raccoon.webp", 
-        icon: "./images/animal-icons/raccoon-icon.png", 
+        image: "/pz1/images/animals/raccoon.webp", 
+        icon: "/pz1/images/animal-icons/raccoon-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -10578,8 +10578,8 @@ const animals = {
     redFox:{
         name: "Red Fox", 
         latin: "Vulpes vulpes", 
-        image: "./images/animals/redFox.webp", 
-        icon: "./images/animal-icons/redFox-icon.png", 
+        image: "/pz1/images/animals/redFox.webp", 
+        icon: "/pz1/images/animal-icons/redFox-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -10664,8 +10664,8 @@ const animals = {
     stripedSkunk:{
         name: "Striped Skunk", 
         latin: "Mephitis mephitis", 
-        image: "./images/animals/stripedSkunk.webp", 
-        icon: "./images/animal-icons/stripedSkunk-icon.png", 
+        image: "/pz1/images/animals/stripedSkunk.webp", 
+        icon: "/pz1/images/animal-icons/stripedSkunk-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -10750,8 +10750,8 @@ const animals = {
     egyptianFruitBat:{
         name: "Egyptian Fruit Bat", 
         latin: "Rousettus aegyptiacus", 
-        image: "./images/animals/egyptianFruitBat.webp", 
-        icon: "./images/animal-icons/egyptianFruitBat-icon.png", 
+        image: "/pz1/images/animals/egyptianFruitBat.webp", 
+        icon: "/pz1/images/animal-icons/egyptianFruitBat-icon.png", 
    
         class: "Mammalia", 
         order: "Chiroptera", 
@@ -10796,8 +10796,8 @@ const animals = {
     redDeer:{
         name: "Red Deer", 
         latin: "Cervus elaphus", 
-        image: "./images/animals/redDeer.webp", 
-        icon: "./images/animal-icons/redDeer-icon.png", 
+        image: "/pz1/images/animals/redDeer.webp", 
+        icon: "/pz1/images/animal-icons/redDeer-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -10885,8 +10885,8 @@ const animals = {
     blueWildebeest:{
         name: "Blue Wildebeest", 
         latin: "Connochaetes taurinus", 
-        image: "./images/animals/blueWildebeest.webp", 
-        icon: "./images/animal-icons/blueWildebeest-icon.png", 
+        image: "/pz1/images/animals/blueWildebeest.webp", 
+        icon: "/pz1/images/animal-icons/blueWildebeest-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -10971,8 +10971,8 @@ const animals = {
     caracal:{
         name: "Caracal", 
         latin: "Caracal caracal", 
-        image: "./images/animals/caracal.webp", 
-        icon: "./images/animal-icons/caracal-icon.png", 
+        image: "/pz1/images/animals/caracal.webp", 
+        icon: "/pz1/images/animal-icons/caracal-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -11057,8 +11057,8 @@ const animals = {
     emu:{
         name: "Emu", 
         latin: "Dromaius novaehollandiae", 
-        image: "./images/animals/emu.webp", 
-        icon: "./images/animal-icons/emu-icon.png", 
+        image: "/pz1/images/animals/emu.webp", 
+        icon: "/pz1/images/animal-icons/emu-icon.png", 
    
         class: "Aves", 
         order: "Casuariiformes", 
@@ -11143,8 +11143,8 @@ const animals = {
     manedWolf:{
         name: "Maned Wolf", 
         latin: "Chrysocyon brachyurus", 
-        image: "./images/animals/manedWolf.webp", 
-        icon: "./images/animal-icons/manedWolf-icon.png", 
+        image: "/pz1/images/animals/manedWolf.webp", 
+        icon: "/pz1/images/animal-icons/manedWolf-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -11229,8 +11229,8 @@ const animals = {
     nineBandedArmadillo:{
         name: "Nine-Banded Armadillo", 
         latin: "Dasypus novemcinctus", 
-        image: "./images/animals/nineBandedArmadillo.webp", 
-        icon: "./images/animal-icons/nineBandedArmadillo-icon.png", 
+        image: "/pz1/images/animals/nineBandedArmadillo.webp", 
+        icon: "/pz1/images/animal-icons/nineBandedArmadillo-icon.png", 
    
         class: "Mammalia", 
         order: "Cingulata", 
@@ -11315,8 +11315,8 @@ const animals = {
     redNeckedWallaby:{
         name: "Red-Necked Wallaby", 
         latin: "Notamacropus rufogriseus", 
-        image: "./images/animals/redNeckedWallaby.webp", 
-        icon: "./images/animal-icons/redNeckedWallaby-icon.png", 
+        image: "/pz1/images/animals/redNeckedWallaby.webp", 
+        icon: "/pz1/images/animal-icons/redNeckedWallaby-icon.png", 
    
         class: "Mammalia", 
         order: "Diprotodontia", 
@@ -11401,8 +11401,8 @@ const animals = {
     stripedHyena:{
         name: "Striped Hyena", 
         latin: "Hyaena hyaena", 
-        image: "./images/animals/stripedHyena.webp", 
-        icon: "./images/animal-icons/stripedHyena-icon.png", 
+        image: "/pz1/images/animals/stripedHyena.webp", 
+        icon: "/pz1/images/animal-icons/stripedHyena-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -11487,8 +11487,8 @@ const animals = {
     cloudlessSulphur:{
         name: "Cloudless Sulphur", 
         latin: "Phoebis sennae", 
-        image: "./images/animals/cloudlessSulphur.webp", 
-        icon: "./images/animal-icons/cloudlessSulphur-icon.png", 
+        image: "/pz1/images/animals/cloudlessSulphur.webp", 
+        icon: "/pz1/images/animal-icons/cloudlessSulphur-icon.png", 
    
         class: "Insecta", 
         order: "Lepidoptera", 
@@ -11530,8 +11530,8 @@ const animals = {
     europeanPeacock:{
         name: "European Peacock", 
         latin: "Aglais io", 
-        image: "./images/animals/europeanPeacock.webp", 
-        icon: "./images/animal-icons/europeanPeacock-icon.png", 
+        image: "/pz1/images/animals/europeanPeacock.webp", 
+        icon: "/pz1/images/animal-icons/europeanPeacock-icon.png", 
    
         class: "Insecta", 
         order: "Lepidoptera", 
@@ -11573,8 +11573,8 @@ const animals = {
     menelausBlueMorpho:{
         name: "Menelaus Blue Morpho", 
         latin: "Morpho menelaus", 
-        image: "./images/animals/menelausBlueMorpho.webp", 
-        icon: "./images/animal-icons/menelausBlueMorpho-icon.png", 
+        image: "/pz1/images/animals/menelausBlueMorpho.webp", 
+        icon: "/pz1/images/animal-icons/menelausBlueMorpho-icon.png", 
    
         class: "Insecta", 
         order: "Lepidoptera", 
@@ -11616,8 +11616,8 @@ const animals = {
     monarch:{
         name: "Monarch", 
         latin: "Danaus plexippus", 
-        image: "./images/animals/monarch.webp", 
-        icon: "./images/animal-icons/monarch-icon.png", 
+        image: "/pz1/images/animals/monarch.webp", 
+        icon: "/pz1/images/animal-icons/monarch-icon.png", 
    
         class: "Insecta", 
         order: "Lepidoptera", 
@@ -11659,8 +11659,8 @@ const animals = {
     oldWorldSwallowtail:{
         name: "Old World Swallowtail", 
         latin: "Papilio machaon", 
-        image: "./images/animals/oldWorldSwallowtail.webp", 
-        icon: "./images/animal-icons/oldWorldSwallowtail-icon.png", 
+        image: "/pz1/images/animals/oldWorldSwallowtail.webp", 
+        icon: "/pz1/images/animal-icons/oldWorldSwallowtail-icon.png", 
    
         class: "Insecta", 
         order: "Lepidoptera", 
@@ -11705,8 +11705,8 @@ const animals = {
     asianWaterMonitor:{
         name: "Asian Water Monitor", 
         latin: "Varanus salvator", 
-        image: "./images/animals/asianWaterMonitor.webp", 
-        icon: "./images/animal-icons/asianWaterMonitor-icon.png", 
+        image: "/pz1/images/animals/asianWaterMonitor.webp", 
+        icon: "/pz1/images/animal-icons/asianWaterMonitor-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -11791,8 +11791,8 @@ const animals = {
     fossa:{
         name: "Fossa", 
         latin: "Cryptoprocta ferox", 
-        image: "./images/animals/fossa.webp", 
-        icon: "./images/animal-icons/fossa-icon.png", 
+        image: "/pz1/images/animals/fossa.webp", 
+        icon: "/pz1/images/animal-icons/fossa-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -11877,8 +11877,8 @@ const animals = {
     larGibbon:{
         name: "Lar Gibbon", 
         latin: "Hylobates lar", 
-        image: "./images/animals/larGibbon.webp", 
-        icon: "./images/animal-icons/larGibbon-icon.png", 
+        image: "/pz1/images/animals/larGibbon.webp", 
+        icon: "/pz1/images/animal-icons/larGibbon-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -11963,8 +11963,8 @@ const animals = {
     redRiverHog:{
         name: "Red River Hog", 
         latin: "Potamochoerus porcus", 
-        image: "./images/animals/redRiverHog.webp", 
-        icon: "./images/animal-icons/redRiverHog-icon.png", 
+        image: "/pz1/images/animals/redRiverHog.webp", 
+        icon: "/pz1/images/animal-icons/redRiverHog-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -12049,8 +12049,8 @@ const animals = {
     brownThroatedSloth:{
         name: "Brown-Throated Sloth", 
         latin: "Bradypus variegatus", 
-        image: "./images/animals/brownThroatedSloth.webp", 
-        icon: "./images/animal-icons/brownThroatedSloth-icon.png", 
+        image: "/pz1/images/animals/brownThroatedSloth.webp", 
+        icon: "/pz1/images/animal-icons/brownThroatedSloth-icon.png", 
    
         class: "Mammalia", 
         order: "Pilosa", 
@@ -12095,8 +12095,8 @@ const animals = {
     addax:{
         name: "Addax", 
         latin: "Addax nasomaculatus", 
-        image: "./images/animals/addax.webp", 
-        icon: "./images/animal-icons/addax-icon.png", 
+        image: "/pz1/images/animals/addax.webp", 
+        icon: "/pz1/images/animal-icons/addax-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -12181,8 +12181,8 @@ const animals = {
     africanCrestedPorcupine:{
         name: "African Crested Porcupine", 
         latin: "Hystrix cristata", 
-        image: "./images/animals/africanCrestedPorcupine.webp", 
-        icon: "./images/animal-icons/africanCrestedPorcupine-icon.png", 
+        image: "/pz1/images/animals/africanCrestedPorcupine.webp", 
+        icon: "/pz1/images/animal-icons/africanCrestedPorcupine-icon.png", 
    
         class: "Mammalia", 
         order: "Rodentia", 
@@ -12267,8 +12267,8 @@ const animals = {
     blackRhinoceros:{
         name: "Black Rhinoceros", 
         latin: "Diceros bicornis", 
-        image: "./images/animals/blackRhinoceros.webp", 
-        icon: "./images/animal-icons/blackRhinoceros-icon.png", 
+        image: "/pz1/images/animals/blackRhinoceros.webp", 
+        icon: "/pz1/images/animal-icons/blackRhinoceros-icon.png", 
    
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -12353,8 +12353,8 @@ const animals = {
     damaGazelle:{
         name: "Dama Gazelle", 
         latin: "Nanger dama", 
-        image: "./images/animals/damaGazelle.webp", 
-        icon: "./images/animal-icons/damaGazelle-icon.png", 
+        image: "/pz1/images/animals/damaGazelle.webp", 
+        icon: "/pz1/images/animal-icons/damaGazelle-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -12439,8 +12439,8 @@ const animals = {
     dromedaryCamel:{
         name: "Dromedary Camel", 
         latin: "Camelus dromedarius", 
-        image: "./images/animals/dromedaryCamel.webp", 
-        icon: "./images/animal-icons/dromedaryCamel-icon.png", 
+        image: "/pz1/images/animals/dromedaryCamel.webp", 
+        icon: "/pz1/images/animal-icons/dromedaryCamel-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -12525,8 +12525,8 @@ const animals = {
     sandCat:{
         name: "Sand Cat", 
         latin: "Felis margarita", 
-        image: "./images/animals/sandCat.webp", 
-        icon: "./images/animal-icons/sandCat-icon.png", 
+        image: "/pz1/images/animals/sandCat.webp", 
+        icon: "/pz1/images/animal-icons/sandCat-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -12611,8 +12611,8 @@ const animals = {
     somaliWildAss:{
         name: "Somali Wild Ass", 
         latin: "Equus africanus somaliensis", 
-        image: "./images/animals/somaliWildAss.webp", 
-        icon: "./images/animal-icons/somaliWildAss-icon.png", 
+        image: "/pz1/images/animals/somaliWildAss.webp", 
+        icon: "/pz1/images/animal-icons/somaliWildAss-icon.png", 
    
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -12697,8 +12697,8 @@ const animals = {
     desertHornedViper:{
         name: "Desert Horned Viper", 
         latin: "Cerastes cerastes", 
-        image: "./images/animals/desertHornedViper.webp", 
-        icon: "./images/animal-icons/desertHornedViper-icon.png", 
+        image: "/pz1/images/animals/desertHornedViper.webp", 
+        icon: "/pz1/images/animal-icons/desertHornedViper-icon.png", 
    
         class: "Reptilia", 
         order: "Squamata", 
@@ -12744,8 +12744,8 @@ const animals = {
     littlePenguin:{
         name: "Little Penguin", 
         latin: "Eudyptula minor", 
-        image: "./images/animals/littlePenguin.webp", 
-        icon: "./images/animal-icons/littlePenguin-icon.png", 
+        image: "/pz1/images/animals/littlePenguin.webp", 
+        icon: "/pz1/images/animal-icons/littlePenguin-icon.png", 
    
         class: "Aves", 
         order: "Sphenisciformes", 
@@ -12830,8 +12830,8 @@ const animals = {
     northIslandBrownKiwi:{
         name: "North Island Brown Kiwi", 
         latin: "Apteryx mantelli", 
-        image: "./images/animals/northIslandBrownKiwi.webp", 
-        icon: "./images/animal-icons/northIslandBrownKiwi-icon.png", 
+        image: "/pz1/images/animals/northIslandBrownKiwi.webp", 
+        icon: "/pz1/images/animal-icons/northIslandBrownKiwi-icon.png", 
    
         class: "Aves", 
         order: "Apterygiformes", 
@@ -12916,8 +12916,8 @@ const animals = {
     quokka:{
         name: "Quokka", 
         latin: "Setonix brachyurus", 
-        image: "./images/animals/quokka.webp", 
-        icon: "./images/animal-icons/quokka-icon.png", 
+        image: "/pz1/images/animals/quokka.webp", 
+        icon: "/pz1/images/animal-icons/quokka-icon.png", 
    
         class: "Mammalia", 
         order: "Diprotodontia", 
@@ -13002,8 +13002,8 @@ const animals = {
     tasmanianDevil:{
         name: "Tasmanian Devil", 
         latin: "Sarcophilus harrisii", 
-        image: "./images/animals/tasmanianDevil.webp", 
-        icon: "./images/animal-icons/tasmanianDevil-icon.png", 
+        image: "/pz1/images/animals/tasmanianDevil.webp", 
+        icon: "/pz1/images/animal-icons/tasmanianDevil-icon.png", 
    
         class: "Mammalia", 
         order: "Dasyuromorphia", 
@@ -13088,8 +13088,8 @@ const animals = {
     spectacledFlyingFox:{
         name: "Spectacled Flying Fox", 
         latin: "Pteropus conspicillatus", 
-        image: "./images/animals/spectacledFlyingFox.webp", 
-        icon: "./images/animal-icons/spectacledFlyingFox-icon.png", 
+        image: "/pz1/images/animals/spectacledFlyingFox.webp", 
+        icon: "/pz1/images/animal-icons/spectacledFlyingFox-icon.png", 
    
         class: "Mammalia", 
         order: "Chiroptera", 
@@ -13134,8 +13134,8 @@ const animals = {
     collaredPeccary:{
         name: "Collared Peccary", 
         latin: "Dicotyles tajacu", 
-        image: "./images/animals/collaredPeccary.webp", 
-        icon: "./images/animal-icons/collaredPeccary-icon.png", 
+        image: "/pz1/images/animals/collaredPeccary.webp", 
+        icon: "/pz1/images/animal-icons/collaredPeccary-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -13223,8 +13223,8 @@ const animals = {
     muteSwan:{
         name: "Mute Swan", 
         latin: "Cygnus olor", 
-        image: "./images/animals/muteSwan.webp", 
-        icon: "./images/animal-icons/muteSwan-icon.png", 
+        image: "/pz1/images/animals/muteSwan.webp", 
+        icon: "/pz1/images/animal-icons/muteSwan-icon.png", 
    
         class: "Aves", 
         order: "Anseriformes", 
@@ -13309,8 +13309,8 @@ const animals = {
     saiga:{
         name: "Saiga", 
         latin: "Saiga tatarica", 
-        image: "./images/animals/saiga.webp", 
-        icon: "./images/animal-icons/saiga-icon.png", 
+        image: "/pz1/images/animals/saiga.webp", 
+        icon: "/pz1/images/animal-icons/saiga-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -13395,8 +13395,8 @@ const animals = {
     slothBear:{
         name: "Sloth Bear", 
         latin: "Melursus ursinus", 
-        image: "./images/animals/slothBear.webp", 
-        icon: "./images/animal-icons/slothBear-icon.png", 
+        image: "/pz1/images/animals/slothBear.webp", 
+        icon: "/pz1/images/animal-icons/slothBear-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -13481,8 +13481,8 @@ const animals = {
     takin:{
         name: "Takin", 
         latin: "Budorcas taxicolor", 
-        image: "./images/animals/takin.webp", 
-        icon: "./images/animal-icons/takin-icon.png", 
+        image: "/pz1/images/animals/takin.webp", 
+        icon: "/pz1/images/animal-icons/takin-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -13567,8 +13567,8 @@ const animals = {
     wildBoar:{
         name: "Wild Boar", 
         latin: "Sus scrofa", 
-        image: "./images/animals/wildBoar.webp", 
-        icon: "./images/animal-icons/wildBoar-icon.png", 
+        image: "/pz1/images/animals/wildBoar.webp", 
+        icon: "/pz1/images/animal-icons/wildBoar-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -13653,8 +13653,8 @@ const animals = {
     wisent:{
         name: "Wisent", 
         latin: "Bison bonasus", 
-        image: "./images/animals/wisent.webp", 
-        icon: "./images/animal-icons/wisent-icon.png", 
+        image: "/pz1/images/animals/wisent.webp", 
+        icon: "/pz1/images/animal-icons/wisent-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -13739,8 +13739,8 @@ const animals = {
     wolverine:{
         name: "Wolverine", 
         latin: "Gulo gulo", 
-        image: "./images/animals/wolverine.webp", 
-        icon: "./images/animal-icons/wolverine-icon.png", 
+        image: "/pz1/images/animals/wolverine.webp", 
+        icon: "/pz1/images/animal-icons/wolverine-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -13825,8 +13825,8 @@ const animals = {
     hermannsTortoise:{
         name: "Hermann's Tortoise", 
         latin: "Testudo hermanni", 
-        image: "./images/animals/hermannsTortoise.webp", 
-        icon: "./images/animal-icons/hermannsTortoise-icon.png", 
+        image: "/pz1/images/animals/hermannsTortoise.webp", 
+        icon: "/pz1/images/animal-icons/hermannsTortoise-icon.png", 
    
         class: "Reptilia", 
         order: "Testudines", 
@@ -13872,8 +13872,8 @@ const animals = {
     alpaca:{
         name: "Alpaca", 
         latin: "Vicugna pacos", 
-        image: "./images/animals/alpaca.webp", 
-        icon: "./images/animal-icons/alpaca-icon.png", 
+        image: "/pz1/images/animals/alpaca.webp", 
+        icon: "/pz1/images/animal-icons/alpaca-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -13958,8 +13958,8 @@ const animals = {
     alpineGoat:{
         name: "Alpine Goat", 
         latin: "Capra hircus", 
-        image: "./images/animals/alpineGoat.webp", 
-        icon: "./images/animal-icons/alpineGoat-icon.png", 
+        image: "/pz1/images/animals/alpineGoat.webp", 
+        icon: "/pz1/images/animal-icons/alpineGoat-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -14044,8 +14044,8 @@ const animals = {
     americanStandardDonkey:{
         name: "American Standard Donkey", 
         latin: "Equus africanus asinus", 
-        image: "./images/animals/americanStandardDonkey.webp", 
-        icon: "./images/animal-icons/americanStandardDonkey-icon.png", 
+        image: "/pz1/images/animals/americanStandardDonkey.webp", 
+        icon: "/pz1/images/animal-icons/americanStandardDonkey-icon.png", 
    
         class: "Mammalia", 
         order: "Perissodactyla", 
@@ -14130,8 +14130,8 @@ const animals = {
     highlandCattle:{
         name: "Highland Cattle", 
         latin: "Bos taurus", 
-        image: "./images/animals/highlandCattle.webp", 
-        icon: "./images/animal-icons/highlandCattle-icon.png", 
+        image: "/pz1/images/animals/highlandCattle.webp", 
+        icon: "/pz1/images/animal-icons/highlandCattle-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -14216,8 +14216,8 @@ const animals = {
     hillRadnorSheep:{
         name: "Hill Radnor Sheep", 
         latin: "Ovis aries", 
-        image: "./images/animals/hillRadnorSheep.webp", 
-        icon: "./images/animal-icons/hillRadnorSheep-icon.png", 
+        image: "/pz1/images/animals/hillRadnorSheep.webp", 
+        icon: "/pz1/images/animal-icons/hillRadnorSheep-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -14302,8 +14302,8 @@ const animals = {
     sussexChicken:{
         name: "Sussex Chicken", 
         latin: "Gallus domesticus", 
-        image: "./images/animals/sussexChicken.webp", 
-        icon: "./images/animal-icons/sussexChicken-icon.png", 
+        image: "/pz1/images/animals/sussexChicken.webp", 
+        icon: "/pz1/images/animal-icons/sussexChicken-icon.png", 
    
         class: "Aves", 
         order: "Galliformes", 
@@ -14388,8 +14388,8 @@ const animals = {
     tamworthPig:{
         name: "Tamworth Pig", 
         latin: "Sus domesticus", 
-        image: "./images/animals/tamworthPig.webp", 
-        icon: "./images/animal-icons/tamworthPig-icon.png", 
+        image: "/pz1/images/animals/tamworthPig.webp", 
+        icon: "/pz1/images/animal-icons/tamworthPig-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -14477,8 +14477,8 @@ const animals = {
     africanSpurredTortoise:{
         name: "African Spurred Tortoise", 
         latin: "Centrochelys sulcata", 
-        image: "./images/animals/africanSpurredTortoise.webp", 
-        icon: "./images/animal-icons/africanSpurredTortoise-icon.png", 
+        image: "/pz1/images/animals/africanSpurredTortoise.webp", 
+        icon: "/pz1/images/animal-icons/africanSpurredTortoise-icon.png", 
    
         class: "Reptilia", 
         order: "Testudines", 
@@ -14563,8 +14563,8 @@ const animals = {
     coquerelsSifaka:{
         name: "Coquerel's Sifaka", 
         latin: "Propithecus coquereli", 
-        image: "./images/animals/coquerelsSifaka.webp", 
-        icon: "./images/animal-icons/coquerelsSifaka-icon.png", 
+        image: "/pz1/images/animals/coquerelsSifaka.webp", 
+        icon: "/pz1/images/animal-icons/coquerelsSifaka-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -14649,8 +14649,8 @@ const animals = {
     hamadryasBaboon:{
         name: "Hamadryas Baboon", 
         latin: "Papio hamadryas", 
-        image: "./images/animals/hamadryasBaboon.webp", 
-        icon: "./images/animal-icons/hamadryasBaboon-icon.png", 
+        image: "/pz1/images/animals/hamadryasBaboon.webp", 
+        icon: "/pz1/images/animal-icons/hamadryasBaboon-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -14735,8 +14735,8 @@ const animals = {
     kirksDikDik:{
         name: "Kirk's Dik-Dik", 
         latin: "Madoqua kirkii", 
-        image: "./images/animals/kirksDikDik.webp", 
-        icon: "./images/animal-icons/kirksDikDik-icon.png", 
+        image: "/pz1/images/animals/kirksDikDik.webp", 
+        icon: "/pz1/images/animal-icons/kirksDikDik-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -14821,8 +14821,8 @@ const animals = {
     markhor:{
         name: "Markhor", 
         latin: "Capra falconeri", 
-        image: "./images/animals/markhor.webp", 
-        icon: "./images/animal-icons/markhor-icon.png", 
+        image: "/pz1/images/animals/markhor.webp", 
+        icon: "/pz1/images/animal-icons/markhor-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -14907,8 +14907,8 @@ const animals = {
     pallassCat:{
         name: "Pallas's Cat", 
         latin: "Otocolobus manul", 
-        image: "./images/animals/pallassCat.webp", 
-        icon: "./images/animal-icons/pallassCat-icon.png", 
+        image: "/pz1/images/animals/pallassCat.webp", 
+        icon: "/pz1/images/animal-icons/pallassCat-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -14993,8 +14993,8 @@ const animals = {
     spectacledBear:{
         name: "Spectacled Bear", 
         latin: "Tremarctos ornatus", 
-        image: "./images/animals/spectacledBear.webp", 
-        icon: "./images/animal-icons/spectacledBear-icon.png", 
+        image: "/pz1/images/animals/spectacledBear.webp", 
+        icon: "/pz1/images/animal-icons/spectacledBear-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -15082,8 +15082,8 @@ const animals = {
     africanLeopard:{
         name: "African Leopard", 
         latin: "Panthera pardus pardus", 
-        image: "./images/animals/africanLeopard.webp", 
-        icon: "./images/animal-icons/africanLeopard-icon.png", 
+        image: "/pz1/images/animals/africanLeopard.webp", 
+        icon: "/pz1/images/animal-icons/africanLeopard-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -15171,8 +15171,8 @@ const animals = {
     americanFlamingo:{
         name: "American Flamingo", 
         latin: "Phoenicopterus ruber", 
-        image: "./images/animals/americanFlamingo.webp", 
-        icon: "./images/animal-icons/americanFlamingo-icon.png", 
+        image: "/pz1/images/animals/americanFlamingo.webp", 
+        icon: "/pz1/images/animal-icons/americanFlamingo-icon.png", 
    
         class: "Aves", 
         order: "Phoenicopteriformes", 
@@ -15257,8 +15257,8 @@ const animals = {
     bighornSheep:{
         name: "Bighorn Sheep", 
         latin: "Ovis canadensis", 
-        image: "./images/animals/bighornSheep.webp", 
-        icon: "./images/animal-icons/bighornSheep-icon.png", 
+        image: "/pz1/images/animals/bighornSheep.webp", 
+        icon: "/pz1/images/animal-icons/bighornSheep-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -15343,8 +15343,8 @@ const animals = {
     bushDog:{
         name: "Bush Dog", 
         latin: "Speothos venaticus", 
-        image: "./images/animals/bushDog.webp", 
-        icon: "./images/animal-icons/bushDog-icon.png", 
+        image: "/pz1/images/animals/bushDog.webp", 
+        icon: "/pz1/images/animal-icons/bushDog-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -15429,8 +15429,8 @@ const animals = {
     coyote:{
         name: "Coyote", 
         latin: "Canis latrans", 
-        image: "./images/animals/coyote.webp", 
-        icon: "./images/animal-icons/coyote-icon.png", 
+        image: "/pz1/images/animals/coyote.webp", 
+        icon: "/pz1/images/animal-icons/coyote-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -15515,8 +15515,8 @@ const animals = {
     greaterRhea:{
         name: "Greater Rhea", 
         latin: "Rhea americana", 
-        image: "./images/animals/greaterRhea.webp", 
-        icon: "./images/animal-icons/greaterRhea-icon.png", 
+        image: "/pz1/images/animals/greaterRhea.webp", 
+        icon: "/pz1/images/animal-icons/greaterRhea-icon.png", 
    
         class: "Aves", 
         order: "Rheiformes", 
@@ -15601,8 +15601,8 @@ const animals = {
     ocelot:{
         name: "Ocelot", 
         latin: "Leopardus pardalis", 
-        image: "./images/animals/ocelot.webp", 
-        icon: "./images/animal-icons/ocelot-icon.png", 
+        image: "/pz1/images/animals/ocelot.webp", 
+        icon: "/pz1/images/animal-icons/ocelot-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -15687,8 +15687,8 @@ const animals = {
     whiteFacedSaki:{
         name: "White-Faced Saki", 
         latin: "Pithecia pithecia", 
-        image: "./images/animals/whiteFacedSaki.webp", 
-        icon: "./images/animal-icons/whiteFacedSaki-icon.png", 
+        image: "/pz1/images/animals/whiteFacedSaki.webp", 
+        icon: "/pz1/images/animal-icons/whiteFacedSaki-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -15776,8 +15776,8 @@ const animals = {
     blackbuck:{
         name: "Blackbuck", 
         latin: "Antilope cervicapra", 
-        image: "./images/animals/blackbuck.webp", 
-        icon: "./images/animal-icons/blackbuck-icon.png", 
+        image: "/pz1/images/animals/blackbuck.webp", 
+        icon: "/pz1/images/animal-icons/blackbuck-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -15862,8 +15862,8 @@ const animals = {
     borneanElephant:{
         name: "Bornean Elephant", 
         latin: "Elephas maximus borneensis", 
-        image: "./images/animals/borneanElephant.webp", 
-        icon: "./images/animal-icons/borneanElephant-icon.png", 
+        image: "/pz1/images/animals/borneanElephant.webp", 
+        icon: "/pz1/images/animal-icons/borneanElephant-icon.png", 
    
         class: "Mammalia", 
         order: "Proboscidea", 
@@ -15948,8 +15948,8 @@ const animals = {
     honeyBadger:{
         name: "Honey Badger", 
         latin: "Mellivora capensis", 
-        image: "./images/animals/honeyBadger.webp", 
-        icon: "./images/animal-icons/honeyBadger-icon.png", 
+        image: "/pz1/images/animals/honeyBadger.webp", 
+        icon: "/pz1/images/animal-icons/honeyBadger-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -16034,8 +16034,8 @@ const animals = {
     japaneseRaccoonDog:{
         name: "Japanese Raccoon Dog", 
         latin: "Nyctereutes viverrinus", 
-        image: "./images/animals/japaneseRaccoonDog.webp", 
-        icon: "./images/animal-icons/japaneseRaccoonDog-icon.png", 
+        image: "/pz1/images/animals/japaneseRaccoonDog.webp", 
+        icon: "/pz1/images/animal-icons/japaneseRaccoonDog-icon.png", 
    
         class: "Mammalia", 
         order: "Carnivora", 
@@ -16120,8 +16120,8 @@ const animals = {
     lionTailedMacaque:{
         name: "Lion-Tailed Macaque", 
         latin: "Macaca silenus", 
-        image: "./images/animals/lionTailedMacaque.webp", 
-        icon: "./images/animal-icons/lionTailedMacaque-icon.png", 
+        image: "/pz1/images/animals/lionTailedMacaque.webp", 
+        icon: "/pz1/images/animal-icons/lionTailedMacaque-icon.png", 
    
         class: "Mammalia", 
         order: "Primates", 
@@ -16206,8 +16206,8 @@ const animals = {
     nilgai:{
         name: "Nilgai", 
         latin: "Boselaphus tragocamelus", 
-        image: "./images/animals/nilgai.webp", 
-        icon: "./images/animal-icons/nilgai-icon.png", 
+        image: "/pz1/images/animals/nilgai.webp", 
+        icon: "/pz1/images/animal-icons/nilgai-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -16292,8 +16292,8 @@ const animals = {
     pereDavidsDeer:{
         name: "Pere David's Deer", 
         latin: "Elaphurus davidianus", 
-        image: "./images/animals/pereDavidsDeer.webp", 
-        icon: "./images/animal-icons/pereDavidsDeer-icon.png", 
+        image: "/pz1/images/animals/pereDavidsDeer.webp", 
+        icon: "/pz1/images/animal-icons/pereDavidsDeer-icon.png", 
    
         class: "Mammalia", 
         order: "Artiodactyla", 
@@ -16381,8 +16381,8 @@ const animals = {
     malabarRose:{
         name: "Malabar Rose", 
         latin: "Pachliopta jophon", 
-        image: "./images/animals/malabarRose.webp", 
-        icon: "./images/animal-icons/malabarRose-icon.png", 
+        image: "/pz1/images/animals/malabarRose.webp", 
+        icon: "/pz1/images/animal-icons/malabarRose-icon.png", 
    
         class: "Insecta", 
         order: "Lepidoptera", 
