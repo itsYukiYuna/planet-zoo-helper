@@ -82,7 +82,6 @@ import {
     //     foodGrade3: "name", 
     //     foodGrade3Cost: 0, 
     //     foodGrade3CostJuv: 0, 
-
     //     speciesAppeal: 0, 
     //     enrichmentBonus: [""], 
     //     wiki: "link", 

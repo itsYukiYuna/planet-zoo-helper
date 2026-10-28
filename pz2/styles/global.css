@@ -93,9 +93,791 @@ nav li {
     cursor: pointer;
 }
 
+#menu-overlay {
+    display: none;
+}
+
 #button-open-menu svg, #button-close-menu svg {
     fill: var(--color-background);
     stroke: var(--color-background);
+}
+
+footer {
+    font-family: var(--font-content);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 5rem 0;
+    padding-inline: 5vw;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* ANIMAL CARDS MODAL */
+
+.animal-modal-open {
+    overflow: hidden;
+}
+
+.animal-modal-container {
+    position: fixed;
+    inset: 0;
+    z-index: 11000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+
+.animal-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 70%);
+    cursor: pointer;
+}
+
+.animal-modal-card {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    grid-template-rows: minmax(0, 1.35fr) repeat(5, minmax(0, 1fr));
+    grid-template-areas:
+        "animal-card-image animal-card-general"
+        "animal-card-image animal-card-details"
+        "animal-card-image animal-card-details"
+        "animal-card-image animal-card-details"
+        "animal-card-name animal-card-details"
+        "animal-card-name animal-card-details";
+    gap: 0.8rem;
+    width: min(96vw, 1500px);
+    height: min(94dvh, 1050px);
+    padding: 0.8rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    background: var(--color-background-dark);
+    box-shadow: 0 0 1.5rem rgb(0 0 0 / 45%);
+}
+
+.modal-animal-image,
+.modal-animal-name,
+.modal-animal-general,
+.modal-animal-details {
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    border-radius: 0.55rem;
+}
+
+.modal-animal-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 0.3rem solid var(--color-text);
+    background: var(--color-background);
+}
+
+.modal-animal-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-animal-name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.2rem;
+    padding: 1.5rem 1rem 0.25rem;
+    overflow: visible;
+    color: var(--color-background);
+    text-align: center;
+    background-color: var(--color-text);
+    background-image: url("/images/pattern-zebra.svg");
+}
+
+.modal-animal-name h1,
+.modal-animal-name h3 {
+    margin: 0.25rem;
+    overflow-wrap: anywhere;
+}
+
+.modal-animal-name h3 {
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.modal-animal-taxonomy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    font-family: var(--font-content);
+    font-size: clamp(0.65rem, 1vw, 1rem);
+}
+
+.animal-modal-conservation {
+    display: flex;
+    flex: 0 0 auto;
+    min-height: 0;
+    width: 100%;
+    margin-top: -1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal-modal-conservation img {
+    width: min(32.25rem, 100%);
+    height: clamp(6.375rem, 17vh, 12.75rem);
+    object-fit: contain;
+}
+
+.modal-animal-general {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem;
+    overflow: visible;
+    color: var(--color-background);
+    background-color: var(--color-menu);
+    background-image: linear-gradient(to top, var(--color-menu), transparent, var(--color-menu)), url('/images/pattern-animal.svg');
+}
+
+.animal-modal-general-layout {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.animal-modal-general-top {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: clamp(1rem, 2vw, 1.5rem);
+}
+
+.animal-modal-general-top > .animal-modal-tooltip > img {
+    width: clamp(5.47rem, 9.375vw, 6.875rem);
+    height: clamp(3.44rem, 6.25vh, 4.375rem);
+    max-height: 4.375rem;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.animal-modal-general-top > .animal-modal-tooltip {
+    order: 2;
+    margin: 0;
+}
+
+.animal-modal-general-links {
+    display: flex;
+    order: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.animal-modal-round-link {
+    display: inline-flex;
+    width: clamp(1.5rem, 2vw, 1.8rem);
+    height: clamp(1.5rem, 2vw, 1.8rem);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid var(--color-background);
+    border-radius: 50%;
+    background: var(--color-background);
+}
+
+.animal-modal-round-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.animal-modal-geography {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.animal-modal-geography-group {
+    display: flex;
+    min-width: 0;
+    width: max-content;
+    max-width: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2rem clamp(1rem, 1.5vw, 2rem);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.animal-modal-geography-group > strong {
+    display: block;
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+.animal-modal-geography-group .animal-modal-icon-collection {
+    min-width: 0;
+    width: auto;
+    flex: 0 1 auto;
+    gap: 1.25rem;
+}
+
+.modal-animal-general .animal-modal-icon-collection .animal-modal-icon {
+    height: clamp(1.875rem, 2.34vw, 2.625rem);
+}
+
+.animal-modal-icon-collection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.animal-modal-icon {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: clamp(0.9rem, 1.6vw, 1.3rem);
+    object-fit: contain;
+}
+
+.animal-modal-details {
+    padding: 0.75rem;
+    overflow: auto;
+    color: var(--color-text);
+    font-weight: 600;
+    font-family: var(--font-content);
+    background-color: var(--color-background-dark);
+    scrollbar-color: var(--color-menu) var(--color-background);
+    text-align: center;
+}
+
+.modal-animal-details h3 {
+    margin: 0.8rem 0 0.35rem;
+    color: var(--color-text);
+}
+
+.modal-animal-details h3:first-child {
+    margin-top: 0;
+}
+
+.modal-animal-details-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.65rem;
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    color: var(--color-text);
+    text-align: center;
+}
+
+.animal-modal-general-details {
+    column-gap: clamp(1rem, 2vw, 2rem);
+    row-gap: 0.45rem;
+}
+
+.animal-modal-icon-label,
+.animal-modal-detail-pair,
+.animal-modal-compact-value {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.animal-modal-icon-label {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.animal-modal-detail-pair {
+    padding: 0.25rem 0;
+}
+
+.animal-modal-detail-pair img,
+.animal-modal-icon-label img {
+    flex: 0 0 auto;
+}
+
+.animal-modal-enclosure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.animal-modal-enclosure-line {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem 0.65rem;
+    width: 100%;
+}
+
+.animal-modal-line-break {
+    display: block;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 0;
+}
+
+.animal-modal-enclosure-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 0.8rem;
+    width: 100%;
+}
+
+.animal-modal-compact-value {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0.2rem 0.35rem;
+}
+
+.animal-modal-compact-value .animal-modal-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.animal-modal-boolean {
+    width: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.animal-modal-enclosure-conditions {
+    gap: 0.2rem clamp(0.4rem, 1.2vw, 1rem);
+}
+
+.animal-modal-boolean-icon {
+    display: inline-flex;
+    width: 1.75rem;
+    height: 1.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.animal-modal-boolean-icon.is-true {
+    background: #4a9b5b;
+}
+
+.animal-modal-boolean-icon.is-false {
+    background: #c94d4d;
+}
+
+.animal-modal-boolean-icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.animal-modal-area-list,
+.animal-modal-terrain-list,
+.animal-modal-colourmorphs {
+    justify-content: center;
+}
+
+.animal-modal-area {
+    display: flex;
+    min-width: 5.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.35rem;
+}
+
+.animal-modal-area img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.animal-modal-area-list {
+    gap: 0.8rem 1.5rem;
+}
+
+.animal-modal-area small {
+    text-align: center;
+}
+
+.animal-modal-terrain-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem;
+}
+
+.animal-modal-terrain-item img {
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 1;
+    padding: 0.1rem;
+    overflow: hidden;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.animal-modal-group-ranges {
+    justify-content: space-around;
+}
+
+.animal-modal-group-column {
+    display: flex;
+    min-width: 7rem;
+    flex: 1 1 7rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    text-align: center;
+}
+
+.animal-modal-group-column strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.animal-modal-group-column img {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.animal-modal-group-meta {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 1rem;
+}
+
+.animal-modal-group-meta .animal-modal-detail-pair {
+    font-weight: 500;
+}
+
+.animal-modal-breeding {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.animal-modal-breeding-line {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5vw;
+}
+
+.animal-modal-lifespan-stage {
+    display: flex;
+    min-width: 5.5rem;
+    flex: 0 1 7rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.2rem 0.6rem 0.35rem;
+    border-bottom: 0.35rem solid var(--color-menu);
+}
+
+.animal-modal-lifespan-stage.is-juvenile {
+    border-color: #e889ae;
+}
+
+.animal-modal-lifespan-stage.is-adult {
+    border-color: var(--color-menu);
+}
+
+.animal-modal-lifespan-stage.is-elder {
+    border-color: var(--color-menu-dark);
+}
+
+.animal-modal-breeding-line.animal-modal-lifespan {
+    gap: 0;
+}
+
+.animal-modal-reserve {
+    display: flex;
+    min-width: 8rem;
+    flex: 1 1 8rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.animal-modal-reserve-line {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+.animal-modal-reserve img {
+    height: 2.75rem;
+    border-radius: 50%;
+}
+
+.reserve-ecosystem img {
+    height: 1.85rem;
+    border-radius: 50%;
+}
+
+.reserve-ecosystem {
+    font-size: smaller;
+}
+
+.animal-modal-reserve small {
+    opacity: 0.8;
+}
+
+.animal-modal-wide-line,
+.animal-modal-care-subsection {
+    flex: 1 1 100%;
+}
+
+.animal-modal-care-subsection {
+    padding-top: 0.3rem;
+    border-top: 1px solid var(--color-background-dark);
+}
+
+.animal-modal-care-subsection > strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.animal-modal-care-subsection p {
+    margin: 0.2rem 0;
+}
+
+.animal-modal-care-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 0.6rem;
+}
+
+.animal-modal-care-value {
+    max-width: 100%;
+    flex: 0 1 auto;
+    overflow-wrap: anywhere;
+}
+
+.animal-modal-care-value:not(:last-child)::after {
+    content: ",";
+}
+
+.animal-modal-enrichment-icons .animal-modal-icon-collection {
+    gap: 0.45rem;
+}
+
+.animal-modal-enrichment-icons .animal-modal-icon-collection img {
+    width: 2.7rem;
+    height: 2.7rem;
+}
+
+.animal-modal-food-costs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.animal-modal-food-grade {
+    display: flex;
+    min-width: 8rem;
+    flex: 1 1 8rem;
+    flex-direction: column;
+}
+
+.animal-modal-release-groups {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 100%;
+    text-align: center;
+}
+
+.animal-modal-release-groups > strong {
+    width: 100%;
+}
+
+.animal-modal-release-groups > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.animal-modal-release-groups img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.animal-modal-related {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.animal-modal-related-animal {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.35rem;
+    border: 0;
+    border-radius: 0.35rem;
+    color: var(--color-text);
+    background: var(--color-background-dark);
+    font: inherit;
+    cursor: pointer;
+}
+
+.animal-modal-related-animal img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.animal-modal-bullet-list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.animal-modal-standard-headshot {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.animal-modal-colourmorph {
+    display: flex;
+    min-width: 5.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+}
+
+.animal-modal-colourmorph img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.animal-modal-map-container {
+    justify-content: center;
+}
+
+.animal-modal-map {
+    display: block;
+    max-width: 100%;
+    max-height: 25rem;
+    object-fit: contain;
+    border-radius: 0.65rem;
+}
+
+.animal-modal-empty {
+    width: 100%;
+    margin: 0.25rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.animal-modal-tooltip {
+    position: relative;
+}
+
+.animal-modal-tooltip-popup {
+    position: fixed;
+    z-index: 12001;
+    width: max-content;
+    max-width: min(16rem, calc(100vw - 1rem));
+    padding: 0.35rem 0.55rem;
+    border-radius: 0.3rem;
+    color: var(--color-background);
+    background: var(--color-text-dark);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+    pointer-events: none;
+}
+
+.animal-modal-disease {
+    position: relative;
+    cursor: help;
+}
+
+.animal-modal-close {
+    position: absolute;
+    z-index: 3;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    width: 2.7rem;
+    height: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
+    border: 2px solid var(--color-background);
+    border-radius: 50%;
+    background: var(--color-text);
+    cursor: pointer;
+}
+
+.animal-modal-close img {
+    width: 100%;
+    height: 100%;
+}
+
+.animal-modal-close:hover {
+    background: var(--color-menu-dark);
 }
 
 /* Mobile Version */
@@ -133,9 +915,26 @@ nav li {
         font-size: x-large;
         line-height: 2.5rem;
 
-        z-index: 999;
+        z-index: 2;
         visibility: hidden;
         transition: right 0.3s ease, visibility 0.3s ease;
+    }
+
+    #menu-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        background: rgb(0 0 0 / 45%);
+        cursor: pointer;
+    }
+
+    body.menu-open #menu-overlay {
+        display: block;
     }
 
     nav li {
@@ -162,5 +961,116 @@ nav li {
 
     body.menu-open {
         overflow: hidden;
+    }
+}
+
+@media screen and (orientation: portrait), (max-width: 760px) {
+    .animal-modal-container {
+        padding: 0.35rem;
+        align-items: flex-start;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .animal-modal-card {
+        display: flex;
+        width: min(96vw, 44rem);
+        height: auto;
+        min-height: 96dvh;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        overflow: visible;
+    }
+
+    .modal-animal-image {
+        flex: 0 0 clamp(14rem, 38vh, 20rem);
+        min-height: 14rem;
+    }
+
+    .modal-animal-image img {
+        object-position: center;
+        transform: scale(1.06);
+    }
+
+    .modal-animal-name {
+        flex: 0 0 auto;
+        min-height: 0;
+        max-height: none;
+        justify-content: center;
+        padding: 0.6rem 1rem 0.5rem;
+        overflow: visible;
+    }
+
+    .animal-modal-conservation {
+        margin-top: 0;
+    }
+
+    .modal-animal-name h1 {
+        font-size: clamp(1.2rem, 6vw, 2rem);
+    }
+
+    .modal-animal-name h3 {
+        font-size: clamp(0.85rem, 4vw, 1.15rem);
+    }
+
+    .animal-modal-taxonomy {
+        column-gap: 0.45rem;
+        row-gap: 0.15rem;
+        font-size: clamp(0.58rem, 2.4vw, 0.8rem);
+    }
+
+    .animal-modal-conservation img {
+        width: min(25.8rem, 100%);
+        height: clamp(2.55rem, 6.2vh, 4.125rem);
+    }
+
+    .modal-animal-general {
+        flex: 0 0 auto;
+        min-height: 10rem;
+        max-height: none;
+        padding: 0.3rem;
+        overflow: visible;
+    }
+
+    .animal-modal-geography-group {
+        font-size: 1rem;
+    }
+
+    .modal-animal-general .animal-modal-icon-collection .animal-modal-icon {
+        height: clamp(1.6875rem, 6.56vw, 2.25rem);
+    }
+
+    .animal-modal-general-top {
+        gap: 1rem;
+        margin-right: 1.25rem;
+    }
+
+    .animal-modal-general-top > .animal-modal-tooltip > img {
+        width: clamp(4.6875rem, 15.625vw, 5.9375rem);
+        height: clamp(2.97rem, 10.94vw, 3.75rem);
+        max-height: 3.75rem;
+    }
+
+    .animal-modal-round-link {
+        width: clamp(1.3rem, 5vw, 1.6rem);
+        height: clamp(1.3rem, 5vw, 1.6rem);
+    }
+
+    .animal-modal-details {
+        flex: 0 0 auto;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .animal-modal-hide-label .animal-modal-detail-label {
+        display: none;
+    }
+
+    .animal-modal-close {
+        position: fixed;
+        top: 0.7rem;
+        right: 0.7rem;
     }
 }
