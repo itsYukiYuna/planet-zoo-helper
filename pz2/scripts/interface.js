@@ -254,10 +254,10 @@ function buildAnimalModal(animal, allAnimals) {
         ? animal.sterilityAge === "Death" ? "Death" : `${animal.sterilityAge} years`
         : null);
     const reproductionTypes = [
-        ["groupDivision", "Reproduces by Group Division"],
-        ["spawning", "Reproduces by spawning new animals"],
-        ["pregnancy", "Reproduces via pregnancy"],
-        ["eggLaying", "Reproduces by laying eggs."]
+        ["groupDivision", "When the group is big enough, it can split to form a new young group."],
+        ["spawning", "Juveniles spawn from the parent some time after mating"],
+        ["pregnancy", "The mother gets pregnant after mating and gives birth to live offspring."],
+        ["eggLaying", "The mother lays eggs after mating."]
     ].filter(([key]) => animal[key] === true).map(([, text]) => text);
     const relationshipHTML = relationships => {
         const names = modalList(relationships).map(modalValueName).filter(Boolean);
@@ -411,7 +411,7 @@ function buildAnimalModal(animal, allAnimals) {
                     ${lifespanStages ? `<div class="animal-modal-breeding-line animal-modal-lifespan">${lifespanStages}</div>` : ""}
                     ${(maturityAgeHTML || sterilityAgeHTML) ? `<div class="animal-modal-breeding-line">${maturityAgeHTML}${sterilityAgeHTML}</div>` : ""}
                     ${reproductionTypes.map(text => `<span class="animal-modal-detail-pair">${escapeModalHTML(text)}</span>`).join("")}
-                    ${animal.eggLaying === true ? `<span class="animal-modal-detail-pair">${escapeModalHTML(animal.nestbound ? "Incubates their eggs and has nestbound hatchlings." : animal.brooding ? "Incubates their eggs till they hatch." : "Does not incubate their eggs.")}</span>` : ""}
+                    ${animal.eggLaying === true ? `<span class="animal-modal-detail-pair">${escapeModalHTML(animal.nestbound ? "A parent will incubate the eggs and they will care for nestbound hatchlings." : animal.brooding ? "A parent will incubate the eggs till they hatch." : "Parents do not incubate the eggs.")}</span>` : ""}
                 </div>
                 <h3>Wildlife Reserves</h3>
                 <div class="modal-animal-details-item animal-modal-reserves">

@@ -930,14 +930,14 @@ function setupExpandableFilterGroup({id, label, optionFilters}) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "zoopedia-filter-group-button";
-    button.textContent = `${label} ⮞`;
+    button.textContent = `${label} ➤`;
     button.title = "Open";
     button.setAttribute("aria-expanded", "false");
 
     let isOpen = false;
     function setOpen(open) {
         isOpen = open;
-        button.textContent = isOpen ? "⮜" : `${label} ⮞`;
+        button.textContent = isOpen ? "⯇" : `${label} ➤`;
         button.title = isOpen ? "Hide" : "Open";
         button.setAttribute("aria-label", isOpen ? "Hide filters" : `Open ${label}`);
         button.classList.toggle("is-open", isOpen);

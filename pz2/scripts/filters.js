@@ -56,6 +56,18 @@ const enclosureTypes = {
     exhibitWalkthrough: "Walkthrough Exhibit"
 };
 
+const exhibitTerrain = {
+    none: "None",
+    aquaticFull: "Aquatic Full",
+    aquaticHalf: "Aquatic Half",
+    aquaticQuarter: "Aquatic Quarter",
+    semiaquatic: "Semi-aquatic",
+    rainforestDry: "Rainforest Dry",
+    rainforestWet: "Rainforest Wet",
+    xericShallow: "Xeric Shallow",
+    xericDeep: "Xeric Deep"
+};
+
 const cohabitationOptions = {
     none: "None",
     nonPredatory: "Any non-predatory species",
@@ -290,7 +302,7 @@ const ecosystems = {
     river: {
         name: "River",
         biome: "Tropical",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_river.png"
     },
     limestoneHills: {
         name: "Limestone Hills",
@@ -350,7 +362,7 @@ const ecosystems = {
     forestSwamp: {
         name: "Forest Swamp",
         biome: "Tropical",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_forestSwamp.png"
     },
     pastures: {
         name: "Pastures",
@@ -400,7 +412,7 @@ const ecosystems = {
     swamp: {
         name: "Swamp",
         biome: "Grassland",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_swamp.png"
     },
     fenWetland: {
         name: "Fen Wetland",
@@ -723,7 +735,7 @@ const shelters = {
     moundNestLarge: {
         name: "Mound Nest - Large",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_moundNestLarge.png"
     }, 
     mudMoundNest: {
         name: "Mud Mound Nest",
@@ -776,7 +788,7 @@ const foodEnrichment = {
     blockofFrozenFruit: {
         name: "Block of Frozen Fruit",
         type: "Frozen Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Block_of_Ice_Fruit.png"
     }, 
     dogBall: {
         name: "Dog Ball",
@@ -791,7 +803,7 @@ const foodEnrichment = {
     fixedRollerFeederSmall: {
         name: "Fixed Roller Feeder - Small",
         type: "Dexterity Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/En_Small_Fixed_Roller_Feeder.png"
     }, 
     forageBox: {
         name: "Forage Box",
@@ -806,7 +818,7 @@ const foodEnrichment = {
     foragingWall: {
         name: "Foraging Wall",
         type: "Foraging Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_ForageWall.png"
     }, 
     frozenBloodPumpkin: {
         name: "Frozen Blood Pumpkin",
@@ -841,7 +853,7 @@ const foodEnrichment = {
     naturalTermiteMound: {
         name: "Natural Termite Mound",
         type: "Insectivore Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_NaturalTermiteMound.png"
     }, 
     perchFeeder: {
         name: "Perch Feeder",
@@ -901,7 +913,7 @@ const foodEnrichment = {
     suspendedPerchFeeder: {
         name: "Suspended Perch Feeder",
         type: "Arboreal Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Feeder_Perch_Suspended.png"
     },  
     suspendedPuzzleFeeder: {
         name: "Suspended Puzzle Feeder",
@@ -926,12 +938,12 @@ const foodEnrichment = {
     toolPuzzleFeeder: {
         name: "Tool Puzzle Feeder",
         type: "Dexterity Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Tool_Puzzle_Feeder.png"
     }, 
     treeForager: {
         name: "Tree Forager",
         type: "Dexterity Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Tree_Forager.png"
     }, 
     treeScatterFeeder: {
         name: "Tree Scatter Feeder",
@@ -964,7 +976,7 @@ const toyEnrichment = {
     blockofIce: {
         name: "Block of Ice",
         type: "Ball Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/En_Block_of_Ice_Spawner.png"
     }, 
     bloodScentMarker: {
         name: "Blood Scent Marker",
@@ -974,12 +986,12 @@ const toyEnrichment = {
     bobbin: {
         name: "Bobbin",
         type: "Manipulation Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Bobbin_Spawner.png"
     }, 
     bobbinDrum: {
         name: "Bobbin Drum",
         type: "Manipulation Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Bobbin_Drum_Spawner.png"
     }, 
     cardboardBox: {
         name: "Cardboard Box",
@@ -1079,7 +1091,7 @@ const toyEnrichment = {
     rattle: {
         name: "Rattle",
         type: "Auditory Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Rattle_Spawner.png"
     }, 
     rubberChicken: {
         name: "Rubber Chicken",
@@ -1089,7 +1101,7 @@ const toyEnrichment = {
     rubberDuck: {
         name: "Rubber Duck",
         type: "Ball Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Rubber_Duck_Spawner.png"
     }, 
     rubberSnake: {
         name: "Rubber Snake",
@@ -1139,7 +1151,7 @@ const toyEnrichment = {
     smallBubbleMachine: {
         name: "Small Bubble Machine",
         type: "Curiosity Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Small_Bubble_Machine.png"
     }, 
     smallIceBall: {
         name: "Small Ice Ball",
@@ -1154,7 +1166,7 @@ const toyEnrichment = {
     stuffedPandaLarge: {
         name: "Stuffed Panda - Large",
         type: "No Research Required",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Stuffed_Animal_Panda_Spawner.png"
     }, 
     submarineBuoy: {
         name: "Submarine Buoy",
@@ -1214,7 +1226,7 @@ const toyEnrichment = {
     waterfallAndMetalFrame: {
         name: "Waterfall And Metal Frame",
         type: "Water Feature Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Waterfall_And_Metal_Frame.png"
     }, 
     windChimes: {
         name: "Wind Chimes",
@@ -1530,6 +1542,10 @@ const conservationTopics = {
     herpetologyTalk: {
         name: "Herpetology Talk",
         type: "Talks - No Research"
+    },      
+    theArthropodWorldTalk: {
+        name: "The Arthropod World Talk",
+        type: "Talks - No Research"
     }, 
     mammalEvolution: {
         name: "Mammal Evolution",
@@ -1554,7 +1570,11 @@ const conservationTopics = {
     amphibianEvolution: {
         name: "Amphibian Evolution",
         type: "Evolution - No Research"
-    },  
+    },         
+    insectEvolution: {
+        name: "Insect Evolution",
+        type: "Evolution - No Research"
+    }, 
     jumpingAnimals: {
         name: "Jumping Animals",
         type: "Animal Types - No Research"
@@ -1574,7 +1594,15 @@ const conservationTopics = {
     walkingAnimals: {
         name: "Walking Animals",
         type: "Animal Types - No Research"
-    },     
+    },      
+    strongAnimals: {
+        name: "Strong Animals",
+        type: "Animal Types - No Research"
+    },         
+    vocalAnimals: {
+        name: "Vocal Animals",
+        type: "Animal Types - No Research"
+    },  
     speciesReintroduction: {
         name: "Species Reintroduction",
         type: "Conservation - No Research"
@@ -1754,7 +1782,7 @@ const conservationTopics = {
 };
 
 export {
-    DLC, form, types, enclosures, enclosureTypes, cohabitationOptions, conservation, 
+    DLC, form, types, enclosures, enclosureTypes, exhibitTerrain, cohabitationOptions, conservation, 
     nativeRange, biomes, wildlifeReserves, ecosystems, speciesRoles, releaseGroups, 
     temperament, alphaDominance,  offspringDispersal, matingSystem, matingSeason, reproductionDifficulty,
     salinity, feeders, shelters, foodEnrichment, toyEnrichment, diseases, conservationTopics
