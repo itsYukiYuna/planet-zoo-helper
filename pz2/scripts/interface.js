@@ -41,6 +41,7 @@ let activeAnimalModalClose;
 let animalModalRequestId = 0;
 let activeAnimalTooltipTrigger;
 let activeAnimalTooltip;
+let activeAnimalTooltipPinned = false;
 
 const animalTooltipSelector = "#modal-container .animal-modal-tooltip[data-tooltip], #modal-container .animal-modal-compact-value[data-tooltip], #modal-container .animal-modal-disease[data-tooltip]";
 
@@ -48,11 +49,16 @@ function hideAnimalTooltip() {
     activeAnimalTooltip?.remove();
     activeAnimalTooltip = null;
     activeAnimalTooltipTrigger = null;
+    activeAnimalTooltipPinned = false;
 }
 
-function showAnimalTooltip(trigger) {
+function showAnimalTooltip(trigger, pinned = false) {
     const text = trigger.dataset.tooltip;
-    if (!text || activeAnimalTooltipTrigger === trigger) return;
+    if (!text) return;
+    if (activeAnimalTooltipTrigger === trigger) {
+        activeAnimalTooltipPinned = activeAnimalTooltipPinned || pinned;
+        return;
+    }
     hideAnimalTooltip();
 
     const tooltip = document.createElement("div");
@@ -76,6 +82,7 @@ function showAnimalTooltip(trigger) {
     tooltip.style.top = `${Math.max(8, top)}px`;
     activeAnimalTooltipTrigger = trigger;
     activeAnimalTooltip = tooltip;
+    activeAnimalTooltipPinned = pinned;
 }
 
 const findAnimalTooltipTrigger = target => target instanceof Element
@@ -91,7 +98,20 @@ document.addEventListener("pointerout", event => {
     const trigger = findAnimalTooltipTrigger(event.target);
     if (!trigger || (event.relatedTarget instanceof Node && trigger.contains(event.relatedTarget))) return;
     if (activeAnimalTooltipTrigger !== trigger) return;
+    if (activeAnimalTooltipPinned) return;
     if (document.activeElement !== trigger && !trigger.contains(document.activeElement)) {
+        hideAnimalTooltip();
+    }
+});
+
+document.addEventListener("click", event => {
+    const trigger = findAnimalTooltipTrigger(event.target);
+    const isTouchLayout = window.matchMedia("(hover: none), (max-width: 700px)").matches;
+    if (isTouchLayout && trigger) {
+        showAnimalTooltip(trigger, true);
+        return;
+    }
+    if (activeAnimalTooltipTrigger && !activeAnimalTooltipTrigger.contains(event.target)) {
         hideAnimalTooltip();
     }
 });
@@ -156,6 +176,12 @@ const modalRange = (range, suffix = "") => {
     return `${escapeModalHTML(min)}${suffix} - ${escapeModalHTML(max)}${suffix}`;
 };
 
+const modalAlbumImages = animal => animal.album && typeof animal.album === "object"
+    ? Object.entries(animal.album)
+        .filter(([, source]) => typeof source === "string" && source && !/(?:^|\/)image$/i.test(source))
+        .map(([alt, source]) => ({alt, source}))
+    : [];
+
 const modalIconCollection = values => modalList(values).map(value => {
     const name = modalValueName(value);
     return modalTooltip(name, modalIcon(value?.icon, name));
@@ -190,6 +216,7 @@ function buildAnimalModal(animal, allAnimals) {
     ];
 
     const imageURL = animal.imageURL || animal.image;
+    const albumImages = modalAlbumImages(animal);
     const typeLabel = modalValueName(animal.type);
     const dlc = animal.DLC;
     const simpleDetail = (label, value, icon = "") => {
@@ -201,6 +228,10 @@ function buildAnimalModal(animal, allAnimals) {
         const content = `${modalIcon(icon, label)}<span class="animal-modal-detail-label">${escapeModalHTML(label)}:</span><span>${escapeModalHTML(value)}${suffix}</span>`;
         return `<span class="animal-modal-compact-value" data-tooltip="${escapeModalHTML(label)}">${content}</span>`;
     };
+    const formName = modalValueName(animal.form).toLocaleLowerCase();
+    const adultUnit = formName === "collective" || formName === "collectives"
+        ? "Collective"
+        : "Adult";
     const formatAdultGroup = (min, max) => {
         if (!modalHasValue(max) || Number(max) === 0) return "";
         return `${modalHasValue(min) ? min : 0} - ${max}`;
@@ -210,7 +241,7 @@ function buildAnimalModal(animal, allAnimals) {
         if (!modalHasValue(area) || Number(area) === 0) return "";
         const image = `/pz2/images/icons/icons_area_${icon}.svg`;
         const additional = animal[adultKey];
-        return `<span class="animal-modal-area animal-modal-tooltip" data-tooltip="${escapeModalHTML(`${label} Area`)}">${modalIcon(image, label)}<span>${escapeModalHTML(area)} m²</span>${modalHasValue(additional) ? `<small>+${escapeModalHTML(additional)} m² p/Adult</small>` : ""}</span>`;
+        return `<span class="animal-modal-area animal-modal-tooltip" data-tooltip="${escapeModalHTML(`${label} Area`)}">${modalIcon(image, label)}<span>${escapeModalHTML(area)} m²</span>${modalHasValue(additional) ? `<small>+${escapeModalHTML(additional)} m² p/${adultUnit}</small>` : ""}</span>`;
     }).join("");
     const terrainHTML = terrainProperties.map(([key, label, icon]) => {
         const value = animal[key];
@@ -235,6 +266,7 @@ function buildAnimalModal(animal, allAnimals) {
     }).join("");
 
     const enclosureTypes = modalList(animal.enclosureTypes).map(modalValueName).filter(Boolean);
+    const exhibitTerrain = modalList(animal.exhibitTerrain).map(modalValueName).filter(Boolean);
     const litterSizeHTML = animal.offspringPerMating
         && modalHasValue(animal.offspringPerMating.min)
         && modalHasValue(animal.offspringPerMating.max)
@@ -275,18 +307,47 @@ function buildAnimalModal(animal, allAnimals) {
         const juvenile = animal[`foodGrade${grade}CostJuv`];
         if (![name, adult, juvenile].some(modalHasValue)) return "";
         const cost = value => modalHasValue(value) ? `$${Number(value).toFixed(2)}` : "";
-        return `<div class="animal-modal-food-grade"><strong>Grade ${grade}</strong>${modalHasValue(name) ? `<span>${escapeModalHTML(name)}</span>` : ""}${modalHasValue(adult) ? `<span>${cost(adult)} p/Adult</span>` : ""}${modalHasValue(juvenile) ? `<span>${cost(juvenile)} p/Juvenile</span>` : ""}</div>`;
+        return `<div class="animal-modal-food-grade"><strong>Grade ${grade}</strong>${modalHasValue(name) ? `<span>${escapeModalHTML(name)}</span>` : ""}${modalHasValue(adult) ? `<span>${cost(adult)} p/${adultUnit}</span>` : ""}${modalHasValue(juvenile) ? `<span>${cost(juvenile)} p/Juvenile</span>` : ""}</div>`;
     }).join("");
-    const diseasesHTML = modalList(animal.diseases).map(disease => {
-        const name = modalValueName(disease);
-        const tooltip = modalHasValue(disease?.level) || disease?.danger
-            ? `${disease.level ?? ""}${disease.level && disease.danger ? " - " : ""}${disease.danger ?? ""}`
-            : name;
-        return `<span class="animal-modal-care-value animal-modal-disease" data-tooltip="${escapeModalHTML(tooltip)}">${escapeModalHTML(name)}</span>`;
-    }).join("");
-    const conservationTopicsHTML = modalList(animal.conservationTopics)
-        .map(topic => `<span class="animal-modal-care-value">${escapeModalHTML(modalValueName(topic))}</span>`)
+    const diseasesByDanger = new Map();
+    modalList(animal.diseases).forEach(disease => {
+        const danger = disease?.danger || "Other";
+        const diseases = diseasesByDanger.get(danger) || [];
+        diseases.push(disease);
+        diseasesByDanger.set(danger, diseases);
+    });
+    const diseasesHTML = [...diseasesByDanger.entries()]
+        .sort(([dangerA], [dangerB]) => {
+            const levelA = Number.parseInt(dangerA, 10);
+            const levelB = Number.parseInt(dangerB, 10);
+            return (Number.isNaN(levelA) ? Number.MAX_SAFE_INTEGER : levelA)
+                - (Number.isNaN(levelB) ? Number.MAX_SAFE_INTEGER : levelB);
+        })
+        .map(([danger, diseases]) => `<div class="animal-modal-disease-level"><strong>${escapeModalHTML(danger)}:</strong><div class="animal-modal-care-values">${diseases.map(disease => `<span class="animal-modal-care-value animal-modal-disease">${escapeModalHTML(modalValueName(disease))}</span>`).join("")}</div></div>`)
         .join("");
+    const topicValues = (property, type) => [...new Set([
+        ...modalList(animal[property]),
+        ...modalList(animal.conservationTopics).filter(topic => topic?.type === type)
+    ].map(modalValueName).filter(Boolean))];
+    const topicSectionHTML = (property, type) => {
+        const names = topicValues(property, type);
+        return names.length
+            ? `<div class="animal-modal-care-subsection animal-modal-topic-section"><div class="animal-modal-topic-line"><strong>${escapeModalHTML(type)}:</strong> <span>${names.map(escapeModalHTML).join(", ")}</span></div></div>`
+            : "";
+    };
+    const additionalConservationTopics = topicValues("conservationThreats", "Conservation Threats & Human Impact");
+    const additionalConservationHTML = additionalConservationTopics.length
+        ? `<div class="animal-modal-care-subsection"><strong>Conservation Threats &amp; Human Impact</strong><div class="animal-modal-care-values animal-modal-topic-values">${additionalConservationTopics.map(name => `<span class="animal-modal-care-value">${escapeModalHTML(name)}</span>`).join("")}</div></div>`
+        : "";
+    const animalTalkHTML = topicSectionHTML("animalTalk", "Animal Talk");
+    const evolutionTopicHTML = topicSectionHTML("evolutionTopic", "Evolution Topic");
+    const animalTypesTopicHTML = topicSectionHTML("animalTypesTopic", "Animal Types Topic");
+    const animalDietHTML = topicSectionHTML("animalDiet", "Animal Diet");
+    const activityPatternHTML = topicSectionHTML("activityPattern", "Activity Pattern");
+    const ambienceValues = topicValues("ambience", "Ambience");
+    const ambienceHTML = ambienceValues.length
+        ? `<div class="animal-modal-care-subsection"><strong>Ambience</strong><div class="animal-modal-care-values animal-modal-topic-values">${ambienceValues.map(name => `<span class="animal-modal-care-value">${escapeModalHTML(name)}</span>`).join("")}</div></div>`
+        : "";
     const thrivingRequirements = animal.thrivingRequirements && typeof animal.thrivingRequirements === "object"
         ? Object.values(animal.thrivingRequirements).filter(Boolean)
         : [];
@@ -327,6 +388,9 @@ function buildAnimalModal(animal, allAnimals) {
         <div id="modal-animal-card" class="animal-modal-card">
             <div class="modal-animal-image" style="grid-area: animal-card-image;">
                 <img src="${escapeModalHTML(imageURL || "")}" alt="${escapeModalHTML(animal.name)}">
+                ${albumImages.length
+                    ? `<button type="button" class="animal-modal-photo-control is-previous" aria-label="Previous ${escapeModalHTML(animal.name)} photo">&#x2BC7</button><button type="button" class="animal-modal-photo-control is-next" aria-label="Next ${escapeModalHTML(animal.name)} photo">&#x2BC8</button>`
+                    : ""}
             </div>
             <div class="modal-animal-name" style="grid-area: animal-card-name;">
                 <div><h1>${escapeModalHTML(animal.name)}</h1></div>
@@ -361,14 +425,15 @@ function buildAnimalModal(animal, allAnimals) {
                 <div class="modal-animal-details-item animal-modal-general-details">${generalHTML}</div>
                 <h3>Enclosure</h3>
                 <div class="modal-animal-details-item animal-modal-enclosure">
-                    ${enclosureTypes.length ? `<div class="animal-modal-enclosure-line"><div class="animal-modal-detail-pair">${modalIcon("/pz2/images/icons/icons_enclosure_barrier.svg", "Enclosure Type")}<span>${escapeModalHTML(enclosureTypes.join(", "))}</span></div></div>` : ""}
-                    <div class="animal-modal-enclosure-line">
-                        ${simpleDetail("Cohabitation Options", animal.cohabitationOptions)}
-                        ${typeof animal.guestsEnter === "boolean" ? `<div class="animal-modal-detail-pair animal-modal-boolean">
-                            <span>${animal.guestsEnter === true ? "Guests Can Walk Through" : "Guests Can't Walk Through"}</span>
-                            <span class="animal-modal-boolean-icon ${animal.guestsEnter === true ? "is-true" : "is-false"}">${modalIcon(`/pz2/images/icons/icons_UI_toggle${animal.guestsEnter === true ? "True" : "False"}.svg`, "Guests Walk Through")}</span>
-                        </div>` : ""}
-                    </div>
+                    ${enclosureTypes.length ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-types"><div class="animal-modal-detail-pair">${modalIcon("/pz2/images/icons/icons_enclosure_barrier.svg", "Enclosure Type")}<span class="animal-modal-enclosure-values">${enclosureTypes.map((type, index) => `<span>${escapeModalHTML(type)}${index < enclosureTypes.length - 1 ? "," : ""}</span>`).join(" ")}</span></div></div>` : ""}
+                    ${exhibitTerrain.length ? `<div class="animal-modal-enclosure-line animal-modal-exhibit-terrain">${modalIcon("/pz2/images/icons/icons_terrain.svg", "Exhibit Terrain")}<span>Exhibit Terrain: ${exhibitTerrain.map(escapeModalHTML).join(", ")}</span></div>` : ""}
+                    ${modalHasValue(animal.cohabitationOptions) ? `<div class="animal-modal-enclosure-line">
+                        ${simpleDetail("Cohabitation", animal.cohabitationOptions)}
+                    </div>` : ""}
+                    ${typeof animal.guestsEnter === "boolean" ? `<div class="animal-modal-enclosure-line"><div class="animal-modal-detail-pair animal-modal-boolean">
+                        <span>${animal.guestsEnter === true ? "Guests Can Walk Through" : "Guests Can't Walk Through"}</span>
+                        <span class="animal-modal-boolean-icon ${animal.guestsEnter === true ? "is-true" : "is-false"}">${modalIcon(`/pz2/images/icons/icons_UI_toggle${animal.guestsEnter === true ? "True" : "False"}.svg`, "Guests Walk Through")}</span>
+                    </div></div>` : ""}
                     ${(() => {
                         const barrierStrength = modalHasValue(animal.barrierStrength)
                             ? iconDetail("Barrier Strength", `Grade ${animal.barrierStrength}`, "/pz2/images/icons/icons_enclosure_barrierStrength.svg")
@@ -380,6 +445,7 @@ function buildAnimalModal(animal, allAnimals) {
                             ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-barriers">${barrierStrength}${barrierHeight}</div>`
                             : "";
                     })()}
+                    ${modalHasValue(animal.diveDepth) && Number(animal.diveDepth) > 0 ? `<div class="animal-modal-enclosure-line">${iconDetail("Minimum Diving Depth", animal.diveDepth, "/pz2/images/icons/icons_area_deepWater.svg", "m")}</div>` : ""}
                     ${conditionHTML ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-conditions">${conditionHTML}</div>` : ""}
                 </div>
                 ${areaHTML ? `<h3>Space Requirements</h3><div class="modal-animal-details-item animal-modal-area-list">${areaHTML}</div>` : ""}
@@ -394,7 +460,9 @@ function buildAnimalModal(animal, allAnimals) {
                     ${Number(animal.maxMalesBachelor) > 0 ? `<div class="animal-modal-group-column"><strong>${modalIcon("/pz2/images/icons/icons_releaseGroups_maleGroup.svg", "Male Group")} Male Group</strong><span>${formatAdultGroup(animal.groupSizeMin, animal.maxMalesBachelor)}</span></div>` : ""}
                     ${Number(animal.maxFemalesBachelor) > 0 ? `<div class="animal-modal-group-column"><strong>${modalIcon("/pz2/images/icons/icons_releaseGroups_femaleGroup.svg", "Female Group")} Female Group</strong><span>${formatAdultGroup(animal.groupSizeMin, animal.maxFemalesBachelor)}</span></div>` : ""}
                     <span class="animal-modal-line-break"></span>
-                    <div class="animal-modal-group-meta">${simpleDetail("Dominance", animal.dominance)}${simpleDetail("Alpha Animals", animal.alphaDominance?.type || animal.alphaDominance)}</div>
+                    ${animal.collectiveExhibit && modalRange(animal.collectiveExhibit) ? `<div class="animal-modal-group-meta animal-modal-collective-size"><strong>Exhibit Collective Size:</strong><span>${modalRange(animal.collectiveExhibit)}</span></div>` : ""}
+                    ${animal.collectiveAquarium && modalRange(animal.collectiveAquarium) ? `<div class="animal-modal-group-meta animal-modal-collective-size"><strong>Aquarium Shoal Size:</strong><span>${modalRange(animal.collectiveAquarium)}</span></div>` : ""}
+                    <div class="animal-modal-group-meta">${simpleDetail("Dominance", animal.dominance)}${animal.alphaDominance?.description ? `<span class="animal-modal-alpha-description">${escapeModalHTML(animal.alphaDominance.description)}</span>` : ""}</div>
                 </div>
                 <h3>Breeding &amp; Lifecycle</h3>
                 <div class="modal-animal-details-item animal-modal-breeding">
@@ -405,8 +473,9 @@ function buildAnimalModal(animal, allAnimals) {
                     ${simpleDetail("Reproduction Difficulty", animal.reproductionDifficulty)
                         ? `<div class="animal-modal-breeding-line">${simpleDetail("Reproduction Difficulty", animal.reproductionDifficulty)}</div>`
                         : ""}
-                    ${(litterSizeHTML || animal.preBirthMonths != null || animal.interbirthMonths != null)
-                        ? `<div class="animal-modal-breeding-line">${litterSizeHTML}${simpleDetail("Prebirth", modalHasValue(animal.preBirthMonths) ? `${animal.preBirthMonths} months` : null)}${simpleDetail("Interbirth", modalHasValue(animal.interbirthMonths) ? `${animal.interbirthMonths} months` : null)}</div>`
+                    ${litterSizeHTML ? `<div class="animal-modal-breeding-line">${litterSizeHTML}</div>` : ""}
+                    ${(modalHasValue(animal.preBirthMonths) || modalHasValue(animal.interbirthMonths))
+                        ? `<div class="animal-modal-breeding-line">${simpleDetail("Prebirth", modalHasValue(animal.preBirthMonths) ? `${animal.preBirthMonths} months` : null)}${simpleDetail("Interbirth", modalHasValue(animal.interbirthMonths) ? `${animal.interbirthMonths} months` : null)}</div>`
                         : ""}
                     ${lifespanStages ? `<div class="animal-modal-breeding-line animal-modal-lifespan">${lifespanStages}</div>` : ""}
                     ${(maturityAgeHTML || sterilityAgeHTML) ? `<div class="animal-modal-breeding-line">${maturityAgeHTML}${sterilityAgeHTML}</div>` : ""}
@@ -415,18 +484,27 @@ function buildAnimalModal(animal, allAnimals) {
                 </div>
                 <h3>Wildlife Reserves</h3>
                 <div class="modal-animal-details-item animal-modal-reserves">
-                    ${animal.releasable === false ? `<p class="animal-modal-empty">No Wildlife Reserves Available</p>` : `
-                        ${modalList(animal.wildlifeReserves).length ? `<div class="animal-modal-reserve-line">${modalList(animal.wildlifeReserves).map(reserve => `<span class="animal-modal-reserve">${modalIcon(reserve.icon, reserve.name)}<strong>${escapeModalHTML(reserve.name)}</strong><small>${escapeModalHTML([reserve.continent, reserve.biome].filter(Boolean).join(", "))}</small></span>`).join("")}</div>` : ""}
-                        ${modalList(animal.ecosystems).length ? `<div class="animal-modal-reserve-line">${modalList(animal.ecosystems).map(ecosystem => `<span class="animal-modal-reserve reserve-ecosystem">${modalIcon(ecosystem.icon, ecosystem.name)}<strong>${escapeModalHTML(ecosystem.name)}</strong><small>Biome: ${escapeModalHTML(ecosystem.biome || "N/A")}</small></span>`).join("")}</div>` : ""}
-                        ${modalList(animal.speciesRoles).length ? `<div class="animal-modal-wide-line"><strong>Species Roles:</strong> ${modalTextCollection(animal.speciesRoles)}</div>` : ""}
-                        ${modalList(animal.rolesRequired).length ? `<div class="animal-modal-wide-line"><strong>Roles Required:</strong> ${modalTextCollection(animal.rolesRequired)}</div>` : ""}
-                        ${modalList(animal.releaseGroups).length ? `<div class="animal-modal-release-groups"><strong>Release Groups:</strong>${modalList(animal.releaseGroups).map(group => `<span>${modalIcon(group.icon, group.type)}${escapeModalHTML(group.type)}</span>`).join("")}</div>` : ""}
-                        ${animal.releasable !== false && !modalList(animal.wildlifeReserves).length ? `<p class="animal-modal-empty">No Wildlife Reserves Available</p>` : ""}
-                    `}
+                    ${animal.releasable === false || !modalList(animal.wildlifeReserves).length ? `<p class="animal-modal-empty">No Wildlife Reserves Available</p>` : ""}
+                    ${modalList(animal.wildlifeReserves).length ? `<div class="animal-modal-reserve-line">${modalList(animal.wildlifeReserves).map(reserve => `<span class="animal-modal-reserve">${modalIcon(reserve.icon, reserve.name)}<strong>${escapeModalHTML(reserve.name)}</strong><small>${escapeModalHTML([reserve.continent, reserve.biome].filter(Boolean).join(", "))}</small></span>`).join("")}</div>` : ""}
+                    ${modalList(animal.ecosystems).length ? `<div class="animal-modal-reserve-line">${modalList(animal.ecosystems).map(ecosystem => `<span class="animal-modal-reserve reserve-ecosystem">${modalIcon(ecosystem.icon, ecosystem.name)}<strong>${escapeModalHTML(ecosystem.name)}</strong><small>Biome: ${escapeModalHTML(ecosystem.biome || "N/A")}</small></span>`).join("")}</div>` : ""}
+                    ${modalList(animal.speciesRoles).length ? `<div class="animal-modal-wide-line"><strong>Species Roles:</strong> ${modalTextCollection(animal.speciesRoles)}</div>` : ""}
+                    ${modalList(animal.rolesRequired).length ? `<div class="animal-modal-wide-line"><strong>Roles Required:</strong> ${modalTextCollection(animal.rolesRequired)}</div>` : ""}
+                    ${modalList(animal.releaseGroups).length ? `<div class="animal-modal-release-groups"><strong>Release Groups:</strong>${modalList(animal.releaseGroups).map(group => `<span>${modalIcon(group.icon, group.type)}${escapeModalHTML(group.type)}</span>`).join("")}</div>` : ""}
                 </div>
                 <h3>Research &amp; Enrichments</h3>
                 <div class="modal-animal-details-item animal-modal-care">
-                    <div class="animal-modal-wide-line"><strong>Movement:</strong> ${[
+                    ${animalTalkHTML}
+                    ${evolutionTopicHTML}
+                    ${animalTypesTopicHTML}
+                    ${activityPatternHTML}
+                    ${animalDietHTML}
+                    ${modalList(animal.feeders).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Food &amp; Water</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.feeders)}</div></div>` : ""}
+                    ${foodGradeHTML ? `<div class="animal-modal-care-subsection"><strong>Food Costs</strong><div class="animal-modal-food-costs">${foodGradeHTML}</div></div>` : ""}
+                    ${modalList(animal.foodEnrichment).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Food-based Enrichment</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.foodEnrichment)}</div></div>` : ""}
+                    ${modalList(animal.toyEnrichment).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Toy Enrichment</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.toyEnrichment)}</div></div>` : ""}
+                    ${modalList(animal.shelters).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Bedding, Shelters &amp; Nests</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.shelters)}</div></div>` : ""}
+
+                    <div class="animal-modal-care-subsection animal-modal-movement"><div class="animal-modal-topic-line"><strong>Movement:</strong> <span>${[
                         animal.canMoveOnLand && "Moves on Land",
                         animal.canJump && "Jumps",
                         animal.canClimb && "Climbs",
@@ -435,14 +513,10 @@ function buildAnimalModal(animal, allAnimals) {
                         animal.canSwim && "Swims",
                         animal.canDive && "Dives",
                         !animal.canWade && !animal.canSwim && !animal.canDive && "Can't Swim"
-                    ].filter(Boolean).map(escapeModalHTML).join(", ") || "N/A"}</div>
-                    ${modalList(animal.feeders).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Food &amp; Water</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.feeders)}</div></div>` : ""}
-                    ${foodGradeHTML ? `<div class="animal-modal-care-subsection"><strong>Food Costs</strong><div class="animal-modal-food-costs">${foodGradeHTML}</div></div>` : ""}
-                    ${modalList(animal.foodEnrichment).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Food-based Enrichment</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.foodEnrichment)}</div></div>` : ""}
-                    ${modalList(animal.toyEnrichment).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Toy Enrichment</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.toyEnrichment)}</div></div>` : ""}
-                    ${modalList(animal.shelters).length ? `<div class="animal-modal-care-subsection animal-modal-enrichment-icons"><strong>Bedding, Shelters & Nests</strong><div class="animal-modal-icon-collection">${modalIconCollection(animal.shelters)}</div></div>` : ""}
-                    ${diseasesHTML ? `<div class="animal-modal-care-subsection"><strong>Diseases</strong><div class="animal-modal-care-values">${diseasesHTML}</div></div>` : ""}
-                    ${conservationTopicsHTML ? `<div class="animal-modal-care-subsection"><strong>Conservation Topics</strong><div class="animal-modal-care-values">${conservationTopicsHTML}</div></div>` : ""}
+                    ].filter(Boolean).map(escapeModalHTML).join(", ") || "N/A"}</span></div></div>
+                    ${additionalConservationHTML}
+                    ${diseasesHTML ? `<div class="animal-modal-care-subsection"><strong>Diseases</strong><div class="animal-modal-disease-list">${diseasesHTML}</div></div>` : ""}
+                    ${ambienceHTML}
                 </div>
                 <h3>Thriving Relationships</h3>
                 <div class="modal-animal-details-item">${relationshipHTML(animal.thrivingRelationships, "thriving")}</div>
@@ -451,8 +525,10 @@ function buildAnimalModal(animal, allAnimals) {
                 ${thrivingHTML ? `<h3>Thriving Requirements</h3><div class="modal-animal-details-item"><ul class="animal-modal-bullet-list">${thrivingHTML}</ul></div>` : ""}
                 <h3>Standard Coat(s)</h3>
                 <div class="modal-animal-details-item animal-modal-standard-coat">
-                    ${standardCoatImage ? modalIcon(standardCoatImage, animal.headshot || animal.name, "animal-modal-standard-headshot") : ""}
-                    ${standardCoatHTML ? `<ul class="animal-modal-bullet-list">${standardCoatHTML}</ul>` : `<span class="animal-modal-empty">No standard coat information available</span>`}
+                    <div class="animal-modal-standard-coat-content">
+                        ${standardCoatImage ? modalIcon(standardCoatImage, animal.headshot || animal.name, "animal-modal-standard-headshot") : ""}
+                        ${standardCoatHTML ? `<ul class="animal-modal-bullet-list">${standardCoatHTML}</ul>` : `<span class="animal-modal-empty">No standard coat information available</span>`}
+                    </div>
                 </div>
                 <h3>Colourmorphs</h3>
                 <div class="modal-animal-details-item animal-modal-colourmorphs">${colourmorphHTML}</div>
@@ -479,6 +555,7 @@ async function openAnimalModal(animalName) {
         if (!animal) {
             throw new Error(`Could not find animal data for "${animalName}".`);
         }
+        const albumImages = modalAlbumImages(animal);
 
         const modalContainer = document.createElement("div");
         modalContainer.innerHTML = buildAnimalModal(animal, allAnimals);
@@ -487,6 +564,23 @@ async function openAnimalModal(animalName) {
             throw new Error(`Could not create the animal modal for "${animalName}".`);
         }
         document.body.append(modal);
+        const modalImage = modal.querySelector(".modal-animal-image img");
+        const baseImage = animal.imageURL || animal.image;
+        const photoSequence = albumImages.length
+            ? [{alt: animal.name, source: baseImage}, ...albumImages, {alt: animal.name, source: baseImage}]
+            : [];
+        if (modalImage instanceof HTMLImageElement && photoSequence.length) {
+            let currentPhotoIndex = 0;
+            modal.querySelectorAll(".animal-modal-photo-control").forEach(control => {
+                control.addEventListener("click", event => {
+                    event.stopPropagation();
+                    const direction = control.classList.contains("is-next") ? 1 : -1;
+                    currentPhotoIndex = (currentPhotoIndex + direction + photoSequence.length) % photoSequence.length;
+                    modalImage.src = photoSequence[currentPhotoIndex].source;
+                    modalImage.alt = photoSequence[currentPhotoIndex].alt;
+                });
+            });
+        }
         document.body.classList.add("animal-modal-open");
 
         const closeModal = () => {

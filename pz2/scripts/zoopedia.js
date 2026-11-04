@@ -14,6 +14,7 @@ import {
 } from "/pz2/scripts/interface.js";
 
 const zoopediaList = document.getElementById("zoopedia-list");
+const animalCount = document.getElementById("zoopedia-animal-count");
 const dlcFilter = document.getElementById("filters-dlc");
 const formFilter = document.getElementById("filters-form");
 const typesFilter = document.getElementById("filters-types");
@@ -22,6 +23,13 @@ const zoopediaFilters = document.getElementById("zoopedia-filters");
 
 if (!zoopediaList) {
     throw new Error('Could not find the "zoopedia-list" element.');
+}
+if (!animalCount) {
+    throw new Error('Could not find the "zoopedia-animal-count" element.');
+}
+
+function asArray(value) {
+    return Array.isArray(value) ? value : value === null || value === undefined ? [] : [value];
 }
 
 if (!dlcFilter) {
@@ -48,6 +56,11 @@ const selectedSimpleFilters = {
     diseases: "",
     diets: "",
     activityPatterns: "",
+    animalTalks: "",
+    evolutionTopics: "",
+    animalTypesTopics: "",
+    conservationThreats: "",
+    ambiences: "",
     matingSystem: "",
     matingSeason: "",
     reproductionDifficulty: "",
@@ -94,7 +107,7 @@ const selectedTaxonomy = {
     genus: ""
 };
 const selectedReproduction = {value: ""};
-const selectedMovement = {movement: "", swimming: ""};
+const selectedMovement = {value: ""};
 const reproductionOptions = [
     {key: "pregnancy", label: "Pregnancy", matches: animal => animal.pregnancy === true},
     {key: "egg-laying", label: "Lays Eggs", matches: animal => animal.eggLaying === true},
@@ -117,9 +130,7 @@ const movementOptions = [
         key: "only-swims",
         label: "Only Swims",
         matches: animal => animal.canMoveOnLand === false && animal.canSwim === true
-    }
-];
-const swimmingOptions = [
+    },
     {
         key: "cant-swim",
         label: "Can't Swim",
@@ -171,19 +182,61 @@ const simpleFilters = {
         label: "Diseases",
         options: diseases
     },
-    diets: {
-        id: "filters-diets",
-        label: "Animal Diets",
-        property: "conservationTopics",
-        options: Object.fromEntries(Object.entries(conservationTopics)
-            .filter(([, topic]) => topic.type === "Animal Diets"))
-    },
     activityPatterns: {
         id: "filters-activity-patterns",
         label: "Activity Patterns",
-        property: "conservationTopics",
+        property: "activityPattern",
+        topicType: "Activity Pattern",
         options: Object.fromEntries(Object.entries(conservationTopics)
-            .filter(([, topic]) => topic.type === "Activity Patterns"))
+            .filter(([, topic]) => topic.type === "Activity Pattern"))
+    },
+    diets: {
+        id: "filters-diets",
+        label: "Animal Diets",
+        property: "animalDiet",
+        topicType: "Animal Diet",
+        options: Object.fromEntries(Object.entries(conservationTopics)
+            .filter(([, topic]) => topic.type === "Animal Diet"))
+    },
+    animalTalks: {
+        id: "filters-animal-talks",
+        label: "Animal Talks",
+        property: "animalTalk",
+        topicType: "Animal Talk",
+        options: Object.fromEntries(Object.entries(conservationTopics)
+            .filter(([, topic]) => topic.type === "Animal Talk"))
+    },
+    evolutionTopics: {
+        id: "filters-evolution-topics",
+        label: "Evolution Topics",
+        property: "evolutionTopic",
+        topicType: "Evolution Topic",
+        options: Object.fromEntries(Object.entries(conservationTopics)
+            .filter(([, topic]) => topic.type === "Evolution Topic"))
+    },
+    animalTypesTopics: {
+        id: "filters-animal-types-topics",
+        label: "Animal Type Topics",
+        property: "animalTypesTopic",
+        topicType: "Animal Types Topic",
+        options: Object.fromEntries(Object.entries(conservationTopics)
+            .filter(([, topic]) => topic.type === "Animal Types Topic"))
+    },
+    conservationThreats: {
+        id: "filters-conservation-threats",
+        label: "Conservation Threats",
+        property: "conservationThreats",
+        topicType: "Conservation Threats & Human Impact",
+        options: Object.fromEntries(Object.entries(conservationTopics)
+            .filter(([, topic]) => topic.type === "Conservation Threats & Human Impact"))
+    },
+    ambiences: {
+        id: "filters-ambiences",
+        label: "Ambiences",
+        property: "ambience",
+        topicType: "Ambience",
+        options: Object.fromEntries(Object.entries(conservationTopics)
+            .filter(([, topic]) => topic.type === "Ambience"))
     },
     matingSystem: {
         id: "filters-mating-system",
@@ -307,6 +360,14 @@ function lifetimeExpectancy(animal) {
     ];
     return lifeStages.every(value => value !== null)
         ? lifeStages.reduce((total, value) => total + value, 0)
+        : null;
+}
+
+function juvenileAdultExpectancy(animal) {
+    const juvenileYears = numericValue(animal.juvenileYears);
+    const adultYears = numericValue(animal.adultYears);
+    return juvenileYears !== null && adultYears !== null
+        ? juvenileYears + adultYears
         : null;
 }
 
@@ -559,23 +620,13 @@ function setupMovementFilters() {
 
     container.classList.add("zoopedia-compound-filter");
     const movementSelect = document.createElement("div");
-    const swimmingSelect = document.createElement("div");
-    container.replaceChildren(movementSelect, swimmingSelect);
+    container.replaceChildren(movementSelect);
     createPredicateSelectFilter({
         container: movementSelect,
         label: "Movement",
         options: movementOptions,
         onChange: value => {
-            selectedMovement.movement = value;
-            renderAnimals();
-        }
-    });
-    createPredicateSelectFilter({
-        container: swimmingSelect,
-        label: "Swimming",
-        options: swimmingOptions,
-        onChange: value => {
-            selectedMovement.swimming = value;
+            selectedMovement.value = value;
             renderAnimals();
         }
     });
@@ -738,10 +789,15 @@ function setupOtherFiltersGroup() {
         label: "Misc Filters",
         optionFilters: [
             {id: "filters-movement"},
-            simpleFilters.shelters,
             simpleFilters.activityPatterns,
             simpleFilters.diets,
-            simpleFilters.diseases
+            simpleFilters.shelters,
+            simpleFilters.animalTalks,
+            simpleFilters.evolutionTopics,
+            simpleFilters.animalTypesTopics,
+            simpleFilters.conservationThreats,
+            simpleFilters.diseases,
+            simpleFilters.ambiences
         ]
     });
 }
@@ -937,7 +993,7 @@ function setupExpandableFilterGroup({id, label, optionFilters}) {
     let isOpen = false;
     function setOpen(open) {
         isOpen = open;
-        button.textContent = isOpen ? "⯇" : `${label} ➤`;
+        button.textContent = isOpen ? "↩ " : `${label} ➤`;
         button.title = isOpen ? "Hide" : "Open";
         button.setAttribute("aria-label", isOpen ? "Hide filters" : `Open ${label}`);
         button.classList.toggle("is-open", isOpen);
@@ -1058,10 +1114,17 @@ function renderAnimals() {
         }));
 
         const matchesSimpleFilters = Object.entries(simpleFilters).every(
-            ([property, {options, property: animalProperty = property}]) => {
+            ([property, {options, property: animalProperty = property, topicType}]) => {
                 const selectedKey = selectedSimpleFilters[property];
+                const animalValues = topicType
+                    ? [
+                        ...asArray(animal[animalProperty]),
+                        ...asArray(animal.conservationTopics)
+                            .filter(topic => topic?.type === topicType)
+                    ]
+                    : animal[animalProperty];
                 return !selectedKey
-                    || matchesSelectedOptions(animal[animalProperty], options, [selectedKey]);
+                    || matchesSelectedOptions(animalValues, options, [selectedKey]);
             }
         );
         const matchesBooleanFilters = Object.entries(selectedBooleanFilters).every(
@@ -1081,14 +1144,10 @@ function renderAnimals() {
             : null;
         const matchesReproduction = !selectedReproductionOption
             || selectedReproductionOption.matches(animal);
-        const selectedMovementOption = selectedMovement.movement
-            ? movementOptions.find(option => option.key === selectedMovement.movement)
+        const selectedMovementOption = selectedMovement.value
+            ? movementOptions.find(option => option.key === selectedMovement.value)
             : null;
-        const selectedSwimmingOption = selectedMovement.swimming
-            ? swimmingOptions.find(option => option.key === selectedMovement.swimming)
-            : null;
-        const matchesMovement = (!selectedMovementOption || selectedMovementOption.matches(animal))
-            && (!selectedSwimmingOption || selectedSwimmingOption.matches(animal));
+        const matchesMovement = !selectedMovementOption || selectedMovementOption.matches(animal);
         const matchesTaxonomy = Object.entries(selectedTaxonomy).every(
             ([property, selectedValue]) => !selectedValue || animal[property] === selectedValue
         );
@@ -1205,11 +1264,36 @@ function renderAnimals() {
             const comparison = isAlphabetical
                 ? valueA.localeCompare(valueB)
                 : valueA - valueB;
-            return isAscending ? comparison : -comparison;
+            if (comparison !== 0) {
+                return isAscending ? comparison : -comparison;
+            }
+            if (activeSort.id === "filters-sortby-lifetime-expectancy") {
+                const juvenileAdultA = juvenileAdultExpectancy(animalA);
+                const juvenileAdultB = juvenileAdultExpectancy(animalB);
+                if (juvenileAdultA !== null && juvenileAdultB !== null
+                    && juvenileAdultA !== juvenileAdultB) {
+                    return juvenileAdultB - juvenileAdultA;
+                }
+                const adultA = numericValue(animalA.adultYears);
+                const adultB = numericValue(animalB.adultYears);
+                if (adultA !== null && adultB !== null && adultA !== adultB) {
+                    return adultB - adultA;
+                }
+            }
+            if (activeSort.id === "filters-sortby-fertility-time") {
+                const adultA = numericValue(animalA.adultYears);
+                const adultB = numericValue(animalB.adultYears);
+                if (adultA !== null && adultB !== null && adultA !== adultB) {
+                    return adultB - adultA;
+                }
+            }
+            return 0;
         });
     }
 
-    zoopediaList.innerHTML = filteredAnimals.map(animal => `
+    animalCount.textContent = `${filteredAnimals.length} animal${filteredAnimals.length === 1 ? "" : "s"}`;
+    zoopediaList.innerHTML = filteredAnimals.map(animal => {
+        return `
     <div class="zoopedia-animal" data-animal-name="${animal.name}">
       <div class="zoopedia-image">
         <img src="${animal.imageURL}" alt="${animal.image}">
@@ -1219,7 +1303,8 @@ function renderAnimals() {
         <span>${animal.latin}</span>
       </div>
     </div>
-    `).join("");
+    `;
+    }).join("");
 }
 
 function setupResponsiveFilterToggle() {

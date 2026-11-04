@@ -51,8 +51,11 @@ const enclosureTypes = {
     habitatClimbProof: "Climb-Proof Habitat",
     habitatRoofed: "Roofed Habitat",
     aquarium: "Aquarium",
-    exhibitCylinder: "Cylinder Exhibit",
-    exhibitBox: "Box Exhibit",
+    exhibitBoxAngledLarge: "Large Angled Box Exhibit",
+    exhibitCylinderLarge: "Large Cylinder Exhibit",
+    exhibitBoxLarge: "Large Box Exhibit",
+    exhibitCylinderSmall: "Small Cylinder Exhibit",
+    exhibitBoxSmall: "Small Box Exhibit",
     exhibitWalkthrough: "Walkthrough Exhibit"
 };
 
@@ -277,17 +280,17 @@ const ecosystems = {
     mixedLowlandForest: {
         name: "Mixed Lowland Forest",
         biome: "Taiga",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_mixedLowlandForest.png"
     },
     wateringHole: {
         name: "Watering Hole",
         biome: "Grassland",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_wateringHole.png"
     },
     moorland: {
         name: "Moorland",
         biome: "Taiga",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_moorland.png"
     },
     lakeLoch: {
         name: "Lake (Loch)",
@@ -377,7 +380,7 @@ const ecosystems = {
     rockyHills: {
         name: "Rocky Hills",
         biome: "Grassland",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_rockyHills.png"
     },
     closedCanopyForest: {
         name: "Closed Canopy Forest",
@@ -481,7 +484,7 @@ const releaseGroups = {
     femaleGroup: {
         type: "Female Group",
         icon: "/pz2/images/icons/icons_releaseGroups_femaleGroup.svg"
-    },  
+    }, 
     solitaryMale: {
         type: "Solitary Male",
         icon: "/pz2/images/icons/icons_releaseGroups_solitaryMale.svg"
@@ -501,31 +504,31 @@ const temperament = {
 const alphaDominance = {
     none: {
         type: "None",
-        description: "No set alphas or leaders"
+        description: "The species does not have set alphas or leaders"
     },
     alphaPair: {
         type: "Alpha Pair",
-        description: "Other adults can't mate"
+        description: "A mixed group will have an alpha pair that will not allow the other group members to breed."
     },
     alphaMale: {
         type: "Alpha Male",
-        description: "Other males can't mate"
+        description: "A mixed group will have an alpha male that will not allow other males to mate."
     },
     alphaFemale: {
         type: "Alpha Female",
-        description: "Other females can't mate"
+        description: "A mixed group will have an alpha female that will not allow other females to mate."
     },
     leaderPair: {
         type: "Alpha Pair Leaders",
-        description: "Pair leads group"
+        description: "A mixed group will have an alpha pair leading it."
     },
     leaderMale: {
         type: "Male Alpha Leader",
-        description: "Male leads group"
+        description: "A mixed group will have an alpha male leading it."
     },
     leaderFemale: {
         type: "Female Alpha Leader",
-        description: "Female leads group"
+        description: "A mixed group will have an alpha female leading it."
     }
 };
 
@@ -653,11 +656,11 @@ const feeders = {
     }, 
     aquaticFeederPlant: {
         name: "Aquatic Feeder - Plant",
-        icon: "/pz2/images/icons/icons_feeders_"
+        icon: "/pz2/images/icons/icons_feeders_aquaticFeederPlant.png"
     }, 
     veggieMatFeeder: {
         name: "Veggie Mat Feeder",
-        icon: "/pz2/images/icons/icons_feeders_"
+        icon: "/pz2/images/icons/icons_feeders_veggieMatFeeder.png"
     } 
 };
 
@@ -745,7 +748,7 @@ const shelters = {
     turtleNestLarge: {
         name: "Turtle Nest - Large",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_turtleNestLarge.png"
     }, 
     waterPlatformNestLarge: {
         name: "Water Platform Nest - Large",
@@ -778,7 +781,7 @@ const foodEnrichment = {
     barrelFeederSmall: {
         name: "Barrel Feeder - Small",
         type: "Herbivorous Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Small_Barrel_Feeder_Spawner.png"
     }, 
     blockofFrozenFish: {
         name: "Block of Frozen Fish",
@@ -909,22 +912,22 @@ const foodEnrichment = {
         name: "Suspended High Grazer Feeder",
         type: "Browsing Food-based Enrichments",
         icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Suspended_High_Grazer.png"
-    },  
+    }, 
     suspendedPerchFeeder: {
         name: "Suspended Perch Feeder",
         type: "Arboreal Food-based Enrichments",
         icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Feeder_Perch_Suspended.png"
-    },  
+    }, 
     suspendedPuzzleFeeder: {
         name: "Suspended Puzzle Feeder",
         type: "Arboreal Food-based Enrichments",
         icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Feeder_Puzzle_Suspended.png"
-    },  
+    }, 
     suspendedSpikeFeeder: {
         name: "Suspended Spike Feeder",
         type: "Arboreal Food-based Enrichments",
         icon: "/images/icon-planet-zoo.svg"
-    },  
+    }, 
     suspendedVeggieFeeder: {
         name: "Suspended Veggie Feeder",
         type: "Browsing Food-based Enrichments",
@@ -968,7 +971,7 @@ const foodEnrichment = {
     veggieBundle: {
         name: "Veggie Bundle",
         type: "No Research Required",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Veggie_Bundle.png"
     }
 };
 
@@ -1011,7 +1014,7 @@ const toyEnrichment = {
     fireHoseBall: {
         name: "Fire Hose Ball",
         type: "Biting Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Fire_Hose_Ball_Spawner.png"
     }, 
     grabBall: {
         name: "Grab Ball",
@@ -1026,7 +1029,7 @@ const toyEnrichment = {
     herbScentMarker: {
         name: "Herb Scent Marker",
         type: "Olfactory Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Herbs.png"
     }, 
     largeBall: {
         name: "Large Ball",
@@ -1096,7 +1099,7 @@ const toyEnrichment = {
     rubberChicken: {
         name: "Rubber Chicken",
         type: "No Research Required",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Squeaky_Toy_Spawner.png"
     }, 
     rubberDuck: {
         name: "Rubber Duck",
@@ -1127,7 +1130,7 @@ const toyEnrichment = {
         name: "Scratching Post",
         type: "Sensory Toy Enrichments",
         icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Scratching_Post.png"
-    },  
+    }, 
     shreddingPaper: {
         name: "Shredding Paper",
         type: "Destructible Toy Enrichments",
@@ -1156,7 +1159,7 @@ const toyEnrichment = {
     smallIceBall: {
         name: "Small Ice Ball",
         type: "Ball Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Small_Ball_Ice_Spawner.png"
     }, 
     sprinkler: {
         name: "Sprinkler",
@@ -1176,7 +1179,7 @@ const toyEnrichment = {
     suspendedBall: {
         name: "Suspended Ball",
         type: " Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Ball_Chain.png"
     }, 
     suspendedPerch: {
         name: "Suspended Perch",
@@ -1211,7 +1214,7 @@ const toyEnrichment = {
     tyre: {
         name: "Tyre",
         type: "Manipulation Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Tyre_Spawner.png"
     }, 
     waterJet: {
         name: "Water Jet",
@@ -1231,7 +1234,7 @@ const toyEnrichment = {
     windChimes: {
         name: "Wind Chimes",
         type: "Auditory Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Wind_Chimes.png"
     }, 
     bubbleBlowerAirstone: {
         name: "Bubble Blower - Airstone",
@@ -1246,7 +1249,7 @@ const toyEnrichment = {
     squareFloat: {
         name: "Square Float",
         type: "Aquatic Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Float_Spawner.png"
     }, 
     waterHoop: {
         name: "Water Hoop",
@@ -1258,533 +1261,469 @@ const toyEnrichment = {
 const diseases = {
     amoebiasis: {
         name: "Amoebiasis",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     aspergillosis: {
         name: "Aspergillosis",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     avianHerpesvirus: {
         name: "Avian Herpesvirus",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     avianInfluenza: {
         name: "Avian Influenza",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     avianTuberculosis: {
         name: "Avian Tuberculosis",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     avipoxvirus: {
         name: "Avipoxvirus",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     bordetellosis: {
         name: "Bordetellosis",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     botulismToxicosis: {
         name: "Botulism Toxicosis",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     campylobacteriosis: {
         name: "Campylobacteriosis",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     candidiasis: {
         name: "Candidiasis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     canineDistemperVirus: {
         name: "Canine Distemper Virus",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     classicalSwineFever: {
         name: "Classical Swine Fever",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     cowpoxVirus: {
         name: "Cowpox Virus",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     eehv: {
         name: "EEHV",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     europeanBrownHareSyndromeVirus: {
         name: "European Brown Hare Syndrome Virus",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     featherLice: {
         name: "Feather Lice",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     fip: {
         name: "FIP",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     footAndMouthDisease: {
         name: "Foot And Mouth Disease",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     furunculosis: {
         name: "Furunculosis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     fusariosis: {
         name: "Fusariosis",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     glanders: {
         name: "Glanders",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     hepatitisA: {
         name: "Hepatitis A",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     isopodiasis: {
         name: "Isopodiasis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     listeriosis: {
         name: "Listeriosis",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     mareksDisease: {
         name: "Marek's Disease",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     mpox: {
         name: "Mpox",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     mrsa: {
         name: "MRSA",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     mycoplasmosis: {
         name: "Mycoplasmosis",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     nematodiasis: {
         name: "Nematodiasis",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     newcastleDisease: {
         name: "Newcastle Disease",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     nileCrocodilePoxvirus: {
         name: "Nile Crocodile Poxvirus",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     piscineMycobacteriosis: {
         name: "Piscine Mycobacteriosis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     qFever: {
         name: "Q Fever",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     rabbitHaemorrhagicDiseaseVirus: {
         name: "Rabbit Haemorrhagic Disease Virus",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     rotavirus: {
         name: "Rotavirus",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     salmonellosis: {
         name: "Salmonellosis",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     simianHaemorrhagicFever: {
         name: "Simian Haemorrhagic Fever",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     staphylococcusInfection: {
         name: "Staphylococcus Infection",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     streptococcosis: {
         name: "Streptococcosis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     testudinidHerpesvirus: {
         name: "Testudinid Herpesvirus",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     tetanus: {
         name: "Tetanus",
-        level: 1,
-        danger: "Low Danger"
+        danger: "1 - Low Danger"
     }, 
     toxoplasmosis: {
         name: "Toxoplasmosis",
-        level: 3,
-        danger: "Considerable Danger"
+        danger: "3 - Considerable Danger"
     }, 
     tularemia: {
         name: "Tularemia",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     ulcerativeDermatitis: {
         name: "Ulcerative Dermatitis",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     ulcerativeStomatitis: {
         name: "Ulcerative Stomatitis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     usutuVirus: {
         name: "Usutu Virus",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     velvetDisease: {
         name: "Velvet Disease",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }, 
     vibriosis: {
         name: "Vibriosis",
-        level: 2,
-        danger: "Moderate Danger"
+        danger: "2 - Moderate Danger"
     }, 
     viralErythrocyticNecrosis: {
         name: "Viral Erythrocytic Necrosis",
-        level: 5,
-        danger: "Very High Danger"
+        danger: "5 - Very High Danger"
     }, 
     viralPapillomatosis: {
         name: "Viral Papillomatosis",
-        level: 4,
-        danger: "High Danger"
-    },  
+        danger: "4 - High Danger"
+    }, 
     westNileVirus: {
         name: "West Nile Virus",
-        level: 5,
-        danger: "Very High Danger"
-    },  
+        danger: "5 - Very High Danger"
+    }, 
     whiteSpotDisease: {
         name: "White Spot Disease",
-        level: 4,
-        danger: "High Danger"
+        danger: "4 - High Danger"
     }
 };
 
-const conservationTopics = {
-    speciesNamePlate: {
-        name: "Species Name Plate",
-        type: "Animal Species - No Research"
-    },  
-    speciesFactSheet: {
-        name: "Species Fact Sheet",
-        type: "Animal Species Research"
-    },    
+const conservationTopics = {   
     theAnimalKingdomTalk: {
         name: "The Animal Kingdom Talk",
-        type: "Talks - No Research"
-    },     
+        type: "Animal Talk"
+    }, 
     livesofBirdsTalk: {
         name: "Lives of Birds Talk",
-        type: "Talks - No Research"
-    },      
-    underwaterLifeTalk: {
-        name: "Underwater Life Talk",
-        type: "Talks - No Research"
-    },      
+        type: "Animal Talk"
+    }, 
     herpetologyTalk: {
         name: "Herpetology Talk",
-        type: "Talks - No Research"
-    },      
+        type: "Animal Talk"
+    }, 
+    underwaterLifeTalk: {
+        name: "Underwater Life Talk",
+        type: "Animal Talk"
+    }, 
     theArthropodWorldTalk: {
         name: "The Arthropod World Talk",
-        type: "Talks - No Research"
+        type: "Animal Talk"
     }, 
     mammalEvolution: {
         name: "Mammal Evolution",
-        type: "Evolution - No Research"
-    },   
+        type: "Evolution Topic"
+    }, 
     birdEvolution: {
         name: "Bird Evolution",
-        type: "Evolution - No Research"
-    },    
+        type: "Evolution Topic"
+    }, 
     reptileEvolution: {
         name: "Reptile Evolution",
-        type: "Evolution - No Research"
-    },     
-    sharkandRayEvolution: {
-        name: "Shark and Ray Evolution",
-        type: "Evolution - No Research"
-    },       
-    rayfinnedFishEvolution: {
-        name: "Ray-finned Fish Evolution",
-        type: "Evolution - No Research"
-    },        
+        type: "Evolution Topic"
+    }, 
     amphibianEvolution: {
         name: "Amphibian Evolution",
-        type: "Evolution - No Research"
-    },         
+        type: "Evolution Topic"
+    }, 
+    sharkandRayEvolution: {
+        name: "Shark and Ray Evolution",
+        type: "Evolution Topic"
+    }, 
+    rayfinnedFishEvolution: {
+        name: "Ray-finned Fish Evolution",
+        type: "Evolution Topic"
+    }, 
     insectEvolution: {
         name: "Insect Evolution",
-        type: "Evolution - No Research"
+        type: "Evolution Topic"
+    }, 
+    walkingAnimals: {
+        name: "Walking Animals",
+        type: "Animal Types Topic"
     }, 
     jumpingAnimals: {
         name: "Jumping Animals",
-        type: "Animal Types - No Research"
-    },  
-    tallAnimals: {
-        name: "Tall Animals",
-        type: "Animal Types - No Research"
-    },    
+        type: "Animal Types Topic"
+    }, 
     flyingAnimals: {
         name: "Flying Animals",
-        type: "Animal Types - No Research"
-    },     
+        type: "Animal Types Topic"
+    }, 
     swimmingAnimals: {
         name: "Swimming Animals",
-        type: "Animal Types - No Research"
-    },     
-    walkingAnimals: {
-        name: "Walking Animals",
-        type: "Animal Types - No Research"
-    },      
+        type: "Animal Types Topic"
+    }, 
+    tallAnimals: {
+        name: "Tall Animals",
+        type: "Animal Types Topic"
+    }, 
     strongAnimals: {
         name: "Strong Animals",
-        type: "Animal Types - No Research"
-    },         
+        type: "Animal Types Topic"
+    }, 
     vocalAnimals: {
         name: "Vocal Animals",
-        type: "Animal Types - No Research"
-    },  
-    speciesReintroduction: {
-        name: "Species Reintroduction",
-        type: "Conservation - No Research"
-    },          
-    landSharingvsLandSparing: {
-        name: "Land Sharing vs Land Sparing",
-        type: "Conservation - No Research"
-    },          
-    ecologicalRestoration: {
-        name: "Ecological Restoration",
-        type: "Conservation - No Research"
-    },           
-    amphibianExtinctionCrisis: {
-        name: "Amphibian Extinction Crisis",
-        type: "Conservation - No Research"
-    }, 
-    piscivoreDiet: {
-        name: "Piscivore Diet",
-        type: "Animal Diets"
-    }, 
-    omnivoreDiet: {
-        name: "Omnivore Diet",
-        type: "Animal Diets"
-    }, 
-    nectarivoreDiet: {
-        name: "Nectarivore Diet",
-        type: "Animal Diets"
-    }, 
-    insectivoreDiet: {
-        name: "Insectivore Diet",
-        type: "Animal Diets"
-    }, 
-    herbivoreDiet: {
-        name: "Herbivore Diet",
-        type: "Animal Diets"
-    }, 
-    dungDiet: {
-        name: "Dung Diet",
-        type: "Animal Diets"
-    }, 
-    carnivoreDiet: {
-        name: "Carnivore Diet",
-        type: "Animal Diets"
-    }, 
-    bambooDiet: {
-        name: "Bamboo Diet",
-        type: "Animal Diets"
+        type: "Animal Types Topic"
     }, 
     nocturnalBehaviour: {
         name: "Nocturnal Behaviour",
-        type: "Activity Patterns"
-    },  
+        type: "Activity Pattern"
+    }, 
     diurnalBehaviour: {
         name: "Diurnal Behaviour",
-        type: "Activity Patterns"
-    },  
+        type: "Activity Pattern"
+    }, 
     crepuscularBehaviour: {
         name: "Crepuscular Behaviour",
-        type: "Activity Patterns"
-    },  
+        type: "Activity Pattern"
+    }, 
     cathemeralBehaviour: {
         name: "Cathemeral Behaviour",
-        type: "Activity Patterns"
-    },  
+        type: "Activity Pattern"
+    }, 
+    piscivoreDiet: {
+        name: "Piscivore Diet",
+        type: "Animal Diet"
+    }, 
+    omnivoreDiet: {
+        name: "Omnivore Diet",
+        type: "Animal Diet"
+    }, 
+    nectarivoreDiet: {
+        name: "Nectarivore Diet",
+        type: "Animal Diet"
+    }, 
+    insectivoreDiet: {
+        name: "Insectivore Diet",
+        type: "Animal Diet"
+    }, 
+    herbivoreDiet: {
+        name: "Herbivore Diet",
+        type: "Animal Diet"
+    }, 
+    dungDiet: {
+        name: "Dung Diet",
+        type: "Animal Diet"
+    }, 
+    carnivoreDiet: {
+        name: "Carnivore Diet",
+        type: "Animal Diet"
+    }, 
+    bambooDiet: {
+        name: "Bamboo Diet",
+        type: "Animal Diet"
+    }, 
     populationFragmentation: {
         name: "Population Fragmentation",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     pollution: {
         name: "Pollution",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     habitatLoss: {
         name: "Habitat Loss",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     infectiousDisease: {
         name: "Infectious Disease",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     climateChange: {
         name: "Climate Change",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     geneticBottlenecks: {
         name: "Genetic Bottlenecks",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     foodScarcity: {
         name: "Food Scarcity",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     beePopulationDecline: {
         name: "Bee Population Decline",
-        type: "Conservation Threats"
-    },   
+        type: "Conservation Threats & Human Impact"
+    }, 
     amphibianExtinctionCrisis: {
         name: "Amphibian Extinction Crisis",
-        type: "Conservation Threats"
+        type: "Conservation Threats & Human Impact"
     }, 
     traditionalMedicine: {
         name: "Traditional Medicine",
-        type: "Human Conservation Impact"
-    },  
+        type: "Conservation Threats & Human Impact"
+    }, 
     wildlifePoisoning: {
         name: "Wildlife Poisoning",
-        type: "Human Conservation Impact"
-    },  
-    poachingAndTheExoticPetTrade: {
-        name: "Poaching and the Exotic Pet Trade",
-        type: "Human Conservation Impact"
-    },  
+        type: "Conservation Threats & Human Impact"
+    }, 
     overexploitation: {
         name: "Overexploitation",
-        type: "Human Conservation Impact"
-    },  
+        type: "Conservation Threats & Human Impact"
+    }, 
     invasiveSpecies: {
         name: "Invasive Species",
-        type: "Human Conservation Impact"
-    },  
-    humanWildlifeConflict: {
-        name: "Human-Wildlife Conflict",
-        type: "Human Conservation Impact"
-    },  
+        type: "Conservation Threats & Human Impact"
+    }, 
     deforestation: {
         name: "Deforestation",
-        type: "Human Conservation Impact"
-    },  
+        type: "Conservation Threats & Human Impact"
+    }, 
     bycatch: {
         name: "Bycatch",
-        type: "Human Conservation Impact"
+        type: "Conservation Threats & Human Impact"
+    }, 
+    humanWildlifeConflict: {
+        name: "Human-Wildlife Conflict",
+        type: "Conservation Threats & Human Impact"
+    }, 
+    poachingAndTheExoticPetTrade: {
+        name: "Poaching and the Exotic Pet Trade",
+        type: "Conservation Threats & Human Impact"
+    }, 
+    speciesReintroduction: {
+        name: "Species Reintroduction",
+        type: "Conservation Threats & Human Impact"
+    }, 
+    landSharingvsLandSparing: {
+        name: "Land Sharing vs Land Sparing",
+        type: "Conservation Threats & Human Impact"
+    }, 
+    ecologicalRestoration: {
+        name: "Ecological Restoration",
+        type: "Conservation Threats & Human Impact"
     }, 
     mountainEcosystemAmbience: {
         name: "Mountain Ecosystem Ambience",
-        type: "Terrestrial Ecosystem Ambiences"
-    },  
+        type: "Ambience"
+    }, 
     grasslandEcosystemAmbience: {
         name: "Grassland Ecosystem Ambience",
-        type: "Terrestrial Ecosystem Ambiences"
-    },  
+        type: "Ambience"
+    }, 
     forestEcosystemAmbience: {
         name: "Forest Ecosystem Ambience",
-        type: "Terrestrial Ecosystem Ambiences"
-    },  
+        type: "Ambience"
+    }, 
     desertEcosystemAmbience: {
         name: "Desert Ecosystem Ambience",
-        type: "Terrestrial Ecosystem Ambiences"
-    },  
+        type: "Ambience"
+    }, 
     wetlandEcosystemAmbience: {
         name: "Wetland Ecosystem Ambience",
-        type: "Aquatic Ecosystem Ambiences"
-    },   
+        type: "Ambience"
+    }, 
     reefEcosystemAmbience: {
         name: "Reef Ecosystem Ambience",
-        type: "Aquatic Ecosystem Ambiences"
-    },   
+        type: "Ambience"
+    }, 
     oceanEcosystemAmbience: {
         name: "Ocean Ecosystem Ambience",
-        type: "Aquatic Ecosystem Ambiences"
-    },   
+        type: "Ambience"
+    }, 
     freshwaterEcosystemAmbience: {
         name: "Freshwater Ecosystem Ambience",
-        type: "Aquatic Ecosystem Ambiences"
-    },   
+        type: "Ambience"
+    }, 
     rainforestEcosystemAmbience: {
         name: "Rainforest Ecosystem Ambience",
-        type: "Ecosystem Ambiences - No Research"
-    },   
+        type: "Ambience"
+    }, 
     savannahEcosystemAmbience: {
         name: "Savannah Ecosystem Ambience",
-        type: "Ecosystem Ambiences - No Research"
-    },   
+        type: "Ambience"
+    }, 
     EcosystemAmbience: {
-        name: "Ecosystem Ambience",
-        type: "Ecosystem Ambiences - No Research"
+        name: "Ecosystem Ecosystem Ambience",
+        type: "Ambience"
     }
 };
 
 export {
     DLC, form, types, enclosures, enclosureTypes, exhibitTerrain, cohabitationOptions, conservation, 
     nativeRange, biomes, wildlifeReserves, ecosystems, speciesRoles, releaseGroups, 
-    temperament, alphaDominance,  offspringDispersal, matingSystem, matingSeason, reproductionDifficulty,
+    temperament, alphaDominance, offspringDispersal, matingSystem, matingSeason, reproductionDifficulty,
     salinity, feeders, shelters, foodEnrichment, toyEnrichment, diseases, conservationTopics
 };
 
