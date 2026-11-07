@@ -286,8 +286,8 @@ function buildAnimalModal(animal, allAnimals) {
         ? animal.sterilityAge === "Death" ? "Death" : `${animal.sterilityAge} years`
         : null);
     const reproductionTypes = [
-        ["groupDivision", "When the group is big enough, it can split to form a new young group."],
-        ["spawning", "Juveniles spawn from the parent some time after mating"],
+        ["groupDivision", "When the group is big enough, it can split to form a new juvenile group."],
+        ["spawning", "Juveniles spawn from the parent some time after mating."],
         ["pregnancy", "The mother gets pregnant after mating and gives birth to live offspring."],
         ["eggLaying", "The mother lays eggs after mating."]
     ].filter(([key]) => animal[key] === true).map(([, text]) => text);

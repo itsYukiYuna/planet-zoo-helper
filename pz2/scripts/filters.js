@@ -330,7 +330,7 @@ const ecosystems = {
     shrubland: {
         name: "Shrubland",
         biome: "Grassland",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_shrubland.png"
     },
     montaneForestBoreal: {
         name: "Montane Forest (Boreal)",
@@ -345,7 +345,7 @@ const ecosystems = {
     denseForest: {
         name: "Dense Forest",
         biome: "Grassland",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_denseForest.png"
     },
     montaneRainforest: {
         name: "Montane Rainforest",
@@ -616,11 +616,11 @@ const feeders = {
     }, 
     foodBowl: {
         name: "Food Bowl",
-        icon: "/pz2/images/icons/icons_feeders_"
+        icon: "/pz2/images/icons/icons_feeders_foodBowl.png"
     }, 
     foodCage: {
         name: "Food Cage",
-        icon: "/pz2/images/icons/icons_feeders_"
+        icon: "/pz2/images/icons/icons_feeders_foodCage.png"
     }, 
     foodTray: {
         name: "Food Tray",
@@ -886,7 +886,7 @@ const foodEnrichment = {
     rotationLineFeeder: {
         name: "Rotation Line Feeder",
         type: "Carnivore Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Rotation_Line_Feeder.png"
     }, 
     scarecrowFeeder: {
         name: "Scarecrow Feeder",
@@ -901,7 +901,7 @@ const foodEnrichment = {
     slowFeeder: {
         name: "Slow Feeder",
         type: "Dexterity Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Slow_Feeder.png"
     }, 
     suspendedForager: {
         name: "Suspended Forager",
@@ -1662,6 +1662,10 @@ const conservationTopics = {
         name: "Poaching and the Exotic Pet Trade",
         type: "Conservation Threats & Human Impact"
     }, 
+    ecotourism: {
+        name: "Ecotourism",
+        type: "Conservation Threats & Human Impact"
+    }, 
     speciesReintroduction: {
         name: "Species Reintroduction",
         type: "Conservation Threats & Human Impact"
@@ -1712,10 +1716,6 @@ const conservationTopics = {
     }, 
     savannahEcosystemAmbience: {
         name: "Savannah Ecosystem Ambience",
-        type: "Ambience"
-    }, 
-    EcosystemAmbience: {
-        name: "Ecosystem Ecosystem Ambience",
         type: "Ambience"
     }
 };
