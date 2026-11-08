@@ -693,7 +693,7 @@ const shelters = {
     buriedNest: {
         name: "Buried Nest",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_buriedNest.png"
     }, 
     canopyPlatformNestLarge: {
         name: "Canopy Platform Nest - Large",
@@ -961,7 +961,7 @@ const foodEnrichment = {
     forageTray: {
         name: "Forage Tray",
         type: "No Research Required",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Forage_Tray.png"
     }, 
     suspendedBait: {
         name: "Suspended Bait",
@@ -1219,12 +1219,12 @@ const toyEnrichment = {
     waterJet: {
         name: "Water Jet",
         type: "Water Feature Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Water_Jet.png"
     }, 
     waterJetRock: {
         name: "Water Jet Rock",
         type: "Water Feature Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Natural_Water_Jet.png"
     }, 
     waterfallAndMetalFrame: {
         name: "Waterfall And Metal Frame",

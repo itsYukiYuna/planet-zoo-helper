@@ -2229,8 +2229,8 @@ const animals = {
 
         colourmorphs: null, 
 
-        thrivingRelationships: ["", "", "Blue and Gold Fusilier", "", "", "", "", "", "", "Hawksbill Turtle", "", "", "", "", "Longfin Batfish", "", "", "", "", "", "", "", "", ""], 
-        neutralRelationships: ["Ocean Sunfish", ""], 
+        thrivingRelationships: ["", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "", "Hawksbill Turtle", "", "", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "", "", "", "", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["Ocean Sunfish", "Red Lionfish"], 
 
         album: null,
 
@@ -2739,8 +2739,8 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "", "", "", "Longfin Batfish", "", "", "", "", "", ""], 
-        neutralRelationships: ["", "", "", "", "", "Humphead Wrasse", "", "", "", "", "", ""], 
+        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "", "", "", "Longfin Batfish", "", "", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["", "Blacktip Reef Shark", "", "", "", "Humphead Wrasse", "", "", "Ocellated Eagle Ray", "Red Lionfish", "", ""], 
 
         album: null, 
 
@@ -2933,7 +2933,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "", "", "", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "", "", "Springbok", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -3130,7 +3130,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "", "", "", "", ""], 
+        thrivingRelationships: ["", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "", "", "Springbok", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -4094,7 +4094,7 @@ const animals = {
         }, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "Blue and Gold Fusilier", "", "", "", "", "", "", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "", "", "", "", ""], 
+        neutralRelationships: ["", "Blue and Gold Fusilier", "", "", "", "", "", "", "Humphead Wrasse", "", "", "", "Longfin Batfish", "", "", "", "Schooling Bannerfish", "", ""], 
 
         album: null, 
 
@@ -4271,7 +4271,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "", "Plains Zebra", "", "", "", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "", "Plains Zebra", "", "", "Springbok", "", ""], 
         neutralRelationships: ["African Savannah Elephant", ""], 
 
         album: null, 
@@ -4649,7 +4649,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Masai Giraffe", "", "Plains Zebra", "", "", "", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Masai Giraffe", "", "Plains Zebra", "", "", "Springbok", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -5188,6 +5188,1389 @@ const animals = {
         album: null, 
 
         notes: "Revealed in the animal spotlight and its own special Zoopedia drop on 2026/07/16 (shortly after Zoopedia Bundle#4)." 
+    }, 
+
+    // --- Zoopedia bundle#5 2026/07/21 --- 
+
+    // --- # 31 ---
+    ocellatedEagleRay:{
+        name: "Ocellated Eagle Ray", 
+        latin: "Aetobatus ocellatus", 
+        image: "/pz2/images/animals/ocellatedEagleRay.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvMmExY2IyMmMvUmF5X1Nwb3R0ZWRFYWdsZS5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxOTIwLCJmaXQiOiJjb250YWluIn0sInZlcnNpb24iOiI1MWM2MTE3OC1iMmU1LTRjOWMtOWFkOC0zZDk1NDQwNGQzZGQifX0=", 
+        headshot: "/pz2/images/animal_headshots/ocellatedEagleRay_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2a1cb22c/Ray_SpottedEagle_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2a1cb22c/Ray_SpottedEagle_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2a1cb22c/Ray_SpottedEagle_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/ocellated-eagle-ray", 
+        wiki: "https://en.wikipedia.org/wiki/Aetobatus_ocellatus", 
+   
+        class: "Chondrichthyes", 
+        order: "Myliobatiformes", 
+        family: "Aetobatidae", 
+        genus: "Aetobatus", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.endangered, 
+  
+        maxAnimalAppeal: 3500, 
+        careerAccreditation: 4, 
+        franchiseAccreditation: 4, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.estuarine, biomes.openSea, biomes.reef], 
+        wildlifeReserves: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup, releaseGroups.solitaryMale, releaseGroups.solitaryFemale], 
+
+        temperament: temperament.confident, 
+        dominance: "None", 
+        offspringDispersal: offspringDispersal.none, 
+        matingSystem: matingSystem.promiscuous, 
+        matingSeason: [matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 16, 
+        maxMalesMixed: 16, 
+        maxMalesBachelor: 16, 
+        maxFemalesMixed: 16, 
+        maxFemalesBachelor: 16, 
+
+        offspringPerMating: {min: 1, max: 3}, 
+        preBirthMonths: 12, 
+        interbirthMonths: 12, 
+        juvenileYears: 5, 
+        adultYears: 13, 
+        elderlyYears: 12, 
+        maturityAge: 5, 
+        sterilityAge: "Death", 
+
+        barrierStrength: 2, 
+        barrierHeight: 1, 
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 180, 
+        deepWaterPerAddAdult: 45, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 24, max: 27}, 
+        plantCoverage: {min: 0, max: 30}, 
+        grassRange: null, 
+        grassShort: null, 
+        grassLong: null, 
+        sandRange: {min: 50, max: 100}, 
+        sandFine: null, 
+        sandCoarse: null, 
+        soilRange: {min: 0, max: 50}, 
+        rockRange: {min: 0, max: 20}, 
+        waterloggedRange: {min: 0, max: 0}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Clams and Crustaceans", 
+        foodGrade1Cost: 478, 
+        foodGrade1CostJuv: 239, 
+        foodGrade2: "+ Squid", 
+        foodGrade2Cost: 672, 
+        foodGrade2CostJuv: 336, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFish], 
+        shelters: null, 
+        foodEnrichment: [foodEnrichment.forageTray], 
+        toyEnrichment: [toyEnrichment.submarineBuoy, toyEnrichment.bubbleBlowerAirstone, toyEnrichment.latticeBall], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.sharkandRayEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.cathemeralBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.overexploitation], 
+        ambience: conservationTopics.oceanEcosystemAmbience, 
+        diseases: [diseases.amoebiasis, diseases.furunculosis, diseases.fusariosis, diseases.isopodiasis, diseases.nematodiasis, diseases.piscineMycobacteriosis, diseases.salmonellosis, diseases.streptococcosis, diseases.velvetDisease, diseases.vibriosis, diseases.viralErythrocyticNecrosis, diseases.whiteSpotDisease], 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: false, 
+        pregnancy: true, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Bubble Blower - Airstone", 
+                value: 2, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Fine Sand", 
+                value: 50, 
+                valueType: "m²" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Forage Tray", 
+                value: 2, 
+                valueType: "Objects" 
+            }, 
+            req5: {
+                requirement: "Large Indo-Pacific Reef animals", 
+                value: 1, 
+                valueType: "Species" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Black back with white rosettes, white belly" 
+            }, 
+            standardLight: {
+                name: "Standard", 
+                description: "Brown back with white rosettes, white belly" 
+            }, 
+            standardDark: {
+                name: "Standard", 
+                description: "Dark brown back with white rosettes, white belly" 
+            }
+        }, 
+
+        colourmorphs: {
+            leucistic: {
+                name: "Leucistic", 
+                description: "Leucistic: White body", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2a1cb22c/Ray_SpottedEagle_headshot_Albino.png" 
+            }
+        }, 
+
+        thrivingRelationships: ["", "", "Blue and Gold Fusilier", "", "", "", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "", "", "", "", "", "", "", ""], 
+        neutralRelationships: ["Red Lionfish"], 
+
+        album: null, 
+
+        notes: "Revealed in the gameplay trailer on 2026/06/07 and confirmed on Instagram on 2026/06/11, was part of Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 32 ---
+    redLionfish:{
+        name: "Red Lionfish", 
+        latin: "Pterois volitans", 
+        image: "/pz2/images/animals/redLionfish.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvYWZiMTlhMzQvTGlvbmZpc2hfUmVkLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjUxYzYxMTc4LWIyZTUtNGM5Yy05YWQ4LTNkOTU0NDA0ZDNkZCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/redLionfish_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/afb19a34/Lionfish_Red_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/afb19a34/Lionfish_Red_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/afb19a34/Lionfish_Red_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/red-lionfish", 
+        wiki: "https://en.wikipedia.org/wiki/Red_lionfish", 
+   
+        class: "Actinopterygii", 
+        order: "Perciformes", 
+        family: "Scorpaenidae", 
+        genus: "Pterois", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1500, 
+        careerAccreditation: 4, 
+        franchiseAccreditation: 3, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.estuarine, biomes.reef], 
+        wildlifeReserves: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.solitaryMale, releaseGroups.solitaryFemale], 
+
+        temperament: temperament.confident, 
+        dominance: "Male dominance based on size", 
+        offspringDispersal: offspringDispersal.allOffspring, 
+        matingSystem: matingSystem.promiscuous, 
+        matingSeason: [matingSeason.aseasonal], 
+        reproductionDifficulty: reproductionDifficulty.veryEasy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 20, 
+        maxMalesMixed: 19, 
+        maxMalesBachelor: 20, 
+        maxFemalesMixed: 19, 
+        maxFemalesBachelor: 20, 
+
+        offspringPerMating: {min: 1, max: 5}, 
+        preBirthMonths: 0, 
+        interbirthMonths: 6, 
+        juvenileYears: 1, 
+        adultYears: 8, 
+        elderlyYears: 11, 
+        maturityAge: 1, 
+        sterilityAge: "Death", 
+
+        barrierStrength: 2, 
+        barrierHeight: 1, 
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 16, 
+        deepWaterPerAddAdult: 16, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 22, max: 28}, 
+        plantCoverage: {min: 0, max: 100}, 
+        grassRange: null, 
+        grassShort: null, 
+        grassLong: null, 
+        sandRange: {min: 30, max: 80}, 
+        sandFine: {min: 25, max: 80}, 
+        sandCoarse: null, 
+        soilRange: {min: 0, max: 50}, 
+        rockRange: {min: 20, max: 70}, 
+        waterloggedRange: {min: 0, max: 0}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Krill", 
+        foodGrade1Cost: 177, 
+        foodGrade1CostJuv: 88.5, 
+        foodGrade2: "+ Small Whole Fish", 
+        foodGrade2Cost: 242, 
+        foodGrade2CostJuv: 121, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFlakes], 
+        shelters: null, 
+        foodEnrichment: [foodEnrichment.suspendedBait], 
+        toyEnrichment: [toyEnrichment.bloodScentMarker, toyEnrichment.bubbleBlowerAirstone], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.nocturnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.climateChange, conservationTopics.invasiveSpecies], 
+        ambience: conservationTopics.reefEcosystemAmbience, 
+        diseases: [diseases.amoebiasis, diseases.furunculosis, diseases.fusariosis, diseases.isopodiasis, diseases.nematodiasis, diseases.piscineMycobacteriosis, diseases.salmonellosis, diseases.streptococcosis, diseases.velvetDisease, diseases.vibriosis, diseases.viralErythrocyticNecrosis, diseases.whiteSpotDisease], 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Rocks", 
+                value: 20, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Coral", 
+                value: 5, 
+                valueType: "Objects" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Coarse Sand", 
+                value: 30, 
+                valueType: "m²" 
+            }, 
+            req5: {
+                requirement: "Smooth Rock", 
+                value: 30, 
+                valueType: "m²" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "White body with orange-red stripes and spots" 
+            }, 
+            standardLight: {
+                name: "Standard", 
+                description: "White body with light red stripes and spots" 
+            }, 
+            standardDark: {
+                name: "Standard", 
+                description: "White body with dark red stripes and spots" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: ["", "", "Blue and Gold Fusilier", "", "", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "", "", "", "", "", ""], 
+
+        album: null, 
+
+        notes: "Teased on 2026/07/16 with 'Guess the Animal' and revealed in the feature focus and via Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 33 ---
+    blacktipReefShark:{
+        name: "Blacktip Reef Shark", 
+        latin: "Carcharhinus melanopterus", 
+        image: "/pz2/images/animals/blacktipReefShark.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvZmJkOWRiZjUvU2hhcmtfQmxhY2t0aXBSZWVmLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjUxYzYxMTc4LWIyZTUtNGM5Yy05YWQ4LTNkOTU0NDA0ZDNkZCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/blacktipReefShark_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/fbd9dbf5/Shark_BlacktipReef_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/fbd9dbf5/Shark_BlacktipReef_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/fbd9dbf5/Shark_BlacktipReef_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/blacktip-reef-shark", 
+        wiki: "https://en.wikipedia.org/wiki/Blacktip_reef_shark", 
+   
+        class: "Chondrichthyes", 
+        order: "Carcharhiniformes", 
+        family: "Carcharhinidae", 
+        genus: "Carcharhinus", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.vulnerable, 
+  
+        maxAnimalAppeal: 4000, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.mangrove, biomes.estuarine, biomes.reef], 
+        wildlifeReserves: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.breedingPartners, releaseGroups.solitaryMale, releaseGroups.solitaryFemale], 
+
+        temperament: temperament.confident, 
+        dominance: "Largest individual in congregations adopts leadership role", 
+        offspringDispersal: offspringDispersal.none, 
+        matingSystem: matingSystem.promiscuous, 
+        matingSeason: [matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.average, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 10, 
+        maxMalesMixed: 9, 
+        maxMalesBachelor: 10, 
+        maxFemalesMixed: 9, 
+        maxFemalesBachelor: 10, 
+
+        offspringPerMating: {min: 2, max: 5}, 
+        preBirthMonths: 9, 
+        interbirthMonths: 3, 
+        juvenileYears: 6, 
+        adultYears: 3, 
+        elderlyYears: 5, 
+        maturityAge: 6.5, 
+        sterilityAge: "Death", 
+
+        barrierStrength: 2, 
+        barrierHeight: 1, 
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 210, 
+        deepWaterPerAddAdult: 105, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 22, max: 28}, 
+        plantCoverage: {min: 20, max: 80}, 
+        grassRange: null, 
+        grassShort: null, 
+        grassLong: null, 
+        sandRange: null, 
+        sandFine: {min: 20, max: 100}, 
+        sandCoarse: {min: 0, max: 5}, 
+        soilRange: {min: 0, max: 5}, 
+        rockRange: {min: 0, max: 50}, 
+        waterloggedRange: {min: 0, max: 0}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Whole Fish", 
+        foodGrade1Cost: 520, 
+        foodGrade1CostJuv: 260, 
+        foodGrade2: "+ Squid", 
+        foodGrade2Cost: 725, 
+        foodGrade2CostJuv: 362.5, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFish], 
+        shelters: null, 
+        foodEnrichment: [foodEnrichment.suspendedBait], 
+        toyEnrichment: [toyEnrichment.bloodScentMarker, toyEnrichment.submarineBuoy, toyEnrichment.bubbleBlowerAirstone, toyEnrichment.latticeBall, toyEnrichment.waterHoop], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.sharkandRayEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.crepuscularBehaviour, 
+        animalDiet: conservationTopics.piscivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.bycatch, conservationTopics.ecologicalRestoration], 
+        ambience: conservationTopics.reefEcosystemAmbience, 
+        diseases: [diseases.amoebiasis, diseases.furunculosis, diseases.fusariosis, diseases.isopodiasis, diseases.nematodiasis, diseases.piscineMycobacteriosis, diseases.salmonellosis, diseases.streptococcosis, diseases.velvetDisease, diseases.vibriosis, diseases.viralErythrocyticNecrosis, diseases.whiteSpotDisease], 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: false, 
+        pregnancy: true, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Rocks", 
+                value: 5, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Coral", 
+                value: 10, 
+                valueType: "Objects" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Native Plants", 
+                value: 50, 
+                valueType: "%" 
+            }, 
+            req5: {
+                requirement: "Indo-Pacific Reef Shoals Social Group", 
+                value: 1, 
+                valueType: "Species" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Grey skin, white belly, black fin tips" 
+            }, 
+            standardDark: {
+                name: "Standard", 
+                description: "Brown-grey skin, white belly, black fin tips" 
+            }
+        }, 
+
+        colourmorphs: {
+            leucistic: {
+                name: "Leucistic", 
+                description: "Leucistic: White skin, black fin tips", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/fbd9dbf5/Shark_BlacktipReef_headshot_Albino.png" 
+            }, 
+            piebald: {
+                name: "Piebald", 
+                description: "Piebald: Brown-grey and white mottled skin, white belly, black fin tips", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/fbd9dbf5/Shark_BlacktipReef_headshot_Piebald.png" 
+            }
+        }, 
+
+        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "", "", "", "Longfin Batfish", "", "", "", "", "", ""], 
+        neutralRelationships: ["", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "", "", "Ocellated Eagle Ray", "Red Lionfish", "", ""], 
+
+        album: null, 
+
+        notes: "Revealed and confirmed in the feature focus and via Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 34 ---
+    springbok:{
+        name: "Springbok", 
+        latin: "Antidorcas marsupialis", 
+        image: "/pz2/images/animals/springbok.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvOGY4ZGU4Y2IvQW50ZWxvcGVfU3ByaW5nYm9rLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjUxYzYxMTc4LWIyZTUtNGM5Yy05YWQ4LTNkOTU0NDA0ZDNkZCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/springbok_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/springbok", 
+        wiki: "https://en.wikipedia.org/wiki/Springbok", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Bovidae", 
+        genus: "Antidorcas", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.habitat, enclosureTypes.habitatClimbProof, enclosureTypes.habitatRoofed], 
+        cohabitationOptions: cohabitationOptions.nonPredatory, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1500, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 1, 
+
+        nativeRange: [nativeRange.africa], 
+        biomes: [biomes.desert, biomes.grassland], 
+        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        ecosystems: [ecosystems.grassland, ecosystems.savannah], 
+        speciesRoles: [speciesRoles.grazers, speciesRoles.terrestrialSeedDispersers, speciesRoles.mediumPrey], 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "Territorial males with female harem", 
+        alphaDominance: alphaDominance.leaderMale, 
+        offspringDispersal: offspringDispersal.maleOffspring, 
+        matingSystem: matingSystem.polygynous, 
+        matingSeason: [matingSeason.aseasonal], 
+        reproductionDifficulty: reproductionDifficulty.veryEasy, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 36, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 36, 
+        maxFemalesMixed: 35, 
+        maxFemalesBachelor: 36, 
+
+        offspringPerMating: {min: 1, max: 1}, 
+        preBirthMonths: 6, 
+        interbirthMonths: 6, 
+        juvenileYears: 1, 
+        adultYears: 5, 
+        elderlyYears: 8, 
+        maturityAge: 1, 
+        sterilityAge: "Death", 
+
+        barrierStrength: 2, 
+        barrierHeight: 1.25, 
+        landArea: 425, 
+        landPerAddAdult: 55, 
+        shelterArea: 11, 
+        shelterPerAddAdult: 11, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 0, 
+        deepWaterPerAddAdult: 0, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 14, max: 41}, 
+        plantCoverage: {min: 0, max: 40}, 
+        grassRange: {min: 30, max: 100}, 
+        grassShort: null, 
+        grassLong: {min: 25, max: 100}, 
+        sandRange: {min: 0, max: 10}, 
+        sandFine: null, 
+        sandCoarse: null, 
+        soilRange: {min: 10, max: 100}, 
+        rockRange: {min: 0, max: 20}, 
+        waterloggedRange: {min: 0, max: 0}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Hay", 
+        foodGrade1Cost: 164, 
+        foodGrade1CostJuv: 82, 
+        foodGrade2: "+ Herbivore Pellets", 
+        foodGrade2Cost: 220, 
+        foodGrade2CostJuv: 110, 
+
+        feeders: [feeders.foodTrough, feeders.wallFeeder, feeders.groundWaterFountain, feeders.waterPipe], 
+        shelters: [shelters.habitatBedding, shelters.habitatBeddingLeaves], 
+        foodEnrichment: [foodEnrichment.barrelFeederSmall, foodEnrichment.dogBall, foodEnrichment.hangingGrazerFeeder, foodEnrichment.melonFeeder, foodEnrichment.scarecrowFeeder, foodEnrichment.veggieJellyCake], 
+        toyEnrichment: [toyEnrichment.grabBall, toyEnrichment.herbScentMarker, toyEnrichment.mudBath, toyEnrichment.plantScreen, toyEnrichment.rubbingPillar, toyEnrichment.smallBall, toyEnrichment.smallIceBall], 
+        animalTalk: conservationTopics.theAnimalKingdomTalk, 
+        evolutionTopic: conservationTopics.mammalEvolution, 
+        animalTypesTopic: conservationTopics.walkingAnimals, 
+        activityPattern: conservationTopics.crepuscularBehaviour, 
+        animalDiet: conservationTopics.herbivoreDiet, 
+        conservationThreats: [conservationTopics.ecotourism], 
+        ambience: conservationTopics.savannahEcosystemAmbience, 
+        diseases: [diseases.avianInfluenza, diseases.bordetellosis, diseases.botulismToxicosis, diseases.campylobacteriosis, diseases.cowpoxVirus, diseases.footAndMouthDisease, diseases.listeriosis, diseases.mrsa, diseases.rotavirus, diseases.salmonellosis, diseases.tetanus, diseases.tularemia], 
+
+        cohabitation: true, 
+        releasable: true, 
+        guestsEnter: true, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: false, 
+        pregnancy: true, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: true, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Grab Ball", 
+                value: 3, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Shrub", 
+                value: 8, 
+                valueType: "Objects" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Native Plants", 
+                value: 50, 
+                valueType: "%" 
+            }, 
+            req5: {
+                requirement: "African Savannah Social Group", 
+                value: 1, 
+                valueType: "Species" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Tan coat with dark brown markings and white belly" 
+            }
+        }, 
+
+        colourmorphs: {
+            whiteMorph: {
+                name: "White Morph", 
+                description: "White springbok: White coat", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot_Albino.png" 
+            }, 
+            coffeeMorph: {
+                name: "Coffee Morph", 
+                description: "Coffee: Brown coat with dark brown markings and white belly", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot_Erythristic.png" 
+            }, 
+            ivoryMorph: {
+                name: "Ivory Morph", 
+                description: "Ivory: Off-white coat with tan markings and white belly", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot_Leucistic.png" 
+            }, 
+            blackMorph: {
+                name: "Black Morph", 
+                description: "Black springbok: Dark brown coat with black markings", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot_Melanistic.png" 
+            }, 
+            copperMorph: {
+                name: "Copper Morph", 
+                description: "Copper springbok: Tan coat with dark brown markings", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot_Axanthic.png" 
+            }, 
+            kingMorph: {
+                name: "King Morph", 
+                description: "King springbok: White pied coat with dark flank markings", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/8f8de8cb/Antelope_Springbok_headshot_Piebald.png" 
+            }
+        }, 
+
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "", "", "", ""], 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 35 ---
+    gharial:{
+        name: "Gharial", 
+        latin: "Gavialis gangeticus", 
+        image: "/pz2/images/animals/gharial.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvNjQ4NzBjNDMvR2hhcmlhbC5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxOTIwLCJmaXQiOiJjb250YWluIn0sInZlcnNpb24iOiI1MWM2MTE3OC1iMmU1LTRjOWMtOWFkOC0zZDk1NDQwNGQzZGQifX0=", 
+        headshot: "/pz2/images/animal_headshots/gharial_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/64870c43/Gharial_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/64870c43/Gharial_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/64870c43/Gharial_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/gharial", 
+        wiki: "https://en.wikipedia.org/wiki/Gharial", 
+   
+        class: "Reptilia", 
+        order: "Crocodilia", 
+        family: "Gavialidae", 
+        genus: "Gavialis", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.habitat, enclosureTypes.habitatClimbProof, enclosureTypes.habitatRoofed], 
+        cohabitationOptions: cohabitationOptions.nonPredatory, 
+        conservation: conservation.criticallyEndangered, 
+  
+        maxAnimalAppeal: 3500, 
+        careerAccreditation: 4, 
+        franchiseAccreditation: 4, 
+
+        nativeRange: [nativeRange.asia], 
+        biomes: [biomes.tropical, biomes.wetlands, biomes.lakesRivers], 
+        wildlifeReserves: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "Male dominance over breeding sites", 
+        offspringDispersal: offspringDispersal.none, 
+        matingSystem: matingSystem.polygynous, 
+        matingSeason: [matingSeason.winter], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 7, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 6, 
+        maxFemalesBachelor: 7, 
+
+        offspringPerMating: {min: 2, max: 9}, 
+        preBirthMonths: 3, 
+        interbirthMonths: 10, 
+        juvenileYears: 16, 
+        adultYears: 34, 
+        elderlyYears: 15, 
+        maturityAge: 16, 
+        sterilityAge: 50, 
+
+        barrierStrength: 2, 
+        barrierHeight: 1, 
+        landArea: 110, 
+        landPerAddAdult: 16, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 300, 
+        waterPerAddAdult: 30, 
+        deepWaterArea: 120, 
+        deepWaterPerAddAdult: 52, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 14, max: 41}, 
+        plantCoverage: {min: 0, max: 80}, 
+        grassRange: null, 
+        grassShort: {min: 0, max: 40}, 
+        grassLong: null, 
+        sandRange: {min: 40, max: 100}, 
+        sandFine: null, 
+        sandCoarse: null, 
+        soilRange: {min: 0, max: 60}, 
+        rockRange: {min: 0, max: 20}, 
+        waterloggedRange: {min: 0, max: 100}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Small Whole Fish", 
+        foodGrade1Cost: 489, 
+        foodGrade1CostJuv: 244.5, 
+        foodGrade2: "+ Freshwater Crustaceans", 
+        foodGrade2Cost: 691, 
+        foodGrade2CostJuv: 345.5, 
+
+        feeders: [feeders.foodTray, feeders.aquaticFeederFish, feeders.groundWaterFountain], 
+        shelters: [shelters.buriedNest, shelters.jettyBeddingPlatform, shelters.habitatBedding, shelters.habitatBeddingLeaves], 
+        foodEnrichment: [foodEnrichment.bambooFeeder, foodEnrichment.blockofFrozenFish], 
+        toyEnrichment: [toyEnrichment.mudBath, toyEnrichment.platformFloats, toyEnrichment.rubberDuck, toyEnrichment.rubbingPad, toyEnrichment.rubbingPadBark, toyEnrichment.smallBall, toyEnrichment.smallBubbleMachine, toyEnrichment.waterJet, toyEnrichment.waterJetRock], 
+        animalTalk: conservationTopics.herpetologyTalk, 
+        evolutionTopic: conservationTopics.reptileEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.piscivoreDiet, 
+        conservationThreats: [conservationTopics.pollution, conservationTopics.habitatLoss, conservationTopics.bycatch, conservationTopics.ecologicalRestoration], 
+        ambience: conservationTopics.wetlandEcosystemAmbience, 
+        diseases: [diseases.nematodiasis, diseases.nileCrocodilePoxvirus, diseases.salmonellosis, diseases.streptococcosis, diseases.ulcerativeDermatitis, diseases.ulcerativeStomatitis, diseases.westNileVirus], 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: false, 
+        pregnancy: false, 
+        eggLaying: true, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: true, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Shelter Space", 
+                value: 35, 
+                valueType: "m²" 
+            }, 
+            req2: {
+                requirement: "Water Jet", 
+                value: 2, 
+                valueType: "Objects" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Platform Floats", 
+                value: 1, 
+                valueType: "Objects" 
+            }, 
+            req5: {
+                requirement: "Fine Sand", 
+                value: 60, 
+                valueType: "m²" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Grey and yellow scaled skin with dark markings" 
+            }
+        }, 
+
+        colourmorphs: {
+            leucistic: {
+                name: "Leucistic", 
+                description: "Leucistic: Light grey scaled skin with black markings", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/64870c43/Gharial_headshot_Albino.png" 
+            }
+        }, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 36 ---
+    schoolingBannerfish:{
+        name: "Schooling Bannerfish", 
+        latin: "Heniochus diphreutes", 
+        image: "/pz2/images/animals/schoolingBannerfish.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvMWY4YjExYWQvQmFubmVyZmlzaF9TY2hvb2xpbmcuanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4NX0sInRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiZml0IjoiY29udGFpbiJ9LCJ2ZXJzaW9uIjoiNTFjNjExNzgtYjJlNS00YzljLTlhZDgtM2Q5NTQ0MDRkM2RkIn19", 
+        headshot: "/pz2/images/animal_headshots/schoolingBannerfish_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/1f8b11ad/Bannerfish_Schooling_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/1f8b11ad/Bannerfish_Schooling_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/1f8b11ad/Bannerfish_Schooling_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/schooling-bannerfish", 
+        wiki: "https://en.wikipedia.org/wiki/Schooling_bannerfish", 
+   
+        class: "Actinopterygii", 
+        order: "Acanthuriformes", 
+        family: "Chaetodontidae", 
+        genus: "Heniochus", 
+
+        DLC: DLC.basegame, 
+        form: form.collective, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat, enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.aquarium, enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge, enclosureTypes.exhibitCylinderSmall, enclosureTypes.exhibitBoxSmall], 
+        exhibitTerrain: [exhibitTerrain.aquaticFull, exhibitTerrain.aquaticHalf, exhibitTerrain.aquaticQuarter], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1000, 
+        careerAccreditation: 1, 
+        franchiseAccreditation: 1, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.reef], 
+        wildlifeReserves: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "None", 
+        collectiveExhibit: {min: 1, max: 10}, 
+        collectiveAquarium: {min: 40, max: 60}, 
+        matingSeason: [matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 4, 
+
+        preBirthMonths: 0.1, 
+        interbirthMonths: 11, 
+        juvenileYears: 1, 
+        adultYears: 7, 
+        elderlyYears: 10, 
+        maturityAge: 1, 
+        sterilityAge: "Death", 
+
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 50, 
+        deepWaterPerAddAdult: 15, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 24, max: 28}, 
+        plantCoverage: {min: 20, max: 60}, 
+
+        foodGrade1: "Copepods", 
+        foodGrade1Cost: 121, 
+        foodGrade2: "+ Algae Pellets", 
+        foodGrade2Cost: 165, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFlakes], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.omnivoreDiet, 
+        conservationThreats: [conservationTopics.pollution, conservationTopics.habitatLoss, conservationTopics.climateChange], 
+        ambience: conservationTopics.reefEcosystemAmbience, 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: true, 
+        spawning: false, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Black-white vertical banding and yellow fins" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: ["", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "", "Red Lionfish", "", "", "", ""], 
+
+        album: null, 
+
+        notes: "Revealed in the PZ2 trailer on 2026/05/28, was part of Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 37 ---
+    africanTigerfish:{
+        name: "African Tigerfish", 
+        latin: "Hydrocynus vittatus", 
+        image: "/pz2/images/animals/africanTigerfish.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvMjI2OGNmZDEvVGlnZXJmaXNoX0FmcmljYW4uanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4NX0sInRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiZml0IjoiY29udGFpbiJ9LCJ2ZXJzaW9uIjoiNTFjNjExNzgtYjJlNS00YzljLTlhZDgtM2Q5NTQ0MDRkM2RkIn19", 
+        headshot: "/pz2/images/animal_headshots/africanTigerfish_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2268cfd1/Tigerfish_African_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2268cfd1/Tigerfish_African_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/2268cfd1/Tigerfish_African_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/african-tigerfish", 
+        wiki: "https://en.wikipedia.org/wiki/Hydrocynus_vittatus", 
+   
+        class: "Actinopterygii", 
+        order: "Characiformes", 
+        family: "Alestidae", 
+        genus: "Hydrocynus", 
+
+        DLC: DLC.basegame, 
+        form: form.collective, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat, enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.aquarium, enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge], 
+        exhibitTerrain: [exhibitTerrain.aquaticFull, exhibitTerrain.aquaticHalf, exhibitTerrain.aquaticQuarter], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1000, 
+        careerAccreditation: 1, 
+        franchiseAccreditation: 3, 
+
+        nativeRange: [nativeRange.africa], 
+        biomes: [biomes.lakesRivers], 
+        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        ecosystems: [ecosystems.swamp], 
+        speciesRoles: [speciesRoles.underwaterPredators], 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "None", 
+        collectiveExhibit: {min: 1, max: 6}, 
+        collectiveAquarium: {min: 10, max: 20}, 
+        matingSeason: [matingSeason.spring, matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 5, 
+
+        preBirthMonths: 0.1, 
+        interbirthMonths: 11, 
+        juvenileYears: 2, 
+        adultYears: 17, 
+        elderlyYears: 20, 
+        maturityAge: 2.5, 
+        sterilityAge: "Death", 
+
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 100, 
+        deepWaterPerAddAdult: 30, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 22, max: 30}, 
+        plantCoverage: {min: 20, max: 60}, 
+
+        foodGrade1: "Fish Cuts", 
+        foodGrade1Cost: 132, 
+        foodGrade2: "+ Squid", 
+        foodGrade2Cost: 184, 
+
+        salinity: [salinity.freshwater], 
+        feeders: [feeders.aquaticFeederFish], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.cathemeralBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.populationFragmentation, conservationTopics.pollution, conservationTopics.overexploitation], 
+        ambience: conservationTopics.freshwaterEcosystemAmbience, 
+
+        cohabitation: true, 
+        releasable: true, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: true, 
+        spawning: false, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Brass and black scales and yellow-red fins" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed and confirmed in the feature focus and via Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 38 ---
+    gilaMonster:{
+        name: "Gila Monster", 
+        latin: "Heloderma suspectum", 
+        image: "/pz2/images/animals/gilaMonster.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvNTM4MzBlYzAvTGl6YXJkX0dpbGFNb25zdGVyLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjUxYzYxMTc4LWIyZTUtNGM5Yy05YWQ4LTNkOTU0NDA0ZDNkZCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/gilaMonster_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/53830ec0/Lizard_GilaMonster_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/53830ec0/Lizard_GilaMonster_map.png", 
+        illustration: null, 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/gila-monster", 
+        wiki: "https://en.wikipedia.org/wiki/Gila_monster", 
+   
+        class: "Reptilia", 
+        order: "Squamata", 
+        family: "Helodermatidae", 
+        genus: "Heloderma", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge, enclosureTypes.exhibitCylinderSmall, enclosureTypes.exhibitBoxSmall], 
+        exhibitTerrain: [exhibitTerrain.xericShallow, exhibitTerrain.xericDeep], 
+        cohabitationOptions: cohabitationOptions.none, 
+        conservation: conservation.nearThreatened, 
+  
+        maxAnimalAppeal: 3000, 
+        careerAccreditation: 3, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.northAmerica], 
+        biomes: [biomes.desert], 
+
+        dominance: "None", 
+        matingSeason: [matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 4, 
+
+        offspringPerMating: {min: 1, max: 2}, 
+        preBirthMonths: 9, 
+        interbirthMonths: 3, 
+        juvenileYears: 4, 
+        adultYears: 16, 
+        elderlyYears: 30, 
+        maturityAge: 4, 
+        sterilityAge: "Death", 
+
+        temperatureRange: {min: 24, max: 32}, 
+        humidityRange: {min: 15, max: 25}, 
+
+        foodGrade1: null, 
+        foodGrade1Cost: 225, 
+        foodGrade1CostJuv: null, 
+
+        animalTalk: conservationTopics.herpetologyTalk, 
+        evolutionTopic: conservationTopics.reptileEvolution, 
+        animalTypesTopic: null, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.poachingAndTheExoticPetTrade], 
+        ambience: conservationTopics.desertEcosystemAmbience, 
+
+        cohabitation: false, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: false, 
+        canDive: false, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Beige skin with black markings" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#5 from 2026/07/21." 
+    }, 
+    // --- # 39 ---
+    boaConstrictor:{
+        name: "Boa Constrictor", 
+        latin: "Boa constrictor", 
+        image: "/pz2/images/animals/boaConstrictor.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvNjExOTM4ZTAvQ29uc3RyaWN0b3JfQm9hLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjUxYzYxMTc4LWIyZTUtNGM5Yy05YWQ4LTNkOTU0NDA0ZDNkZCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/boaConstrictor_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/611938e0/Constrictor_Boa_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/611938e0/Constrictor_Boa_map.png", 
+        illustration: null, 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/boa-constrictor", 
+        wiki: "https://en.wikipedia.org/wiki/Boa_constrictor", 
+   
+        class: "Reptilia", 
+        order: "Squamata", 
+        family: "Boidae", 
+        genus: "Boa", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge, enclosureTypes.exhibitCylinderSmall, enclosureTypes.exhibitBoxSmall], 
+        exhibitTerrain: [exhibitTerrain.rainforestDry, exhibitTerrain.rainforestWet], 
+        cohabitationOptions: cohabitationOptions.none, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 3000, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.northAmerica, nativeRange.southAmerica], 
+        biomes: [biomes.grassland, biomes.tropical], 
+
+        dominance: "None", 
+        matingSeason: [matingSeason.spring, matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 2, 
+
+        offspringPerMating: {min: 1, max: 1}, 
+        preBirthMonths: 4, 
+        interbirthMonths: 20, 
+        juvenileYears: 3, 
+        adultYears: 17, 
+        elderlyYears: 40, 
+        maturityAge: 3, 
+        sterilityAge: "Death", 
+
+        temperatureRange: {min: 23, max: 31}, 
+        humidityRange: {min: 60, max: 80}, 
+
+        foodGrade1: null, 
+        foodGrade1Cost: 225, 
+        foodGrade1CostJuv: null, 
+
+        animalTalk: conservationTopics.herpetologyTalk, 
+        evolutionTopic: conservationTopics.reptileEvolution, 
+        animalTypesTopic: null, 
+        activityPattern: conservationTopics.nocturnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.poachingAndTheExoticPetTrade], 
+        ambience: conservationTopics.rainforestEcosystemAmbience, 
+
+        cohabitation: false, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: false, 
+        canDive: false, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Brown and tan reticulated body" 
+            }
+        }, 
+
+        colourmorphs: {
+            albino: {
+                name: "Albino", 
+                description: "Albino: Yellow and white reticulated body", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/611938e0/Constrictor_Boa_headshot_Albino.png" 
+            }
+        }, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#5 from 2026/07/21." 
     }, 
 
 // --- DELUXE DLC ANIMALS ---
@@ -5835,7 +7218,7 @@ const animals = {
         colourmorphs: null, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "", "Blue and Gold Fusilier", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Ocean Sunfish", "", "", "", "", "", "", "", "", "", ""], 
+        neutralRelationships: ["", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
 
         album: null,
 
@@ -5954,7 +7337,7 @@ const animals = {
         colourmorphs: null, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocean Sunfish", "", "", "", "", "", "", "", "", "", ""], 
+        neutralRelationships: ["", "Blacktip Reef Shark", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
 
         album: null,
 
