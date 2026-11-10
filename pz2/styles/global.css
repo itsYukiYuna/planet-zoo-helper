@@ -126,6 +126,7 @@ footer a {
 
 .animal-modal-open {
     overflow: hidden;
+    overscroll-behavior: none;
 }
 
 .animal-modal-container {
@@ -259,9 +260,9 @@ footer a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.35rem;
+    gap: 0.5rem;
     font-family: var(--font-content);
-    font-size: clamp(0.65rem, 1vw, 1rem);
+    font-size: clamp(0.65rem, 0.95vw, 1rem);
 }
 
 .animal-modal-conservation {
@@ -269,13 +270,13 @@ footer a {
     flex: 0 0 auto;
     min-height: 0;
     width: 100%;
-    margin-top: -1.75rem;
+    margin-top: -3vh;
     align-items: center;
     justify-content: center;
 }
 
 .animal-modal-conservation img {
-    width: min(32.25rem, 100%);
+    width: min(35vw, 100%);
     height: clamp(6.375rem, 17vh, 12.75rem);
     object-fit: contain;
 }
@@ -552,6 +553,32 @@ footer a {
 
 .animal-modal-enclosure-conditions {
     gap: 0.2rem clamp(0.4rem, 1.2vw, 1rem);
+}
+
+.animal-modal-salinity {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.25rem;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.animal-modal-salinity > .animal-modal-icon {
+    flex: 0 0 auto;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.animal-modal-salinity-values {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.animal-modal-salinity-item {
+    white-space: nowrap;
 }
 
 .animal-modal-boolean-icon {
@@ -928,6 +955,85 @@ footer a {
     gap: 0.4rem;
 }
 
+.animal-modal-research-levels {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+}
+
+.animal-modal-research-level {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+}
+
+.animal-modal-research-badge {
+    display: inline-flex;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: 0 0 1.6rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-background);
+    background: var(--color-text);
+    line-height: 1;
+}
+
+.animal-modal-research-badge.is-gate {
+    font-size: 1.25rem;
+}
+
+.animal-modal-research-awards {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.animal-modal-research-award {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.35rem;
+    background: var(--color-background-dark);
+    text-align: center;
+}
+
+.animal-modal-research-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: 0 0 1.6rem;
+    object-fit: contain;
+}
+
+.animal-modal-research-gate {
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.animal-modal-research-gate-heading {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+}
+
+.animal-modal-research-gate-name {
+    min-width: 0;
+    flex: 0 1 auto;
+    overflow-wrap: anywhere;
+}
+
 .animal-modal-related-animal {
     display: flex;
     align-items: center;
@@ -955,6 +1061,16 @@ footer a {
     padding-left: 0;
     list-style-position: inside;
     text-align: center;
+}
+
+.animal-modal-bullet-list > li {
+    text-align: center;
+}
+
+.animal-modal-requirement-value {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .animal-modal-standard-coat-content {
@@ -1005,6 +1121,11 @@ footer a {
     border-radius: 0.65rem;
 }
 
+.animal-modal-map-native-range {
+    flex: 1 1 100%;
+    margin: 0;
+}
+
 .animal-modal-empty {
     width: 100%;
     margin: 0.25rem;
@@ -1025,6 +1146,7 @@ footer a {
     border-radius: 0.3rem;
     color: var(--color-background);
     background: var(--color-text-dark);
+    font-family: var(--font-content);
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.3;
@@ -1248,6 +1370,27 @@ footer a {
 
     .animal-modal-hide-label .animal-modal-detail-label {
         display: none;
+    }
+
+    .animal-modal-research-level {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .animal-modal-research-level > .animal-modal-research-badge {
+        align-self: center;
+    }
+
+    .animal-modal-research-awards {
+        min-width: 0;
+        flex: 1 1 0;
+        justify-content: center;
+    }
+
+    .animal-modal-research-award {
+        max-width: 100%;
+        font-size: 0.9em;
     }
 
     .animal-modal-close {

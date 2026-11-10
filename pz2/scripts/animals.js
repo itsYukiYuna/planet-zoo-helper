@@ -38,7 +38,9 @@ import {
 
     //     nativeRange: [nativeRange.], 
     //     biomes: [biomes.], 
+    //     nativeRangeMap: "text", 
     //     wildlifeReserves: [wildlifeReserves.], 
+    //     researchGate: wildlifeReserves., 
     //     ecosystems: [ecosystems.], 
     //     speciesRoles: [speciesRoles.], 
     //     rolesRequired: [speciesRoles.], 
@@ -125,6 +127,7 @@ import {
     //     releasable: , 
     //     guestsEnter: , 
     //     burrower: , 
+    //     nestingSites: , 
     //     groupDivision: , 
     //     spawning: , 
     //     pregnancy: , 
@@ -229,7 +232,9 @@ const animals = {
 
         nativeRange: [nativeRange.asia], 
         biomes: [biomes.tropical, biomes.wetlands], 
-        wildlifeReserves: [wildlifeReserves.sumatraReserve], 
+        nativeRangeMap: "Southeast Asia", 
+        wildlifeReserves:[wildlifeReserves.sumatraReserve], 
+        researchGate: wildlifeReserves.sumatraReserve, 
         ecosystems: [ecosystems.lowlandRainforest], 
         speciesRoles: [speciesRoles.predators], 
         rolesRequired: [speciesRoles.mediumPrey], 
@@ -311,6 +316,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -426,8 +432,10 @@ const animals = {
         franchiseAccreditation: 5, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.desert, biomes.grassland, biomes.wetlands], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.desert, biomes.grassland, biomes.wetlands],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.tanzaniaReserve, 
         ecosystems: [ecosystems.wetland, ecosystems.savannah, ecosystems.riverine], 
         speciesRoles: [speciesRoles.highBrowsers, speciesRoles.terrestrialForagers, speciesRoles.terrestrialSeedDispersers], 
         rolesRequired: null, 
@@ -510,6 +518,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -576,7 +585,7 @@ const animals = {
         }, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "Masai Giraffe", ""], 
+        neutralRelationships: ["", "Masai Giraffe", "Reticulated Giraffe"], 
 
         album: null,
 
@@ -613,8 +622,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.grassland], 
         speciesRoles: [speciesRoles.predators, speciesRoles.scavengers], 
         rolesRequired: null, 
@@ -696,6 +707,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: true, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: false, 
@@ -706,7 +718,7 @@ const animals = {
         canJump: true, 
         canClimb: true, 
         canFly: true, 
-        canWade: true, 
+        canWade: false, 
         canSwim: false, 
         canDive: false, 
 
@@ -793,8 +805,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland, biomes.openSea], 
-        wildlifeReserves: null, 
+        biomes: [biomes.grassland, biomes.openSea],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -876,6 +890,7 @@ const animals = {
         releasable: false, 
         guestsEnter: true, 
         burrower: true, 
+        nestingSites: true, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: false, 
@@ -981,8 +996,10 @@ const animals = {
         franchiseAccreditation: 2, 
 
         nativeRange: [nativeRange.europe], 
-        biomes: [biomes.temperate, biomes.taiga], 
-        wildlifeReserves: [wildlifeReserves.polandReserve], 
+        biomes: [biomes.temperate, biomes.taiga],  
+        nativeRangeMap: "Europe", 
+        wildlifeReserves:[wildlifeReserves.polandReserve], 
+        researchGate: wildlifeReserves.polandReserve, 
         ecosystems: [ecosystems.closedCanopyForest, ecosystems.pastures, ecosystems.openCanopyForest], 
         speciesRoles: [speciesRoles.grazers, speciesRoles.terrestrialSeedDispersers, speciesRoles.largePrey], 
         rolesRequired: null, 
@@ -1065,6 +1082,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -1171,8 +1189,10 @@ const animals = {
         franchiseAccreditation: 5, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.tropical], 
-        wildlifeReserves: null, 
+        biomes: [biomes.tropical],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -1254,6 +1274,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -1362,8 +1383,10 @@ const animals = {
         franchiseAccreditation: 2, 
 
         nativeRange: [nativeRange.asia, nativeRange.oceania], 
-        biomes: [biomes.tropical, biomes.mangrove, biomes.estuarine], 
-        wildlifeReserves: [wildlifeReserves.sumatraReserve], 
+        biomes: [biomes.tropical, biomes.mangrove, biomes.estuarine],  
+        nativeRangeMap: "Asia, Oceania", 
+        wildlifeReserves:[wildlifeReserves.sumatraReserve], 
+        researchGate: wildlifeReserves.sumatraReserve, 
         ecosystems: [ecosystems.forestSwamp, ecosystems.river], 
         speciesRoles: [speciesRoles.predators], 
         rolesRequired: [speciesRoles.mediumPrey], 
@@ -1445,6 +1468,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: true, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: false, 
@@ -1548,8 +1572,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland, biomes.wetlands, biomes.lakesRivers], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland, biomes.wetlands, biomes.lakesRivers],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.tanzaniaReserve, 
         ecosystems: [ecosystems.swamp], 
         speciesRoles: [speciesRoles.grazers, speciesRoles.wetlandEngineers], 
         rolesRequired: null, 
@@ -1631,6 +1657,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -1731,8 +1758,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.oceania], 
-        biomes: [biomes.tropical], 
-        wildlifeReserves: null, 
+        biomes: [biomes.tropical],  
+        nativeRangeMap: "Southeast Asia", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -1814,6 +1843,7 @@ const animals = {
         releasable: false, 
         guestsEnter: true, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -1903,8 +1933,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.asia], 
-        biomes: [biomes.temperate, biomes.taiga], 
-        wildlifeReserves: null, 
+        biomes: [biomes.temperate, biomes.taiga],  
+        nativeRangeMap: "Asia", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -1986,6 +2018,7 @@ const animals = {
         releasable: false, 
         guestsEnter: true, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -2089,8 +2122,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.openSea, biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.openSea, biomes.reef],  
+        nativeRangeMap: "Indo-Pacific reefs and coasts", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -2174,6 +2209,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -2229,7 +2265,7 @@ const animals = {
 
         colourmorphs: null, 
 
-        thrivingRelationships: ["", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "", "Hawksbill Turtle", "", "", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "", "", "", "", "", "Schooling Bannerfish", "", ""], 
+        thrivingRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Hawksbill Turtle", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "", "", "Schooling Bannerfish", "", ""], 
         neutralRelationships: ["Ocean Sunfish", "Red Lionfish"], 
 
         album: null,
@@ -2268,8 +2304,10 @@ const animals = {
         franchiseAccreditation: 2, 
 
         nativeRange: [nativeRange.europe], 
-        biomes: [biomes.lakesRivers], 
-        wildlifeReserves: [wildlifeReserves.scottishHighlands, wildlifeReserves.swedenReserve, wildlifeReserves.polandReserve], 
+        biomes: [biomes.lakesRivers],  
+        nativeRangeMap: "Europe, Western Asia, North Africa (Atlas Mountains)", 
+        wildlifeReserves:[wildlifeReserves.scottishHighlands, wildlifeReserves.swedenReserve, wildlifeReserves.polandReserve], 
+        researchGate: wildlifeReserves.swedenReserve, 
         ecosystems: [ecosystems.lakeTemperate, ecosystems.lakeTaiga, ecosystems.lakeLoch], 
         speciesRoles: [speciesRoles.underwaterPredators], 
         rolesRequired: null, 
@@ -2325,6 +2363,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -2398,6 +2437,7 @@ const animals = {
 
         nativeRange: [nativeRange.europe, nativeRange.asia], 
         biomes: [biomes.grassland, biomes.temperate], 
+        nativeRangeMap: "Europe, Asia", 
 
         dominance: "Males are territorial", 
         collectiveExhibit: {min: 1, max: 15}, 
@@ -2435,6 +2475,7 @@ const animals = {
         releasable: false, 
         guestsEnter: true, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -2498,6 +2539,7 @@ const animals = {
 
         nativeRange: [nativeRange.europe], 
         biomes: [biomes.wetlands, biomes.lakesRivers], 
+        nativeRangeMap: "Europe", 
 
         dominance: "None", 
         matingSeason: [matingSeason.spring], 
@@ -2534,6 +2576,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -2598,8 +2641,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.africa, nativeRange.europe, nativeRange.asia, nativeRange.northAmerica, nativeRange.southAmerica, nativeRange.atlanticOcean, nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.mangrove, biomes.estuarine, biomes.openSea, biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.mangrove, biomes.estuarine, biomes.openSea, biomes.reef],  
+        nativeRangeMap: "Worldwide tropical and temperate oceans", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -2682,6 +2727,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: true, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: false, 
@@ -2739,8 +2785,8 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "", "", "", "Longfin Batfish", "", "", "", "Schooling Bannerfish", "", ""], 
-        neutralRelationships: ["", "Blacktip Reef Shark", "", "", "", "Humphead Wrasse", "", "", "Ocellated Eagle Ray", "Red Lionfish", "", ""], 
+        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "Golden Trevally", "", "", "Longfin Batfish", "", "Pacific Sardine", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "", "", "", "Humphead Wrasse", "Indo-Pacific Leopard Shark", "", "Ocellated Eagle Ray", "Red Lionfish", "", ""], 
 
         album: null, 
 
@@ -2777,8 +2823,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.grassland, ecosystems.wateringHole], 
         speciesRoles: [speciesRoles.grazers, speciesRoles.terrestrialSeedDispersers, speciesRoles.mediumPrey], 
         rolesRequired: null, 
@@ -2861,6 +2909,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -2933,7 +2982,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "", "", "Springbok", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "Reticulated Giraffe", "", "Springbok", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -2971,8 +3020,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.tanzaniaReserve, 
         ecosystems: [ecosystems.grassland], 
         speciesRoles: [speciesRoles.grazers, speciesRoles.terrestrialSeedDispersers, speciesRoles.mediumPrey], 
         rolesRequired: null, 
@@ -3055,6 +3106,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -3130,7 +3182,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "", "", "Springbok", "", ""], 
+        thrivingRelationships: ["", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "Reticulated Giraffe", "", "Springbok", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -3168,8 +3220,10 @@ const animals = {
         franchiseAccreditation: 5, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.savannah, ecosystems.rockyHills, ecosystems.riverine], 
         speciesRoles: [speciesRoles.predators], 
         rolesRequired: [speciesRoles.mediumPrey], 
@@ -3252,6 +3306,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -3372,8 +3427,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa, nativeRange.europe, nativeRange.asia], 
-        biomes: [biomes.temperate], 
-        wildlifeReserves: [wildlifeReserves.scottishHighlands, wildlifeReserves.swedenReserve, wildlifeReserves.polandReserve], 
+        biomes: [biomes.temperate],  
+        nativeRangeMap: "Europe, Asia, Africa", 
+        wildlifeReserves:[wildlifeReserves.scottishHighlands, wildlifeReserves.swedenReserve, wildlifeReserves.polandReserve], 
+        researchGate: wildlifeReserves.scottishHighlands, 
         ecosystems: [ecosystems.pastures, ecosystems.mixedLowlandForest], 
         speciesRoles: [speciesRoles.terrestrialSeedDispersers, speciesRoles.mediumPrey, speciesRoles.terrestrialPollinators, speciesRoles.lowBrowsers], 
         rolesRequired: null, 
@@ -3456,6 +3513,7 @@ const animals = {
         releasable: true, 
         guestsEnter: true, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -3564,8 +3622,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.europe, nativeRange.asia], 
-        biomes: [biomes.temperate, biomes.taiga, biomes.tundra], 
-        wildlifeReserves: [wildlifeReserves.swedenReserve], 
+        biomes: [biomes.temperate, biomes.taiga, biomes.tundra],  
+        nativeRangeMap: "Europe, Asia", 
+        wildlifeReserves:[wildlifeReserves.swedenReserve], 
+        researchGate: wildlifeReserves.swedenReserve, 
         ecosystems: [ecosystems.moorland, ecosystems.lakeTaiga, ecosystems.lakeLoch, ecosystems.moorland], 
         speciesRoles: [speciesRoles.predators, speciesRoles.terrestrialSeedDispersers, speciesRoles.highBrowsers, speciesRoles.terrestrialPollinators], 
         rolesRequired: null, 
@@ -3647,6 +3707,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -3752,6 +3813,7 @@ const animals = {
 
         nativeRange: [nativeRange.oceania], 
         biomes: [biomes.grassland, biomes.tropical, biomes.temperate], 
+        nativeRangeMap: "Oceania", 
 
         dominance: "No dominance structure", 
         matingSeason: [matingSeason.spring], 
@@ -3788,6 +3850,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -3851,6 +3914,7 @@ const animals = {
 
         nativeRange: [nativeRange.southAmerica], 
         biomes: [biomes.tropical], 
+        nativeRangeMap: "South America", 
 
         dominance: "None", 
         collectiveExhibit: {min: 1, max: 8}, 
@@ -3888,6 +3952,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -3952,8 +4017,10 @@ const animals = {
         franchiseAccreditation: 5, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.openSea], 
-        wildlifeReserves: null, 
+        biomes: [biomes.openSea],  
+        nativeRangeMap: "Worldwide", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -4036,6 +4103,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -4094,7 +4162,7 @@ const animals = {
         }, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "Blue and Gold Fusilier", "", "", "", "", "", "", "Humphead Wrasse", "", "", "", "Longfin Batfish", "", "", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["Blackspotted Puffer", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "Longfin Batfish", "Pacific Sardine", "", "", "Schooling Bannerfish", "", ""], 
 
         album: null, 
 
@@ -4131,8 +4199,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.denseForest], 
         speciesRoles: [speciesRoles.terrestrialSeedDispersers, speciesRoles.highBrowsers], 
         rolesRequired: null, 
@@ -4214,6 +4284,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -4271,7 +4342,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "", "Plains Zebra", "", "", "Springbok", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "", "Plains Zebra", "Reticulated Giraffe", "", "Springbok", "", ""], 
         neutralRelationships: ["African Savannah Elephant", ""], 
 
         album: null, 
@@ -4309,8 +4380,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.savannah, ecosystems.shrubland], 
         speciesRoles: [speciesRoles.smallPrey, speciesRoles.soilRooters, speciesRoles.terrestrialForagers], 
         rolesRequired: null, 
@@ -4392,6 +4465,7 @@ const animals = {
         releasable: true, 
         guestsEnter: true, 
         burrower: true, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -4495,8 +4569,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.desert, biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.desert, biomes.grassland],  
+        nativeRangeMap: "Southwest Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.savannah], 
         speciesRoles: [speciesRoles.terrestrialSeedDispersers, speciesRoles.mediumPrey], 
         rolesRequired: null, 
@@ -4579,6 +4655,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -4649,7 +4726,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Masai Giraffe", "", "Plains Zebra", "", "", "Springbok", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Masai Giraffe", "", "Plains Zebra", "Reticulated Giraffe", "", "Springbok", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -4688,8 +4765,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.lakesRivers], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.lakesRivers],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.swamp], 
         speciesRoles: [speciesRoles.underwaterGrazers, speciesRoles.smallUnderwaterPrey], 
         rolesRequired: null, 
@@ -4745,6 +4824,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -4795,7 +4875,7 @@ const animals = {
         }, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "", ""], 
+        neutralRelationships: ["", "Clown Loach", ""], 
 
         album: null, 
 
@@ -4834,6 +4914,7 @@ const animals = {
 
         nativeRange: [nativeRange.asia], 
         biomes: [biomes.tropical], 
+        nativeRangeMap: "Southeast Asia", 
 
         dominance: "None", 
         collectiveExhibit: {min: 1, max: 20}, 
@@ -4871,6 +4952,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -4934,6 +5016,7 @@ const animals = {
 
         nativeRange: [nativeRange.europe], 
         biomes: [biomes.temperate, biomes.wetlands], 
+        nativeRangeMap: "Europe", 
 
         dominance: "None, though male aggression may occur over access to food or mates", 
         matingSeason: [matingSeason.autumn, matingSeason.winter], 
@@ -4970,6 +5053,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -5037,8 +5121,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.grassland, biomes.tropical], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.grassland, biomes.tropical],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.wetland, ecosystems.denseForest, ecosystems.riverine], 
         speciesRoles: [speciesRoles.predators], 
         rolesRequired: [speciesRoles.mediumPrey], 
@@ -5120,6 +5206,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -5223,8 +5310,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.estuarine, biomes.openSea, biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.estuarine, biomes.openSea, biomes.reef],  
+        nativeRangeMap: "Indo-Pacific reefs and coasts", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -5307,9 +5396,10 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
-        spawning: false, 
-        pregnancy: true, 
+        spawning: true, 
+        pregnancy: false, 
         eggLaying: false, 
         brooding: false, 
         nestbound: false, 
@@ -5372,7 +5462,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "", "Blue and Gold Fusilier", "", "", "", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "", "", "", "", "", "", "", ""], 
+        thrivingRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "", "Pacific Sardine", "", "", "", "Schooling Bannerfish", "", ""], 
         neutralRelationships: ["Red Lionfish"], 
 
         album: null, 
@@ -5410,8 +5500,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.estuarine, biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.estuarine, biomes.reef],  
+        nativeRangeMap: "Western Indo-Pacific Ocean", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -5494,6 +5586,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -5554,7 +5647,7 @@ const animals = {
         colourmorphs: null, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "", "Blue and Gold Fusilier", "", "", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "", "", "", "", "", ""], 
+        neutralRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "Golden Trevally", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "Pacific Sardine", "", "", "", "Schooling Bannerfish", ""], 
 
         album: null, 
 
@@ -5591,8 +5684,10 @@ const animals = {
         franchiseAccreditation: 2, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.mangrove, biomes.estuarine, biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.mangrove, biomes.estuarine, biomes.reef],  
+        nativeRangeMap: "Indo-Pacific reefs and coasts", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -5675,9 +5770,10 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
-        spawning: false, 
-        pregnancy: true, 
+        spawning: true, 
+        pregnancy: false, 
         eggLaying: false, 
         brooding: false, 
         nestbound: false, 
@@ -5717,14 +5813,18 @@ const animals = {
             }
         },
 
-        standardCoat: {
+        standardCoat: { 
             standard: {
+                name: "Standard", 
+                description: "Brown-grey skin, white belly, black fin tips" 
+            }, 
+            standardLight: {
                 name: "Standard", 
                 description: "Grey skin, white belly, black fin tips" 
             }, 
             standardDark: {
                 name: "Standard", 
-                description: "Brown-grey skin, white belly, black fin tips" 
+                description: "Dark grey skin, white belly, black fin tips" 
             }
         }, 
 
@@ -5741,8 +5841,8 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "", "", "", "Longfin Batfish", "", "", "", "", "", ""], 
-        neutralRelationships: ["", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "", "", "Ocellated Eagle Ray", "Red Lionfish", "", ""], 
+        thrivingRelationships: ["Blue and Gold Fusilier", "", "", "Golden Trevally", "", "", "Longfin Batfish", "", "Pacific Sardine", "", "", "", ""], 
+        neutralRelationships: ["Blackspotted Puffer", "", "", "", "Hawksbill Turtle", "Humphead Wrasse", "Indo-Pacific Leopard Shark", "", "Ocellated Eagle Ray", "Red Lionfish", "", ""], 
 
         album: null, 
 
@@ -5779,8 +5879,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.desert, biomes.grassland], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.desert, biomes.grassland],  
+        nativeRangeMap: "Southern Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.tanzaniaReserve, 
         ecosystems: [ecosystems.grassland, ecosystems.savannah], 
         speciesRoles: [speciesRoles.grazers, speciesRoles.terrestrialSeedDispersers, speciesRoles.mediumPrey], 
         rolesRequired: null, 
@@ -5863,6 +5965,7 @@ const animals = {
         releasable: true, 
         guestsEnter: true, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -5945,7 +6048,7 @@ const animals = {
             }
         }, 
 
-        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "", "", "", ""], 
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "Reticulated Giraffe", "", "", ""], 
         neutralRelationships: null, 
 
         album: null, 
@@ -5983,8 +6086,10 @@ const animals = {
         franchiseAccreditation: 4, 
 
         nativeRange: [nativeRange.asia], 
-        biomes: [biomes.tropical, biomes.wetlands, biomes.lakesRivers], 
-        wildlifeReserves: null, 
+        biomes: [biomes.tropical, biomes.wetlands, biomes.lakesRivers],  
+        nativeRangeMap: "Asia - Indian subcontinent", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -6066,6 +6171,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: true, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: false, 
@@ -6162,8 +6268,10 @@ const animals = {
         franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.reef],  
+        nativeRangeMap: "Indo-Pacific reefs", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -6219,6 +6327,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -6243,7 +6352,7 @@ const animals = {
         colourmorphs: null, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "", "Red Lionfish", "", "", "", ""], 
+        neutralRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "Red Lionfish", "", "", "", ""], 
 
         album: null, 
 
@@ -6281,8 +6390,10 @@ const animals = {
         franchiseAccreditation: 3, 
 
         nativeRange: [nativeRange.africa], 
-        biomes: [biomes.lakesRivers], 
-        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        biomes: [biomes.lakesRivers],  
+        nativeRangeMap: "Africa", 
+        wildlifeReserves:[wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.greatRiftValleyReserve, 
         ecosystems: [ecosystems.swamp], 
         speciesRoles: [speciesRoles.underwaterPredators], 
         rolesRequired: null, 
@@ -6338,6 +6449,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -6401,6 +6513,7 @@ const animals = {
 
         nativeRange: [nativeRange.northAmerica], 
         biomes: [biomes.desert], 
+        nativeRangeMap: "North America", 
 
         dominance: "None", 
         matingSeason: [matingSeason.summer], 
@@ -6437,6 +6550,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -6500,6 +6614,7 @@ const animals = {
 
         nativeRange: [nativeRange.northAmerica, nativeRange.southAmerica], 
         biomes: [biomes.grassland, biomes.tropical], 
+        nativeRangeMap: "South America, Central America", 
 
         dominance: "None", 
         matingSeason: [matingSeason.spring, matingSeason.summer], 
@@ -6536,6 +6651,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true, 
         pregnancy: false, 
@@ -6573,6 +6689,1176 @@ const animals = {
         notes: "Revealed via Zoopedia Bundle#5 from 2026/07/21." 
     }, 
 
+    // --- Zoopedia bundle#6 2026/07/28 --- 
+
+    // --- # 40 ---
+    reticulatedGiraffe:{
+        name: "Reticulated Giraffe", 
+        latin: "Giraffa reticulata", 
+        image: "/pz2/images/animals/reticulatedGiraffe.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvNWMzODhmNzgvR2lyYWZmZV9SZXRpY3VsYXRlZC5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxOTIwLCJmaXQiOiJjb250YWluIn0sInZlcnNpb24iOiIyMjgyYzRlNi0zN2Q2LTRmOWYtODlhMC01NDIyZTg0MGI4NjQifX0=", 
+        headshot: "/pz2/images/animal_headshots/reticulatedGiraffe_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/5c388f78/Giraffe_Reticulated_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/5c388f78/Giraffe_Reticulated_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/5c388f78/Giraffe_Reticulated_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/reticulated-giraffe", 
+        wiki: "https://en.wikipedia.org/wiki/Reticulated_giraffe", 
+   
+        class: "Mammalia", 
+        order: "Artiodactyla", 
+        family: "Giraffidae", 
+        genus: "Giraffa", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.habitat, enclosureTypes.habitatClimbProof, enclosureTypes.habitatRoofed], 
+        cohabitationOptions: cohabitationOptions.nonPredatory, 
+        conservation: conservation.endangered, 
+  
+        maxAnimalAppeal: 6500, 
+        careerAccreditation: 4, 
+        franchiseAccreditation: 4, 
+
+        nativeRange: [nativeRange.africa], 
+        biomes: [biomes.grassland], 
+        nativeRangeMap: "Africa", 
+        wildlifeReserves: [wildlifeReserves.greatRiftValleyReserve, wildlifeReserves.tanzaniaReserve], 
+        researchGate: wildlifeReserves.tanzaniaReserve, 
+        ecosystems: [ecosystems.denseForest], 
+        speciesRoles: [speciesRoles.highBrowsers, speciesRoles.terrestrialSeedDispersers], 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup, releaseGroups.maleGroup, releaseGroups.femaleGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "Female dominance based on age, prefer older males", 
+        offspringDispersal: offspringDispersal.maleOffspring, 
+        matingSystem: matingSystem.polygynous, 
+        matingSeason: [matingSeason.aseasonal], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 3, 
+        groupMixedMax: 12, 
+        maxMalesMixed: 3, 
+        maxMalesBachelor: 12, 
+        maxFemalesMixed: 9, 
+        maxFemalesBachelor: 12, 
+
+        offspringPerMating: {min: 1, max: 1}, 
+        preBirthMonths: 14.2, 
+        interbirthMonths: 22, 
+        juvenileYears: 4, 
+        adultYears: 28, 
+        elderlyYears: 3, 
+        maturityAge: 4, 
+        sterilityAge: 32, 
+
+        barrierStrength: 3, 
+        barrierHeight: 2, 
+        landArea: 1500, 
+        landPerAddAdult: 125, 
+        shelterArea: 25, 
+        shelterPerAddAdult: 25, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 0, 
+        deepWaterPerAddAdult: 0, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 12, max: 36}, 
+        plantCoverage: {min: 0, max: 100}, 
+        grassRange: {min: 20, max: 90}, 
+        grassShort: null, 
+        grassLong: null, 
+        sandRange: {min: 10, max: 50}, 
+        sandFine: null, 
+        sandCoarse: null, 
+        soilRange: {min: 0, max: 50}, 
+        rockRange: {min: 0, max: 20}, 
+        waterloggedRange: {min: 0, max: 10}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Leaves and Branches", 
+        foodGrade1Cost: 838, 
+        foodGrade1CostJuv: 419, 
+        foodGrade2: "+ Hay", 
+        foodGrade2Cost: 1165, 
+        foodGrade2CostJuv: 582.5, 
+
+        feeders: [feeders.foodCage, feeders.waterPipe], 
+        shelters: [shelters.habitatBedding, shelters.habitatBeddingLeaves], 
+        foodEnrichment: [foodEnrichment.barrelFeederHanging, foodEnrichment.melonFeeder, foodEnrichment.suspendedHighGrazerFeeder], 
+        toyEnrichment: [toyEnrichment.gyro, toyEnrichment.largeBall, toyEnrichment.rubbingPillar, toyEnrichment.skittle], 
+        animalTalk: conservationTopics.theAnimalKingdomTalk, 
+        evolutionTopic: conservationTopics.mammalEvolution, 
+        animalTypesTopic: conservationTopics.tallAnimals, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.herbivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.humanWildlifeConflict, conservationTopics.poachingAndTheExoticPetTrade, conservationTopics.ecotourism], 
+        ambience: conservationTopics.savannahEcosystemAmbience, 
+        diseases: [diseases.avianInfluenza, diseases.bordetellosis, diseases.botulismToxicosis, diseases.campylobacteriosis, diseases.cowpoxVirus, diseases.footAndMouthDisease, diseases.listeriosis, diseases.mrsa, diseases.qFever, diseases.rotavirus, diseases.salmonellosis, diseases.tetanus, diseases.tularemia], 
+
+        cohabitation: true, 
+        releasable: true, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: false, 
+        spawning: false, 
+        pregnancy: true, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: true, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Acacia Tree", 
+                value: 5, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Smooth Rock", 
+                value: 50, 
+                valueType: "m²" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Spreading Crown", 
+                value: 8, 
+                valueType: "Objects" 
+            }, 
+            req5: {
+                requirement: "African Savannah Social Group", 
+                value: 1, 
+                valueType: "Species" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Red-brown polygonal spots with white connecting edges" 
+            }
+        }, 
+
+        colourmorphs: {
+            leucistic: {
+                name: "Leucistic", 
+                description: "Leucistic: White coat with faint grey spots", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/5c388f78/Giraffe_Reticulated_headshot_Albino.png" 
+            }, 
+            spotless: {
+                name: "Spotless", 
+                description: "Spotless: Red-brown fur", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/5c388f78/Giraffe_Reticulated_headshot_Erythristic.png" 
+            }
+        }, 
+
+        thrivingRelationships: ["", "Blue Wildebeest", "", "", "", "Gemsbok", "Masai Giraffe", "", "Plains Zebra", "", "Springbok", "", ""], 
+        neutralRelationships: ["African Savannah Elephant", ""], 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 41 ---
+    blackspottedPuffer:{
+        name: "Blackspotted Puffer", 
+        latin: "Arothron nigropunctatus", 
+        image: "/pz2/images/animals/blackspottedPuffer.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvNDUzOGQ3MzIvUHVmZmVyX0JsYWNrc3BvdHRlZC5qcGciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxOTIwLCJmaXQiOiJjb250YWluIn0sInZlcnNpb24iOiIyMjgyYzRlNi0zN2Q2LTRmOWYtODlhMC01NDIyZTg0MGI4NjQifX0=", 
+        headshot: "/pz2/images/animal_headshots/blackspottedPuffer_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/4538d732/Puffer_Blackspotted_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/4538d732/Puffer_Blackspotted_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/4538d732/Puffer_Blackspotted_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/blackspotted-puffer", 
+        wiki: "https://en.wikipedia.org/wiki/Blackspotted_puffer", 
+   
+        class: "Actinopterygii", 
+        order: "Tetraodontiformes", 
+        family: "Tetraodontidae", 
+        genus: "Arothron", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1500, 
+        careerAccreditation: 4, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.reef], 
+        nativeRangeMap: "Indo-Pacific reefs and lagoons", 
+        wildlifeReserves: null, 
+        researchGate: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.solitaryMale, releaseGroups.solitaryFemale], 
+
+        temperament: temperament.confident, 
+        dominance: "Males fight for territories and access to females", 
+        offspringDispersal: offspringDispersal.allOffspring, 
+        matingSystem: matingSystem.promiscuous, 
+        matingSeason: [matingSeason.aseasonal], 
+        reproductionDifficulty: reproductionDifficulty.veryDifficult, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 4, 
+        maxMalesMixed: 1, 
+        maxMalesBachelor: 1, 
+        maxFemalesMixed: 3, 
+        maxFemalesBachelor: 3, 
+
+        offspringPerMating: {min: 1, max: 5}, 
+        preBirthMonths: 0, 
+        interbirthMonths: 12, 
+        juvenileYears: 2, 
+        adultYears: 5, 
+        elderlyYears: 3, 
+        maturityAge: 2, 
+        sterilityAge: "Death", 
+
+        barrierStrength: 1, 
+        barrierHeight: 1, 
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 16, 
+        deepWaterPerAddAdult: 40, 
+        diveDepth: 2, 
+
+        temperatureRange: {min: 23, max: 27}, 
+        plantCoverage: {min: 20, max: 80}, 
+        grassRange: null, 
+        grassShort: null, 
+        grassLong: null, 
+        sandRange: {min: 30, max: 80}, 
+        sandFine: null, 
+        sandCoarse: null, 
+        soilRange: {min: 0, max: 50}, 
+        rockRange: {min: 20, max: 70}, 
+        waterloggedRange: {min: 0, max: 0}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Krill", 
+        foodGrade1Cost: 190, 
+        foodGrade1CostJuv: 95, 
+        foodGrade2: "+ Clams and Crustaceans", 
+        foodGrade2Cost: 263, 
+        foodGrade2CostJuv: 131.5, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFlakes], 
+        shelters: null, 
+        foodEnrichment: [foodEnrichment.forageTray], 
+        toyEnrichment: [toyEnrichment.bubbleBlowerAirstone, toyEnrichment.submarineBuoy], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.omnivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.poachingAndTheExoticPetTrade], 
+        ambience: conservationTopics.reefEcosystemAmbience, 
+        diseases: [diseases.amoebiasis, diseases.furunculosis, diseases.fusariosis, diseases.isopodiasis, diseases.nematodiasis, diseases.piscineMycobacteriosis, diseases.salmonellosis, diseases.streptococcosis, diseases.velvetDisease, diseases.vibriosis, diseases.viralErythrocyticNecrosis, diseases.whiteSpotDisease], 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Rocks", 
+                value: 15, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Ocean Bed", 
+                value: 5, 
+                valueType: "Objects" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Native Plants", 
+                value: 50, 
+                valueType: "%" 
+            }, 
+            req5: {
+                requirement: "Deep Water Surface Area", 
+                value: 120, 
+                valueType: "m²" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Light-grey body with black spots" 
+            }, 
+            standardLight: {
+                name: "Standard", 
+                description: "White body with black spots" 
+            }, 
+            standardDark: {
+                name: "Standard", 
+                description: "Grey body with black spots" 
+            }
+        }, 
+
+        colourmorphs: {
+            yellowMorph: {
+                name: "Yellow Morph", 
+                description: "Yellow Morph: Yellow with black spots", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/4538d732/Puffer_Blackspotted_headshot_Albino.png" 
+            }, 
+            blueMorph: {
+                name: "Blue Morph", 
+                description: "Blue Morph: Blue with black spots", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/4538d732/Puffer_Blackspotted_headshot_Erythristic.png" 
+            }, 
+            piebald: {
+                name: "Piebald", 
+                description: "Piebald: Yellow blotches and black spots", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/4538d732/Puffer_Blackspotted_headshot_Piebald.png" 
+            }
+        }, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: ["Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
+
+        album: null, 
+
+        notes: "Revealed in the gameplay trailer on 2026/06/07 and confirmed on the official website news, was part of Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 42 ---
+    pacificSardine:{
+        name: "Pacific Sardine", 
+        latin: "Sardinops sagax", 
+        image: "/pz2/images/animals/pacificSardine.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvZTgxZTQxNGUvU2FyZGluZV9QYWNpZmljLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjIyODJjNGU2LTM3ZDYtNGY5Zi04OWEwLTU0MjJlODQwYjg2NCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/pacificSardine_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/e81e414e/Sardine_Pacific_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/e81e414e/Sardine_Pacific_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/e81e414e/Sardine_Pacific_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/pacific-sardine", 
+        wiki: "https://en.wikipedia.org/wiki/Sardinops", 
+   
+        class: "Actinopterygii", 
+        order: "Clupeiformes", 
+        family: "Alosidae", 
+        genus: "Sardinops", 
+
+        DLC: DLC.basegame, 
+        form: form.collective, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1000, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.openSea], 
+        nativeRangeMap: "Pacific Ocean, Indian Ocean and Atlantic Ocean", 
+        wildlifeReserves: null, 
+        researchGate: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "None", 
+        collectiveAquarium: {min: 40, max: 100}, 
+        matingSeason: [matingSeason.winter, matingSeason.spring], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 3, 
+
+        preBirthMonths: 0.1, 
+        interbirthMonths: 11, 
+        juvenileYears: 3, 
+        adultYears: 4, 
+        elderlyYears: 13, 
+        maturityAge: 3, 
+        sterilityAge: "Death", 
+
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 50, 
+        deepWaterPerAddAdult: 15, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 15, max: 26}, 
+        plantCoverage: {min: 0, max: 10}, 
+
+        foodGrade1: "Fishmeal", 
+        foodGrade1Cost: 124, 
+        foodGrade2: "+ Vitamin and Mineral Supplements", 
+        foodGrade2Cost: 171, 
+
+        salinity: [salinity.brackish, salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFlakes], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.nocturnalBehaviour, 
+        animalDiet: conservationTopics.omnivoreDiet, 
+        conservationThreats: [conservationTopics.overexploitation], 
+        ambience: conservationTopics.oceanEcosystemAmbience, 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: true, 
+        spawning: false, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Dark blue back and silver sides with black spots" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
+
+        album: null, 
+
+        notes: "Revealed in the PZ2 trailer on 2026/05/28, was part of Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 43 ---
+    goldenTrevally:{
+        name: "Golden Trevally", 
+        latin: "Gnathanodon speciosus", 
+        image: "/pz2/images/animals/goldenTrevally.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvYTViNTEyYmYvVHJldmFsbHlfR29sZGVuLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjIyODJjNGU2LTM3ZDYtNGY5Zi04OWEwLTU0MjJlODQwYjg2NCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/goldenTrevally_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/a5b512bf/Trevally_Golden_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/a5b512bf/Trevally_Golden_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/a5b512bf/Trevally_Golden_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/golden-trevally", 
+        wiki: "https://en.wikipedia.org/wiki/Golden_trevally", 
+   
+        class: "Actinopterygii", 
+        order: "Carangiformes", 
+        family: "Carangidae", 
+        genus: "Gnathanodon", 
+
+        DLC: DLC.basegame, 
+        form: form.collective, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1000, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.estuarine, biomes.reef], 
+        nativeRangeMap: "Indo-Pacific reefs and coasts", 
+        wildlifeReserves: null, 
+        researchGate: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.neutral, 
+        dominance: "None", 
+        collectiveAquarium: {min: 15, max: 30}, 
+        matingSeason: [matingSeason.spring, matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 5, 
+
+        preBirthMonths: 0.1, 
+        interbirthMonths: 11, 
+        juvenileYears: 2, 
+        adultYears: 12, 
+        elderlyYears: 10, 
+        maturityAge: 2.5, 
+        sterilityAge: "Death", 
+
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 100, 
+        deepWaterPerAddAdult: 30, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 24, max: 30}, 
+        plantCoverage: {min: 20, max: 60}, 
+
+        foodGrade1: "Crustaceans", 
+        foodGrade1Cost: 129, 
+        foodGrade2: "+ Whole Fish", 
+        foodGrade2Cost: 179, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFish], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.pollution, conservationTopics.habitatLoss, conservationTopics.overexploitation], 
+        ambience: conservationTopics.reefEcosystemAmbience, 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: true, 
+        spawning: false, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Grey-white vertical banding with yellow fins" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
+
+        album: null, 
+
+        notes: "Revealed in the gameplay trailer on 2026/06/07, was part of Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 44 ---
+    clownLoach:{
+        name: "Clown Loach", 
+        latin: "Chromobotia macracanthus", 
+        image: "/pz2/images/animals/clownLoach.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvMTI0OTA5OTcvTG9hY2hfQ2xvd24uanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4NX0sInRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiZml0IjoiY29udGFpbiJ9LCJ2ZXJzaW9uIjoiMjI4MmM0ZTYtMzdkNi00ZjlmLTg5YTAtNTQyMmU4NDBiODY0In19", 
+        headshot: "/pz2/images/animal_headshots/clownLoach_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/12490997/Loach_Clown_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/12490997/Loach_Clown_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/12490997/Loach_Clown_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/clown-loach", 
+        wiki: "https://en.wikipedia.org/wiki/Clown_loach", 
+   
+        class: "Actinopterygii", 
+        order: "Cypriniformes", 
+        family: "Botiidae", 
+        genus: "Chromobotia", 
+
+        DLC: DLC.basegame, 
+        form: form.collective, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat, enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.aquarium, enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge], 
+        exhibitTerrain: [exhibitTerrain.aquaticFull, exhibitTerrain.aquaticHalf, exhibitTerrain.aquaticQuarter], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 1000, 
+        careerAccreditation: 1, 
+        franchiseAccreditation: 1, 
+
+        nativeRange: [nativeRange.asia], 
+        biomes: [biomes.lakesRivers], 
+        nativeRangeMap: "Asia", 
+        wildlifeReserves: [wildlifeReserves.sumatraReserve], 
+        researchGate: wildlifeReserves.sumatraReserve, 
+        ecosystems: [ecosystems.forestSwamp, ecosystems.river], 
+        speciesRoles: [speciesRoles.underwaterPredators], 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup], 
+
+        temperament: temperament.shy, 
+        dominance: "None", 
+        collectiveExhibit: {min: 1, max: 8}, 
+        collectiveAquarium: {min: 5, max: 20}, 
+        matingSeason: [matingSeason.spring, matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 5, 
+
+        preBirthMonths: 0.1, 
+        interbirthMonths: 3, 
+        juvenileYears: 3, 
+        adultYears: 16, 
+        elderlyYears: 20, 
+        maturityAge: 3.5, 
+        sterilityAge: "Death", 
+
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 100, 
+        deepWaterPerAddAdult: 30, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 25, max: 30}, 
+        plantCoverage: {min: 30, max: 60}, 
+
+        foodGrade1: "Copepods", 
+        foodGrade1Cost: 120, 
+        foodGrade2: "+ Algae Pellets", 
+        foodGrade2Cost: 164, 
+
+        salinity: [salinity.freshwater], 
+        feeders: [feeders.aquaticFeederFlakes], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.rayfinnedFishEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.omnivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.overexploitation], 
+        ambience: conservationTopics.freshwaterEcosystemAmbience, 
+
+        cohabitation: true, 
+        releasable: true, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: true, 
+        spawning: false, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Yellow-black banded body, red fins" 
+            }
+        }, 
+
+        colourmorphs: {
+            partLeucistic: {
+                name: "Part Leucistic", 
+                description: "Part Leucistic: Yellow-pink banded body, orange fins", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/12490997/Loach_Clown_headshot_Albino.png" 
+            }, 
+            oliveMorph: {
+                name: "Olive Morph", 
+                description: "Olive-black banded body, red fins", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/12490997/Loach_Clown_headshot_Leucistic.png" 
+            }
+        }, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: ["Blunthead Cichlid", "", ""], 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 45 ---
+    americanBullfrog:{
+        name: "American Bullfrog", 
+        latin: "Aquarana catesbeianus", 
+        image: "/pz2/images/animals/americanBullfrog.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvNjUzNjdiZTcvRnJvZ19BbWVyaWNhbkJ1bGwuanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4NX0sInRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiZml0IjoiY29udGFpbiJ9LCJ2ZXJzaW9uIjoiMjI4MmM0ZTYtMzdkNi00ZjlmLTg5YTAtNTQyMmU4NDBiODY0In19", 
+        headshot: "/pz2/images/animal_headshots/americanBullfrog_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/65367be7/Frog_AmericanBull_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/65367be7/Frog_AmericanBull_map.png", 
+        illustration: null, 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/american-bullfrog", 
+        wiki: "https://en.wikipedia.org/wiki/American_bullfrog", 
+   
+        class: "Amphibia", 
+        order: "Anura", 
+        family: "Ranidae", 
+        genus: "Lithobates", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge, enclosureTypes.exhibitCylinderSmall, enclosureTypes.exhibitBoxSmall], 
+        exhibitTerrain: [exhibitTerrain.aquaticFull, exhibitTerrain.aquaticHalf, exhibitTerrain.aquaticQuarter], 
+        cohabitationOptions: cohabitationOptions.none, 
+        conservation: conservation.leastConcern, 
+  
+        maxAnimalAppeal: 2000, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 1, 
+
+        nativeRange: [nativeRange.northAmerica], 
+        biomes: [biomes.wetlands, biomes.lakesRivers], 
+        nativeRangeMap: "North America", 
+
+        dominance: "None, though males may fight during mating season", 
+        matingSeason: [matingSeason.spring, matingSeason.summer], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 4, 
+
+        offspringPerMating: {min: 1, max: 2}, 
+        preBirthMonths: 0.2, 
+        interbirthMonths: 12, 
+        juvenileYears: 4, 
+        adultYears: 4, 
+        elderlyYears: 16, 
+        maturityAge: 4, 
+        sterilityAge: "Death", 
+
+        temperatureRange: {min: 23, max: 29}, 
+        humidityRange: {min: 60, max: 80}, 
+
+        foodGrade1: null, 
+        foodGrade1Cost: 225, 
+        foodGrade1CostJuv: null,  
+
+        animalTalk: conservationTopics.herpetologyTalk, 
+        evolutionTopic: conservationTopics.amphibianEvolution, 
+        animalTypesTopic: null, 
+        activityPattern: conservationTopics.nocturnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.invasiveSpecies], 
+        ambience: conservationTopics.wetlandEcosystemAmbience, 
+
+        cohabitation: false, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Green body with brown markings and pale underside" 
+            }
+        }, 
+
+        colourmorphs: {
+            albino: {
+                name: "Albino", 
+                description: "Albino: Off-white body", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/65367be7/Frog_AmericanBull_headshot_Albino.png" 
+            }
+        }, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 46 ---
+    diamondbackTerrapin:{
+        name: "Diamondback Terrapin", 
+        latin: "Malaclemys terrapin", 
+        image: "/pz2/images/animals/diamondbackTerrapin.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvZDU1MjUzYTgvVHVydGxlX0RpYW1vbmRiYWNrVGVycmFwaW4uanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo4NX0sInRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTkyMCwiZml0IjoiY29udGFpbiJ9LCJ2ZXJzaW9uIjoiMjI4MmM0ZTYtMzdkNi00ZjlmLTg5YTAtNTQyMmU4NDBiODY0In19", 
+        headshot: "/pz2/images/animal_headshots/diamondbackTerrapin_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/d55253a8/Turtle_DiamondbackTerrapin_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/d55253a8/Turtle_DiamondbackTerrapin_map.png", 
+        illustration: null, 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/diamondback-terrapin", 
+        wiki: "https://en.wikipedia.org/wiki/Diamondback_terrapin", 
+   
+        class: "Reptilia", 
+        order: "Testudines", 
+        family: "Emydidae", 
+        genus: "Malaclemys", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.terrestrial, 
+        enclosure: [enclosures.exhibit], 
+        enclosureTypes: [enclosureTypes.exhibitBoxAngledLarge, enclosureTypes.exhibitCylinderLarge, enclosureTypes.exhibitBoxLarge, enclosureTypes.exhibitCylinderSmall, enclosureTypes.exhibitBoxSmall], 
+        exhibitTerrain: [exhibitTerrain.aquaticFull, exhibitTerrain.aquaticHalf, exhibitTerrain.aquaticQuarter], 
+        cohabitationOptions: cohabitationOptions.none, 
+        conservation: conservation.vulnerable, 
+  
+        maxAnimalAppeal: 2500, 
+        careerAccreditation: 2, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.northAmerica], 
+        biomes: [biomes.wetlands, biomes.mangrove, biomes.estuarine], 
+        nativeRangeMap: "North America", 
+
+        dominance: "None", 
+        matingSeason: [matingSeason.spring], 
+        reproductionDifficulty: reproductionDifficulty.easy, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 8, 
+
+        offspringPerMating: {min: 2, max: 4}, 
+        preBirthMonths: 4.9, 
+        interbirthMonths: 7, 
+        juvenileYears: 7, 
+        adultYears: 18, 
+        elderlyYears: 40, 
+        maturityAge: 7, 
+        sterilityAge: "Death", 
+
+        temperatureRange: {min: 21, max: 32}, 
+        humidityRange: {min: 65, max: 80}, 
+
+        foodGrade1: null, 
+        foodGrade1Cost: 225, 
+        foodGrade1CostJuv: null, 
+
+        animalTalk: conservationTopics.herpetologyTalk, 
+        evolutionTopic: conservationTopics.reptileEvolution, 
+        animalTypesTopic: null, 
+        activityPattern: conservationTopics.diurnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.habitatLoss, conservationTopics.bycatch, conservationTopics.ecologicalRestoration], 
+        ambience: conservationTopics.wetlandEcosystemAmbience, 
+
+        cohabitation: false, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: true, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: true, 
+        canSwim: true, 
+        canDive: false, 
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Brown-black carapace, orange-brown plastron and grey-green skin with black spots" 
+            }
+        }, 
+
+        colourmorphs: null, 
+
+        thrivingRelationships: null, 
+        neutralRelationships: null, 
+
+        album: null, 
+
+        notes: "Revealed via Zoopedia Bundle#6 from 2026/07/28." 
+    }, 
+    // --- # 47 ---
+    indoPacificLeopardShark:{
+        name: "Indo-Pacific Leopard Shark", 
+        latin: "Stegostoma tigrinum", 
+        image: "/pz2/images/animals/indoPacificLeopardShark.webp", 
+        imageURL: "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1wbGF0Zm9ybS1ob3N0aW5nIiwia2V5Ijoid2Vic2l0ZXMvcGxhbmV0LXpvby0yL2FuaW1hbHMvOWQwYjkwMGYvU2hhcmtfSW5kb1BhY2lmaWNMZW9wYXJkLmpwZyIsImVkaXRzIjp7IndlYnAiOnsicXVhbGl0eSI6ODV9LCJ0b0Zvcm1hdCI6IndlYnAiLCJyZXNpemUiOnsid2lkdGgiOjE5MjAsImZpdCI6ImNvbnRhaW4ifSwidmVyc2lvbiI6IjIyODJjNGU2LTM3ZDYtNGY5Zi04OWEwLTU0MjJlODQwYjg2NCJ9fQ==", 
+        headshot: "/pz2/images/animal_headshots/indoPacificLeopardShark_headshot.png", 
+        headshotURL: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/9d0b900f/Shark_IndoPacificLeopard_headshot.png", 
+        map: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/9d0b900f/Shark_IndoPacificLeopard_map.png", 
+        illustration: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/9d0b900f/Shark_IndoPacificLeopard_illustration.jpg", 
+        zoopedia: "https://www.planetzoogame.com/2/zoopedia/indo-pacific-leopard-shark", 
+        wiki: "https://en.wikipedia.org/wiki/Zebra_shark", 
+   
+        class: "Chondrichthyes", 
+        order: "Orectolobiformes", 
+        family: "Stegostomatidae", 
+        genus: "Stegostoma", 
+
+        DLC: DLC.basegame, 
+        form: form.individual, 
+        type: types.aquatic, 
+        enclosure: [enclosures.habitat], 
+        enclosureTypes: [enclosureTypes.aquarium], 
+        cohabitationOptions: cohabitationOptions.selectSpecies, 
+        conservation: conservation.vulnerable, 
+  
+        maxAnimalAppeal: 3500, 
+        careerAccreditation: 3, 
+        franchiseAccreditation: 2, 
+
+        nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
+        biomes: [biomes.mangrove, biomes.estuarine, biomes.openSea, biomes.reef], 
+        nativeRangeMap: "Indo-Pacific reefs and lagoons", 
+        wildlifeReserves: null, 
+        researchGate: null, 
+        ecosystems: null, 
+        speciesRoles: null, 
+        rolesRequired: null, 
+        releaseGroups: [releaseGroups.mixedGroup, releaseGroups.solitaryMale, releaseGroups.solitaryFemale], 
+
+        temperament: temperament.confident, 
+        dominance: "None", 
+        offspringDispersal: offspringDispersal.none, 
+        matingSystem: matingSystem.promiscuous, 
+        matingSeason: [matingSeason.aseasonal], 
+        reproductionDifficulty: reproductionDifficulty.average, 
+
+        groupSizeMin: 1, 
+        groupMixedMax: 20, 
+        maxMalesMixed: 20, 
+        maxMalesBachelor: 20, 
+        maxFemalesMixed: 20, 
+        maxFemalesBachelor: 20, 
+
+        offspringPerMating: {min: 2, max: 6}, 
+        preBirthMonths: 6.5, 
+        interbirthMonths: 6, 
+        juvenileYears: 8, 
+        adultYears: 11, 
+        elderlyYears: 11, 
+        maturityAge: 8, 
+        sterilityAge: "Death", 
+
+        barrierStrength: 2, 
+        barrierHeight: 1, 
+        landArea: 0, 
+        landPerAddAdult: 0, 
+        shelterArea: 0, 
+        shelterPerAddAdult: 0, 
+        climbableArea: 0, 
+        climbablePerAddAdult: 0, 
+        flyableArea: 0, 
+        flyablePerAddAdult: 0, 
+        waterArea: 0, 
+        waterPerAddAdult: 0, 
+        deepWaterArea: 36, 
+        deepWaterPerAddAdult: 18, 
+        diveDepth: 0, 
+
+        temperatureRange: {min: 24, max: 29}, 
+        plantCoverage: {min: 0, max: 80}, 
+        grassRange: null, 
+        grassShort: null, 
+        grassLong: null, 
+        sandRange: {min: 20, max: 100}, 
+        sandFine: null, 
+        sandCoarse: null, 
+        soilRange: {min: 0, max: 50}, 
+        rockRange: {min: 0, max: 50}, 
+        waterloggedRange: {min: 0, max: 0}, 
+        snowRange: {min: 0, max: 0}, 
+
+        foodGrade1: "Whole Fish", 
+        foodGrade1Cost: 448, 
+        foodGrade1CostJuv: 224, 
+        foodGrade2: "+ Squid", 
+        foodGrade2Cost: 622, 
+        foodGrade2CostJuv: 311, 
+
+        salinity: [salinity.saltwater], 
+        feeders: [feeders.aquaticFeederFish], 
+        shelters: null, 
+        foodEnrichment: [foodEnrichment.suspendedBait], 
+        toyEnrichment: [toyEnrichment.bloodScentMarker, toyEnrichment.bubbleBlowerAirstone, toyEnrichment.latticeBall, toyEnrichment.submarineBuoy, toyEnrichment.waterHoop], 
+        animalTalk: conservationTopics.underwaterLifeTalk, 
+        evolutionTopic: conservationTopics.sharkandRayEvolution, 
+        animalTypesTopic: conservationTopics.swimmingAnimals, 
+        activityPattern: conservationTopics.nocturnalBehaviour, 
+        animalDiet: conservationTopics.carnivoreDiet, 
+        conservationThreats: [conservationTopics.overexploitation, conservationTopics.bycatch], 
+        ambience: conservationTopics.reefEcosystemAmbience, 
+        diseases: [diseases.amoebiasis, diseases.furunculosis, diseases.fusariosis, diseases.isopodiasis, diseases.nematodiasis, diseases.piscineMycobacteriosis, diseases.salmonellosis, diseases.streptococcosis, diseases.velvetDisease, diseases.vibriosis, diseases.viralErythrocyticNecrosis, diseases.whiteSpotDisease], 
+
+        cohabitation: true, 
+        releasable: false, 
+        guestsEnter: false, 
+        burrower: false, 
+        nestingSites: false, 
+        groupDivision: false, 
+        spawning: true, 
+        pregnancy: false, 
+        eggLaying: false, 
+        brooding: false, 
+        nestbound: false, 
+        canMoveOnLand: false, 
+        canJump: false, 
+        canClimb: false, 
+        canFly: false, 
+        canWade: false, 
+        canSwim: true, 
+        canDive: true, 
+
+        thrivingRequirements: {
+            req1: {
+                requirement: "Lattice Ball", 
+                value: 2, 
+                valueType: "Objects" 
+            }, 
+            req2: {
+                requirement: "Rocks", 
+                value: 15, 
+                valueType: "Objects" 
+            }, 
+            req3: {
+                requirement: "Food Grade", 
+                value: 2, 
+                valueType: "Quality" 
+            }, 
+            req4: {
+                requirement: "Rock", 
+                value: 50, 
+                valueType: "m²" 
+            }, 
+            req5: {
+                requirement: "Large Indo-Pacific Reef animals", 
+                value: 1, 
+                valueType: "Species" 
+            }
+        },
+
+        standardCoat: {
+            standard: {
+                name: "Standard", 
+                description: "Yellow skin with black dots" 
+            }, 
+            standardLight: {
+                name: "Standard", 
+                description: "Pale yellow skin with olive dots" 
+            }, 
+            standardDark: {
+                name: "Standard", 
+                description: "Brass yellow skin with black dots" 
+            }
+        }, 
+
+        colourmorphs: {
+            albino: {
+                name: "Albino", 
+                description: "Albino: White skin", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/9d0b900f/Shark_IndoPacificLeopard_headshot_Albino.png" 
+            }, 
+            darkerVariation: {
+                name: "Darker Variation", 
+                description: "Dark morph: Brown marbled skin", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/9d0b900f/Shark_IndoPacificLeopard_headshot_Erythristic.png" 
+            }, 
+            lighterVariation: {
+                name: "Lighter Variation", 
+                description: "Light morph: White skin with grey dots", 
+                icon: "https://hosting.zaonce.net/websites/planet-zoo-2/animals/9d0b900f/Shark_IndoPacificLeopard_headshot_Leucistic.png" 
+            }
+        }, 
+
+        thrivingRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "Longfin Batfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["Ocean Sunfish", "Red Lionfish"], 
+
+        album: null, 
+
+        notes: "Teased on 2026/07/23 with 'Guess the Animal' and revealed in the animal spotlight and its own special Zoopedia drop on 2026/07/30 (shortly after Zoopedia Bundle#6)." 
+    }, 
+
 // --- DELUXE DLC ANIMALS ---
 
     // --- # 131 ---
@@ -6603,11 +7889,13 @@ const animals = {
   
         maxAnimalAppeal: 5500, 
         careerAccreditation: 4, 
-        franchiseAccreditation: 3, 
+        franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.africa, nativeRange.europe, nativeRange.asia, nativeRange.northAmerica], 
-        biomes: [biomes.desert, biomes.grassland, biomes.temperate, biomes.taiga, biomes.tundra], 
-        wildlifeReserves: [wildlifeReserves.scottishHighlands, wildlifeReserves.swedenReserve, wildlifeReserves.polandReserve], 
+        biomes: [biomes.desert, biomes.grassland, biomes.temperate, biomes.taiga, biomes.tundra],  
+        nativeRangeMap: "North America, Europe, Northern Africa, Asia", 
+        wildlifeReserves:[wildlifeReserves.scottishHighlands, wildlifeReserves.swedenReserve, wildlifeReserves.polandReserve], 
+        researchGate: wildlifeReserves.swedenReserve, 
         ecosystems: [ecosystems.lakeTemperate, ecosystems.lakeTaiga, ecosystems.lakeLoch], 
         speciesRoles: [speciesRoles.predators, speciesRoles.scavengers, speciesRoles.aerialForagers], 
         rolesRequired: null, 
@@ -6689,6 +7977,7 @@ const animals = {
         releasable: true, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: true, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: false, 
@@ -6699,7 +7988,7 @@ const animals = {
         canJump: true, 
         canClimb: true, 
         canFly: true, 
-        canWade: true, 
+        canWade: false, 
         canSwim: false, 
         canDive: false, 
 
@@ -6775,11 +8064,13 @@ const animals = {
   
         maxAnimalAppeal: 2500, 
         careerAccreditation: 3, 
-        franchiseAccreditation: 3, 
+        franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.southAmerica], 
-        biomes: [biomes.tropical], 
-        wildlifeReserves: null, 
+        biomes: [biomes.tropical],  
+        nativeRangeMap: "South America", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -6862,6 +8153,7 @@ const animals = {
         releasable: false, 
         guestsEnter: true, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: false, 
         pregnancy: true, 
@@ -6948,11 +8240,13 @@ const animals = {
   
         maxAnimalAppeal: 7000, 
         careerAccreditation: 4, 
-        franchiseAccreditation: 5, 
+        franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.atlanticOcean, nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.openSea, biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.openSea, biomes.reef],  
+        nativeRangeMap: "Worldwide tropical and warm temperate oceans", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -7035,9 +8329,10 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: false, 
-        spawning: false, 
-        pregnancy: true, 
+        spawning: true, 
+        pregnancy: false, 
         eggLaying: false, 
         brooding: false, 
         nestbound: false, 
@@ -7135,11 +8430,13 @@ const animals = {
   
         maxAnimalAppeal: 1000, 
         careerAccreditation: 3, 
-        franchiseAccreditation: 2, 
+        franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.reef],  
+        nativeRangeMap: "Western Pacific coasts and reefs", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -7194,6 +8491,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -7218,7 +8516,7 @@ const animals = {
         colourmorphs: null, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["Blackspotted Puffer", "Blacktip Reef Shark", "Blue and Gold Fusilier", "", "", "", "", "", "Golden Trevally", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Ocean Sunfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
 
         album: null,
 
@@ -7253,11 +8551,13 @@ const animals = {
   
         maxAnimalAppeal: 1000, 
         careerAccreditation: 2, 
-        franchiseAccreditation: 2, 
+        franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.indianOcean, nativeRange.pacificOcean], 
-        biomes: [biomes.reef], 
-        wildlifeReserves: null, 
+        biomes: [biomes.reef],  
+        nativeRangeMap: "Indo-Pacific reefs", 
+        wildlifeReserves:null, 
+        researchGate: null, 
         ecosystems: null, 
         speciesRoles: null, 
         rolesRequired: null, 
@@ -7313,6 +8613,7 @@ const animals = {
         releasable: false, 
         guestsEnter: false, 
         burrower: false, 
+        nestingSites: false, 
         groupDivision: true, 
         spawning: false, 
         pregnancy: false, 
@@ -7337,7 +8638,7 @@ const animals = {
         colourmorphs: null, 
 
         thrivingRelationships: null, 
-        neutralRelationships: ["", "Blacktip Reef Shark", "", "", "", "", "", "", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
+        neutralRelationships: ["", "Blacktip Reef Shark", "", "", "", "", "", "Golden Trevally", "Great Hammerhead", "Hawksbill Turtle", "Humphead Wrasse", "", "Indo-Pacific Leopard Shark", "", "", "Longfin Batfish", "Ocean Sunfish", "Ocellated Eagle Ray", "", "Pacific Sardine", "", "Red Lionfish", "", "", "Schooling Bannerfish", "", ""], 
 
         album: null,
 
@@ -7372,10 +8673,11 @@ const animals = {
   
         maxAnimalAppeal: 3000, 
         careerAccreditation: 2, 
-        franchiseAccreditation: 2, 
+        franchiseAccreditation: 1, 
 
         nativeRange: [nativeRange.northAmerica], 
         biomes: [biomes.lakesRivers], 
+        nativeRangeMap: "North America", 
 
         dominance: "None", 
         matingSeason: [matingSeason.spring], 
@@ -7410,6 +8712,7 @@ const animals = {
 
         releasable: false, 
         guestsEnter: false, 
+        nestingSites: false, 
         groupDivision: false, 
         spawning: true,
         pregnancy: false, 

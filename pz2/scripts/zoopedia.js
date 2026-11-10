@@ -2,7 +2,7 @@ import {
     DLC, form, types, enclosures, enclosureTypes, salinity, cohabitationOptions,
     temperament, matingSystem, matingSeason, reproductionDifficulty, offspringDispersal,
     wildlifeReserves, ecosystems, speciesRoles, conservation, nativeRange, biomes,
-    shelters, diseases, conservationTopics
+    shelters, diseases, conservationTopics, foodEnrichment, toyEnrichment
 } from "/pz2/scripts/filters.js";
 import {animals} from "/pz2/scripts/animals.js";
 import {
@@ -61,6 +61,8 @@ const selectedSimpleFilters = {
     animalTypesTopics: "",
     conservationThreats: "",
     ambiences: "",
+    foodEnrichmentTypes: "",
+    toyEnrichmentTypes: "",
     matingSystem: "",
     matingSeason: "",
     reproductionDifficulty: "",
@@ -147,6 +149,7 @@ const movementOptions = [
 let selectedCareerTier = null;
 let selectedFranchiseTier = null;
 let selectedWildlifeReserveKey = "";
+let selectedResearchGateKey = "";
 let selectedEcosystemKey = "";
 let selectedSpeciesRoleKey = "";
 let availableEcosystemOptions = {};
@@ -237,6 +240,22 @@ const simpleFilters = {
         topicType: "Ambience",
         options: Object.fromEntries(Object.entries(conservationTopics)
             .filter(([, topic]) => topic.type === "Ambience"))
+    },
+    foodEnrichmentTypes: {
+        id: "filters-food-enrichment-types",
+        label: "Food-based Enrichments",
+        property: "foodEnrichment",
+        valueProperty: "type",
+        options: Object.fromEntries([...new Set(Object.values(foodEnrichment)
+            .map(enrichment => enrichment.type))].map(type => [type, type]))
+    },
+    toyEnrichmentTypes: {
+        id: "filters-toy-enrichment-types",
+        label: "Toy Enrichments",
+        property: "toyEnrichment",
+        valueProperty: "type",
+        options: Object.fromEntries([...new Set(Object.values(toyEnrichment)
+            .map(enrichment => enrichment.type))].map(type => [type, type]))
     },
     matingSystem: {
         id: "filters-mating-system",
@@ -797,7 +816,9 @@ function setupOtherFiltersGroup() {
             simpleFilters.animalTypesTopics,
             simpleFilters.conservationThreats,
             simpleFilters.diseases,
-            simpleFilters.ambiences
+            simpleFilters.ambiences,
+            simpleFilters.foodEnrichmentTypes,
+            simpleFilters.toyEnrichmentTypes
         ]
     });
 }
@@ -871,6 +892,7 @@ function createHierarchySelect(container, label, options, selectedKey, onChange)
 function setupReleasableDependentFilters() {
     const ids = [
         "filters-wildlife-reserves",
+        "filters-research-gate",
         "filters-ecosystems",
         "filters-species-roles"
     ];
@@ -883,7 +905,22 @@ function setupReleasableDependentFilters() {
         return container;
     });
 
-    const [wildlifeContainer, ecosystemContainer, speciesRoleContainer] = containers;
+    const [wildlifeContainer, researchGateContainer, ecosystemContainer, speciesRoleContainer] = containers;
+    const researchGateOptions = Object.fromEntries(Object.entries(wildlifeReserves).filter(([key]) =>
+        Object.values(animals).some(animal =>
+            matchesSelectedOptions(animal.researchGate, wildlifeReserves, [key])
+        )
+    ));
+    const researchGateSelect = createHierarchySelect(
+        researchGateContainer,
+        "Research Gate",
+        researchGateOptions,
+        selectedResearchGateKey,
+        selectedKey => {
+            selectedResearchGateKey = selectedKey;
+            renderAnimals();
+        }
+    );
     const wildlifeSelect = createHierarchySelect(
         wildlifeContainer,
         "Wildlife Reserves",
@@ -967,6 +1004,9 @@ function setupReleasableDependentFilters() {
                 if (container === wildlifeContainer) {
                     wildlifeSelect.select.value = "";
                     wildlifeSelect.select.dispatchEvent(new Event("change"));
+                } else if (container === researchGateContainer) {
+                    researchGateSelect.select.value = "";
+                    researchGateSelect.select.dispatchEvent(new Event("change"));
                 }
             }
         });
@@ -1114,7 +1154,12 @@ function renderAnimals() {
         }));
 
         const matchesSimpleFilters = Object.entries(simpleFilters).every(
-            ([property, {options, property: animalProperty = property, topicType}]) => {
+            ([property, {
+                options,
+                property: animalProperty = property,
+                topicType,
+                valueProperty
+            }]) => {
                 const selectedKey = selectedSimpleFilters[property];
                 const animalValues = topicType
                     ? [
@@ -1122,6 +1167,8 @@ function renderAnimals() {
                         ...asArray(animal.conservationTopics)
                             .filter(topic => topic?.type === topicType)
                     ]
+                    : valueProperty
+                        ? asArray(animal[animalProperty]).map(value => value?.[valueProperty])
                     : animal[animalProperty];
                 return !selectedKey
                     || matchesSelectedOptions(animalValues, options, [selectedKey]);
@@ -1183,6 +1230,8 @@ function renderAnimals() {
             || matchesSelectedOptions(animal.ecosystems, ecosystems, [selectedEcosystemKey]);
         const matchesSpeciesRole = !selectedSpeciesRoleKey
             || matchesSelectedOptions(animal.speciesRoles, speciesRoles, [selectedSpeciesRoleKey]);
+        const matchesResearchGate = !selectedResearchGateKey
+            || matchesSelectedOptions(animal.researchGate, wildlifeReserves, [selectedResearchGateKey]);
         const matchesAreaMinimums = areaFilters.every(({property}) => {
             const requestedMinimum = selectedMinimums[property];
             if (requestedMinimum === null) {
@@ -1240,6 +1289,7 @@ function renderAnimals() {
             && matchesWildlifeReserve
             && matchesEcosystem
             && matchesSpeciesRole
+            && matchesResearchGate
             && matchesAreaMinimums
             && matchesBarrierHeight
             && matchesTerrainRanges

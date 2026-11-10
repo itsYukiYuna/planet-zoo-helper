@@ -976,6 +976,26 @@ const foodEnrichment = {
 };
 
 const toyEnrichment = {
+    bubbleBlowerAirstone: {
+        name: "Bubble Blower - Airstone",
+        type: "No Research Required",
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Bubble_Blower_Disk.png"
+    }, 
+    latticeBall: {
+        name: "Lattice Ball",
+        type: "Aquatic Toy Enrichments",
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Ball_Spawner.png"
+    }, 
+    squareFloat: {
+        name: "Square Float",
+        type: "Aquatic Toy Enrichments",
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Float_Spawner.png"
+    }, 
+    waterHoop: {
+        name: "Water Hoop",
+        type: "Navigational Toy Enrichments",
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Water_Hoop.png"
+    }, 
     blockofIce: {
         name: "Block of Ice",
         type: "Ball Toy Enrichments",
@@ -1178,7 +1198,7 @@ const toyEnrichment = {
     }, 
     suspendedBall: {
         name: "Suspended Ball",
-        type: " Toy Enrichments",
+        type: "Ball Toy Enrichments",
         icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Ball_Chain.png"
     }, 
     suspendedPerch: {
@@ -1188,7 +1208,7 @@ const toyEnrichment = {
     }, 
     suspendedRattle: {
         name: "Suspended Rattle",
-        type: " Toy Enrichments",
+        type: "Auditory Toy Enrichments",
         icon: "/images/icon-planet-zoo.svg"
     }, 
     tennisBall: {
@@ -1235,26 +1255,6 @@ const toyEnrichment = {
         name: "Wind Chimes",
         type: "Auditory Toy Enrichments",
         icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Wind_Chimes.png"
-    }, 
-    bubbleBlowerAirstone: {
-        name: "Bubble Blower - Airstone",
-        type: "No Research Required",
-        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Bubble_Blower_Disk.png"
-    }, 
-    latticeBall: {
-        name: "Lattice Ball",
-        type: "Aquatic Toy Enrichments",
-        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Ball_Spawner.png"
-    }, 
-    squareFloat: {
-        name: "Square Float",
-        type: "Aquatic Toy Enrichments",
-        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Float_Spawner.png"
-    }, 
-    waterHoop: {
-        name: "Water Hoop",
-        type: "Navigational Toy Enrichments",
-        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Water_Hoop.png"
     }
 };
 

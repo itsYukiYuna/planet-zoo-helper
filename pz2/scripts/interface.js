@@ -44,6 +44,7 @@ let activeAnimalTooltip;
 let activeAnimalTooltipPinned = false;
 
 const animalTooltipSelector = "#modal-container .animal-modal-tooltip[data-tooltip], #modal-container .animal-modal-compact-value[data-tooltip], #modal-container .animal-modal-disease[data-tooltip]";
+const iconFilterTooltipSelector = ".icon-choice-filter-option[title]";
 
 function hideAnimalTooltip() {
     activeAnimalTooltip?.remove();
@@ -53,7 +54,7 @@ function hideAnimalTooltip() {
 }
 
 function showAnimalTooltip(trigger, pinned = false) {
-    const text = trigger.dataset.tooltip;
+    const text = trigger.dataset.tooltip || trigger.title;
     if (!text) return;
     if (activeAnimalTooltipTrigger === trigger) {
         activeAnimalTooltipPinned = activeAnimalTooltipPinned || pinned;
@@ -105,7 +106,10 @@ document.addEventListener("pointerout", event => {
 });
 
 document.addEventListener("click", event => {
-    const trigger = findAnimalTooltipTrigger(event.target);
+    const trigger = findAnimalTooltipTrigger(event.target)
+        ?? (event.target instanceof Element
+            ? event.target.closest(iconFilterTooltipSelector)
+            : null);
     const isTouchLayout = window.matchMedia("(hover: none), (max-width: 700px)").matches;
     if (isTouchLayout && trigger) {
         showAnimalTooltip(trigger, true);
@@ -223,10 +227,10 @@ function buildAnimalModal(animal, allAnimals) {
         if (!modalHasValue(value)) return "";
         return `<span class="animal-modal-detail-pair">${icon}<span>${escapeModalHTML(label)}: ${modalDisplay(value)}</span></span>`;
     };
-    const iconDetail = (label, value, icon, suffix = "") => {
+    const iconDetail = (label, value, icon, suffix = "", hideLabelOnMobile = false) => {
         if (!modalHasValue(value)) return "";
         const content = `${modalIcon(icon, label)}<span class="animal-modal-detail-label">${escapeModalHTML(label)}:</span><span>${escapeModalHTML(value)}${suffix}</span>`;
-        return `<span class="animal-modal-compact-value" data-tooltip="${escapeModalHTML(label)}">${content}</span>`;
+        return `<span class="animal-modal-compact-value ${hideLabelOnMobile ? "animal-modal-hide-label" : ""}" data-tooltip="${escapeModalHTML(label)}">${content}</span>`;
     };
     const formName = modalValueName(animal.form).toLocaleLowerCase();
     const adultUnit = formName === "collective" || formName === "collectives"
@@ -255,15 +259,16 @@ function buildAnimalModal(animal, allAnimals) {
     const conditionLines = [
         ["Temperature", modalRange(animal.temperatureRange, "°C"), "/pz2/images/icons/icons_enclosure_temperature.svg"],
         ["Plant Coverage", modalRange(animal.plantCoverage, "%"), "/pz2/images/icons/icons_enclosure_plants.svg"],
-        ["Humidity", modalRange(animal.humidityRange, "%"), "/pz2/images/icons/icons_enclosure_humidity.svg"],
-        ["Salinity", modalValueName(animal.salinity), "/pz2/images/icons/icons_enclosure_salinity.svg"]
+        ["Humidity", modalRange(animal.humidityRange, "%"), "/pz2/images/icons/icons_enclosure_humidity.svg"]
     ].filter(([, value]) => modalHasValue(value));
     const conditionHTML = conditionLines.map(([label, value, icon]) => {
-        const description = label === "Salinity" ? animal.salinity?.description : "";
-        const tooltip = description ? `${value}: ${description}` : label;
-        const hideLabel = label === "Salinity" || label === "Temperature" || label === "Plant Coverage" || label === "Humidity";
-        return `<span class="animal-modal-compact-value ${hideLabel ? "animal-modal-hide-label" : ""}" data-tooltip="${escapeModalHTML(tooltip)}">${modalIcon(icon, label)}<span class="animal-modal-detail-label">${escapeModalHTML(label)}:</span><span>${escapeModalHTML(value)}</span></span>`;
+        const hideLabel = label === "Temperature" || label === "Plant Coverage" || label === "Humidity";
+        return `<span class="animal-modal-compact-value ${hideLabel ? "animal-modal-hide-label" : ""}" data-tooltip="${escapeModalHTML(label)}">${modalIcon(icon, label)}<span class="animal-modal-detail-label">${escapeModalHTML(label)}:</span><span>${escapeModalHTML(value)}</span></span>`;
     }).join("");
+    const salinityValues = modalList(animal.salinity);
+    const salinityHTML = salinityValues.length
+        ? `<span class="animal-modal-salinity"><span class="animal-modal-tooltip" data-tooltip="Salinity">${modalIcon("/pz2/images/icons/icons_enclosure_salinity.svg", "Salinity")}</span><span class="animal-modal-salinity-values">${salinityValues.map((value, index) => `<span class="animal-modal-salinity-item"><span class="animal-modal-tooltip" data-tooltip="${escapeModalHTML(value.description || modalValueName(value))}">${escapeModalHTML(modalValueName(value))}</span>${index < salinityValues.length - 1 ? "," : ""}</span>`).join("")}</span></span>`
+        : "";
 
     const enclosureTypes = modalList(animal.enclosureTypes).map(modalValueName).filter(Boolean);
     const exhibitTerrain = modalList(animal.exhibitTerrain).map(modalValueName).filter(Boolean);
@@ -352,12 +357,105 @@ function buildAnimalModal(animal, allAnimals) {
         ? Object.values(animal.thrivingRequirements).filter(Boolean)
         : [];
     const thrivingHTML = thrivingRequirements.map(requirement =>
-            `<li><strong>${escapeModalHTML(requirement.requirement ?? "Requirement")}:</strong> ${escapeModalHTML(requirement.value ?? "")} ${escapeModalHTML(requirement.valueType ?? "")}</li>`
+            `<li><strong>${escapeModalHTML(requirement.requirement ?? "Requirement")}:</strong> <span class="animal-modal-requirement-value">${escapeModalHTML(requirement.value ?? "")} ${escapeModalHTML(requirement.valueType ?? "")}</span></li>`
         ).join("");
     const standardCoatHTML = animal.standardCoat
         ? Object.values(animal.standardCoat).filter(Boolean).map(coat =>
             `<li>${escapeModalHTML(coat.description || coat.name || "")}</li>`
         ).join("")
+        : "";
+    const formType = modalValueName(animal.form).toLocaleLowerCase();
+    const animalEnclosureTypes = modalList(animal.enclosure)
+        .map(value => modalValueName(value).toLocaleLowerCase());
+    const isCollective = formType === "collective" || formType === "collectives";
+    const isIndividualHabitat = formType === "individual"
+        && animalEnclosureTypes.includes("habitat")
+        && !animalEnclosureTypes.includes("exhibit");
+    const isCollectiveHabitat = isCollective && animalEnclosureTypes.includes("habitat");
+    const isExhibitAnimal = ["individual", "collective", "collectives"].includes(formType)
+        && animalEnclosureTypes.includes("exhibit");
+    const researchRequirementHTML = requirementNumber => {
+        const key = `req${requirementNumber}`;
+        const requirement = animal.thrivingRequirements?.[key];
+        const tooltip = requirement
+            ? [requirement.requirement, requirement.value, requirement.valueType]
+                .filter(modalHasValue)
+                .join(" ")
+            : `Thriving Requirement ${requirementNumber}`;
+        return researchAwardHTML(
+            `/pz2/images/icons/icons_research_thriving_req${requirementNumber}.png`,
+            `Thriving Requirement ${requirementNumber}`,
+            tooltip
+        );
+    };
+    const researchAwardHTML = (icon, label, tooltip) =>
+        `<span class="animal-modal-research-award animal-modal-tooltip" data-tooltip="${escapeModalHTML(tooltip)}">${modalIcon(icon, label, "animal-modal-research-icon")}<span>${escapeModalHTML(label)}</span></span>`;
+    const researchGateHTML = () => {
+        const reserveName = modalValueName(animal.researchGate);
+        return `<span class="animal-modal-research-award animal-modal-research-gate animal-modal-tooltip" data-tooltip="Establish an Observation Network and release this species"><span class="animal-modal-research-gate-heading">${modalIcon("/pz2/images/icons/icons_tierUnlock.svg", "Research Gate", "animal-modal-research-icon")}<span>Research Gate:</span></span><span class="animal-modal-research-gate-name">${escapeModalHTML(reserveName)}</span></span>`;
+    };
+    const researchLevelHTML = (number, ...awards) =>
+        `<div class="animal-modal-research-level"><span class="animal-modal-research-badge">${number}</span><div class="animal-modal-research-awards">${awards.join("")}</div></div>`;
+    const factSheetHTML = researchAwardHTML(
+        "/pz2/images/icons/icons_research_factSheet.png",
+        `${animal.name} Fact Sheet`,
+        "Guest Education"
+    );
+    const fertilityLevel1HTML = researchAwardHTML(
+        "/pz2/images/icons/icons_research_fertility_lv1.png",
+        "Fertility Level 1",
+        "+15% Fertility"
+    );
+    const fertilityLevel2HTML = researchAwardHTML(
+        "/pz2/images/icons/icons_research_fertility_lv2.png",
+        "Fertility Level 2",
+        "+30% Fertility"
+    );
+    const releaseGroupsHTML = researchAwardHTML(
+        "/pz2/images/icons/icons_research_releaseGroups.png",
+        "Release Groups",
+        "Release to the Wild"
+    );
+    const researchLevels = [];
+    if (isIndividualHabitat) {
+        if (animal.researchGate) {
+            researchLevels.push(
+                researchLevelHTML(1, researchRequirementHTML(1)),
+                researchLevelHTML(2, factSheetHTML, researchRequirementHTML(2)),
+                researchLevelHTML(3, releaseGroupsHTML),
+                researchLevelHTML("•", researchGateHTML()),
+                researchLevelHTML(4, fertilityLevel1HTML, researchRequirementHTML(3)),
+                researchLevelHTML(5, researchRequirementHTML(4)),
+                researchLevelHTML(6, fertilityLevel2HTML, researchRequirementHTML(5))
+            );
+        } else {
+            researchLevels.push(
+                researchLevelHTML(1, factSheetHTML, researchRequirementHTML(1)),
+                researchLevelHTML(2, fertilityLevel1HTML, researchRequirementHTML(2)),
+                researchLevelHTML(3, releaseGroupsHTML, researchRequirementHTML(3)),
+                researchLevelHTML(4, researchRequirementHTML(4)),
+                researchLevelHTML(5, fertilityLevel2HTML, researchRequirementHTML(5))
+            );
+        }
+    } else if (isExhibitAnimal || isCollectiveHabitat) {
+        if (animal.researchGate) {
+            researchLevels.push(
+                researchLevelHTML(1, fertilityLevel1HTML),
+                researchLevelHTML(2, factSheetHTML),
+                researchLevelHTML("•", researchGateHTML()),
+                researchLevelHTML(3, fertilityLevel2HTML)
+            );
+        } else {
+            researchLevels.push(
+                researchLevelHTML(1, fertilityLevel1HTML),
+                researchLevelHTML(2, factSheetHTML),
+                researchLevelHTML(3, releaseGroupsHTML),
+                researchLevelHTML(4, fertilityLevel2HTML)
+            );
+        }
+    }
+    const researchLevelsHTML = researchLevels.length
+        ? `<h3>Research Levels</h3><div class="modal-animal-details-item animal-modal-research-levels">${researchLevels.join("")}</div>`
         : "";
     const colourmorphs = animal.colourmorphs && typeof animal.colourmorphs === "object"
         ? Object.values(animal.colourmorphs).filter(Boolean)
@@ -365,9 +463,12 @@ function buildAnimalModal(animal, allAnimals) {
     const colourmorphHTML = colourmorphs.length
         ? colourmorphs.map(morph => `<span class="animal-modal-colourmorph animal-modal-tooltip" data-tooltip="${escapeModalHTML(morph.description || morph.name || "")}">${modalIcon(morph.icon, morph.name || "Colourmorph")}<strong>${escapeModalHTML(morph.name || "Colourmorph")}</strong></span>`).join("")
         : `<p class="animal-modal-empty">No Colourmorphs Available</p>`;
-    const mapHTML = animal.map
+    const nativeRangeMapHTML = modalHasValue(animal.nativeRangeMap)
+        ? `<p class="animal-modal-map-native-range"><strong>Native Range:</strong> ${escapeModalHTML(animal.nativeRangeMap)}</p>`
+        : "";
+    const mapHTML = `${animal.map
         ? `<img class="animal-modal-map" src="${escapeModalHTML(animal.map)}" alt="${escapeModalHTML(`${animal.name} map`)}">`
-        : `<p class="animal-modal-empty">No map available</p>`;
+        : `<p class="animal-modal-empty">No map available</p>`}${nativeRangeMapHTML}`;
     const standardCoatImage = animal.headshotURL || animal.headshot;
     const generalHTML = [
         animal.form && `<span class="animal-modal-icon-label">${modalIcon(animal.form.icon, modalValueName(animal.form))}<span>Form: ${modalDisplay(animal.form)}</span></span>`,
@@ -389,7 +490,7 @@ function buildAnimalModal(animal, allAnimals) {
             <div class="modal-animal-image" style="grid-area: animal-card-image;">
                 <img src="${escapeModalHTML(imageURL || "")}" alt="${escapeModalHTML(animal.name)}">
                 ${albumImages.length
-                    ? `<button type="button" class="animal-modal-photo-control is-previous" aria-label="Previous ${escapeModalHTML(animal.name)} photo">&#x2BC7</button><button type="button" class="animal-modal-photo-control is-next" aria-label="Next ${escapeModalHTML(animal.name)} photo">&#x2BC8</button>`
+                    ? `<button type="button" class="animal-modal-photo-control is-previous" aria-label="Previous ${escapeModalHTML(animal.name)} photo"><</button><button type="button" class="animal-modal-photo-control is-next" aria-label="Next ${escapeModalHTML(animal.name)} photo">></button>`
                     : ""}
             </div>
             <div class="modal-animal-name" style="grid-area: animal-card-name;">
@@ -436,17 +537,17 @@ function buildAnimalModal(animal, allAnimals) {
                     </div></div>` : ""}
                     ${(() => {
                         const barrierStrength = modalHasValue(animal.barrierStrength)
-                            ? iconDetail("Barrier Strength", `Grade ${animal.barrierStrength}`, "/pz2/images/icons/icons_enclosure_barrierStrength.svg")
+                            ? iconDetail("Barrier Strength", `Grade ${animal.barrierStrength}`, "/pz2/images/icons/icons_enclosure_barrierStrength.svg", "", true)
                             : "";
                         const barrierHeight = modalHasValue(animal.barrierHeight)
-                            ? iconDetail("Barrier Height", animal.barrierHeight, "/pz2/images/icons/icons_enclosure_barrierHeight.svg", "m")
+                            ? iconDetail("Barrier Height", animal.barrierHeight, "/pz2/images/icons/icons_enclosure_barrierHeight.svg", "m", true)
                             : "";
                         return barrierStrength || barrierHeight
                             ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-barriers">${barrierStrength}${barrierHeight}</div>`
                             : "";
                     })()}
                     ${modalHasValue(animal.diveDepth) && Number(animal.diveDepth) > 0 ? `<div class="animal-modal-enclosure-line">${iconDetail("Minimum Diving Depth", animal.diveDepth, "/pz2/images/icons/icons_area_deepWater.svg", "m")}</div>` : ""}
-                    ${conditionHTML ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-conditions">${conditionHTML}</div>` : ""}
+                    ${conditionHTML || salinityHTML ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-conditions">${conditionHTML}${salinityHTML}</div>` : ""}
                 </div>
                 ${areaHTML ? `<h3>Space Requirements</h3><div class="modal-animal-details-item animal-modal-area-list">${areaHTML}</div>` : ""}
                 ${terrainHTML ? `<h3>Terrain</h3><div class="modal-animal-details-item animal-modal-terrain-list">${terrainHTML}</div>` : ""}
@@ -491,7 +592,7 @@ function buildAnimalModal(animal, allAnimals) {
                     ${modalList(animal.rolesRequired).length ? `<div class="animal-modal-wide-line"><strong>Roles Required:</strong> ${modalTextCollection(animal.rolesRequired)}</div>` : ""}
                     ${modalList(animal.releaseGroups).length ? `<div class="animal-modal-release-groups"><strong>Release Groups:</strong>${modalList(animal.releaseGroups).map(group => `<span>${modalIcon(group.icon, group.type)}${escapeModalHTML(group.type)}</span>`).join("")}</div>` : ""}
                 </div>
-                <h3>Research &amp; Enrichments</h3>
+                <h3>Education &amp; Enrichments</h3>
                 <div class="modal-animal-details-item animal-modal-care">
                     ${animalTalkHTML}
                     ${evolutionTopicHTML}
@@ -518,11 +619,12 @@ function buildAnimalModal(animal, allAnimals) {
                     ${diseasesHTML ? `<div class="animal-modal-care-subsection"><strong>Diseases</strong><div class="animal-modal-disease-list">${diseasesHTML}</div></div>` : ""}
                     ${ambienceHTML}
                 </div>
+                ${researchLevelsHTML}
+                ${thrivingHTML ? `<h3>Thriving Requirements</h3><div class="modal-animal-details-item"><ul class="animal-modal-bullet-list">${thrivingHTML}</ul></div>` : ""}
                 <h3>Thriving Relationships</h3>
                 <div class="modal-animal-details-item">${relationshipHTML(animal.thrivingRelationships, "thriving")}</div>
                 <h3>Neutral Relationships</h3>
                 <div class="modal-animal-details-item">${relationshipHTML(animal.neutralRelationships, "neutral")}</div>
-                ${thrivingHTML ? `<h3>Thriving Requirements</h3><div class="modal-animal-details-item"><ul class="animal-modal-bullet-list">${thrivingHTML}</ul></div>` : ""}
                 <h3>Standard Coat(s)</h3>
                 <div class="modal-animal-details-item animal-modal-standard-coat">
                     <div class="animal-modal-standard-coat-content">
@@ -581,6 +683,7 @@ async function openAnimalModal(animalName) {
                 });
             });
         }
+        document.documentElement.classList.add("animal-modal-open");
         document.body.classList.add("animal-modal-open");
 
         const closeModal = () => {
@@ -588,6 +691,7 @@ async function openAnimalModal(animalName) {
                 hideAnimalTooltip();
             }
             modal.remove();
+            document.documentElement.classList.remove("animal-modal-open");
             document.body.classList.remove("animal-modal-open");
             document.removeEventListener("keydown", handleEscape);
             if (activeAnimalModalClose === closeModal) {
