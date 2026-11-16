@@ -532,6 +532,22 @@ const alphaDominance = {
     }
 };
 
+const socialGroup = {
+    group: "Group Members",
+    shoal: "Shoal",
+    swarm: "Swarm",
+    herd: "Herd Members",
+    pack: "Packmates",
+    colony: "Colony Members",
+    pride: "Pride Members",
+    troop: "Troop Members",
+    mob: "Mob Members",
+    pod: "Pod Members",
+    harem: "Harem Members",
+    school: "School Members",
+    fever: "Fever Members"
+};
+
 const offspringDispersal = {
     none: {
         type: "None",
@@ -708,7 +724,7 @@ const shelters = {
     cavityNestMedium: {
         name: "Cavity Nest - Medium",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_cavityNestMedium.png"
     }, 
     cavityNestSmall: {
         name: "Cavity Nest - Small",
@@ -723,7 +739,7 @@ const shelters = {
     cupNestMedium: {
         name: "Cup Nest - Medium",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_cupNestMedium.png"
     }, 
     cupNestSmall: {
         name: "Cup Nest - Small",
@@ -896,7 +912,7 @@ const foodEnrichment = {
     skittleFeeder: {
         name: "Skittle Feeder",
         type: "Hunting Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Skittle_Feeder_Spawner.png"
     }, 
     slowFeeder: {
         name: "Slow Feeder",
@@ -926,12 +942,12 @@ const foodEnrichment = {
     suspendedSpikeFeeder: {
         name: "Suspended Spike Feeder",
         type: "Arboreal Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Feeder_Spike_Suspended.png"
     }, 
     suspendedVeggieFeeder: {
         name: "Suspended Veggie Feeder",
         type: "Browsing Food-based Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Feeder_Veggie_Suspended.png"
     }, 
     termiteMound: {
         name: "Termite Mound",
@@ -1024,7 +1040,7 @@ const toyEnrichment = {
     chewToy: {
         name: "Chew Toy",
         type: "Biting Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Chew_Toy_Spawner.png"
     }, 
     curioBall: {
         name: "Curio Ball",
@@ -1209,7 +1225,7 @@ const toyEnrichment = {
     suspendedRattle: {
         name: "Suspended Rattle",
         type: "Auditory Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Rattle_Suspended.png"
     }, 
     tennisBall: {
         name: "Tennis Ball",
@@ -1224,12 +1240,12 @@ const toyEnrichment = {
     tugRope: {
         name: "Tug Rope",
         type: "Biting Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Tug_Rope.png"
     }, 
     tunnel: {
         name: "Tunnel",
         type: "Navigational Toy Enrichments",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Tunnel.png"
     }, 
     tyre: {
         name: "Tyre",
@@ -1723,7 +1739,7 @@ const conservationTopics = {
 export {
     DLC, form, types, enclosures, enclosureTypes, exhibitTerrain, cohabitationOptions, conservation, 
     nativeRange, biomes, wildlifeReserves, ecosystems, speciesRoles, releaseGroups, 
-    temperament, alphaDominance, offspringDispersal, matingSystem, matingSeason, reproductionDifficulty,
+    temperament, alphaDominance, socialGroup, offspringDispersal, matingSystem, matingSeason, reproductionDifficulty,
     salinity, feeders, shelters, foodEnrichment, toyEnrichment, diseases, conservationTopics
 };
 

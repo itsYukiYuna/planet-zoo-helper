@@ -1,3 +1,5 @@
+import {releaseGroups as releaseGroupOptions} from "/pz2/scripts/filters.js";
+
 // Menu Function
 const navbar = document.querySelector('nav');
 const menuOverlay = document.getElementById("menu-overlay");
@@ -236,6 +238,45 @@ function buildAnimalModal(animal, allAnimals) {
     const adultUnit = formName === "collective" || formName === "collectives"
         ? "Collective"
         : "Adult";
+    const releaseGroupEntries = Array.isArray(animal.releaseGroups)
+        ? animal.releaseGroups.map((group, index) => {
+            const option = Object.entries(releaseGroupOptions).find(([, releaseGroup]) =>
+                releaseGroup.icon === group?.icon || releaseGroup.type === group?.type
+            );
+            return [option?.[0] ?? `releaseGroup${index}`, group];
+        })
+        : animal.releaseGroups && typeof animal.releaseGroups === "object"
+            ? Object.entries(animal.releaseGroups)
+            : [];
+    const releaseGroupMetricDefinitions = [
+        ["vitality", "Vitality", "/pz2/images/icons/icons_genes_vitality.png"],
+        ["longevity", "Longevity", "/pz2/images/icons/icons_genes_longevity.png"],
+        ["fertility", "Fertility", "/pz2/images/icons/icons_genes_fertility.png"],
+        ["immunity", "Immunity", "/pz2/images/icons/icons_genes_immunity.png"],
+        ["geneticDiversity", "Genetic Diversity", "/pz2/images/icons/icons_genes_diversity.png"],
+        ["shoalHealth", "Shoal Health", "/pz2/images/icons/icons_form_collective.png"]
+    ];
+    const releaseGroupCardHTML = ([key, group]) => {
+        const releaseGroupOption = releaseGroupOptions[key];
+        const groupName = group?.name ?? group?.type ?? releaseGroupOption?.type ?? key;
+        const groupIcon = releaseGroupOption?.icon ?? group?.icon;
+        const groupTooltip = releaseGroupOption?.type ?? group?.type ?? groupName;
+        const counts = [
+            ["animals", "/pz2/images/icons/icons_animals_mixed.png", "Animal", "Animals"],
+            ["males", "/pz2/images/icons/icons_animals_male.svg", "Male", "Males"],
+            ["females", "/pz2/images/icons/icons_animals_female.svg", "Female", "Females"]
+        ].filter(([property]) => modalHasValue(group?.[property]));
+        const metrics = releaseGroupMetricDefinitions
+            .filter(([property]) => modalHasValue(group?.[property]))
+            .map(([property, label, icon]) =>
+                `<span class="animal-modal-release-group-metric animal-modal-tooltip" data-tooltip="${escapeModalHTML(label)}">${modalIcon(icon, label)}<span>${escapeModalHTML(group[property])}%</span></span>`
+            );
+        return `<div class="animal-modal-release-group"><strong>${modalIcon(groupIcon, groupName)}<span class="animal-modal-tooltip" data-tooltip="${escapeModalHTML(groupTooltip)}">${escapeModalHTML(groupName)}</span></strong>${counts.map(([property, icon, singular, plural]) => {
+            const count = group[property];
+            const label = Number(count) === 1 ? singular : plural;
+            return `<span class="animal-modal-release-group-stat">${modalIcon(icon, label)}<span>${escapeModalHTML(count)} ${label}</span></span>`;
+        }).join("")}${metrics.length ? `<div class="animal-modal-release-group-metrics">${metrics.join("")}</div>` : ""}</div>`;
+    };
     const formatAdultGroup = (min, max) => {
         if (!modalHasValue(max) || Number(max) === 0) return "";
         return `${modalHasValue(min) ? min : 0} - ${max}`;
@@ -414,7 +455,7 @@ function buildAnimalModal(animal, allAnimals) {
     const releaseGroupsHTML = researchAwardHTML(
         "/pz2/images/icons/icons_research_releaseGroups.png",
         "Release Groups",
-        "Release to the Wild"
+        "Enables Release to Wild for this species"
     );
     const researchLevels = [];
     if (isIndividualHabitat) {
@@ -546,12 +587,12 @@ function buildAnimalModal(animal, allAnimals) {
                             ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-barriers">${barrierStrength}${barrierHeight}</div>`
                             : "";
                     })()}
-                    ${modalHasValue(animal.diveDepth) && Number(animal.diveDepth) > 0 ? `<div class="animal-modal-enclosure-line">${iconDetail("Minimum Diving Depth", animal.diveDepth, "/pz2/images/icons/icons_area_deepWater.svg", "m")}</div>` : ""}
+                    ${modalHasValue(animal.diveDepth) && Number(animal.diveDepth) > 0 ? `<div class="animal-modal-enclosure-line">${iconDetail("Diving Depth", animal.diveDepth, "/pz2/images/icons/icons_area_deepWater.svg", "m")}</div>` : ""}
                     ${conditionHTML || salinityHTML ? `<div class="animal-modal-enclosure-line animal-modal-enclosure-conditions">${conditionHTML}${salinityHTML}</div>` : ""}
                 </div>
                 ${areaHTML ? `<h3>Space Requirements</h3><div class="modal-animal-details-item animal-modal-area-list">${areaHTML}</div>` : ""}
                 ${terrainHTML ? `<h3>Terrain</h3><div class="modal-animal-details-item animal-modal-terrain-list">${terrainHTML}</div>` : ""}
-                <h3>Group Ranges</h3>
+                <h3>Social Group</h3>
                 <div class="modal-animal-details-item animal-modal-group-ranges">
                     <div class="animal-modal-group-column">
                         <strong>${modalIcon("/pz2/images/icons/icons_animals_mixed.svg", "Mixed Group")} Mixed Group</strong>
@@ -561,9 +602,14 @@ function buildAnimalModal(animal, allAnimals) {
                     ${Number(animal.maxMalesBachelor) > 0 ? `<div class="animal-modal-group-column"><strong>${modalIcon("/pz2/images/icons/icons_releaseGroups_maleGroup.svg", "Male Group")} Male Group</strong><span>${formatAdultGroup(animal.groupSizeMin, animal.maxMalesBachelor)}</span></div>` : ""}
                     ${Number(animal.maxFemalesBachelor) > 0 ? `<div class="animal-modal-group-column"><strong>${modalIcon("/pz2/images/icons/icons_releaseGroups_femaleGroup.svg", "Female Group")} Female Group</strong><span>${formatAdultGroup(animal.groupSizeMin, animal.maxFemalesBachelor)}</span></div>` : ""}
                     <span class="animal-modal-line-break"></span>
-                    ${animal.collectiveExhibit && modalRange(animal.collectiveExhibit) ? `<div class="animal-modal-group-meta animal-modal-collective-size"><strong>Exhibit Collective Size:</strong><span>${modalRange(animal.collectiveExhibit)}</span></div>` : ""}
-                    ${animal.collectiveAquarium && modalRange(animal.collectiveAquarium) ? `<div class="animal-modal-group-meta animal-modal-collective-size"><strong>Aquarium Shoal Size:</strong><span>${modalRange(animal.collectiveAquarium)}</span></div>` : ""}
-                    <div class="animal-modal-group-meta">${simpleDetail("Dominance", animal.dominance)}${animal.alphaDominance?.description ? `<span class="animal-modal-alpha-description">${escapeModalHTML(animal.alphaDominance.description)}</span>` : ""}</div>
+                    ${animal.collectiveExhibit && modalRange(animal.collectiveExhibit) ? `<div class="animal-modal-group-meta animal-modal-collective-size"><strong>Exhibit Collective:</strong><span>${modalRange(animal.collectiveExhibit)}</span></div>` : ""}
+                    ${animal.collectiveAquarium && modalRange(animal.collectiveAquarium) ? `<div class="animal-modal-group-meta animal-modal-collective-size"><strong>Aquarium Collective:</strong><span>${modalRange(animal.collectiveAquarium)}</span></div>` : ""}
+                    <div class="animal-modal-group-meta">
+                        ${modalHasValue(animal.dominance) ? `<div class="animal-modal-group-data-line">Dominance: ${escapeModalHTML(animal.dominance)}</div>` : ""}
+                        ${animal.alphaDominance?.description ? `<span class="animal-modal-alpha-description">${escapeModalHTML(animal.alphaDominance.description)}</span>` : ""}
+                        <span class="animal-modal-line-break"></span><span class="animal-modal-line-break"></span>
+                        ${modalHasValue(animal.socialGroup) ? `<div class="animal-modal-group-data-line">Social Group: ${modalDisplay(animal.socialGroup)}</div>` : ""}
+                    </div>
                 </div>
                 <h3>Breeding &amp; Lifecycle</h3>
                 <div class="modal-animal-details-item animal-modal-breeding">
@@ -590,7 +636,8 @@ function buildAnimalModal(animal, allAnimals) {
                     ${modalList(animal.ecosystems).length ? `<div class="animal-modal-reserve-line">${modalList(animal.ecosystems).map(ecosystem => `<span class="animal-modal-reserve reserve-ecosystem">${modalIcon(ecosystem.icon, ecosystem.name)}<strong>${escapeModalHTML(ecosystem.name)}</strong><small>Biome: ${escapeModalHTML(ecosystem.biome || "N/A")}</small></span>`).join("")}</div>` : ""}
                     ${modalList(animal.speciesRoles).length ? `<div class="animal-modal-wide-line"><strong>Species Roles:</strong> ${modalTextCollection(animal.speciesRoles)}</div>` : ""}
                     ${modalList(animal.rolesRequired).length ? `<div class="animal-modal-wide-line"><strong>Roles Required:</strong> ${modalTextCollection(animal.rolesRequired)}</div>` : ""}
-                    ${modalList(animal.releaseGroups).length ? `<div class="animal-modal-release-groups"><strong>Release Groups:</strong>${modalList(animal.releaseGroups).map(group => `<span>${modalIcon(group.icon, group.type)}${escapeModalHTML(group.type)}</span>`).join("")}</div>` : ""}
+                    <span class="animal-modal-line-break"></span>
+                    ${releaseGroupEntries.length ? `<div class="animal-modal-release-groups"><strong>Release Groups:</strong><div class="animal-modal-release-group-list">${releaseGroupEntries.map(releaseGroupCardHTML).join("")}</div></div>` : ""}
                 </div>
                 <h3>Education &amp; Enrichments</h3>
                 <div class="modal-animal-details-item animal-modal-care">
