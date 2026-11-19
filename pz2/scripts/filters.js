@@ -335,7 +335,7 @@ const ecosystems = {
     montaneForestBoreal: {
         name: "Montane Forest (Boreal)",
         biome: "Taiga",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_montaneForestBoreal.png"
     },
     lakeTaiga: {
         name: "Lake",
@@ -350,7 +350,7 @@ const ecosystems = {
     montaneRainforest: {
         name: "Montane Rainforest",
         biome: "Tropical",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_montaneRainforest.png"
     },
     lowlandRainforest: {
         name: "Lowland Rainforest",
@@ -425,7 +425,7 @@ const ecosystems = {
     montaneForest: {
         name: "Montane Forest",
         biome: "Taiga",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_montaneForest.png"
     },
     grassland: {
         name: "Grassland",
@@ -440,7 +440,7 @@ const ecosystems = {
     sandyPlain: {
         name: "Sandy Plain",
         biome: "Grassland",
-        icon: "/pz2/images/icons/icons_ecosystems_"
+        icon: "/pz2/images/icons/icons_ecosystems_sandyPlain.png"
     }
 };
 
@@ -719,7 +719,7 @@ const shelters = {
     cavityNestLarge: {
         name: "Cavity Nest - Large",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_cavityNestLarge.png"
     }, 
     cavityNestMedium: {
         name: "Cavity Nest - Medium",
@@ -769,7 +769,7 @@ const shelters = {
     waterPlatformNestLarge: {
         name: "Water Platform Nest - Large",
         type: "Nest",
-        icon: "/pz2/images/icons/icons_shelters_"
+        icon: "/pz2/images/icons/icons_shelters_waterPlatformNestLarge.png"
     }, 
     waterPlatformNestSmall: {
         name: "Water Platform Nest - Small",
@@ -832,7 +832,7 @@ const foodEnrichment = {
     foragePool: {
         name: "Forage Pool",
         type: "No Research Required",
-        icon: "/images/icon-planet-zoo.svg"
+        icon: "https://www.planetzoogame.com/assets/images/icons/enrichment/EN_Forage_Pool.png"
     }, 
     foragingWall: {
         name: "Foraging Wall",

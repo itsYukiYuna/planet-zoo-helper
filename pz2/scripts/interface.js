@@ -398,7 +398,7 @@ function buildAnimalModal(animal, allAnimals) {
         ? Object.values(animal.thrivingRequirements).filter(Boolean)
         : [];
     const thrivingHTML = thrivingRequirements.map(requirement =>
-            `<li><strong>${escapeModalHTML(requirement.requirement ?? "Requirement")}:</strong> <span class="animal-modal-requirement-value">${escapeModalHTML(requirement.value ?? "")} ${escapeModalHTML(requirement.valueType ?? "")}</span></li>`
+            `<li><strong>${escapeModalHTML(requirement.requirement ?? "Requirement")}</strong> <span class="animal-modal-requirement-value">${escapeModalHTML(requirement.value ?? "")} ${escapeModalHTML(requirement.valueType ?? "")}</span></li>`
         ).join("");
     const standardCoatHTML = animal.standardCoat
         ? Object.values(animal.standardCoat).filter(Boolean).map(coat =>
@@ -713,6 +713,33 @@ async function openAnimalModal(animalName) {
             throw new Error(`Could not create the animal modal for "${animalName}".`);
         }
         document.body.append(modal);
+        const animalNameHeading = modal.querySelector(".modal-animal-name h1");
+        const fitAnimalName = () => {
+            if (!(animalNameHeading instanceof HTMLElement)) {
+                return;
+            }
+
+            animalNameHeading.style.removeProperty("font-size");
+            if (!window.matchMedia("(min-width: 1061px) and (orientation: landscape)").matches) {
+                return;
+            }
+
+            const availableWidth = animalNameHeading.clientWidth;
+            const renderedWidth = animalNameHeading.scrollWidth;
+            if (availableWidth > 0 && renderedWidth > availableWidth) {
+                const currentFontSize = Number.parseFloat(getComputedStyle(animalNameHeading).fontSize);
+                animalNameHeading.style.fontSize = `${currentFontSize * availableWidth / renderedWidth * 0.98}px`;
+            }
+        };
+        fitAnimalName();
+        window.addEventListener("resize", fitAnimalName);
+        if (document.fonts) {
+            document.fonts.ready.then(() => {
+                if (modal.isConnected) {
+                    fitAnimalName();
+                }
+            });
+        }
         const modalImage = modal.querySelector(".modal-animal-image img");
         const baseImage = animal.imageURL || animal.image;
         const photoSequence = albumImages.length
@@ -738,6 +765,7 @@ async function openAnimalModal(animalName) {
                 hideAnimalTooltip();
             }
             modal.remove();
+            window.removeEventListener("resize", fitAnimalName);
             document.documentElement.classList.remove("animal-modal-open");
             document.body.classList.remove("animal-modal-open");
             document.removeEventListener("keydown", handleEscape);
